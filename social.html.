@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connect with Kenneth J Lewis Sr</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .social-card {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .social-card:hover {
+      transform: scale(1.05);
+    }
+
+    .social-card a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+    }
+
+    .social-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Follow Kenneth J Lewis Sr Online</h1>
+  <div class="social-links">
+    <div class="social-card">
+      <a href="https://www.facebook.com/ArtistKennethLewisSr/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+        Artist Kenneth Lewis Sr
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="https://www.facebook.com/KJLArtSanctuary/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+        KJL Art Sanctuary
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="https://www.instagram.com/kjlartist/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+        @kjlartist
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="https://www.linkedin.com/in/kenneth-lewis-sr-artist-1539b150/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+        LinkedIn Profile
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="https://x.com/KJLARTIST" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X (Twitter)" />
+        @KJLARTIST
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="https://www.tiktok.com/@kjlartist" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" />
+        @kjlartist
+      </a>
+    </div>
+  </div>
+</body>
+</html>

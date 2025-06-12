@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KJL Art Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .category {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: #000;
+    }
+    .category:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KJL Art Sanctuary Gallery</h1>
+    <p>Select a Series to View Artwork</p>
+  </header>
+
+  <main class="gallery">
+    <a href="#" class="category">Abstracts</a>
+    <a href="#" class="category">Structure Series</a>
+    <a href="#" class="category">Men’s Series</a>
+    <a href="#" class="category">Patterns Series</a>
+    <a href="#" class="category">Mixed Media</a>
+    <a href="#" class="category">Basquiat Series</a>
+    <a href="#" class="category">Shoulder People Series</a>
+    <a href="#" class="category">Figurative Works</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
+  </footer>
+
+</body>
+</html>

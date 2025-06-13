@@ -30,29 +30,15 @@
     nav a:hover {
       color: #007acc;
     }
-    .gallery-section {
-      margin-bottom: 60px;
-    }
-    .gallery-title {
-      font-size: 24px;
-      margin-bottom: 20px;
+    .image-wrapper {
       text-align: center;
+      margin: 40px 0;
     }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      justify-items: center;
-    }
-    .gallery-grid a img {
-      width: 100%;
+    .image-wrapper img {
+      max-width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-    .gallery-grid a img:hover {
-      transform: scale(1.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -70,6 +56,10 @@
   <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto;">
     Welcome to the official website of Artist Kenneth J. Lewis Sr. Explore original paintings, podcast episodes, and connect on social platforms. Experience the power of story-driven art.
   </p>
+
+  <div class="image-wrapper">
+    <img src="images/KJL101.jpg" alt="Artist Kenneth J. Lewis Sr in front of paintings" />
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>

@@ -2,97 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Welcome to KJL Art Sanctuary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KJL Art Sanctuary</title>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
       margin: 0;
-      font-family: Georgia, serif;
-      background-color: #fafafa;
-      color: #222;
+      padding: 20px;
     }
-
-    nav {
-      background-color: #111;
+    h1 {
       text-align: center;
-      padding: 15px;
+      margin-bottom: 20px;
     }
-
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
     nav a {
-      color: white;
-      margin: 0 20px;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 16px;
+      color: #333;
       font-weight: bold;
     }
-
     nav a:hover {
-      text-decoration: underline;
+      color: #007acc;
     }
-
-    header {
+    .gallery-section {
+      margin-bottom: 60px;
+    }
+    .gallery-title {
+      font-size: 24px;
+      margin-bottom: 20px;
       text-align: center;
-      padding: 60px 20px 30px;
     }
-
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      justify-items: center;
     }
-
-    header p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: 0 auto;
+    .gallery-grid a img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
     }
-
-    .bio {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background-color: #eee;
-      font-size: 14px;
-      color: #666;
+    .gallery-grid a img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
+  <h1>KJL Art Sanctuary</h1>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
+    <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>
-    <a href="contact.html">Contact</a>
   </nav>
 
-  <header>
-    <h1>Welcome to the KJL Art Sanctuary</h1>
-    <p>Where abstract meets spirit, and every painting tells a story.</p>
-  </header>
+  <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto;">
+    Welcome to the official website of Artist Kenneth J. Lewis Sr. Explore original paintings, podcast episodes, and connect on social platforms. Experience the power of story-driven art.
+  </p>
 
-  <div class="bio">
-    <p>
-      I’m Kenneth J. Lewis Sr., a self-taught painter who didn’t pick up a brush until the age of 47. My journey is rooted in raw intuition and relentless exploration. What started as one painting turned into a lifelong passion—building entire series that speak to the soul.
-    </p>
-    <p>
-      I work primarily in acrylic and oil glazes on canvas, wood, and architectural panels. From abstract textures to figurative energy, my work often begins with chaos—then finds form.
-    </p>
-    <p>
-      This site is the home of my creative world. Feel free to browse my gallery, catch an episode of the KJL Podcast Channel, or reach out for a studio visit at the KJL Art Sanctuary in Ewing, NJ.
-    </p>
-  </div>
-
-  <footer>
-    &copy; 2025 Kenneth J. Lewis Sr. | All Rights Reserved
-  </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

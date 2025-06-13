@@ -50,15 +50,22 @@
       max-width: 300px;
       margin: 0 auto 60px;
     }
-    .gallery img {
+    .gallery a {
+      display: block;
       width: 250px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(255,255,255,0.15);
       transition: transform 0.3s ease;
+      overflow: hidden;
     }
-    .gallery img:hover {
+    .gallery a:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 14px rgba(255,255,255,0.3);
+    }
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
     }
     h1, h2, p {
       margin: 10px 0;
@@ -92,12 +99,18 @@
   <div>
     <h2>🎨 Inside the KJL Podcast World</h2>
     <div class="gallery">
-      <img src="/images/art with kenneth.jpg" alt="Art with Kenneth" />
-      <img src="/images/coffee tea paint sip.jpg" alt="Coffee Tea Paint Sip" />
-      <img src="/images/Gallery Museum Tours (1).jpg" alt="Gallery Museum Tours" />
-      <img src="/images/kjl art sanctuary.jpg" alt="KJL Art Sanctuary" />
-      <img src="/images/muse.jpg" alt="Muse" />
-      <img src="/images/kjl pocast channel.jpg" alt="KJL Podcast Channel" />
+      <a href="https://www.youtube.com/watch?v=58PrjhEma9o&list=PLgYT7Eze6sd3TrOiWg1KBssRYHhupBdvS&pp=gAQB" target="_blank" rel="noopener noreferrer" title="Gallery Museum Tours">
+        <img src="/images/Gallery Museum Tours (1).jpg" alt="Gallery Museum Tours" />
+      </a>
+      <a href="https://www.youtube.com/watch?v=hUk0uGF4ew4&list=PLgYT7Eze6sd3-hlLPpwRqN6sZmHKrgkMH&pp=gAQB" target="_blank" rel="noopener noreferrer" title="Muse">
+        <img src="/images/muse.jpg" alt="Muse" />
+      </a>
+      <a href="https://www.youtube.com/watch?v=jCenDDeSscc&list=PLgYT7Eze6sd1SxmFbU9N-EJKLYmP-8pQc&pp=gAQB" target="_blank" rel="noopener noreferrer" title="Art with Kenneth">
+        <img src="/images/art with kenneth.jpg" alt="Art with Kenneth" />
+      </a>
+      <a href="https://www.youtube.com/watch?v=Fh1vUcCUUx4&list=PLgYT7Eze6sd1WpvxIphESY8PcStL7d-3Q&pp=gAQB" target="_blank" rel="noopener noreferrer" title="KJL Podcast Channel">
+        <img src="/images/kjl pocast channel.jpg" alt="KJL Podcast Channel" />
+      </a>
     </div>
   </div>
 

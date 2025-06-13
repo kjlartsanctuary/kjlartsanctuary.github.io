@@ -28,13 +28,24 @@
     a.youtube-button:hover {
       background-color: #990000;
     }
-    iframe {
-      max-width: 90vw;
-      height: 450px;
+    /* Responsive 16:9 video container */
+    .video-container {
+      position: relative;
+      width: 90vw;
+      max-width: 900px;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 */
+      margin: 0 auto 40px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
       border-radius: 8px;
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
-      margin-bottom: 40px;
     }
     .gallery {
       display: flex;
@@ -73,12 +84,14 @@
 
   <p>Watch this episode below:</p>
 
-  <iframe 
-    src="https://www.youtube.com/embed/1Y17HrXKCiA" 
-    title="KJL Podcast YouTube Video" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/1Y17HrXKCiA" 
+      title="KJL Podcast YouTube Video" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
   <!-- Image Gallery Section -->
   <div>

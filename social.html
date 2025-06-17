@@ -2,61 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title> Lets Get Social </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connect – Kenneth J. Lewis Sr.</title>
   <style>
-    body <nav style="text-align: center; margin-bottom: 40px; font-size: 18px;">
-  <a href="index.html" style="margin: 0 15px;">Home</a>
-  <a href="about.html" style="margin: 0 15px;">About</a>
-  <a href="social.html" style="margin: 0 15px;">Social</a>
-  <a href="youtube.html" style="margin: 0 15px;">Podcast</a>
-  <a href="contact.html" style="margin: 0 15px;">Contact</a>
-</nav>
-
-    {
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #d9cbbd; /* muted sand */
+      color: #3c3226;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background-color: #f5f1e7; /* warm off-white */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 30px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
+
+    hr {
+      width: 80px;
+      margin: 20px auto 40px auto;
+      border: none;
+      border-top: 2px solid #b5a987;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      color: #5d5240;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .social-links {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
       gap: 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      align-items: center;
     }
+
     .social-links a {
-      background: #222;
-      border-radius: 8px;
-      padding: 15px 20px;
-      color: #fff;
-      text-decoration: none;
-      transition: background 0.3s ease;
       display: inline-block;
-      width: 220px;
+      padding: 14px 25px;
+      background-color: #b5a987;
+      color: #fff;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: 280px;
     }
+
     .social-links a:hover {
-      background: #444;
+      background-color: #9c8b6f;
+    }
+
+    .footer-note {
+      margin-top: 50px;
+      font-size: 0.95rem;
+      color: #6d5f4a;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .social-links a {
+        width: 90%;
+        font-size: 1rem;
+      }
+
+      p.description {
+        padding: 0 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Connect with Me on social </h1>
-  <div class="social-links">
-    <a href="https://www.facebook.com/ArtistKennethLewisSr/" target="_blank">Facebook (Artist Page)</a>
-    <a href="https://www.facebook.com/KJLArtSanctuary/" target="_blank">Facebook (KJL Art Sanctuary)</a>
-    <a href="https://www.instagram.com/kjlartist/" target="_blank">Instagram</a>
-    <a href="https://www.linkedin.com/in/kenneth-lewis-sr-artist-1539b150/" target="_blank">LinkedIn</a>
-    <a href="https://x.com/KJLARTIST" target="_blank">X (formerly Twitter)</a>
-    <a href="https://www.tiktok.com/@kjlartist" target="_blank">TikTok</a>
+  <div class="container">
+    <h1>Connect with Kenneth</h1>
+    <hr />
+
+    <p class="description">
+      Stay connected and follow Kenneth J. Lewis Sr. across all platforms for new artwork, behind-the-scenes videos, live paint sessions, podcast episodes, and exhibition news. Tap a link below to explore more.
+    </p>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@kjlpodcastchannel" target="_blank">📺 KJL Podcast Channel (YouTube)</a>
+      <a href="https://www.instagram.com/kennethjlewissr" target="_blank">📸 Instagram: @kennethjlewissr</a>
+      <a href="https://www.facebook.com/kennethjlewissr" target="_blank">📘 Facebook: Kenneth J. Lewis Sr.</a>
+      <a href="https://www.linkedin.com/in/kennethjlewissr" target="_blank">💼 LinkedIn: Kenneth J. Lewis Sr.</a>
+      <a href="mailto:kennethjlewissr@gmail.com">✉️ Email: kennethjlewissr@gmail.com</a>
+      <a href="tel:6093726022">📞 Call: 609-372-6022</a>
+    </div>
+
+    <p class="footer-note">Let’s build, connect, and share creativity — one moment at a time.</p>
   </div>
 </body>
 </html>

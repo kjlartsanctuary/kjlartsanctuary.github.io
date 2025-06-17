@@ -3,67 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KJL Art Sanctuary</title>
-  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+  <title>KJL Art Sanctuary | Home</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      background-color: #f8f1e7; /* Muted sand */
       color: #333;
       margin: 0;
-      padding: 20px;
+      padding: 0;
     }
-    h1 {
+
+    header {
+      background-color: #ddd0c8;
+      padding: 20px 0;
       text-align: center;
-      margin-bottom: 20px;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
     nav {
       text-align: center;
+      background-color: #e7dbd0;
+      padding: 10px 0;
       margin-bottom: 30px;
     }
+
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
+
     nav a:hover {
-      color: #007acc;
+      color: #b56b27;
     }
-    .image-wrapper {
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      font-size: 18px;
+      line-height: 1.7;
       text-align: center;
-      margin: 40px 0;
     }
-    .image-wrapper img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    .featured-image {
+      display: block;
+      max-width: 600px;
+      width: 90%;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #e7dbd0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <h1>KJL Art Sanctuary</h1>
+
+  <header>
+    <h1>KJL Art Sanctuary</h1>
+  </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html">Artwork</a>
     <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>
-      <a href="exhibitions.html">Exhibitions</a>
-
+    <a href="exhibitions.html">Exhibitions</a>
   </nav>
 
-  <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto;">
-   Welcome to the official website of Artist Kenneth J. Lewis Sr.
-A self-taught artist who picked up the brush at 47, Kenneth has since built a powerful, story-rich body of work. This site offers a curated glimpse into his visual world—original paintings, podcast episodes, and more. Collectors, curators, and art dealers are invited to explore the full journey through the KJL Podcast Channel, social platforms, or by visiting the studio in person.
-  </p>
+  <section class="intro">
+    <p>
+      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
+    </p>
+    <p>
+      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks.
+    </p>
+  </section>
 
-  <div class="image-wrapper">
-    <img src="images/KJL101.jpg" alt="Artist Kenneth J. Lewis Sr in front of paintings" />
-  </div>
+  <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
 
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+  <footer>
+    &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
+  </footer>
+
 </body>
 </html>

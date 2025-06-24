@@ -7,10 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-     body {
-  background-color: #ececec; /* soft light gray */
-}
-
+      background-color: #ececec; /* soft light gray */
       color: #333;
       margin: 0;
       padding: 20px;
@@ -33,55 +30,42 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller thumbnails */
       gap: 15px;
+      max-width: 900px;
+      margin: 0 auto 40px;
       justify-items: center;
     }
 
+    .gallery-grid a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
     .gallery-grid a img {
+      max-width: 150px;
       width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease-in-out;
+      margin-bottom: 5px;
     }
 
     .gallery-grid a img:hover {
       transform: scale(1.05);
     }
-  </st.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller max width */
-  gap: 15px;
-  max-width: 900px;
-  margin: 0 auto 40px;
-}
 
-.gallery-grid a {
-  display: block;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-}
-
-.gallery-grid a img {
-  max-width: 150px;   /* smaller image max width */
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 6px;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-}
-
-.gallery-grid a figcaption {
-  font-size: 13px;
-  color: #666;
-}
-yle>
+    figcaption {
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
   <h1>KJL Art Sanctuary Gallery</h1>
 <section class="gallery-section">

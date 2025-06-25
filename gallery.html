@@ -222,6 +222,7 @@
   .gallery-grid-structure a {
     text-align: center;
     display: block;
+    position: relative;
   }
 
   .gallery-grid-structure img {
@@ -243,6 +244,23 @@
     font-size: 13px;
     color: #666;
   }
+
+  /* Watermark overlay */
+  .gallery-grid-structure a::before {
+    content: "Artist Kenneth J. Lewis Sr.";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    pointer-events: none;
+    white-space: nowrap;
+  }
 </style>
 
 <div class="gallery-grid-structure">
@@ -250,44 +268,57 @@
     <img src="images/Crowning A Prince.jpg" alt="Crowning A Prince" />
     <figcaption>Crowning A Prince</figcaption>
   </a>
+
+  <a href="images/Revolutionary.jpg" data-lightbox="structure" data-title="Revolutionary">
+    <img src="images/Revolutionary.jpg" alt="Revolutionary" />
+    <figcaption>Revolutionary</figcaption>
+  </a>
+
   <a href="images/Royal Birth.jpg" data-lightbox="structure" data-title="Royal Birth">
     <img src="images/Royal Birth.jpg" alt="Royal Birth" />
     <figcaption>Royal Birth</figcaption>
-  
+  </a>
 
   <a href="images/Royal Dancers.jpg" data-lightbox="structure" data-title="Royal Dancers">
     <img src="images/Royal Dancers.jpg" alt="Royal Dancers" />
     <figcaption>Royal Dancers</figcaption>
   </a>
+
   <a href="images/Royal Gathering.jpg" data-lightbox="structure" data-title="Royal Gathering">
     <img src="images/Royal Gathering.jpg" alt="Royal Gathering" />
     <figcaption>Royal Gathering</figcaption>
   </a>
- 
+
   <a href="images/structure01.jpg" data-lightbox="structure" data-title="Structure 01">
     <img src="images/structure01.jpg" alt="Structure 01" />
     <figcaption>Structure 01</figcaption>
   </a>
+
   <a href="images/structure02.jpg" data-lightbox="structure" data-title="Structure 02">
     <img src="images/structure02.jpg" alt="Structure 02" />
     <figcaption>Structure 02</figcaption>
   </a>
+
   <a href="images/structure03.jpg" data-lightbox="structure" data-title="Structure 03">
     <img src="images/structure03.jpg" alt="Structure 03" />
     <figcaption>Structure 03</figcaption>
   </a>
+
   <a href="images/structure04.jpg" data-lightbox="structure" data-title="Structure 04">
     <img src="images/structure04.jpg" alt="Structure 04" />
     <figcaption>Structure 04</figcaption>
   </a>
+
   <a href="images/structure05.jpg" data-lightbox="structure" data-title="Structure 05">
     <img src="images/structure05.jpg" alt="Structure 05" />
     <figcaption>Structure 05</figcaption>
   </a>
+
   <a href="images/structure06.jpg" data-lightbox="structure" data-title="Structure 06">
     <img src="images/structure06.jpg" alt="Structure 06" />
     <figcaption>Structure 06</figcaption>
   </a>
+</div>
 </div>
 
 </div>

@@ -81,10 +81,45 @@
 </p>
 
 <section class="gallery-section">
- <h2 class="gallery-title">Luggage Mixed Media Series</h2>
+<h2 class="gallery-title">Luggage Mixed Media Series</h2>
 <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; font-size: 1.1em; color: #444;">
   A vibrant celebration of color, form, and travel — this series blends acrylic and oil pastel into bold, abstract visions of luggage. Each piece bursts with personality and movement, capturing the soulful journey of stories packed and waiting to unfold.
 </p>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    max-width: 900px; /* width limit to contain grid */
+    margin: 0 auto 40px;
+  }
+
+  .gallery-grid a {
+    text-align: center;
+    display: block;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    max-width: 280px; /* smaller max width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+    margin: 0 auto 5px auto;
+    display: block;
+  }
+
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-grid figcaption {
+    font-size: 13px;
+    color: #666;
+  }
+</style>
 
 <div class="gallery-grid">
   <a href="images/Luggage01.jpg" data-lightbox="luggage" data-title="Luggage 01">
@@ -127,6 +162,8 @@
     <img src="images/Luggage10.jpg" alt="Luggage 10" />
     <figcaption>Luggage 10</figcaption>
   </a>
+</div>
+
 </div>
 
 

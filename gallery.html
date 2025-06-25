@@ -6,71 +6,75 @@
   <title>KJL Art Sanctuary Gallery</title>
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ececec;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ececec;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    p.description {
-      text-align: center;
-      font-size: 18px;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      line-height: 1.4;
-    }
+  p.description {
+    text-align: center;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.4;
+  }
 
-    .gallery-section {
-      margin-bottom: 60px;
-    }
+  .gallery-section {
+    margin-bottom: 60px;
+  }
 
-    .gallery-title {
-      font-size: 24px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+  .gallery-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-   .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 960px; /* narrower */
-  margin: 0 auto 40px;
-}
+  /* Grid container: 2 columns, max width 700px */
+  .gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns */
+    gap: 20px !important;
+    max-width: 700px !important; /* narrower container */
+    margin: 0 auto 40px !important;
+  }
 
-.image-caption-container {
-  text-align: center;
-}
+  /* Image container */
+  .image-caption-container {
+    text-align: center !important;
+  }
 
-.image-caption-container img {
-  width: 280px; /* fixed width */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease-in-out;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  /* Images: fixed width, override others */
+  .image-caption-container img {
+    width: 280px !important; /* fixed width */
+    max-width: 100% !important; /* don’t exceed container */
+    height: auto !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    transition: transform 0.2s ease-in-out !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
-.image-caption-container img:hover {
-  transform: scale(1.05);
-}
+  .image-caption-container img:hover {
+    transform: scale(1.05) !important;
+  }
 
-
-    .caption {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #444;
-    }
-  </style>
+  /* Caption text */
+  .caption {
+    margin-top: 8px !important;
+    font-size: 14px !important;
+    color: #444 !important;
+  }
+</style>
 </head>
 <body>
 

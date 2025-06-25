@@ -226,13 +226,15 @@
   }
 
   .gallery-grid-structure img {
-    width: 100%;
+    width: auto;
     max-width: 100%;
-    height: auto;
+    max-height: 320px;        /* Limit max height */
+    margin: 0 auto;
+    display: block;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s ease-in-out;
-    display: block;
+    object-fit: contain;      /* maintain aspect ratio, no cropping */
   }
 
   .gallery-grid-structure img:hover {
@@ -266,11 +268,6 @@
   <a href="images/Crowning A Prince.jpg" data-lightbox="structure" data-title="Crowning A Prince">
     <img src="images/Crowning A Prince.jpg" alt="Crowning A Prince" />
     <figcaption>Crowning A Prince</figcaption>
-  </a>
-
-  <a href="images/Revolutionary.jpg" data-lightbox="structure" data-title="Revolutionary">
-    <img src="images/Revolutionary.jpg" alt="Revolutionary" />
-    <figcaption>Revolutionary</figcaption>
   </a>
 
   <a href="images/Royal Birth.jpg" data-lightbox="structure" data-title="Royal Birth">
@@ -319,7 +316,6 @@
   </a>
 </div>
 
-</div>
 </div>
 
 </div>

@@ -1,176 +1,113 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Original Art | Kenneth J. Lewis Sr.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KJL Art Sanctuary | Home</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f6f3ee;
-      color: #222;
+      background-color: #f8f1e7; /* Muted sand */
+      color: #333;
       margin: 0;
       padding: 0;
-      line-height: 1.8;
-      font-size: 1.15rem;
     }
-    .container {
-      max-width: 1000px;
+
+    header {
+      background-color: #ddd0c8;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #e7dbd0;
+      padding: 10px 0;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #b56b27;
+    }
+
+    .intro {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 20px;
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: center;
     }
-    h1, h2, h3, h4 {
-      color: #111;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      padding: 14px;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
-    }
-    th {
-      background-color: #ece7df;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .gallery-item {
-      width: calc(25% - 20px);
-      box-sizing: border-box;
-      cursor: pointer;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      transition: transform 0.3s ease;
-    }
-    .gallery-item img:hover {
-      transform: scale(1.03);
-    }
-    .gallery-item h4 {
-      margin: 10px 0 5px;
-      font-size: 1rem;
-    }
-    @media (max-width: 768px) {
-      .gallery-item {
-        width: calc(50% - 20px);
-      }
-    }
-    @media (max-width: 480px) {
-      .gallery-item {
-        width: 100%;
-      }
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.9);
-    }
-    .lightbox img {
+
+    .featured-image {
       display: block;
-      margin: auto;
-      max-width: 90%;
-      max-height: 80vh;
+      max-width: 600px;
+      width: 90%;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .lightbox:target {
-      display: block;
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #e7dbd0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Original Art</h1>
-    <h2>Limited Edition Artisan Archival Prints by Kenneth J. Lewis Sr.</h2>
+
+  <header>
+    <h1>KJL Art Sanctuary</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Artwork</a>
+    <a href="bio.html">Artist Bio</a>
+    <a href="podcast.html">Podcast</a>
+      <a href="social.html">Social</a>
+    <a href="exhibitions.html">Exhibitions</a>
+      <section style="text-align:center; padding: 60px 20px; background-color: #f5f5f5;">
+  <h2 style="font-size: 2rem; margin-bottom: 10px;">Canvas Reproductions</h2>
+  <p style="max-width: 700px; margin: 0 auto 20px; font-size: 1.1rem;">
+    Explore a special selection of limited edition, signed and numbered artisan canvas prints by Kenneth J. Lewis Sr.
+  </p>
+  <a href="canvas-reproductions.html" class="cta-button" style="padding: 12px 28px; background-color: #111; color: #fff; text-decoration: none; border-radius: 6px; font-size: 1rem;">
+    View the Collection
+  </a>
+</section>
+  </nav>
+
+  <section class="intro">
     <p>
-      Own a museum-quality canvas reproduction of select original works by Kenneth J. Lewis Sr.—exclusively produced as <strong>signed and numbered limited editions</strong>, each accompanied by a <strong>Certificate of Authenticity</strong>.
+      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
     </p>
     <p>
-      These reproductions are printed on <strong>Artisan Archival Canvas</strong> using state-of-the-art technology to preserve the texture, richness, and depth of the original painting.
+      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks.
     </p>
+  </section>
 
-    <h3>Collector’s Details</h3>
-    <ul>
-      <li>Limited Edition of 20 per size</li>
-      <li>Each canvas is hand-signed and numbered</li>
-      <li>Includes a Certificate of Authenticity</li>
-      <li>Only available directly through the artist</li>
-      <li>Archival inks and canvas rated for 100+ year longevity</li>
-    </ul>
+  <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
 
-    <h3>Available Sizes & Formats</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Size</th>
-          <th>Rolled (Not Mounted)</th>
-          <th>Image Wrap (Mounted)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>16×20″</td>
-          <td>$299</td>
-          <td>$399</td>
-        </tr>
-        <tr>
-          <td>24×30″</td>
-          <td>$549</td>
-          <td>$719</td>
-        </tr>
-        <tr>
-          <td>30×40″</td>
-          <td>$899</td>
-          <td>$1,199</td>
-        </tr>
-        <tr>
-          <td>36×48″</td>
-          <td>$1,099</td>
-          <td>$1,499</td>
-        </tr>
-      </tbody>
-    </table>
+  <footer>
+    &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
+  </footer>
 
-    <h3>What You Receive</h3>
-    <ul>
-      <li>Your selected size and format, produced using artisan archival materials</li>
-      <li>Hand-signed and numbered by Kenneth J. Lewis Sr.</li>
-      <li>Certificate of Authenticity included</li>
-      <li>Optional personalization available upon request</li>
-    </ul>
-
-    <h3>Shipping & Handling</h3>
-    <p>
-      Rolled canvases are shipped securely in protective tubes. Image wrap canvases are stretched and ready to hang upon delivery. Shipping is calculated at checkout. Please allow 10–14 business days for production and delivery.
-    </p>
-
-    <h3>Have Questions or Want to Order?</h3>
-    <p>
-      If you have questions, need assistance selecting a piece, or would like to place an order, please contact Kenneth directly:
-    </p>
-    <p><strong>Email:</strong> <a href="mailto:kjlartsanctuary@gmail.com">kjlartsanctuary@gmail.com</a><br>
-    <strong>Phone:</strong> 609-372-6022</p>
-
-    <h2 style="margin-top: 60px;">Available Canvas Reproductions</h2>
-
-    <!-- Gallery content remains unchanged -->
-  </div>
 </body>
 </html>

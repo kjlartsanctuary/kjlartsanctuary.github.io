@@ -17,46 +17,65 @@
       padding: 40px 20px;
       text-align: center;
     }
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 2.5em;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
+    header p {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .art {
-      width: 280px;
-      text-align: center;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
-    .art img {
-      width: 100%;
-      border: 3px solid #ccc;
+    .image-caption-container {
+      background: white;
       border-radius: 10px;
-      transition: transform 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
     }
-    .art img:hover {
-      transform: scale(1.03);
-      border-color: #888;
+    .image-caption-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
-    .title {
-      margin-top: 10px;
+    .image-caption-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 3px solid #ccc;
+      border-radius: 10px 10px 0 0;
+    }
+    .caption {
+      padding: 12px 8px;
       font-weight: bold;
       font-size: 1em;
+      color: #333;
     }
     .back-link {
-      display: inline-block;
-      margin: 30px auto;
+      display: block;
       text-align: center;
+      margin: 40px 0 20px 0;
       font-weight: bold;
+      font-size: 1.2em;
       color: #0077cc;
       text-decoration: none;
-      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover {
+      color: #005fa3;
     }
     footer {
       text-align: center;
@@ -64,95 +83,118 @@
       background-color: #eee;
       margin-top: 40px;
       font-size: 0.9em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      header p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
     }
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
 
   <header>
     <h1>Luggage Series</h1>
-    <p>Art by Kenneth J. Lewis Sr.</p>
+    <p>This body of work explores the weight we carry—both seen and unseen. Each piece reflects a personal or universal journey, with luggage as the metaphor for life, memory, burden, and hope.</p>
   </header>
 
   <main>
-    <div class="gallery">
-      <!-- Sample artwork block: replace or add more as needed -->
-      <div class="art">
-        <img src="images/luggage1.jpg" alt="Luggage No. 1" />
-        <div class="title">Luggage No. 1</div>
+    <div class="gallery-grid">
+      <!-- Luggage image blocks -->
+      <div class="image-caption-container">
+        <a href="images/Luggage01.jpg" data-lightbox="luggage" data-title="Luggage 01">
+          <img src="images/Luggage01.jpg" alt="Luggage 01" />
+        </a>
+        <div class="caption">Luggage 01</div>
       </div>
-      <div class="art">
-        <img src="images/luggage2.jpg" alt="Luggage No. 2" />
-        <div class="title">Luggage No. 2</div>
+      <div class="image-caption-container">
+        <a href="images/Luggage02.jpg" data-lightbox="luggage" data-title="Luggage 02">
+          <img src="images/Luggage02.jpg" alt="Luggage 02" />
+        </a>
+        <div class="caption">Luggage 02</div>
       </div>
-      <div class="art">
-        <img src="images/luggage3.jpg" alt="Luggage No. 3" />
-        <div class="title">Luggage No. 3</div>
+      <div class="image-caption-container">
+        <a href="images/Luggage03.jpg" data-lightbox="luggage" data-title="Luggage 03">
+          <img src="images/Luggage03.jpg" alt="Luggage 03" />
+        </a>
+        <div class="caption">Luggage 03</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage04.jpg" data-lightbox="luggage" data-title="Luggage 04">
+          <img src="images/Luggage04.jpg" alt="Luggage 04" />
+        </a>
+        <div class="caption">Luggage 04</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage05.jpg" data-lightbox="luggage" data-title="Luggage 05">
+          <img src="images/Luggage05.jpg" alt="Luggage 05" />
+        </a>
+        <div class="caption">Luggage 05</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage06.jpg" data-lightbox="luggage" data-title="Luggage 06">
+          <img src="images/Luggage06.jpg" alt="Luggage 06" />
+        </a>
+        <div class="caption">Luggage 06</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage07.jpg" data-lightbox="luggage" data-title="Luggage 07">
+          <img src="images/Luggage07.jpg" alt="Luggage 07" />
+        </a>
+        <div class="caption">Luggage 07</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage08.jpg" data-lightbox="luggage" data-title="Luggage 08">
+          <img src="images/Luggage08.jpg" alt="Luggage 08" />
+        </a>
+        <div class="caption">Luggage 08</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage09.jpg" data-lightbox="luggage" data-title="Luggage 09">
+          <img src="images/Luggage09.jpg" alt="Luggage 09" />
+        </a>
+        <div class="caption">Luggage 09</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage10.jpg" data-lightbox="luggage" data-title="Luggage 10">
+          <img src="images/Luggage10.jpg" alt="Luggage 10" />
+        </a>
+        <div class="caption">Luggage 10</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage11.jpg" data-lightbox="luggage" data-title="Luggage 11">
+          <img src="images/Luggage11.jpg" alt="Luggage 11" />
+        </a>
+        <div class="caption">Luggage 11</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage12.jpg" data-lightbox="luggage" data-title="Luggage 12">
+          <img src="images/Luggage12.jpg" alt="Luggage 12" />
+        </a>
+        <div class="caption">Luggage 12</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/Luggage13.jpg" data-lightbox="luggage" data-title="Luggage 13">
+          <img src="images/Luggage13.jpg" alt="Luggage 13" />
+        </a>
+        <div class="caption">Luggage 13</div>
       </div>
     </div>
 
-    <div style="text-align: center;">
-      <a href="index.html" class="back-link">&larr; Back to Home</a>
-    </div>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
   </main>
 
   <footer>
     &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
   </footer>
 
+  <!-- Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
 </body>
 </html>
-
-div class="gallery-grid">
-  <a href="images/Luggage01.jpg" data-lightbox="luggage" data-title="Luggage 01">
-    <img src="images/Luggage01.jpg" alt="Luggage 01" />
-    <figcaption>Luggage 01</figcaption>
-  </a>
-  <a href="images/Luggage02.jpg" data-lightbox="luggage" data-title="Luggage 02">
-    <img src="images/Luggage02.jpg" alt="Luggage 02" />
-    <figcaption>Luggage 02</figcaption>
-  </a>
-  <a href="images/Luggage03.jpg" data-lightbox="luggage" data-title="Luggage 03">
-    <img src="images/Luggage03.jpg" alt="Luggage 03" />
-    <figcaption>Luggage 03</figcaption>
-  </a>
-  <a href="images/Luggage04.jpg" data-lightbox="luggage" data-title="Luggage 04">
-    <img src="images/Luggage04.jpg" alt="Luggage 04" />
-    <figcaption>Luggage 04</figcaption>
-  </a>
-  <a href="images/Luggage05.jpg" data-lightbox="luggage" data-title="Luggage 05">
-    <img src="images/Luggage05.jpg" alt="Luggage 05" />
-    <figcaption>Luggage 05</figcaption>
-  </a>
-  <a href="images/Luggage06.jpg" data-lightbox="luggage" data-title="Luggage 06">
-    <img src="images/Luggage06.jpg" alt="Luggage 06" />
-    <figcaption>Luggage 06</figcaption>
-  </a>
-  <a href="images/Luggage07.jpg" data-lightbox="luggage" data-title="Luggage 07">
-    <img src="images/Luggage07.jpg" alt="Luggage 07" />
-    <figcaption>Luggage 07</figcaption>
-  </a>
-  <a href="images/Luggage08.jpg" data-lightbox="luggage" data-title="Luggage 08">
-    <img src="images/Luggage08.jpg" alt="Luggage 08" />
-    <figcaption>Luggage 08</figcaption>
-  </a>
-  <a href="images/Luggage09.jpg" data-lightbox="luggage" data-title="Luggage 09">
-    <img src="images/Luggage09.jpg" alt="Luggage 09" />
-    <figcaption>Luggage 09</figcaption>
-  </a>
-  <a href="images/Luggage10.jpg" data-lightbox="luggage" data-title="Luggage 10">
-    <img src="images/Luggage10.jpg" alt="Luggage 10" />
-    <figcaption>Luggage 10</figcaption>
-  </a>
-  <a href="images/Luggage11.jpg" data-lightbox="luggage" data-title="Luggage 11">
-    <img src="images/Luggage11.jpg" alt="Luggage 11" />
-    <figcaption>Luggage 11</figcaption>
-  </a>
-  <a href="images/Luggage12.jpg" data-lightbox="luggage" data-title="Luggage 12">
-    <img src="images/Luggage12.jpg" alt="Luggage 12" />
-    <figcaption>Luggage 12</figcaption>
-  </a>
-  <a href="images/Luggage13.jpg" data-lightbox="luggage" data-title="Luggage 13">
-    <img src="images/Luggage13.jpg" alt="Luggage 13" />
-    <figcaption>Luggage 13</figcaption>
-  </a>

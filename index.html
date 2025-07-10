@@ -52,15 +52,6 @@
       text-align: center;
     }
 
-    .featured-image {
-      display: block;
-      max-width: 600px;
-      width: 90%;
-      margin: 30px auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
     .series-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -97,6 +88,15 @@
     .series-card span {
       display: block;
       padding: 10px 0;
+    }
+
+    .featured-image {
+      display: block;
+      max-width: 600px;
+      width: 90%;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .section-link {
@@ -136,7 +136,6 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="gallery.html">Original Artwork</a>
     <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>
@@ -153,9 +152,11 @@
     </p>
   </section>
 
-  <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
-
   <section class="series-grid">
+    <a class="series-card" href="gallery.html">
+      <img src="images/KJL101.jpg" alt="Original Artwork" />
+      <span>Original Artwork</span>
+    </a>
     <a class="series-card" href="abstract.html">
       <img src="images/UA33.jpg" alt="Abstract Series" />
       <span>Abstract Series</span>
@@ -168,35 +169,37 @@
       <img src="images/Basquiat Portrait 3.jpg" alt="Basquiat Series" />
       <span>Basquiat Series</span>
     </a>
-    <a class="series-card" href="where-the-daisy-grows.html">
-      <img src="images/daisy02.jpg" alt="Where the Daisy Grows Series" />
-      <span>Where the Daisy Grows Series</span>
-    </a>
-    <a class="series-card" href="pots-and-pans.html">
-      <img src="images/pots01.jpg" alt="Pots and Pans Series" />
-      <span>Pots and Pans Series</span>
-    </a>
-    <a class="series-card" href="mens-series.html">
-      <img src="images/mens01.jpg" alt="Men’s Series" />
-      <span>Men’s Series</span>
-    </a>
-    <a class="series-card" href="luggage-series.html">
-      <img src="images/luggage01.jpg" alt="Luggage Series" />
-      <span>Luggage Series</span>
-    </a>
-    <a class="series-card" href="harlem-renaissance.html">
-      <img src="images/hr03.jpg" alt="Harlem Renaissance Series" />
-      <span>Harlem Renaissance Series</span>
-    </a>
-    <a class="series-card" href="figurative-series.html">
-      <img src="images/figurative01.jpg" alt="Figurative Series" />
-      <span>Figurative Series</span>
-    </a>
     <a class="series-card" href="ephemeral-glow.html">
       <img src="images/EG7.jpg" alt="Ephemeral Glow Series" />
       <span>Ephemeral Glow Series</span>
     </a>
+    <a class="series-card" href="where-the-daisy-grows.html">
+      <img src="images/Daisy1.jpg" alt="Where the Daisy Grows" />
+      <span>Where the Daisy Grows Series</span>
+    </a>
+    <a class="series-card" href="pots-and-pans.html">
+      <img src="images/Pots1.jpg" alt="Pots and Pans" />
+      <span>Pots and Pans Series</span>
+    </a>
+    <a class="series-card" href="mens-series.html">
+      <img src="images/Men1.jpg" alt="Men’s Series" />
+      <span>Men’s Series</span>
+    </a>
+    <a class="series-card" href="luggage-series.html">
+      <img src="images/Luggage1.jpg" alt="Luggage Series" />
+      <span>Luggage Series</span>
+    </a>
+    <a class="series-card" href="harlem-renaissance.html">
+      <img src="images/hr01.jpg" alt="Harlem Renaissance" />
+      <span>Harlem Renaissance Series</span>
+    </a>
+    <a class="series-card" href="figurative-series.html">
+      <img src="images/Fig1.jpg" alt="Figurative Series" />
+      <span>Figurative Series</span>
+    </a>
   </section>
+
+  <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
 
   <section class="section-link">
     <h2>Canvas Reproductions</h2>

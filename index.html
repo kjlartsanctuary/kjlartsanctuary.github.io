@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KJL Art Sanctuary | Home</title>
+  <title>Artist Kenneth J Lewis Sr | Home</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,22 +25,13 @@
       letter-spacing: 1px;
     }
 
-    nav {
+    .intro {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      font-size: 18px;
+      line-height: 1.7;
       text-align: center;
-      background-color: #e7dbd0;
-      padding: 10px 0;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #b56b27;
     }
 
     .thumbnail-grid {
@@ -94,6 +85,24 @@
       margin-top: 3px;
     }
 
+    nav.bottom-nav {
+      text-align: center;
+      background-color: #e7dbd0;
+      padding: 12px 0;
+      margin-bottom: 30px;
+    }
+
+    nav.bottom-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav.bottom-nav a:hover {
+      color: #b56b27;
+    }
+
     .featured-image {
       display: block;
       max-width: 600px;
@@ -110,45 +119,25 @@
       background-color: #e7dbd0;
       font-size: 14px;
     }
-
-    .intro {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      padding: 20px;
-      font-size: 18px;
-      line-height: 1.7;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>KJL Art Sanctuary</h1>
+    <h1>Artist Kenneth J Lewis Sr</h1>
   </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="bio.html">Artist Bio</a>
-    <a href="podcast.html">Podcast</a>
-    <a href="social.html">Social</a>
-    <a href="exhibitions.html">Exhibitions</a>
-    <a href="canvas-reproductions.html">Canvas Reproductions</a>
-  </nav>
 
   <section class="intro">
     <p>
       Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
     </p>
     <p>
-      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks.   Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.
-      (609) 372-6022  kjlartsanctuary@gmail.com
-  </p>
+      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
+      (609) 372-6022 · kjlartsanctuary@gmail.com
     </p>
   </section>
 
   <section class="thumbnail-grid">
-
     <a href="abstract.html">
       <img src="images/abstract31.jpg" alt="Abstract Series" />
       <div class="thumbnail-caption">Abstract Series</div>
@@ -214,8 +203,17 @@
       <div class="thumbnail-caption">Where the Daisy Grows Series</div>
       <div class="thumbnail-description">A gentle meditation on nature, healing, and growth.</div>
     </a>
-
   </section>
+
+  <!-- Moved Full Nav Under Thumbnails -->
+  <nav class="bottom-nav">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Artist Bio</a>
+    <a href="podcast.html">Podcast</a>
+    <a href="social.html">Social</a>
+    <a href="canvas-reproductions.html">Canvas Reproductions</a>
+    <a href="exhibitions.html">Exhibitions</a>
+  </nav>
 
   <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
 

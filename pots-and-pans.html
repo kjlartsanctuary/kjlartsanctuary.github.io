@@ -17,54 +17,74 @@
       padding: 40px 20px;
       text-align: center;
     }
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 2.5em;
       letter-spacing: 1px;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
     }
-    .art-piece {
-      width: 280px;
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .image-container {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
       text-align: center;
     }
-    .art-piece img {
+    .image-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .image-container img {
       width: 100%;
-      border: 3px solid #ccc;
-      border-radius: 10px;
-      transition: transform 0.2s;
+      height: auto;
+      display: block;
     }
-    .art-piece img:hover {
-      transform: scale(1.03);
-      border-color: #888;
-    }
-    .art-title {
-      margin-top: 10px;
+    .caption {
+      padding: 10px;
       font-weight: bold;
       font-size: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 40px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      color: #005fa3;
     }
     footer {
       text-align: center;
       background-color: #eee;
       padding: 30px 20px;
-      margin-top: 40px;
       font-size: 0.9em;
-    }
-    a.back-link {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
+      color: #555;
     }
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -74,38 +94,74 @@
   </header>
 
   <main>
-    <div class="gallery">
-      <div class="art-piece">
-        <img src="images/PP1.jpg" alt="Pots No. 1" />
-        <div class="art-title">Pots No. 1</div>
+    <div class="intro">
+      This series elevates everyday objects—pots, pans, and kitchenware—into bold symbols of nourishment, tradition, and shared experience. A celebration of home life and memory, each piece transforms the ordinary into the extraordinary.
+    </div>
+
+    <div class="gallery-grid">
+      <div class="image-container">
+        <a href="images/PP1.jpg" data-lightbox="pots" data-title="Pots No. 1">
+          <img src="images/PP1.jpg" alt="Pots No. 1" />
+        </a>
+        <div class="caption">Pots No. 1</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP2.jpg" alt="Pots No. 2" />
-        <div class="art-title">Pots No. 2</div>
+      <div class="image-container">
+        <a href="images/PP2.jpg" data-lightbox="pots" data-title="Pots No. 2">
+          <img src="images/PP2.jpg" alt="Pots No. 2" />
+        </a>
+        <div class="caption">Pots No. 2</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP3.jpg" alt="Pots No. 3" />
-        <div class="art-title">Pots No. 3</div>
+      <div class="image-container">
+        <a href="images/PP3.jpg" data-lightbox="pots" data-title="Pots No. 3">
+          <img src="images/PP3.jpg" alt="Pots No. 3" />
+        </a>
+        <div class="caption">Pots No. 3</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP4.jpg" alt="Pots No. 4" />
-        <div class="art-title">Pots No. 4</div>
+      <div class="image-container">
+        <a href="images/PP4.jpg" data-lightbox="pots" data-title="Pots No. 4">
+          <img src="images/PP4.jpg" alt="Pots No. 4" />
+        </a>
+        <div class="caption">Pots No. 4</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP5.jpg" alt="Pots No. 5" />
-        <div class="art-title">Pots No. 5</div>
+      <div class="image-container">
+        <a href="images/PP5.jpg" data-lightbox="pots" data-title="Pots No. 5">
+          <img src="images/PP5.jpg" alt="Pots No. 5" />
+        </a>
+        <div class="caption">Pots No. 5</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP6.jpg" alt="Pots No. 6" />
-        <div class="art-title">Pots No. 6</div>
+      <div class="image-container">
+        <a href="images/PP6.jpg" data-lightbox="pots" data-title="Pots No. 6">
+          <img src="images/PP6.jpg" alt="Pots No. 6" />
+        </a>
+        <div class="caption">Pots No. 6</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP7.jpg" alt="Pots No. 7" />
-        <div class="art-title">Pots No. 7</div>
+      <div class="image-container">
+        <a href="images/PP7.jpg" data-lightbox="pots" data-title="Pots No. 7">
+          <img src="images/PP7.jpg" alt="Pots No. 7" />
+        </a>
+        <div class="caption">Pots No. 7</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP8.jpg" alt="Pots No. 8" />
-        <div class="art-title">Pots No. 8</div>
+      <div class="image-container">
+        <a href="images/PP8.jpg" data-lightbox="pots" data-title="Pots No. 8">
+          <img src="images/PP8.jpg" alt="Pots No. 8" />
+        </a>
+        <div class="caption">Pots No. 8</div>
       </div>
-      <div class="art-piece">
-        <img src="images/PP9.
+      <div class="image-container">
+        <a href="images/PP9.jpg" data-lightbox="pots" data-title="Pots No. 9">
+          <img src="images/PP9.jpg" alt="Pots No. 9" />
+        </a>
+        <div class="caption">Pots No. 9</div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+</body>
+</html>

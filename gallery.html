@@ -18,12 +18,13 @@
       margin-bottom: 20px;
     }
 
-    p.description {
+    p.description, p {
       text-align: center;
       font-size: 18px;
       max-width: 800px;
-      margin: 0 auto 40px;
+      margin: 0 auto 30px;
       line-height: 1.4;
+      color: #444;
     }
 
     .gallery-section {
@@ -36,124 +37,88 @@
       text-align: center;
     }
 
-    .gallery-grid {
+    .gallery-grid,
+    .gallery-grid-structure,
+    .gallery-grid-daisy {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
-      gap: 30px;
-      max-width: 800px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
       margin: 0 auto 40px;
     }
 
-    .image-caption-container {
+    .image-caption-container, .gallery-grid a {
       text-align: center;
+      display: block;
+      position: relative;
     }
 
-    .image-caption-container img {
+    img {
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: transform 0.2s ease-in-out;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
     }
 
-    .image-caption-container img:hover {
+    img:hover {
       transform: scale(1.05);
     }
 
-    .caption {
+    figcaption, .caption {
       margin-top: 8px;
       font-size: 14px;
       color: #444;
+    }
+
+    .gallery-grid a::before,
+    .gallery-grid-structure a::before,
+    .gallery-grid-daisy a::before {
+      content: "Artist Kenneth J. Lewis Sr.";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.95em;
+      pointer-events: none;
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
 
- 
-
   <h1>KJL Art Sanctuary Gallery</h1>
-  <p style="text-align: center; font-size: 1.1em; max-width: 700px; margin: 20px auto 30px; color: #444;">
-  Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (to much to list here)—if you'd like  a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.
-</p>
+  <p>
+    Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.
+  </p>
 
-
-</style>
-
-<h2 class="gallery-title">Luggage Mixed Media Series</h2>
-<p style="text-align: center; max-width: 600px; margin: 0 auto 30px; font-size: 1.1em; color: #444;">
-  A vibrant celebration of color, form, and travel — this series blends acrylic and oil pastel into bold, abstract visions of luggage. Each piece bursts with personality and movement, capturing the soulful journey of stories packed and waiting to unfold.
-</p>
-
-<style>
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto 40px;
-  }
-
-  .gallery-grid a {
-    text-align: center;
-    display: block;
-    position: relative;
-  }
-
-  .gallery-grid img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease-in-out;
-    margin: 0 auto 5px auto;
-    display: block;
-  }
-
-  .gallery-grid img:hover {
-    transform: scale(1.05);
-  }
-
-  .gallery-grid figcaption {
-    font-size: 13px;
-    color: #666;
-  }
-
-  /* Watermark Overlay */
-  .gallery-grid a::before {
-    content: "Artist Kenneth J. Lewis Sr.";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-size: 0.95em;
-    pointer-events: none;
-    white-space: nowrap;
-  }
-</style>
-
-<
-  <a href="images/Luggage14.jpg" data-lightbox="luggage" data-title="Luggage 14">
-    <img src="images/Luggage14.jpg" alt="Luggage 14" />
-    <figcaption>Luggage 14</figcaption>
-  </a>
-  <a href="images/Luggage15.jpg" data-lightbox="luggage" data-title="Luggage 15">
-    <img src="images/Luggage15.jpg" alt="Luggage 15" />
-    <figcaption>Luggage 15</figcaption>
-  </a>
-  <a href="images/Luggage16.jpg" data-lightbox="luggage" data-title="Luggage 16">
-    <img src="images/Luggage16.jpg" alt="Luggage 16" />
-    <figcaption>Luggage 16</figcaption>
-  </a>
+  <!-- Luggage Series -->
+  <h2 class="gallery-title">Luggage Mixed Media Series</h2>
+  <p>
+    A vibrant celebration of color, form, and travel — this series blends acrylic and oil pastel into bold, abstract visions of luggage. Each piece bursts with personality and movement, capturing the soulful journey of stories packed and waiting to unfold.
+  </p>
+  <div class="gallery-grid">
+    <a href="images/Luggage14.jpg" data-lightbox="luggage" data-title="Luggage 14">
+      <img src="images/Luggage14.jpg" alt="Luggage 14" />
+      <figcaption>Luggage 14</figcaption>
+    </a>
+    <a href="images/Luggage15.jpg" data-lightbox="luggage" data-title="Luggage 15">
+      <img src="images/Luggage15.jpg" alt="Luggage 15" />
+      <figcaption>Luggage 15</figcaption>
+    </a>
+    <a href="images/Luggage16.jpg" data-lightbox="luggage" data-title="Luggage 16">
+      <img src="images/Luggage16.jpg" alt="Luggage 16" />
+      <figcaption>Luggage 16</figcaption>
+    </a>
+  </div>
 </div>
 
 </div>

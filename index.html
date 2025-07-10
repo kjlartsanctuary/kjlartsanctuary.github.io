@@ -28,8 +28,7 @@
     nav {
       text-align: center;
       background-color: #e7dbd0;
-      padding: 10px 0;
-      margin-bottom: 30px;
+      padding: 10px 0 30px;
     }
 
     nav a {
@@ -41,6 +40,41 @@
 
     nav a:hover {
       color: #b56b27;
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+    }
+
+    .series-card {
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #fff;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .series-card:hover {
+      transform: scale(1.03);
+      border-color: #b56b27;
+    }
+
+    .series-card img {
+      max-width: 100%;
+      max-height: 200px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      object-fit: cover;
     }
 
     .intro {
@@ -59,14 +93,6 @@
       margin: 30px auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #e7dbd0;
-      font-size: 14px;
     }
 
     .section-link {
@@ -88,6 +114,14 @@
     .section-link a:hover {
       color: #b56b27;
     }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #e7dbd0;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -99,41 +133,55 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="gallery.html">Original Artwork</a>
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: center; font-family: Arial, sans-serif;">
-  <a href="abstract.html" style="text-decoration: none; color: #222; font-weight: bold; padding: 15px; border: 2px solid #333; border-radius: 8px; display: block;">
-    Abstract Series
-  </a>
-  <a href="structure.html" style="text-decoration: none; color: #222; font-weight: bold; padding: 15px; border: 2px solid #333; border-radius: 8px; display: block;">
-    Structure Series
-  </a>
-  <a href="basquiat.html" style="text-decoration: none; color: #222; font-weight: bold; padding: 15px; border: 2px solid #333; border-radius: 8px; display: block;">
-    Basquiat Series
-  </a>
-  <a href="where-the-daisy-grows.html" style="text-decoration: none; color: #222; font-weight: bold; padding: 15px; border: 2px solid #333; border-radius: 8px; display: block;">
-    Where the Daisy Grows Series
-  </a>
-</div>
-
-   <li><a href="pots-and-pans.html">Pots and Pans Series</a></li>
-<li><a href="mens-series.html">Men’s Series</a></li>
-<li><a href="luggage-series.html">Luggage Series</a></li>
-<li><a href="harlem-renaissance.html">Harlem Renaissance Series</a></li>
-<li><a href="figurative-series.html">Figurative Series</a></li>
-    <!-- Ephemeral Glow Series Link -->
-<div class="gallery-link">
-  <a href="ephemeral-glow.html" title="Ephemeral Glow Series">
-    <img src="images/EG5.jpg" alt="Ephemeral Glow Thumbnail" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
-    <h3>Ephemeral Glow Series</h3>
-  </a>
-</div>
-
-
     <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>
     <a href="exhibitions.html">Exhibitions</a>
     <a href="canvas-reproductions.html">Canvas Reproductions</a>
   </nav>
+
+  <section class="series-grid">
+    <a class="series-card" href="abstract.html">
+      <img src="images/UA31.jpg" alt="Abstract Series" />
+      Abstract Series
+    </a>
+    <a class="series-card" href="structure.html">
+      <img src="images/Crowning A Prince.jpg" alt="Structure Series" />
+      Structure Series
+    </a>
+    <a class="series-card" href="basquiat.html">
+      <img src="images/basquiat1.jpg" alt="Basquiat Series" />
+      Basquiat Series
+    </a>
+    <a class="series-card" href="where-the-daisy-grows.html">
+      <img src="images/daisy01.jpg" alt="Where the Daisy Grows" />
+      Where the Daisy Grows Series
+    </a>
+    <a class="series-card" href="pots-and-pans.html">
+      <img src="images/pots01.jpg" alt="Pots and Pans" />
+      Pots and Pans Series
+    </a>
+    <a class="series-card" href="mens-series.html">
+      <img src="images/mens01.jpg" alt="Men’s Series" />
+      Men’s Series
+    </a>
+    <a class="series-card" href="luggage-series.html">
+      <img src="images/luggage01.jpg" alt="Luggage Series" />
+      Luggage Series
+    </a>
+    <a class="series-card" href="harlem-renaissance.html">
+      <img src="images/hr01.jpg" alt="Harlem Renaissance" />
+      Harlem Renaissance Series
+    </a>
+    <a class="series-card" href="figurative-series.html">
+      <img src="images/figurative01.jpg" alt="Figurative Series" />
+      Figurative Series
+    </a>
+    <a class="series-card" href="ephemeral-glow.html">
+      <img src="images/EG5.jpg" alt="Ephemeral Glow" />
+      Ephemeral Glow Series
+    </a>
+  </section>
 
   <section class="intro">
     <p>

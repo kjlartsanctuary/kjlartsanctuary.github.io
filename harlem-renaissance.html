@@ -17,46 +17,65 @@
       padding: 40px 20px;
       text-align: center;
     }
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 2.5em;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
+    header p {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .art {
-      width: 280px;
-      text-align: center;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
-    .art img {
-      width: 100%;
-      border: 3px solid #ccc;
+    .image-caption-container {
+      background: white;
       border-radius: 10px;
-      transition: transform 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
     }
-    .art img:hover {
-      transform: scale(1.03);
-      border-color: #888;
+    .image-caption-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
-    .title {
-      margin-top: 10px;
+    .image-caption-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 3px solid #ccc;
+      border-radius: 10px 10px 0 0;
+    }
+    .caption {
+      padding: 12px 8px;
       font-weight: bold;
       font-size: 1em;
+      color: #333;
     }
     .back-link {
-      display: inline-block;
-      margin: 30px auto;
+      display: block;
       text-align: center;
+      margin: 40px 0 20px 0;
       font-weight: bold;
+      font-size: 1.2em;
       color: #0077cc;
       text-decoration: none;
-      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover {
+      color: #005fa3;
     }
     footer {
       text-align: center;
@@ -64,75 +83,169 @@
       background-color: #eee;
       margin-top: 40px;
       font-size: 0.9em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      header p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
     }
   </style>
+  <!-- Optional: Lightbox CSS if you want to enable lightbox -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
 
   <header>
     <h1>Harlem Renaissance Series</h1>
-    <p>Art by Kenneth J. Lewis Sr.</p>
+    <p>
+      This series pays homage to the cultural, artistic, and intellectual explosion of the Harlem Renaissance era. Each piece honors the spirit, community, and creativity that defined this historic movement.
+    </p>
   </header>
 
   <main>
-    <div class="gallery">
-      <!-- Sample artwork block: replace or add more as needed -->
-      <div class="art">
-        <img src="images/hr1.jpg" alt="Harlem Renaissance No. 1" />
-        <div class="title">Harlem Renaissance No. 1</div>
+    <div class="gallery-grid">
+      <!-- Repeat for each image -->
+      <div class="image-caption-container">
+        <a href="images/HR01.jpg" data-lightbox="harlem" data-title="HR01">
+          <img src="images/HR01.jpg" alt="HR01" />
+        </a>
+        <div class="caption">HR01</div>
       </div>
-      <div class="art">
-        <img src="images/hr2.jpg" alt="Harlem Renaissance No. 2" />
-        <div class="title">Harlem Renaissance No. 2</div>
+      <div class="image-caption-container">
+        <a href="images/HR02.jpg" data-lightbox="harlem" data-title="HR02">
+          <img src="images/HR02.jpg" alt="HR02" />
+        </a>
+        <div class="caption">HR02</div>
       </div>
-      <div class="art">
-        <img src="images/hr3.jpg" alt="Harlem Renaissance No. 3" />
-        <div class="title">Harlem Renaissance No. 3</div>
+      <div class="image-caption-container">
+        <a href="images/HR03.jpg" data-lightbox="harlem" data-title="HR03">
+          <img src="images/HR03.jpg" alt="HR03" />
+        </a>
+        <div class="caption">HR03</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR04.jpg" data-lightbox="harlem" data-title="HR04">
+          <img src="images/HR04.jpg" alt="HR04" />
+        </a>
+        <div class="caption">HR04</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR05.jpg" data-lightbox="harlem" data-title="HR05">
+          <img src="images/HR05.jpg" alt="HR05" />
+        </a>
+        <div class="caption">HR05</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR06.jpg" data-lightbox="harlem" data-title="HR06">
+          <img src="images/HR06.jpg" alt="HR06" />
+        </a>
+        <div class="caption">HR06</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR07.jpg" data-lightbox="harlem" data-title="HR07">
+          <img src="images/HR07.jpg" alt="HR07" />
+        </a>
+        <div class="caption">HR07</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR08.jpg" data-lightbox="harlem" data-title="HR08">
+          <img src="images/HR08.jpg" alt="HR08" />
+        </a>
+        <div class="caption">HR08</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR09.jpg" data-lightbox="harlem" data-title="HR09">
+          <img src="images/HR09.jpg" alt="HR09" />
+        </a>
+        <div class="caption">HR09</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR10.jpg" data-lightbox="harlem" data-title="HR10">
+          <img src="images/HR10.jpg" alt="HR10" />
+        </a>
+        <div class="caption">HR10</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR11.jpg" data-lightbox="harlem" data-title="HR11">
+          <img src="images/HR11.jpg" alt="HR11" />
+        </a>
+        <div class="caption">HR11</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR12.jpg" data-lightbox="harlem" data-title="HR12">
+          <img src="images/HR12.jpg" alt="HR12" />
+        </a>
+        <div class="caption">HR12</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR13.jpg" data-lightbox="harlem" data-title="HR13">
+          <img src="images/HR13.jpg" alt="HR13" />
+        </a>
+        <div class="caption">HR13</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR14.jpg" data-lightbox="harlem" data-title="HR14">
+          <img src="images/HR14.jpg" alt="HR14" />
+        </a>
+        <div class="caption">HR14</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR15.jpg" data-lightbox="harlem" data-title="HR15">
+          <img src="images/HR15.jpg" alt="HR15" />
+        </a>
+        <div class="caption">HR15</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR16.jpg" data-lightbox="harlem" data-title="HR16">
+          <img src="images/HR16.jpg" alt="HR16" />
+        </a>
+        <div class="caption">HR16</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR17.jpg" data-lightbox="harlem" data-title="HR17">
+          <img src="images/HR17.jpg" alt="HR17" />
+        </a>
+        <div class="caption">HR17</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR18.jpg" data-lightbox="harlem" data-title="HR18">
+          <img src="images/HR18.jpg" alt="HR18" />
+        </a>
+        <div class="caption">HR18</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR19.jpg" data-lightbox="harlem" data-title="HR19">
+          <img src="images/HR19.jpg" alt="HR19" />
+        </a>
+        <div class="caption">HR19</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR20.jpg" data-lightbox="harlem" data-title="HR20">
+          <img src="images/HR20.jpg" alt="HR20" />
+        </a>
+        <div class="caption">HR20</div>
+      </div>
+      <div class="image-caption-container">
+        <a href="images/HR21.jpg" data-lightbox="harlem" data-title="HR21">
+          <img src="images/HR21.jpg" alt="HR21" />
+        </a>
+        <div class="caption">HR21</div>
       </div>
     </div>
 
-    <div style="text-align: center;">
-      <a href="index.html" class="back-link">&larr; Back to Home</a>
-    </div>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
   </main>
 
   <footer>
     &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
   </footer>
 
-</body>
-</html>
-
- </div><!-- Harlem Renaissance Series -->
-<section class="gallery-section">
-  <h2 class="gallery-title">Harlem Renaissance Series</h2>
-  <p style="text-align: center; max-width: 800px; margin: 0 auto 20px;">
-    This series pays homage to the cultural, artistic, and intellectual explosion of the Harlem Renaissance era. Each piece honors the spirit, community, and creativity that defined this historic movement.
-  </p>
-  <div class="gallery-grid">
-    <a href="images/HR01.jpg" data-lightbox="harlem" data-title="HR01"><img src="images/HR01.jpg" alt="HR01"></a>
-    <a href="images/HR02.jpg" data-lightbox="harlem" data-title="HR02"><img src="images/HR02.jpg" alt="HR02"></a>
-    <a href="images/HR03.jpg" data-lightbox="harlem" data-title="HR03"><img src="images/HR03.jpg" alt="HR03"></a>
-    <a href="images/HR04.jpg" data-lightbox="harlem" data-title="HR04"><img src="images/HR04.jpg" alt="HR04"></a>
-    <a href="images/HR05.jpg" data-lightbox="harlem" data-title="HR05"><img src="images/HR05.jpg" alt="HR05"></a>
-    <a href="images/HR06.jpg" data-lightbox="harlem" data-title="HR06"><img src="images/HR06.jpg" alt="HR06"></a>
-    <a href="images/HR07.jpg" data-lightbox="harlem" data-title="HR07"><img src="images/HR07.jpg" alt="HR07"></a>
-    <a href="images/HR08.jpg" data-lightbox="harlem" data-title="HR08"><img src="images/HR08.jpg" alt="HR08"></a>
-    <a href="images/HR09.jpg" data-lightbox="harlem" data-title="HR09"><img src="images/HR09.jpg" alt="HR09"></a>
-    <a href="images/HR10.jpg" data-lightbox="harlem" data-title="HR10"><img src="images/HR10.jpg" alt="HR10"></a>
-    <a href="images/HR11.jpg" data-lightbox="harlem" data-title="HR11"><img src="images/HR11.jpg" alt="HR11"></a>
-    <a href="images/HR12.jpg" data-lightbox="harlem" data-title="HR12"><img src="images/HR12.jpg" alt="HR12"></a>
-    <a href="images/HR13.jpg" data-lightbox="harlem" data-title="HR13"><img src="images/HR13.jpg" alt="HR13"></a>
-    <a href="images/HR14.jpg" data-lightbox="harlem" data-title="HR14"><img src="images/HR14.jpg" alt="HR14"></a>
-    <a href="images/HR15.jpg" data-lightbox="harlem" data-title="HR15"><img src="images/HR15.jpg" alt="HR15"></a>
-    <a href="images/HR16.jpg" data-lightbox="harlem" data-title="HR16"><img src="images/HR16.jpg" alt="HR16"></a>
-    <a href="images/HR17.jpg" data-lightbox="harlem" data-title="HR17"><img src="images/HR17.jpg" alt="HR17"></a>
-    <a href="images/HR18.jpg" data-lightbox="harlem" data-title="HR18"><img src="images/HR18.jpg" alt="HR18"></a>
-    <a href="images/HR19.jpg" data-lightbox="harlem" data-title="HR19"><img src="images/HR19.jpg" alt="HR19"></a>
-    <a href="images/HR20.jpg" data-lightbox="harlem" data-title="HR20"><img src="images/HR20.jpg" alt="HR20"></a>
-    <a href="images/HR21.jpg" data-lightbox="harlem" data-title="HR21"><img src="images/HR21.jpg" alt="HR21"></a>
-  </div>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+  <!-- Lightbox JS (optional, remove if you don't use lightbox) -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
 </body>
 </html>

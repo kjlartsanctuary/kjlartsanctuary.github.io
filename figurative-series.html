@@ -17,46 +17,65 @@
       padding: 40px 20px;
       text-align: center;
     }
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 2.5em;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
+    header p {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .art {
-      width: 280px;
-      text-align: center;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
-    .art img {
-      width: 100%;
-      border: 3px solid #ccc;
+    .image-caption-container {
+      background: white;
       border-radius: 10px;
-      transition: transform 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
     }
-    .art img:hover {
-      transform: scale(1.03);
-      border-color: #888;
+    .image-caption-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
-    .title {
-      margin-top: 10px;
+    .image-caption-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 3px solid #ccc;
+      border-radius: 10px 10px 0 0;
+    }
+    .caption {
+      padding: 12px 8px;
       font-weight: bold;
       font-size: 1em;
+      color: #333;
     }
     .back-link {
-      display: inline-block;
-      margin: 30px auto;
+      display: block;
       text-align: center;
+      margin: 40px 0 20px 0;
       font-weight: bold;
+      font-size: 1.2em;
       color: #0077cc;
       text-decoration: none;
-      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover {
+      color: #005fa3;
     }
     footer {
       text-align: center;
@@ -64,6 +83,16 @@
       background-color: #eee;
       margin-top: 40px;
       font-size: 0.9em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      header p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
     }
   </style>
 </head>
@@ -71,121 +100,59 @@
 
   <header>
     <h1>Figurative Series</h1>
-    <p>Art by Kenneth J. Lewis Sr.</p>
+    <p>
+      A celebration of form, emotion, and identity—these figurative pieces bring characters to life with vibrant movement and narrative presence. Kenneth J. Lewis Sr. explores the human spirit through rich color and dynamic design.
+    </p>
   </header>
 
   <main>
-    <div class="gallery">
-      <!-- Sample artwork block: replace or add more as needed -->
-      <div class="art">
-        <img src="images/figurative1.jpg" alt="Figurative No. 1" />
-        <div class="title">Figurative No. 1</div>
+    <div class="gallery-grid">
+      <!-- Repeat this block for each image -->
+      <div class="image-caption-container">
+        <img src="images/American Selfie.jpg" alt="American Selfie" />
+        <div class="caption">American Selfie</div>
       </div>
-      <div class="art">
-        <img src="images/figurative2.jpg" alt="Figurative No. 2" />
-        <div class="title">Figurative No. 2</div>
+      <div class="image-caption-container">
+        <img src="images/BFF.jpg" alt="BFF" />
+        <div class="caption">BFF</div>
       </div>
-      <div class="art">
-        <img src="images/figurative3.jpg" alt="Figurative No. 3" />
-        <div class="title">Figurative No. 3</div>
+      <div class="image-caption-container">
+        <img src="images/Bliss.jpg" alt="Bliss" />
+        <div class="caption">Bliss</div>
       </div>
+      <div class="image-caption-container">
+        <img src="images/Blue Girl.jpg" alt="Blue Girl" />
+        <div class="caption">Blue Girl</div>
+      </div>
+      <div class="image-caption-container">
+        <img src="images/Bonnet.jpg" alt="Bonnet" />
+        <div class="caption">Bonnet</div>
+      </div>
+      <div class="image-caption-container">
+        <img src="images/Bride of Basquiat.jpg" alt="Bride of Basquiat" />
+        <div class="caption">Bride of Basquiat</div>
+      </div>
+      <div class="image-caption-container">
+        <img src="images/Center of the Sun.jpg" alt="Center of the Sun" />
+        <div class="caption">Center of the Sun</div>
+      </div>
+      <div class="image-caption-container">
+        <img src="images/Chanteuse.jpg" alt="Chanteuse" />
+        <div class="caption">Chanteuse</div>
+      </div>
+      <div class="image-caption-container">
+        <img src="images/Color Flow.jpg" alt="Color Flow" />
+        <div class="caption">Color Flow</div>
+      </div>
+      <!-- Add all your other images in the same pattern below -->
     </div>
 
-    <div style="text-align: center;">
-      <a href="index.html" class="back-link">&larr; Back to Home</a>
-    </div>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
   </main>
 
   <footer>
     &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
   </footer>
 
-</body><h1>Figurative Series</h1>
-<p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 30px;">
-  A celebration of form, emotion, and identity—these figurative pieces bring characters to life with vibrant movement and narrative presence. Kenneth J. Lewis Sr. explores the human spirit through rich color and dynamic design.
-</p>
-
-<style>
-  .image-caption-container {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .image-caption-container img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-  }
-  .image-caption-container img:hover {
-    transform: scale(1.05);
-  }
-  .caption {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #444;
-  }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-</style>
-
-<div class="gallery-grid">
-  <div class="image-caption-container"><a href="images/American Selfie.jpg" data-lightbox="figurative" data-title="American Selfie"><img src="images/American Selfie.jpg" alt="American Selfie"></a><div class="caption">American Selfie</div></div>
-  <div class="image-caption-container"><a href="images/BFF.jpg" data-lightbox="figurative" data-title="BFF"><img src="images/BFF.jpg" alt="BFF"></a><div class="caption">BFF</div></div>
-  <div class="image-caption-container"><a href="images/Bliss.jpg" data-lightbox="figurative" data-title="Bliss"><img src="images/Bliss.jpg" alt="Bliss"></a><div class="caption">Bliss</div></div>
-  <div class="image-caption-container"><a href="images/Blue Girl.jpg" data-lightbox="figurative" data-title="Blue Girl"><img src="images/Blue Girl.jpg" alt="Blue Girl"></a><div class="caption">Blue Girl</div></div>
-  <div class="image-caption-container"><a href="images/Bonnet.jpg" data-lightbox="figurative" data-title="Bonnet"><img src="images/Bonnet.jpg" alt="Bonnet"></a><div class="caption">Bonnet</div></div>
-  <div class="image-caption-container"><a href="images/Bride of Basquiat.jpg" data-lightbox="figurative" data-title="Bride of Basquiat"><img src="images/Bride of Basquiat.jpg" alt="Bride of Basquiat"></a><div class="caption">Bride of Basquiat</div></div>
-  <div class="image-caption-container"><a href="images/Center of the Sun.jpg" data-lightbox="figurative" data-title="Center of the Sun"><img src="images/Center of the Sun.jpg" alt="Center of the Sun"></a><div class="caption">Center of the Sun</div></div>
-  <div class="image-caption-container"><a href="images/Chanteuse.jpg" data-lightbox="figurative" data-title="Chanteuse"><img src="images/Chanteuse.jpg" alt="Chanteuse"></a><div class="caption">Chanteuse</div></div>
-  <div class="image-caption-container"><a href="images/Color Flow.jpg" data-lightbox="figurative" data-title="Color Flow"><img src="images/Color Flow.jpg" alt="Color Flow"></a><div class="caption">Color Flow</div></div>
-  <div class="image-caption-container"><a href="images/Color of Jazz.jpg" data-lightbox="figurative" data-title="Color of Jazz"><img src="images/Color of Jazz.jpg" alt="Color of Jazz"></a><div class="caption">Color of Jazz</div></div>
-  <div class="image-caption-container"><a href="images/Coming Home.jpg" data-lightbox="figurative" data-title="Coming Home"><img src="images/Coming Home.jpg" alt="Coming Home"></a><div class="caption">Coming Home</div></div>
-  <div class="image-caption-container"><a href="images/Creator in your own right.jpg" data-lightbox="figurative" data-title="Creator in your own right"><img src="images/Creator in your own right.jpg" alt="Creator in your own right"></a><div class="caption">Creator in your own right</div></div>
-  <div class="image-caption-container"><a href="images/Day Dreaming.jpg" data-lightbox="figurative" data-title="Day Dreaming"><img src="images/Day Dreaming.jpg" alt="Day Dreaming"></a><div class="caption">Day Dreaming</div></div>
-  <div class="image-caption-container"><a href="images/Dream Fragments 3.jpg" data-lightbox="figurative" data-title="Dream Fragments 3"><img src="images/Dream Fragments 3.jpg" alt="Dream Fragments 3"></a><div class="caption">Dream Fragments 3</div></div>
-  <div class="image-caption-container"><a href="images/Dream Fragments (1).jpg" data-lightbox="figurative" data-title="Dream Fragments (1)"><img src="images/Dream Fragments (1).jpg" alt="Dream Fragments (1)"></a><div class="caption">Dream Fragments (1)</div></div>
-  <div class="image-caption-container"><a href="images/Evening Stroll.jpg" data-lightbox="figurative" data-title="Evening Stroll"><img src="images/Evening Stroll.jpg" alt="Evening Stroll"></a><div class="caption">Evening Stroll</div></div>
-  <div class="image-caption-container"><a href="images/Exotic Beauty.jpg" data-lightbox="figurative" data-title="Exotic Beauty"><img src="images/Exotic Beauty.jpg" alt="Exotic Beauty"></a><div class="caption">Exotic Beauty</div></div>
-  <div class="image-caption-container"><a href="images/Eyes ar Mirrors.jpg" data-lightbox="figurative" data-title="Eyes ar Mirrors"><img src="images/Eyes ar Mirrors.jpg" alt="Eyes ar Mirrors"></a><div class="caption">Eyes ar Mirrors</div></div>
-  <div class="image-caption-container"><a href="images/Feeling Dizzy.jpg" data-lightbox="figurative" data-title="Feeling Dizzy"><img src="images/Feeling Dizzy.jpg" alt="Feeling Dizzy"></a><div class="caption">Feeling Dizzy</div></div>
-  <div class="image-caption-container"><a href="images/Fierce.jpg" data-lightbox="figurative" data-title="Fierce"><img src="images/Fierce.jpg" alt="Fierce"></a><div class="caption">Fierce</div></div>
-  <div class="image-caption-container"><a href="images/First Date.jpg" data-lightbox="figurative" data-title="First Date"><img src="images/First Date.jpg" alt="First Date"></a><div class="caption">First Date</div></div>
-  <div class="image-caption-container"><a href="images/Gentle Shush.jpg" data-lightbox="figurative" data-title="Gentle Shush"><img src="images/Gentle Shush.jpg" alt="Gentle Shush"></a><div class="caption">Gentle Shush</div></div>
-  <div class="image-caption-container"><a href="images/Green and Yellow Basket.jpg" data-lightbox="figurative" data-title="Green and Yellow Basket"><img src="images/Green and Yellow Basket.jpg" alt="Green and Yellow Basket"></a><div class="caption">Green and Yellow Basket</div></div>
-  <div class="image-caption-container"><a href="images/Headlines.jpg" data-lightbox="figurative" data-title="Headlines"><img src="images/Headlines.jpg" alt="Headlines"></a><div class="caption">Headlines</div></div>
-  <div class="image-caption-container"><a href="images/I get Misty.jpg" data-lightbox="figurative" data-title="I get Misty"><img src="images/I get Misty.jpg" alt="I get Misty"></a><div class="caption">I get Misty</div></div>
-  <div class="image-caption-container"><a href="images/If heels could talk.jpg" data-lightbox="figurative" data-title="If heels could talk"><img src="images/If heels could talk.jpg" alt="If heels could talk"></a><div class="caption">If heels could talk</div></div>
-  <div class="image-caption-container"><a href="images/Impulsive.jpg" data-lightbox="figurative" data-title="Impulsive"><img src="images/Impulsive.jpg" alt="Impulsive"></a><div class="caption">Impulsive</div></div>
-  <div class="image-caption-container"><a href="images/In the Bottle.jpg" data-lightbox="figurative" data-title="In the Bottle"><img src="images/In the Bottle.jpg" alt="In the Bottle"></a><div class="caption">In the Bottle</div></div>
-  <div class="image-caption-container"><a href="images/Introspective.jpg" data-lightbox="figurative" data-title="Introspective"><img src="images/Introspective.jpg" alt="Introspective"></a><div class="caption">Introspective</div></div>
-  <div class="image-caption-container"><a href="images/Java at Buckstar.jpg" data-lightbox="figurative" data-title="Java at Buckstar"><img src="images/Java at Buckstar.jpg" alt="Java at Buckstar"></a><div class="caption">Java at Buckstar</div></div>
-  <div class="image-caption-container"><a href="images/Liberty Bell.jpg" data-lightbox="figurative" data-title="Liberty Bell"><img src="images/Liberty Bell.jpg" alt="Liberty Bell"></a><div class="caption">Liberty Bell</div></div>
-  <div class="image-caption-container"><a href="images/Lotus.jpg" data-lightbox="figurative" data-title="Lotus"><img src="images/Lotus.jpg" alt="Lotus"></a><div class="caption">Lotus</div></div>
-  <div class="image-caption-container"><a href="images/Madiba 27.jpg" data-lightbox="figurative" data-title="Madiba 27"><img src="images/Madiba 27.jpg" alt="Madiba 27"></a><div class="caption">Madiba 27</div></div>
-  <div class="image-caption-container"><a href="images/Majestic.jpg" data-lightbox="figurative" data-title="Majestic"><img src="images/Majestic.jpg" alt="Majestic"></a><div class="caption">Majestic</div></div>
-  <div class="image-caption-container"><a href="images/Meloudious Mind.jpg" data-lightbox="figurative" data-title="Meloudious Mind"><img src="images/Meloudious Mind.jpg" alt="Meloudious Mind"></a><div class="caption">Meloudious Mind</div></div>
-  <div class="image-caption-container"><a href="images/Movement.jpg" data-lightbox="figurative" data-title="Movement"><img src="images/Movement.jpg" alt="Movement"></a><div class="caption">Movement</div></div>
-  <div class="image-caption-container"><a href="images/Multifaceted.jpg" data-lightbox="figurative" data-title="Multifaceted"><img src="images/Multifaceted.jpg" alt="Multifaceted"></a><div class="caption">Multifaceted</div></div>
-  <div class="image-caption-container"><a href="images/Mr Rainbow.jpg" data-lightbox="figurative" data-title="Mr Rainbow"><img src="images/Mr Rainbow.jpg" alt="Mr Rainbow"></a><div class="caption">Mr Rainbow</div></div>
-  <div class="image-caption-container"><a href="images/Native.jpg" data-lightbox="figurative" data-title="Native"><img src="images/Native.jpg" alt="Native"></a><div class="caption">Native</div></div>
-  <div class="image-caption-container"><a href="images/Orange Moon.jpg" data-lightbox="figurative" data-title="Orange Moon"><img src="images/Orange Moon.jpg" alt="Orange Moon"></a><div class="caption">Orange Moon</div></div>
-  <div class="image-caption-container"><a href="images/P1100113.JPG" data-lightbox="figurative" data-title="Untitled"><img src="images/P1100113.JPG" alt="Untitled"></a><div class="caption">Untitled</div></div>
-  <div class="image-caption-container"><a href="images/Pick up your own cross.jpg" data-lightbox="figurative" data-title="Pick up your own cross"><img src="images/Pick up your own cross.jpg" alt="Pick up your own cross"></a><div class="caption">Pick up your own cross</div></div>
-  <div class="image-caption-container"><a href="images/Raw.jpg" data-lightbox="figurative" data-title="Raw"><img src="images/Raw.jpg" alt="Raw"></a><div class="caption">Raw</div></div>
-  <div class="image-caption-container"><a href="images/Rearing.jpg" data-lightbox="figurative" data-title="Rearing"><img src="images/Rearing.jpg" alt="Rearing"></a><div class="caption">Rearing</div></div>
-  <div class="image-caption-container"><a href="images/Regal.jpg" data-lightbox="figurative" data-title="Regal"><img src="images/Regal.jpg" alt="Regal"></a><div class="caption">Regal</div></div>
-  <div class="image-caption-container"><a href="images/Relationship Mathematics.jpg" data-lightbox="figurative" data-title="Relationship Mathematics"><img src="images/Relationship Mathematics.jpg" alt="Relationship Mathematics"></a><div class="caption">Relationship Mathematics</div></div>
-  <div class="image-caption-container"><a href="images/She Strings.jpg" data-lightbox="figurative" data-title="She Strings"><img src="images/She Strings.jpg" alt="She Strings"></a><div class="caption">She Strings</div></div>
-  <div class="image-caption-container"><a href="images/Salt Peanuts.jpg" data-lightbox="figurative" data-title="Salt Peanuts"><img src="images/Salt Peanuts.jpg" alt="Salt Peanuts"></a><div class="caption">Salt Peanuts</div></div>
-  <div class="image-caption-container"><a href="images/Starry Night.jpg" data-lightbox="figurative" data-title="Starry Night"><img src="images/Starry Night.jpg" alt="Starry Night"></a><div class="caption">Starry Night</div></div>
-  <div class="image-caption-container"><a href="images/Table Chair Window.jpg" data-lightbox="figurative" data-title="Table Chair Window"><img src="images/Table Chair Window.jpg" alt="Table Chair Window"></a><div class="caption">Table Chair Window</div></div>
-  <div class="image-caption-container"><a href="images/The Pugilist.jpg" data-lightbox="figurative" data-title="The Pugilist"><img src="images/The Pugilist.jpg" alt="The Pugilist"></a><div class="caption">The Pugilist</div></div>
-  <div class="image-caption-container"><a href="images/Tough Decisions.jpg" data-lightbox="figurative" data-title="Tough Decisions"><img src="images/Tough Decisions.jpg" alt="Tough Decisions"></a><div class="caption">Tough Decisions</div></div>
-  <div class="image-caption-container"><a href="images/Vivacious.jpg" data-lightbox="figurative" data-title="Vivacious"><img src="images/Vivacious.jpg" alt="Vivacious"></a><div class="caption">Vivacious</div></div>
-  <div class="image-caption-container"><a href="images/XOXO.jpg" data-lightbox="figurative" data-title="XOXO"><img src="images/XOXO.jpg" alt="XOXO"></a><div class="caption">XOXO</div></div>
-</div>
+</body>
 </html>
-

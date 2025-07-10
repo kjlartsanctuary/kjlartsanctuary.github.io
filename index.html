@@ -28,7 +28,8 @@
     nav {
       text-align: center;
       background-color: #e7dbd0;
-      padding: 10px 0 30px;
+      padding: 10px 0;
+      margin-bottom: 30px;
     }
 
     nav a {
@@ -40,41 +41,6 @@
 
     nav a:hover {
       color: #b56b27;
-    }
-
-    .series-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: 0 auto 50px;
-      padding: 0 20px;
-    }
-
-    .series-card {
-      text-align: center;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 10px;
-      background-color: #fff;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .series-card:hover {
-      transform: scale(1.03);
-      border-color: #b56b27;
-    }
-
-    .series-card img {
-      max-width: 100%;
-      max-height: 200px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      object-fit: cover;
     }
 
     .intro {
@@ -93,6 +59,44 @@
       margin: 30px auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .series-card {
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      border: 2px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .series-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .series-card:hover {
+      transform: scale(1.03);
+    }
+
+    .series-card span {
+      display: block;
+      padding: 10px 0;
     }
 
     .section-link {
@@ -140,52 +144,9 @@
     <a href="canvas-reproductions.html">Canvas Reproductions</a>
   </nav>
 
-  <section class="series-grid">
-    <a class="series-card" href="abstract.html">
-      <img src="images/UA31.jpg" alt="Abstract Series" />
-      Abstract Series
-    </a>
-    <a class="series-card" href="structure.html">
-      <img src="images/Crowning A Prince.jpg" alt="Structure Series" />
-      Structure Series
-    </a>
-    <a class="series-card" href="basquiat.html">
-      <img src="images/basquiat1.jpg" alt="Basquiat Series" />
-      Basquiat Series
-    </a>
-    <a class="series-card" href="where-the-daisy-grows.html">
-      <img src="images/daisy01.jpg" alt="Where the Daisy Grows" />
-      Where the Daisy Grows Series
-    </a>
-    <a class="series-card" href="pots-and-pans.html">
-      <img src="images/pots01.jpg" alt="Pots and Pans" />
-      Pots and Pans Series
-    </a>
-    <a class="series-card" href="mens-series.html">
-      <img src="images/mens01.jpg" alt="Men’s Series" />
-      Men’s Series
-    </a>
-    <a class="series-card" href="luggage-series.html">
-      <img src="images/luggage01.jpg" alt="Luggage Series" />
-      Luggage Series
-    </a>
-    <a class="series-card" href="harlem-renaissance.html">
-      <img src="images/hr01.jpg" alt="Harlem Renaissance" />
-      Harlem Renaissance Series
-    </a>
-    <a class="series-card" href="figurative-series.html">
-      <img src="images/figurative01.jpg" alt="Figurative Series" />
-      Figurative Series
-    </a>
-    <a class="series-card" href="ephemeral-glow.html">
-      <img src="images/EG5.jpg" alt="Ephemeral Glow" />
-      Ephemeral Glow Series
-    </a>
-  </section>
-
   <section class="intro">
     <p>
-      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
+      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation.
     </p>
     <p>
       Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks.
@@ -193,6 +154,49 @@
   </section>
 
   <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
+
+  <section class="series-grid">
+    <a class="series-card" href="abstract.html">
+      <img src="images/UA33.jpg" alt="Abstract Series" />
+      <span>Abstract Series</span>
+    </a>
+    <a class="series-card" href="structure.html">
+      <img src="images/structure01.jpg" alt="Structure Series" />
+      <span>Structure Series</span>
+    </a>
+    <a class="series-card" href="basquiat.html">
+      <img src="images/Basquiat Portrait 3.jpg" alt="Basquiat Series" />
+      <span>Basquiat Series</span>
+    </a>
+    <a class="series-card" href="where-the-daisy-grows.html">
+      <img src="images/daisy02.jpg" alt="Where the Daisy Grows Series" />
+      <span>Where the Daisy Grows Series</span>
+    </a>
+    <a class="series-card" href="pots-and-pans.html">
+      <img src="images/pots01.jpg" alt="Pots and Pans Series" />
+      <span>Pots and Pans Series</span>
+    </a>
+    <a class="series-card" href="mens-series.html">
+      <img src="images/mens01.jpg" alt="Men’s Series" />
+      <span>Men’s Series</span>
+    </a>
+    <a class="series-card" href="luggage-series.html">
+      <img src="images/luggage01.jpg" alt="Luggage Series" />
+      <span>Luggage Series</span>
+    </a>
+    <a class="series-card" href="harlem-renaissance.html">
+      <img src="images/hr03.jpg" alt="Harlem Renaissance Series" />
+      <span>Harlem Renaissance Series</span>
+    </a>
+    <a class="series-card" href="figurative-series.html">
+      <img src="images/figurative01.jpg" alt="Figurative Series" />
+      <span>Figurative Series</span>
+    </a>
+    <a class="series-card" href="ephemeral-glow.html">
+      <img src="images/EG7.jpg" alt="Ephemeral Glow Series" />
+      <span>Ephemeral Glow Series</span>
+    </a>
+  </section>
 
   <section class="section-link">
     <h2>Canvas Reproductions</h2>

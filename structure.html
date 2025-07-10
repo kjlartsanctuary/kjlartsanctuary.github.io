@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Structure Series - Kenneth J. Lewis Sr.</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 30px 20px;
+      padding: 0;
+    }
+    h2.gallery-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    p.description {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.4;
+    }
+    .gallery-grid-structure {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+    }
+    .gallery-grid-structure a {
+      text-align: center;
+      display: block;
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+    }
+    .gallery-grid-structure img {
+      width: auto;
+      max-width: 100%;
+      max-height: 320px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease-in-out;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .gallery-grid-structure img:hover {
+      transform: scale(1.05);
+    }
+    .gallery-grid-structure figcaption {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+    .gallery-grid-structure a::before {
+      content: "Artist Kenneth J. Lewis Sr.";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.95em;
+      pointer-events: none;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    .gallery-grid-structure a:hover::before {
+      opacity: 1;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .gallery-grid-structure {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 400px) {
+      .gallery-grid-structure {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2 class="gallery-title">Structure Series</h2>
+  <p class="description">
+    A vibrant exploration of abstract form and expression—this series weaves layers of bold color, geometry, and movement into powerful figurative compositions. Each piece pulses with energy and individuality, where form is reimagined and emotion is built through color.
+  </p>
+
+  <div class="gallery-grid-structure">
+    <a href="images/Crowning A Prince.jpg" data-lightbox="structure" data-title="Crowning A Prince">
+      <img src="images/Crowning A Prince.jpg" alt="Crowning A Prince" />
+      <figcaption>Crowning A Prince</figcaption>
+    </a>
+
+    <a href="images/Royal Birth.jpg" data-lightbox="structure" data-title="Royal Birth">
+      <img src="images/Royal Birth.jpg" alt="Royal Birth" />
+      <figcaption>Royal Birth</figcaption>
+    </a>
+
+    <a href="images/Royal Dancers.jpg" data-lightbox="structure" data-title="Royal Dancers">
+      <img src="images/Royal Dancers.jpg" alt="Royal Dancers" />
+      <figcaption>Royal Dancers</figcaption>
+    </a>
+
+    <a href="images/Royal Gathering.jpg" data-lightbox="structure" data-title="Royal Gathering">
+      <img src="images/Royal Gathering.jpg" alt="Royal Gathering" />
+      <figcaption>Royal Gathering</figcaption>
+    </a>
+
+    <a href="images/structure01.jpg" data-lightbox="structure" data-title="Structure 01">
+      <img src="images/structure01.jpg" alt="Structure 01" />
+      <figcaption>Structure 01</figcaption>
+    </a>
+
+    <a href="images/structure02.jpg" data-lightbox="structure" data-title="Structure 02">
+      <img src="images/structure02.jpg" alt="Structure 02" />
+      <figcaption>Structure 02</figcaption>
+    </a>
+
+    <a href="images/structure03.jpg" data-lightbox="structure" data-title="Structure 03">
+      <img src="images/structure03.jpg" alt="Structure 03" />
+      <figcaption>Structure 03</figcaption>
+    </a>
+
+    <a href="images/structure04.jpg" data-lightbox="structure" data-title="Structure 04">
+      <img src="images/structure04.jpg" alt="Structure 04" />
+      <figcaption>Structure 04</figcaption>
+    </a>
+
+    <a href="images/structure05.jpg" data-lightbox="structure" data-title="Structure 05">
+      <img src="images/structure05.jpg" alt="Structure 05" />
+      <figcaption>Structure 05</figcaption>
+    </a>
+
+    <a href="images/structure06.jpg" data-lightbox="structure" data-title="Structure 06">
+      <img src="images/structure06.jpg" alt="Structure 06" />
+      <figcaption>Structure 06</figcaption>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
 

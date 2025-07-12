@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patterns Series | Kenneth J. Lewis Sr.</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      color: #222;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .image-caption-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .image-caption-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .image-caption-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 3px solid #ccc;
+      border-radius: 10px 10px 0 0;
+    }
+    .caption {
+      padding: 12px 8px;
+      font-weight: bold;
+      font-size: 1em;
+      color: #333;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 40px 0 20px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #0077cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .back-link:hover {
+      color: #005fa3;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #eee;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      header p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <h1>Patterns Series</h1>
+    <p>A collection exploring rhythm, repetition, and the beauty in form and structure.</p>
+  </header>
+
+  <main>
+    <div class="gallery-grid">
+      <!-- Add your images here as you get them -->
+      <!-- Example image block:
+      <div class="image-caption-container">
+        <a href="images/Pattern01.jpg" data-lightbox="patterns" data-title="Pattern 01">
+          <img src="images/Pattern01.jpg" alt="Pattern 01" />
+        </a>
+        <div class="caption">Pattern 01</div>
+      </div>
+      -->
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+</body>
+</html>

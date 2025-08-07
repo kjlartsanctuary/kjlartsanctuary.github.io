@@ -54,11 +54,19 @@
       color: #b56b27;
     }
 
-    .featured-image {
-      display: block;
-      max-width: 600px;
-      width: 90%;
+    .featured-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 900px;
       margin: 40px auto;
+      flex-wrap: wrap;
+    }
+
+    .featured-gallery img {
+      max-width: 100%;
+      width: 45%;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
@@ -110,7 +118,11 @@
     <a href="structure.html">Structure Series</a>
   </nav>
 
-  <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />
+  <!-- Featured Images Side by Side -->
+  <div class="featured-gallery">
+    <img src="images/abstract34.jpg" alt="Abstract Painting 34">
+    <img src="images/abstract36.jpg" alt="Abstract Painting 36">
+  </div>
 
   <footer>
     &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.

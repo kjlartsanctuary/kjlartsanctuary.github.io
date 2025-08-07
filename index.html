@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,14 +7,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #ffffff; /* Set to plain white */
+      background-color: #ffffff;
       color: #333;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #ffffff; /* White background */
+      background-color: #ffffff;
       padding: 20px 0;
       text-align: center;
     }
@@ -27,79 +27,30 @@
 
     .intro {
       max-width: 900px;
-      margin: 0 auto 40px;
+      margin: 0 auto 20px;
       padding: 20px;
       font-size: 18px;
       line-height: 1.7;
       text-align: center;
     }
 
-    .thumbnail-grid {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+    nav.main-nav {
       text-align: center;
+      background-color: #ffffff;
+      padding: 15px 0;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
     }
 
-    .thumbnail-grid a {
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-      padding: 15px;
-      border: 2px solid #333;
-      border-radius: 8px;
-      display: block;
-      transition: box-shadow 0.3s ease;
-      background-color: #ffffff; /* White background */
-    }
-
-    .thumbnail-grid a:hover {
-      box-shadow: 0 0 12px #b56b27;
-      color: #b56b27;
-    }
-
-    .thumbnail-grid img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .thumbnail-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    .thumbnail-caption {
-      font-size: 15px;
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .thumbnail-description {
-      font-size: 13px;
-      color: #555;
-      margin-top: 3px;
-    }
-
-    nav.bottom-nav {
-      text-align: center;
-      background-color: #ffffff; /* White background */
-      padding: 12px 0;
-      margin-bottom: 30px;
-    }
-
-    nav.bottom-nav a {
-      margin: 0 15px;
+    nav.main-nav a {
+      margin: 0 12px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
+      font-size: 16px;
     }
 
-    nav.bottom-nav a:hover {
+    nav.main-nav a:hover {
       color: #b56b27;
     }
 
@@ -107,7 +58,7 @@
       display: block;
       max-width: 600px;
       width: 90%;
-      margin: 30px auto 60px auto;
+      margin: 40px auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
@@ -116,8 +67,9 @@
       text-align: center;
       margin-top: 60px;
       padding: 20px;
-      background-color: #ffffff; /* White background */
+      background-color: #ffffff;
       font-size: 14px;
+      border-top: 1px solid #ccc;
     }
   </style>
 </head>
@@ -137,81 +89,25 @@
     </p>
   </section>
 
-  <section class="thumbnail-grid">
-    <a href="abstract.html">
-      <img src="images/abstract31.jpg" alt="Abstract Series" />
-      <div class="thumbnail-caption">Abstract Series</div>
-      <div class="thumbnail-description">A bold journey into texture, rhythm, and spontaneous composition.</div>
-    </a>
-
-    <a href="patterns-series.html">
-      <img src="images/Pattern100.jpg" alt="Patterns Series" />
-      <div class="thumbnail-caption">Patterns Series</div>
-      <div class="thumbnail-description">A vibrant exploration of texture, color, and rhythm through pattern-based abstract art.</div>
-    </a>
-
-    <a href="basquiat.html">
-      <img src="images/Basquiat Portrait 4.jpg" alt="Basquiat Series" />
-      <div class="thumbnail-caption">Basquiat Series</div>
-      <div class="thumbnail-description">A tribute to Jean-Michel Basquiat through expressive portraiture and chaos.</div>
-    </a>
-
-    <a href="ephemeral-glow.html">
-      <img src="images/EG5.jpg" alt="Ephemeral Glow Series" />
-      <div class="thumbnail-caption">Ephemeral Glow Series</div>
-      <div class="thumbnail-description">Luminous compositions that explore the fleeting nature of beauty and light.</div>
-    </a>
-
-    <a href="figurative-series.html">
-      <img src="images/Vivacious.jpg" alt="Figurative Series" />
-      <div class="thumbnail-caption">Figurative Series</div>
-      <div class="thumbnail-description">Expressive human forms filled with energy, movement, and emotion.</div>
-    </a>
-
-    <a href="harlem-renaissance.html">
-      <img src="images/HR10.jpg" alt="Harlem Renaissance Series" />
-      <div class="thumbnail-caption">Harlem Renaissance Series</div>
-      <div class="thumbnail-description">A celebration of Black culture through historic jazz and artistic imagery.</div>
-    </a>
-
-    <a href="luggage mixed media series.html">
-      <img src="images/Luggage13.jpg" alt="Luggage Mixed Media Series" />
-      <div class="thumbnail-caption">Luggage Mixed Media Series</div>
-      <div class="thumbnail-description">Mixed media works exploring migration, memory, and movement.</div>
-    </a>
-
-    <a href="luggage-series.html">
-      <img src="images/Luggage12.jpg" alt="Luggage Series" />
-      <div class="thumbnail-caption">Luggage Series</div>
-      <div class="thumbnail-description">Minimal yet powerful, this series explores what we carry—physically and emotionally.</div>
-    </a>
-
-    <a href="mens-series.html">
-      <img src="images/The Mathematician.jpg" alt="Men’s Series" />
-      <div class="thumbnail-caption">Men’s Series</div>
-      <div class="thumbnail-description">Paintings capturing the spirit, complexity, and resilience of men through time.</div>
-    </a>
-
-    <a href="pots-and-pans.html">
-      <img src="images/PP3.jpg" alt="Pots and Pans Series" />
-      <div class="thumbnail-caption">Pots and Pans Series</div>
-      <div class="thumbnail-description">An abstract look into domesticity, rhythm, and cultural roots through kitchen tools.</div>
-    </a>
-
-    <a href="structure.html">
-      <img src="images/Structure 10.jpg" alt="Structure Series" />
-      <div class="thumbnail-caption">Structure Series</div>
-      <div class="thumbnail-description">Architectural forms collide with vibrant geometry in this abstract series.</div>
-    </a>
-  </section>
-
-  <nav class="bottom-nav">
+  <!-- Combined Navigation for All Tabs -->
+  <nav class="main-nav">
     <a href="index.html">Home</a>
     <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>
     <a href="canvas-reproductions.html">Canvas Reproductions</a>
     <a href="exhibitions.html">Exhibitions</a>
+    <a href="abstract.html">Abstract Series</a>
+    <a href="patterns-series.html">Patterns Series</a>
+    <a href="basquiat.html">Basquiat Series</a>
+    <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
+    <a href="figurative-series.html">Figurative Series</a>
+    <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
+    <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
+    <a href="luggage-series.html">Luggage Series</a>
+    <a href="mens-series.html">Men’s Series</a>
+    <a href="pots-and-pans.html">Pots and Pans Series</a>
+    <a href="structure.html">Structure Series</a>
   </nav>
 
   <img src="images/KJL101.jpg" alt="Featured Artwork" class="featured-image" />

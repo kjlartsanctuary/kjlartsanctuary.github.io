@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Current Auction - KJL Art</title>
+  <title>KJL Art Sanctuary Auction</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: #f5f5f5;
+      color: #333;
     }
     header {
       background: #222;
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
     }
     .auction-container {
       max-width: 1000px;
@@ -25,109 +29,122 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .lot {
+    .auction-item {
+      display: flex;
+      flex-wrap: wrap;
       margin-bottom: 40px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 20px;
     }
-    .lot:last-child {
-      border-bottom: none;
-    }
-    .lot img {
+    .auction-item img {
       max-width: 100%;
       height: auto;
       border-radius: 6px;
-    }
-    .lot h2 {
-      margin: 10px 0 5px;
+      flex: 1 1 300px;
     }
     .details {
-      margin: 10px 0;
+      flex: 1 1 300px;
+      margin-left: 20px;
     }
-    form {
-      margin-top: 10px;
+    .details h2 {
+      margin-top: 0;
     }
-    input[type="text"], input[type="number"], input[type="email"] {
+    .details p {
+      margin: 8px 0;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"] {
       width: 95%;
       padding: 10px;
       margin: 5px 0;
-      border: 1px solid #ccc;
       border-radius: 4px;
+      border: 1px solid #ccc;
     }
-    input[type="submit"] {
+    form input[type="submit"] {
+      padding: 10px 20px;
       background: #222;
       color: #fff;
-      padding: 10px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      margin-top: 10px;
     }
-    input[type="submit"]:hover {
+    form input[type="submit"]:hover {
       background: #444;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>KJL Art - Current Auction</h1>
-  <p>Private Bidding • Submit your bid via email</p>
+  <h1>KJL Art Sanctuary Gallery Auction</h1>
+  <p>Private Bidding • Submit via Email</p>
+  <p><strong>Auction Dates:</strong> Monday, August 18, 2025 – Friday, August 22, 2025</p>
 </header>
 
 <div class="auction-container">
 
   <!-- Lot 1 -->
-  <div class="lot">
-    <h2>Lot 1: Abstract 26</h2>
-    <img src="abstract26.jpg" alt="Abstract 26 artwork">
+  <div class="auction-item">
+    <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
     <div class="details">
-      <p><strong>Starting Bid:</strong> $500</p>
-      <p><strong>Reserve Price:</strong> $1,200</p>
-      <p>Bold, colorful abstract composition, part of Kenneth J. Lewis Sr.’s signature series.</p>
+      <h2>Framed Basquiat Portrait 1</h2>
+      <p><strong>Starting Bid:</strong> $895</p>
+      <p>Oil on canvas, 20" x 24" (framed 30" x 40")</p>
+      <form action="mailto:kjlartsanctuary@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="number" name="Bid" placeholder="Your Bid Amount (USD)" required>
+        <input type="submit" value="Submit Bid for Lot 1">
+      </form>
     </div>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="number" name="Bid" placeholder="Your Bid Amount (USD)" required>
-      <input type="submit" value="Submit Bid for Lot 1">
-    </form>
   </div>
 
   <!-- Lot 2 -->
-  <div class="lot">
-    <h2>Lot 2: The Draftsman</h2>
-    <img src="The Draftsman.jpg" alt="The Draftsman artwork">
+  <div class="auction-item">
+    <img src="images/The Draftsman.jpg" alt="The Draftsman">
     <div class="details">
-      <p><strong>Starting Bid:</strong> $750</p>
-      <p><strong>Reserve Price:</strong> $1,800</p>
-      <p>An expressive portrait that captures focus, intensity, and artistry in motion.</p>
+      <h2>The Draftsman</h2>
+      <p><strong>Starting Bid:</strong> $900</p>
+      <p>Acrylic on unstretched canvas, 66" x 52"</p>
+      <form action="mailto:kjlartsanctuary@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="number" name="Bid" placeholder="Your Bid Amount (USD)" required>
+        <input type="submit" value="Submit Bid for Lot 2">
+      </form>
     </div>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="number" name="Bid" placeholder="Your Bid Amount (USD)" required>
-      <input type="submit" value="Submit Bid for Lot 2">
-    </form>
   </div>
 
   <!-- Lot 3 -->
-  <div class="lot">
-    <h2>Lot 3: Framed Basquiat Portrait 1</h2>
-    <img src="Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1 artwork">
+  <div class="auction-item">
+    <img src="images/abstract26.jpg" alt="Abstract 26">
     <div class="details">
-      <p><strong>Starting Bid:</strong> $1,000</p>
-      <p><strong>Reserve Price:</strong> $2,500</p>
-      <p>A tribute piece with layered textures and vibrant energy inspired by Basquiat’s raw style.</p>
+      <h2>Abstract 26 (Diptych)</h2>
+      <p><strong>Starting Bid:</strong> $1,195</p>
+      <p>Acrylic on canvas, 72" x 48"</p>
+      <form action="mailto:kjlartsanctuary@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="number" name="Bid" placeholder="Your Bid Amount (USD)" required>
+        <input type="submit" value="Submit Bid for Lot 3">
+      </form>
     </div>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="number" name="Bid" placeholder="Your Bid Amount (USD)" required>
-      <input type="submit" value="Submit Bid for Lot 3">
-    </form>
   </div>
 
 </div>
+
+<footer>
+  <p>KJL Art Sanctuary • 310 4th St, Ewing, NJ 08638 • Email: kjlartsanctuary@gmail.com • Phone: 609-372-6022</p>
+</footer>
 
 </body>
 </html>

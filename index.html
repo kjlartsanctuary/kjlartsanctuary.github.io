@@ -1,162 +1,120 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artist Kenneth J Lewis Sr | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJL Art Sanctuary</title>
   <style>
     body {
-      font-family: Garamond, "Times New Roman", serif;
-      background-color: #ffffff;
-      color: #333;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: #f5f5f5;
+      color: #333;
     }
-
     header {
-      background-color: #ffffff;
-      padding: 20px 0;
+      background: #222;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
-      font-size: 36px;
-      letter-spacing: 1px;
     }
-
-    .intro {
-      max-width: 900px;
-      margin: 0 auto 20px;
+    main {
       padding: 20px;
-      text-align: center;
     }
-
-    .intro p {
-      font-size: 9px; /* half of original 18px */
-      line-height: 1.7;
-    }
-
-    nav.main-nav {
-      text-align: center;
-      background-color: #ffffff;
-      padding: 12px 0;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
-    }
-
-    nav.main-nav a {
-      margin: 0 8px; /* reduce spacing between tabs */
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 11px; /* reduced to two-thirds of 16px */
-      padding: 4px 6px; /* tighter tab size */
-    }
-
-    nav.main-nav a:hover {
-      color: #b56b27;
-    }
-
-    .featured-gallery {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      max-width: 900px;
-      margin: 40px auto;
-      flex-wrap: wrap;
-    }
-
-    .featured-gallery img {
-      max-width: 100%;
-      width: 45%;
+    .auction-section {
+      background: #fff;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-top: 20px;
     }
-
-    footer {
+    .auction-section h2 {
       text-align: center;
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #ffffff;
-      font-size: 14px;
-      border-top: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .auction-dates {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .auction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .auction-item {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .auction-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .auction-item h3 {
+      margin: 10px 0 5px;
+    }
+    .auction-item p {
+      margin: 5px 0;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Artist Kenneth J Lewis Sr</h1>
+    <h1>KJL Art Sanctuary</h1>
+    <p>Welcome to my official art gallery and auction space</p>
   </header>
 
-  <section class="intro">
-    <p>
-      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
-    </p>
-    <p>
-      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
-      (609) 372-6022 · www.kjlartsanctuary@gmail.com
-    </p>
+  <main>
+    <section class="auction-section">
+      <h2>Current Auction</h2>
+      <div class="auction-dates">
+        Auction Open: August 18, 2025 — Auction Close: August 22, 2025
+      </div>
 
-    <!-- ===== Current Auction Section ===== -->
-<section id="current-auction" style="padding: 60px 20px; text-align: center; background-color: #f9f9f9;">
-  <h2 style="font-size: 2em; margin-bottom: 20px;">🎨 Current Auction</h2>
-  <p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1em; line-height: 1.6;">
-    Don’t miss your chance to collect an original Kenneth J. Lewis Sr. artwork.  
-    This exclusive piece is now available through our live auction.
-  </p>
+      <div class="auction-grid">
+        <!-- Item 1 -->
+        <div class="auction-item">
+          <img src="abstract26.jpg" alt="Abstract 26">
+          <h3>Abstract 26</h3>
+          <p><strong>Starting Bid:</strong> $400</p>
+          <p><strong>Reserve:</strong> $1,200</p>
+        </div>
 
-  <!-- Auction Preview Card -->
-  <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
-    <img src="images/auction-piece.jpg" alt="Auction Artwork" style="width: 100%; display: block;">
+        <!-- Item 2 -->
+        <div class="auction-item">
+          <img src="The Draftsman.jpg" alt="The Draftsman">
+          <h3>The Draftsman</h3>
+          <p><strong>Starting Bid:</strong> $500</p>
+          <p><strong>Reserve:</strong> $1,500</p>
+        </div>
 
-    <div style="padding: 20px;">
-      <h3 style="margin: 0 0 10px;">Abstract 37</h3>
-      <p style="font-size: 1em; color: #555;">Bidding closes: <strong>August 31, 2025</strong></p>
-      <a href="auction.html" 
-         style="display: inline-block; margin-top: 15px; padding: 12px 24px; background: #222; color: #fff; text-decoration: none; font-weight: bold; border-radius: 6px;">
-         View Auction Details
-      </a>
-    </div>
-  </div>
-</section>
-<!-- ===== End Current Auction Section ===== -->
-
-  </section>
-
-  <!-- Combined Navigation for All Tabs -->
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="bio.html">Artist Bio</a>
-    <a href="podcast.html">Podcast</a>
-    <a href="social.html">Social</a>
-    <a href="current-auction.html">View Current Auction</a>
-    <a href="canvas-reproductions.html">Canvas Reproductions</a>
-    <a href="exhibitions.html">Exhibitions</a>
-    <a href="abstract.html">Abstract Series</a>
-    <a href="patterns-series.html">Patterns Series</a>
-    <a href="basquiat.html">Basquiat Series</a>
-    <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
-    <a href="figurative-series.html">Figurative Series</a>
-    <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
-    <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
-    <a href="luggage-series.html">Luggage Series</a>
-    <a href="mens-series.html">Men’s Series</a>
-    <a href="pots-and-pans.html">Pots and Pans Series</a>
-    <a href="structure.html">Structure Series</a>
-  </nav>
-
-  <!-- Featured Images Side by Side -->
-  <div class="featured-gallery">
-    <img src="images/abstract34.jpg" alt="Abstract Painting 34">
-    <img src="images/abstract36.jpg" alt="Abstract Painting 36">
-  </div>
+        <!-- Item 3 -->
+        <div class="auction-item">
+          <img src="Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
+          <h3>Framed Basquiat Portrait 1</h3>
+          <p><strong>Starting Bid:</strong> $600</p>
+          <p><strong>Reserve:</strong> $2,000</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
+    <p>&copy; 2025 KJL Art Sanctuary | All Rights Reserved</p>
   </footer>
-
 </body>
 </html>

@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJL Art Auction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .auction-info {
+      text-align: center;
+      margin: 20px;
+      font-size: 1.1em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .art-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .art-card:hover {
+      transform: scale(1.02);
+    }
+    .art-card img {
+      width: 100%;
+      display: block;
+    }
+    .art-details {
+      padding: 15px;
+    }
+    .art-details h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+    .art-details p {
+      margin: 6px 0;
+    }
+    .starting-bid {
+      font-weight: bold;
+      color: #b12704;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: #fff;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KJL Art Auction</h1>
+    <p>August 18, 2025 @ 10:00 AM → August 22, 2025 @ 9:00 PM (EST)</p>
+  </header>
+
+  <div class="auction-info">
+    <p>Bid on original works of art by Kenneth J. Lewis Sr. All bidding starts at the amounts listed below. Reserve prices are hidden and will be revealed only when met.</p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- Artwork 1 -->
+    <div class="art-card">
+      <img src="https://raw.githubusercontent.com/YourGitHubUsername/your-repo/main/Framed%20Basquiat%20Portrait%201.jpg" alt="Framed Basquiat Portrait 1">
+      <div class="art-details">
+        <h2>Framed Basquiat Portrait 1</h2>
+        <p>Oil on Canvas</p>
+        <p>Image: 20 x 24 inches<br>Framed: 30 x 40 inches</p>
+        <p class="starting-bid">Starting Bid: $895</p>
+      </div>
+    </div>
+
+    <!-- Artwork 2 -->
+    <div class="art-card">
+      <img src="https://raw.githubusercontent.com/YourGitHubUsername/your-repo/main/The%20Draftsman.jpg" alt="The Draftsman">
+      <div class="art-details">
+        <h2>The Draftsman</h2>
+        <p>Acrylic on Unstretched Canvas</p>
+        <p>66 x 52 inches</p>
+        <p class="starting-bid">Starting Bid: $900</p>
+      </div>
+    </div>
+
+    <!-- Artwork 3 -->
+    <div class="art-card">
+      <img src="https://raw.githubusercontent.com/YourGitHubUsername/your-repo/main/abstract26.jpg" alt="Abstract 26">
+      <div class="art-details">
+        <h2>Abstract 26 (Diptych)</h2>
+        <p>Acrylic on Canvas</p>
+        <p>72 x 48 inches</p>
+        <p class="starting-bid">Starting Bid: $1195</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary</p>
+  </footer>
+</body>
+</html>
 

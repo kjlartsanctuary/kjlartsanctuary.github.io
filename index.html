@@ -58,9 +58,9 @@
       color: #b56b27;
     }
 
-    /* Current Auction Section Styles */
+    /* Current Auction Section */
     .auction-section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 20px;
       background-color: #fafafa;
@@ -70,26 +70,26 @@
 
     .auction-section h2 {
       text-align: center;
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
     .auction-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .auction-item {
-      width: 30%;      /* 3 across */
+      width: 30%; 
       min-width: 200px;
-      text-align: center;
-      padding: 10px;
+      background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      background: #fff;
+      padding: 10px;
+      text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
@@ -152,14 +152,6 @@
       font-size: 14px;
       border-top: 1px solid #ccc;
     }
-
-    .countdown {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      margin-top: 20px;
-      color: #b56b27;
-    }
   </style>
 </head>
 <body>
@@ -182,8 +174,6 @@
   <section class="auction-section">
     <h2>Current Auction</h2>
     <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
-    <div class="countdown" id="countdown"></div>
-
     <div class="auction-grid">
       <!-- Lot 1 -->
       <div class="auction-item">
@@ -191,7 +181,7 @@
         <h3>Framed Basquiat Portrait 1</h3>
         <p><strong>Starting Bid:</strong> $895</p>
         <span>Reserve price not shown</span>
-        <p><a href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Inquiry%20Framed%20Basquiat%20Portrait%201">Place Private Bid</a></p>
+        <p><a href="auction.html">View Auction</a></p>
       </div>
       <!-- Lot 2 -->
       <div class="auction-item">
@@ -199,7 +189,7 @@
         <h3>The Draftsman</h3>
         <p><strong>Starting Bid:</strong> $900</p>
         <span>Reserve price not shown</span>
-        <p><a href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Inquiry%20The%20Draftsman">Place Private Bid</a></p>
+        <p><a href="auction.html">View Auction</a></p>
       </div>
       <!-- Lot 3 -->
       <div class="auction-item">
@@ -207,15 +197,15 @@
         <h3>Abstract 26 (Diptych)</h3>
         <p><strong>Starting Bid:</strong> $1,195</p>
         <span>Reserve price not shown</span>
-        <p><a href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Inquiry%20Abstract%2026">Place Private Bid</a></p>
+        <p><a href="auction.html">View Auction</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Combined Navigation for All Tabs -->
+  <!-- Combined Navigation for All Tabs with Auction -->
   <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="auction.html">Auction</a>
+    <a href="auction.html">Auction</a> <!-- Auction tab added -->
     <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>
@@ -243,28 +233,6 @@
   <footer>
     &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
   </footer>
-
-  <script>
-    // Countdown Timer
-    const countdownElement = document.getElementById('countdown');
-    const auctionEnd = new Date("August 22, 2025 23:59:59").getTime();
-
-    const timer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = auctionEnd - now;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        countdownElement.innerHTML = "Auction Closed";
-      } else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        countdownElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-      }
-    }, 1000);
-  </script>
 
 </body>
 </html>

@@ -1,272 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artist Kenneth J Lewis Sr | Home</title>
-  <style>
-    body {
-      font-family: Garamond, "Times New Roman", serif;
-      background-color: #ffffff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artist Kenneth J Lewis Sr | Home</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Garamond, "Times New Roman", serif;
+    background-color: #ffffff;
+    color: #333;
+  }
 
-    header {
-      background-color: #ffffff;
-      padding: 20px 0;
-      text-align: center;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      letter-spacing: 1px;
-    }
+  header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+  }
 
-    .intro {
-      max-width: 900px;
-      margin: 0 auto 20px;
-      padding: 20px;
-      text-align: center;
-    }
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
 
-    .intro p {
-      font-size: 9px;
-      line-height: 1.7;
-    }
+  .intro {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    text-align: center;
+  }
 
-    nav.main-nav {
-      text-align: center;
-      background-color: #ffffff;
-      padding: 12px 0;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
-    }
+  .intro p {
+    font-size: 9px;
+    line-height: 1.7;
+  }
 
-    nav.main-nav a {
-      margin: 0 8px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 11px;
-      padding: 4px 6px;
-    }
+  nav.main-nav {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 12px 0;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+  }
 
-    nav.main-nav a:hover {
-      color: #b56b27;
-    }
+  nav.main-nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 4px 6px;
+  }
 
-    /* Current Auction Section */
-    .auction-section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+  nav.main-nav a:hover {
+    color: #b56b27;
+  }
 
-    .auction-section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+  /* Current Auction Section */
+  .auction-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
 
-    .auction-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 30px;
-    }
+  .auction-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 
-    .auction-item {
-      flex: 1 1 calc(33.333% - 20px); /* Three across */
-      max-width: 300px;
-      min-width: 200px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+  .auction-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
-    .auction-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
+  .auction-item {
+    width: 30%;
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
 
-    .auction-item h3 {
-      margin: 10px 0 5px 0;
-    }
+  .auction-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
 
-    .auction-item p {
-      margin: 5px 0;
-    }
+  .auction-item h3 {
+    margin: 10px 0 5px 0;
+  }
 
-    .auction-item span {
-      font-style: italic;
-      font-size: 0.9em;
-    }
+  .auction-item p {
+    margin: 5px 0;
+  }
 
-    .auction-item a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background: #222;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
+  .auction-item span {
+    font-style: italic;
+    font-size: 0.9em;
+  }
 
-    .auction-item a:hover {
-      background: #444;
-    }
+  .auction-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
-    /* Countdown Timer */
-    #auction-timer {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 15px;
-      font-weight: bold;
-    }
+  .auction-item a:hover {
+    background: #444;
+  }
 
-    /* Featured Gallery */
-    .featured-gallery {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      max-width: 900px;
-      margin: 40px auto;
-      flex-wrap: wrap;
-    }
+  /* Featured Gallery */
+  .featured-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+  }
 
-    .featured-gallery img {
-      max-width: 100%;
-      width: 45%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+  .featured-gallery img {
+    max-width: 100%;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
 
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #ffffff;
-      font-size: 14px;
-      border-top: 1px solid #ccc;
-    }
-  </style>
+  footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Countdown Timer */
+  #auction-timer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  @media(max-width: 900px){
+    .auction-item { width: 45%; }
+    .featured-gallery img { width: 90%; }
+  }
+
+  @media(max-width: 600px){
+    .auction-item { width: 90%; }
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Artist Kenneth J Lewis Sr</h1>
-  </header>
+<header>
+  <h1>Artist Kenneth J Lewis Sr</h1>
+</header>
 
-  <section class="intro">
-    <p>
-      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
-    </p>
-    <p>
-      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
-      (609) 372-6022 · www.kjlartsanctuary@gmail.com
-    </p>
-  </section>
+<section class="intro">
+  <p>
+    Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
+  </p>
+  <p>
+    Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
+    (609) 372-6022 · www.kjlartsanctuary@gmail.com
+  </p>
+</section>
 
-  <!-- ===== Current Auction Section ===== -->
-  <section class="auction-section">
-    <h2>Current Auction</h2>
-    <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
-    
-    <!-- Countdown Timer -->
-    <div id="auction-timer"></div>
-    <script>
-      var auctionEnd = new Date("August 22, 2025 23:59:59").getTime();
-      var countdown = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = auctionEnd - now;
+<!-- Navigation -->
+<nav class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="auction.html">Auction</a>
+  <a href="bio.html">Artist Bio</a>
+  <a href="podcast.html">Podcast</a>
+  <a href="social.html">Social</a>
+  <a href="canvas-reproductions.html">Canvas Reproductions</a>
+  <a href="exhibitions.html">Exhibitions</a>
+  <a href="abstract.html">Abstract Series</a>
+  <a href="patterns-series.html">Patterns Series</a>
+  <a href="basquiat.html">Basquiat Series</a>
+  <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
+  <a href="figurative-series.html">Figurative Series</a>
+  <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
+  <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
+  <a href="luggage-series.html">Luggage Series</a>
+  <a href="mens-series.html">Men’s Series</a>
+  <a href="pots-and-pans.html">Pots and Pans Series</a>
+  <a href="structure.html">Structure Series</a>
+</nav>
 
-        if (distance < 0) {
-          clearInterval(countdown);
-          document.getElementById("auction-timer").innerHTML = "Auction Closed";
-          return;
-        }
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("auction-timer").innerHTML = 
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-      }, 1000);
-    </script>
-
-    <div class="auction-grid">
-      <!-- Lot 1 -->
-      <div class="auction-item">
-        <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
-        <h3>Framed Basquiat Portrait 1</h3>
-        <p><strong>Starting Bid:</strong> $895</p>
-        <span>Reserve price not shown</span>
-        <p><a href="auction.html">View Auction</a></p>
-      </div>
-      <!-- Lot 2 -->
-      <div class="auction-item">
-        <img src="images/The Draftsman.jpg" alt="The Draftsman">
-        <h3>The Draftsman</h3>
-        <p><strong>Starting Bid:</strong> $900</p>
-        <span>Reserve price not shown</span>
-        <p><a href="auction.html">View Auction</a></p>
-      </div>
-      <!-- Lot 3 -->
-      <div class="auction-item">
-        <img src="images/abstract26.jpg" alt="Abstract 26">
-        <h3>Abstract 26 (Diptych)</h3>
-        <p><strong>Starting Bid:</strong> $1,195</p>
-        <span>Reserve price not shown</span>
-        <p><a href="auction.html">View Auction</a></p>
-      </div>
+<!-- ===== Current Auction Section ===== -->
+<section class="auction-section">
+  <h2>Current Auction</h2>
+  <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
+  <div id="auction-timer"></div>
+  <div class="auction-grid">
+    <!-- Lot 1 -->
+    <div class="auction-item">
+      <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
+      <h3>Framed Basquiat Portrait 1</h3>
+      <p><strong>Starting Bid:</strong> $895</p>
+      <span>Reserve price not shown</span>
+      <p><a href="auction.html">View Auction</a></p>
     </div>
-  </section>
-
-  <!-- Combined Navigation for All Tabs -->
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="auction.html">Auction</a>
-    <a href="bio.html">Artist Bio</a>
-    <a href="podcast.html">Podcast</a>
-    <a href="social.html">Social</a>
-    <a href="canvas-reproductions.html">Canvas Reproductions</a>
-    <a href="exhibitions.html">Exhibitions</a>
-    <a href="abstract.html">Abstract Series</a>
-    <a href="patterns-series.html">Patterns Series</a>
-    <a href="basquiat.html">Basquiat Series</a>
-    <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
-    <a href="figurative-series.html">Figurative Series</a>
-    <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
-    <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
-    <a href="luggage-series.html">Luggage Series</a>
-    <a href="mens-series.html">Men’s Series</a>
-    <a href="pots-and-pans.html">Pots and Pans Series</a>
-    <a href="structure.html">Structure Series</a>
-  </nav>
-
-  <!-- Featured Images Side by Side -->
-  <div class="featured-gallery">
-    <img src="images/abstract34.jpg" alt="Abstract Painting 34">
-    <img src="images/abstract36.jpg" alt="Abstract Painting 36">
+    <!-- Lot 2 -->
+    <div class="auction-item">
+      <img src="images/The Draftsman.jpg" alt="The Draftsman">
+      <h3>The Draftsman</h3>
+      <p><strong>Starting Bid:</strong> $900</p>
+      <span>Reserve price not shown</span>
+      <p><a href="auction.html">View Auction</a></p>
+    </div>
+    <!-- Lot 3 -->
+    <div class="auction-item">
+      <img src="images/abstract26.jpg" alt="Abstract 26">
+      <h3>Abstract 26 (Diptych)</h3>
+      <p><strong>Starting Bid:</strong> $1,195</p>
+      <span>Reserve price not shown</span>
+      <p><a href="auction.html">View Auction</a></p>
+    </div>
   </div>
+</section>
 
-  <footer>
-    &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
-  </footer>
+<!-- Featured Images Section -->
+<div class="featured-gallery">
+  <img src="images/abstract34.jpg" alt="Abstract Painting 34">
+  <img src="images/abstract36.jpg" alt="Abstract Painting 36">
+</div>
+
+<footer>
+  &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
+</footer>
+
+<script>
+  // ===== Countdown Timer =====
+  const countdownDate = new Date("August 22, 2025 23:59:59").getTime();
+  const timerElement = document.getElementById("auction-timer");
+
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timerElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if(distance < 0) {
+      clearInterval(countdown);
+      timerElement.innerHTML = "The auction has ended.";
+    }
+  }, 1000);
+</script>
 
 </body>
 </html>

@@ -92,7 +92,7 @@
 
     .form-container {
       max-width: 800px;
-      margin: 40px auto;
+      margin: 20px auto 60px auto;
       text-align: center;
     }
 
@@ -103,6 +103,7 @@
       background: #fafafa;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 2em; /* doubled font size */
     }
 
     .auction-rules h3 {
@@ -181,17 +182,11 @@
   </div>
 </section>
 
-<!-- Google Form Embed Section -->
-<section class="form-container" id="bid-form">
-  <h3>Place Your Bid</h3>
-  <p>Please fill out the form below to submit your bid. All bids are recorded in our Google Sheet for easy tracking.</p>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6IcsY8oT4jXZIy358qOsH6tNjibJyXE6x6_5B44c_vUqoVA/viewform?embedded=true" width="700" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</section>
-
+<!-- Auction Rules Section BEFORE Form -->
 <section class="auction-rules">
   <h3>Auction Rules & Information</h3>
   <ul>
-    <li>Auction is private bidding only via the form above.</li>
+    <li>Auction is private bidding only via the form below.</li>
     <li>All starting bids are listed. Reserve prices exist but are not shown.</li>
     <li>Payment accepted via Credit Card, CashApp, or Cash.</li>
     <li>Shipping charges apply if the item must be shipped: free pickup available, $35 for delivery within 30 miles, consult for distances over 30 miles.</li>
@@ -199,6 +194,13 @@
     <li>Auction opens August 18, 2025, and closes August 22, 2025 at 11:59 PM.</li>
     <li>KJL Art Sanctuary reserves the right to reject any bid.</li>
   </ul>
+</section>
+
+<!-- Google Form Embed Section -->
+<section class="form-container" id="bid-form">
+  <h3>Place Your Bid</h3>
+  <p>Please fill out the form below to submit your bid. All bids are recorded in our Google Sheet for easy tracking.</p>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6IcsY8oT4jXZIy358qOsH6tNjibJyXE6x6_5B44c_vUqoVA/viewform?embedded=true" width="700" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </section>
 
 <footer>

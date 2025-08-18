@@ -83,7 +83,8 @@
     }
 
     .auction-item {
-      width: 30%; 
+      flex: 1 1 calc(33.333% - 20px); /* Three across */
+      max-width: 300px;
       min-width: 200px;
       background: #fff;
       border: 1px solid #ddd;
@@ -124,6 +125,14 @@
 
     .auction-item a:hover {
       background: #444;
+    }
+
+    /* Countdown Timer */
+    #auction-timer {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: bold;
     }
 
     /* Featured Gallery */
@@ -174,10 +183,32 @@
   <section class="auction-section">
     <h2>Current Auction</h2>
     <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
-    <div class="auction-grid">
-      <!-- ===== Countdown Timer ===== -->
-<div id="auction-timer" style="text-align:center; font-size:18px
+    
+    <!-- Countdown Timer -->
+    <div id="auction-timer"></div>
+    <script>
+      var auctionEnd = new Date("August 22, 2025 23:59:59").getTime();
+      var countdown = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = auctionEnd - now;
 
+        if (distance < 0) {
+          clearInterval(countdown);
+          document.getElementById("auction-timer").innerHTML = "Auction Closed";
+          return;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("auction-timer").innerHTML = 
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      }, 1000);
+    </script>
+
+    <div class="auction-grid">
       <!-- Lot 1 -->
       <div class="auction-item">
         <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
@@ -205,10 +236,10 @@
     </div>
   </section>
 
-  <!-- Combined Navigation for All Tabs with Auction -->
+  <!-- Combined Navigation for All Tabs -->
   <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="auction.html">Auction</a> <!-- Auction tab added -->
+    <a href="auction.html">Auction</a>
     <a href="bio.html">Artist Bio</a>
     <a href="podcast.html">Podcast</a>
     <a href="social.html">Social</a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artist Kenneth J Lewis Sr | Home</title>
+  <title>KJL Art Sanctuary Gallery Auction</title>
   <style>
     body {
       font-family: Garamond, "Times New Roman", serif;
@@ -14,9 +14,9 @@
     }
 
     header {
-      background-color: #ffffff;
-      padding: 20px 0;
       text-align: center;
+      padding: 20px 0;
+      background-color: #fff;
     }
 
     header h1 {
@@ -25,52 +25,15 @@
       letter-spacing: 1px;
     }
 
-    .intro {
-      max-width: 900px;
-      margin: 0 auto 20px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .intro p {
-      font-size: 9px;
-      line-height: 1.7;
-    }
-
-    nav.main-nav {
-      text-align: center;
-      background-color: #ffffff;
-      padding: 12px 0;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
-    }
-
-    nav.main-nav a {
-      margin: 0 8px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 11px;
-      padding: 4px 6px;
-    }
-
-    nav.main-nav a:hover {
-      color: #b56b27;
-    }
-
-    /* Current Auction Section Styles */
     .auction-section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 20px;
-      background-color: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .auction-section h2 {
       text-align: center;
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
@@ -79,22 +42,22 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .auction-item {
+      width: 30%;
+      min-width: 250px;
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      width: 30%;
-      min-width: 220px; /* ensures responsiveness */
-      text-align: center;
       padding: 10px;
+      text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .auction-item img {
-      width: 90%;
+      width: 100%;
       height: auto;
       border-radius: 6px;
     }
@@ -105,6 +68,11 @@
 
     .auction-item p {
       margin: 5px 0;
+    }
+
+    .auction-item span {
+      font-style: italic;
+      font-size: 0.9em;
     }
 
     .auction-item a {
@@ -121,21 +89,31 @@
       background: #444;
     }
 
-    .featured-gallery {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+    .auction-rules {
       max-width: 900px;
       margin: 40px auto;
-      flex-wrap: wrap;
+      padding: 20px;
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .featured-gallery img {
-      max-width: 100%;
-      width: 45%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    .auction-rules h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .auction-rules ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #b56b27;
     }
 
     footer {
@@ -150,79 +128,84 @@
 </head>
 <body>
 
-  <header>
-    <h1>Artist Kenneth J Lewis Sr</h1>
-  </header>
+<header>
+  <h1>KJL Art Sanctuary Gallery Auction</h1>
+</header>
 
-  <section class="intro">
-    <p>
-      Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
-    </p>
-    <p>
-      Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
-      (609) 372-6022 · www.kjlartsanctuary@gmail.com
-    </p>
-  </section>
+<section class="auction-section">
+  <h2>Current Auction</h2>
+  <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
+  <div class="countdown" id="countdown"></div>
 
-  <!-- ===== Current Auction Section ===== -->
-  <section class="auction-section">
-    <h2>Current Auction</h2>
-    <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
-    <div class="auction-grid">
-      <!-- Lot 1 -->
-      <div class="auction-item">
-        <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
-        <h3>Framed Basquiat Portrait 1</h3>
-        <p><strong>Starting Bid:</strong> $895</p>
-        <a href="auction.html">View Auction</a>
-      </div>
-      <!-- Lot 2 -->
-      <div class="auction-item">
-        <img src="images/The Draftsman.jpg" alt="The Draftsman">
-        <h3>The Draftsman</h3>
-        <p><strong>Starting Bid:</strong> $900</p>
-        <a href="auction.html">View Auction</a>
-      </div>
-      <!-- Lot 3 -->
-      <div class="auction-item">
-        <img src="images/abstract26.jpg" alt="Abstract 26">
-        <h3>Abstract 26 (Diptych)</h3>
-        <p><strong>Starting Bid:</strong> $1,195</p>
-        <a href="auction.html">View Auction</a>
-      </div>
+  <div class="auction-grid">
+    <!-- Lot 1 -->
+    <div class="auction-item">
+      <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
+      <h3>Framed Basquiat Portrait 1</h3>
+      <p><strong>Starting Bid:</strong> $895</p>
+      <span>Reserve price not shown</span>
+      <p><a href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Inquiry%20Framed%20Basquiat%20Portrait%201">Place Private Bid</a></p>
     </div>
-  </section>
 
-  <!-- Combined Navigation for All Tabs -->
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="bio.html">Artist Bio</a>
-    <a href="podcast.html">Podcast</a>
-    <a href="social.html">Social</a>
-    <a href="canvas-reproductions.html">Canvas Reproductions</a>
-    <a href="exhibitions.html">Exhibitions</a>
-    <a href="abstract.html">Abstract Series</a>
-    <a href="patterns-series.html">Patterns Series</a>
-    <a href="basquiat.html">Basquiat Series</a>
-    <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
-    <a href="figurative-series.html">Figurative Series</a>
-    <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
-    <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
-    <a href="luggage-series.html">Luggage Series</a>
-    <a href="mens-series.html">Men’s Series</a>
-    <a href="pots-and-pans.html">Pots and Pans Series</a>
-    <a href="structure.html">Structure Series</a>
-  </nav>
+    <!-- Lot 2 -->
+    <div class="auction-item">
+      <img src="images/The Draftsman.jpg" alt="The Draftsman">
+      <h3>The Draftsman</h3>
+      <p><strong>Starting Bid:</strong> $900</p>
+      <span>Reserve price not shown</span>
+      <p><a href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Inquiry%20The%20Draftsman">Place Private Bid</a></p>
+    </div>
 
-  <!-- Featured Images Side by Side -->
-  <div class="featured-gallery">
-    <img src="images/abstract34.jpg" alt="Abstract Painting 34">
-    <img src="images/abstract36.jpg" alt="Abstract Painting 36">
+    <!-- Lot 3 -->
+    <div class="auction-item">
+      <img src="images/abstract26.jpg" alt="Abstract 26">
+      <h3>Abstract 26 (Diptych)</h3>
+      <p><strong>Starting Bid:</strong> $1,195</p>
+      <span>Reserve price not shown</span>
+      <p><a href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Inquiry%20Abstract%2026">Place Private Bid</a></p>
+    </div>
   </div>
+</section>
 
-  <footer>
-    &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
-  </footer>
+<section class="auction-rules">
+  <h3>Auction Rules & Information</h3>
+  <ul>
+    <li>Auction is private bidding only via email to <a href="mailto:kjlartsanctuary@gmail.com">kjlartsanctuary@gmail.com</a>.</li>
+    <li>All starting bids are listed. Reserve prices exist but are not shown.</li>
+    <li>Payment accepted via Credit Card, CashApp, or Cash.</li>
+    <li>Shipping charges apply if the item must be shipped: free pickup available, $35 for delivery within 30 miles, consult for distances over 30 miles.</li>
+    <li>All bids are legally binding; please confirm your bid carefully.</li>
+    <li>Auction opens August 18, 2025, and closes August 22, 2025 at 11:59 PM.</li>
+    <li>KJL Art Sanctuary reserves the right to reject any bid.</li>
+  </ul>
+</section>
+
+<footer>
+  KJL Art Sanctuary | 310 4th St, Ewing, NJ 08638<br>
+  Email: <a href="mailto:kjlartsanctuary@gmail.com">kjlartsanctuary@gmail.com</a> | Phone: 609-372-6022
+</footer>
+
+<script>
+  // Countdown Timer
+  const countdownElement = document.getElementById('countdown');
+  const auctionEnd = new Date("August 22, 2025 23:59:59").getTime();
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = auctionEnd - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      countdownElement.innerHTML = "Auction Closed";
+    } else {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+  }, 1000);
+</script>
 
 </body>
 </html>

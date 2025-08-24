@@ -3,114 +3,69 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Artist Kenneth J Lewis Sr | Home</title>
+<title>Current Auction | Artist Kenneth J Lewis Sr</title>
 <style>
-  html, body {
-    height: 100%;
+  body {
     margin: 0;
-    padding: 0;
     font-family: Garamond, "Times New Roman", serif;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #333;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
   header {
-    background-color: #ffffff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-bottom: 2px solid #333;
   }
 
   header h1 {
     margin: 0;
-    font-size: 36px;
-    letter-spacing: 1px;
+    font-size: 32px;
   }
 
-  .intro {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .intro p {
-    font-size: 9px;
-    line-height: 1.7;
-  }
-
-  nav.main-nav {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 12px 0;
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
-  }
-
-  nav.main-nav a {
-    margin: 0 8px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 11px;
-    padding: 4px 6px;
-  }
-
-  nav.main-nav a:hover {
-    color: #b56b27;
-  }
-
-  /* Current Auction Section */
   .auction-section {
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 30px auto;
     padding: 20px;
-    background-color: #fafafa;
+    background: #fafafa;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
   }
 
   .auction-section h2 {
-    text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 10px;
   }
 
-  .auction-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
+  .auction-section p {
+    margin: 6px 0;
+  }
+
+  #auction-timer {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
   }
 
   .auction-item {
-    width: 30%;
-    min-width: 200px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-top: 25px;
   }
 
   .auction-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   }
 
   .auction-item h3 {
-    margin: 10px 0 5px 0;
+    font-size: 22px;
+    margin: 15px 0 5px;
   }
 
   .auction-item p {
+    font-size: 16px;
     margin: 5px 0;
   }
 
@@ -119,135 +74,46 @@
     font-size: 0.9em;
   }
 
-  .auction-item a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-
-  .auction-item a:hover {
-    background: #444;
-  }
-
-  /* Featured Gallery */
-  .featured-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: 40px auto;
-    flex-wrap: wrap;
-  }
-
-  .featured-gallery img {
-    max-width: 100%;
-    width: 45%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-
   footer {
-    margin-top: auto;
+    margin-top: 40px;
+    padding: 15px;
     text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
     font-size: 14px;
     border-top: 1px solid #ccc;
   }
 
-  /* Countdown Timer */
-  #auction-timer {
-    text-align: center;
-    font-size: 18px;
+  a.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
-    margin-top: 10px;
   }
-
-  @media(max-width: 900px){
-    .auction-item { width: 45%; }
-    .featured-gallery img { width: 90%; }
-  }
-
-  @media(max-width: 600px){
-    .auction-item { width: 90%; }
+  a.back-link:hover {
+    color: #b56b27;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Artist Kenneth J Lewis Sr</h1>
+  <h1>Current Auction</h1>
 </header>
 
-<section class="intro">
-  <p>
-    Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
-  </p>
-  <p>
-    Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
-    (609) 372-6022 · www.kjlartsanctuary@gmail.com
-  </p>
-</section>
-
-<!-- Navigation -->
-<nav class="main-nav">
-  <a href="index.html">Home</a>
-  <a href="auction.html">Auction</a>
-  <a href="bio.html">Artist Bio</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="social.html">Social</a>
-  <a href="canvas-reproductions.html">Canvas Reproductions</a>
-  <a href="exhibitions.html">Exhibitions</a>
-  <a href="abstract.html">Abstract Series</a>
-  <a href="patterns-series.html">Patterns Series</a>
-  <a href="basquiat.html">Basquiat Series</a>
-  <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
-  <a href="figurative-series.html">Figurative Series</a>
-  <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
-  <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
-  <a href="luggage-series.html">Luggage Series</a>
-  <a href="mens-series.html">Men’s Series</a>
-  <a href="pots-and-pans.html">Pots and Pans Series</a>
-  <a href="structure.html">Structure Series</a>
-</nav>
-
-<!-- ===== Current Auction Section ===== -->
 <section class="auction-section">
-  <h2>Current Auction</h2>
-  <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
+  <h2>Dream Fragments 3</h2>
+  <p><strong>Opens:</strong> August 24, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 28, 2025</p>
   <div id="auction-timer"></div>
-  <div class="auction-grid">
-    Discover original works by Kenneth J. Lewis Sr. in our private, time-limited auctions. Over 3–5 days, you can place your confidential bid on one-of-a-kind pieces, connecting with the art in a personal and meaningful way. Each auction offers a unique opportunity to bring home a masterpiece that speaks to you.
-    <!-- Lot 1 -->
-    <div class="auction-item">
-      <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
-      <h3>Framed Basquiat Portrait 1</h3>
-      <p><strong>Starting Bid:</strong> $895</p>
-      <span>Reserve price not shown</span>
-      <p><a href="auction.html">View Auction</a></p>
-    </div>
-    <!-- Lot 2 -->
-    <div class="auction-item">
-      <img src="images/The Draftsman.jpg" alt="The Draftsman">
-      <h3>The Draftsman</h3>
-      <p><strong>Starting Bid:</strong> $900</p>
-      <span>Reserve price not shown</span>
-      <p><a href="auction.html">View Auction</a></p>
-    </div>
-    <!-- Lot 3 -->
-    <div class="auction-item">
-      <img src="images/abstract26.jpg" alt="Abstract 26">
-      <h3>Abstract 26 (Diptych)</h3>
-      <p><strong>Starting Bid:</strong> $1,195</p>
-      <span>Reserve price not shown</span>
-      <p><a href="auction.html">View Auction</a></p>
-    </div>
+
+  <div class="auction-item">
+    <img src="images/Dream Fragments 3.jpg" alt="Dream Fragments 3">
+    <h3>Dream Fragments 3</h3>
+    <p><strong>Starting Bid:</strong> $1,200</p>
+    <span>Reserve price not shown</span>
+    <p>Bid privately and confidentially during this 4-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
   </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
 </section>
 
 <footer>
@@ -255,8 +121,8 @@
 </footer>
 
 <script>
-  // ===== Countdown Timer =====
-  const countdownDate = new Date("August 22, 2025 23:59:59").getTime();
+  // Countdown Timer
+  const countdownDate = new Date("August 28, 2025 23:59:59").getTime();
   const timerElement = document.getElementById("auction-timer");
 
   const countdown = setInterval(() => {

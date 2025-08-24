@@ -1,239 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KJL Art Sanctuary Gallery Auction</title>
-  <style>
-    body {
-      font-family: Garamond, "Times New Roman", serif;
-      background-color: #ffffff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Current Auction | Artist Kenneth J Lewis Sr</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Garamond, "Times New Roman", serif;
+    background: #ffffff;
+    color: #333;
+  }
 
-    header {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #fff;
-    }
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-bottom: 2px solid #333;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      letter-spacing: 1px;
-    }
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+  }
 
-    .auction-section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+  .auction-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
 
-    .auction-section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+  .auction-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
 
-    .auction-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-    }
+  .auction-section p {
+    margin: 6px 0;
+  }
 
-    .auction-item {
-      width: 30%;
-      min-width: 250px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+  #auction-timer {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
 
-    .auction-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
+  .auction-item {
+    margin-top: 25px;
+  }
 
-    .auction-item h3 {
-      margin: 10px 0 5px 0;
-    }
+  .auction-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  }
 
-    .auction-item p {
-      margin: 5px 0;
-    }
+  .auction-item h3 {
+    font-size: 22px;
+    margin: 15px 0 5px;
+  }
 
-    .auction-item span {
-      font-style: italic;
-      font-size: 0.9em;
-    }
+  .auction-item p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
 
-    .auction-item button {
-      margin-top: 10px;
-      padding: 8px 16px;
-      background: #222;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+  .auction-item span {
+    font-style: italic;
+    font-size: 0.9em;
+  }
 
-    .auction-item button:hover {
-      background: #444;
-    }
+  footer {
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+  }
 
-    .form-container {
-      max-width: 800px;
-      margin: 20px auto 60px auto;
-      text-align: center;
-    }
-
-    .auction-rules {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 2em; /* doubled font size */
-    }
-
-    .auction-rules h3 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .auction-rules ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .countdown {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      margin: 20px 0;
-      color: #b56b27;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #ffffff;
-      font-size: 14px;
-      border-top: 1px solid #ccc;
-    }
-
-    @media(max-width: 900px){
-      .auction-item { width: 45%; }
-    }
-    @media(max-width: 600px){
-      .auction-item { width: 90%; }
-    }
-  </style>
+  a.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  a.back-link:hover {
+    color: #b56b27;
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <h1>KJL Art Sanctuary Gallery Auction</h1>
+  <h1>Current Auction</h1>
 </header>
 
 <section class="auction-section">
-  <h2>Current Auction</h2>
-  <p style="text-align:center;"><strong>Opens:</strong> August 18, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 22, 2025</p>
-  <div class="countdown" id="countdown"></div>
+  <h2>Dream Fragments 3</h2>
+  <p><strong>Opens:</strong> August 24, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 28, 2025</p>
+  <div id="auction-timer"></div>
 
-  <div class="auction-grid">
-    <!-- Lot 1 -->
-    <div class="auction-item">
-      <img src="images/Framed Basquiat Portrait 1.jpg" alt="Framed Basquiat Portrait 1">
-      <h3>Framed Basquiat Portrait 1</h3>
-      <p><strong>Starting Bid:</strong> $895</p>
-      <span>Reserve price not shown</span>
-      <button onclick="scrollToForm()">Bid Now</button>
-    </div>
-
-    <!-- Lot 2 -->
-    <div class="auction-item">
-      <img src="images/The Draftsman.jpg" alt="The Draftsman">
-      <h3>The Draftsman</h3>
-      <p><strong>Starting Bid:</strong> $900</p>
-      <span>Reserve price not shown</span>
-      <button onclick="scrollToForm()">Bid Now</button>
-    </div>
-
-    <!-- Lot 3 -->
-    <div class="auction-item">
-      <img src="images/abstract26.jpg" alt="Abstract 26">
-      <h3>Abstract 26 (Diptych)</h3>
-      <p><strong>Starting Bid:</strong> $1,195</p>
-      <span>Reserve price not shown</span>
-      <button onclick="scrollToForm()">Bid Now</button>
-    </div>
+  <div class="auction-item">
+    <img src="images/Dream Fragments 3.jpg" alt="Dream Fragments 3">
+    <h3>Dream Fragments 3</h3>
+    <p><strong>Starting Bid:</strong> $1,200</p>
+    <span>Reserve price not shown</span>
+    <p>Bid privately and confidentially during this 4-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
   </div>
-</section>
 
-<!-- Auction Rules Section BEFORE Form -->
-<section class="auction-rules">
-  <h3>Auction Rules & Information</h3>
-  <ul>
-    <li>Auction is private bidding only via the form below.</li>
-    <li>All starting bids are listed. Reserve prices exist but are not shown.</li>
-    <li>Payment accepted via Credit Card, CashApp, or Cash.</li>
-    <li>Shipping charges apply if the item must be shipped: free pickup available, $35 for delivery within 30 miles, consult for distances over 30 miles.</li>
-    <li>All bids are legally binding; please confirm your bid carefully.</li>
-    <li>Auction opens August 18, 2025, and closes August 22, 2025 at 11:59 PM.</li>
-    <li>KJL Art Sanctuary reserves the right to reject any bid.</li>
-  </ul>
-</section>
-
-<!-- Google Form Embed Section -->
-<section class="form-container" id="bid-form">
-  <h3>Place Your Bid</h3>
-  <p>Please fill out the form below to submit your bid. All bids are recorded in our Google Sheet for easy tracking.</p>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6IcsY8oT4jXZIy358qOsH6tNjibJyXE6x6_5B44c_vUqoVA/viewform?embedded=true" width="700" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <a href="index.html" class="back-link">← Back to Home</a>
 </section>
 
 <footer>
-  KJL Art Sanctuary | 310 4th St, Ewing, NJ 08638<br>
-  Email: <a href="mailto:kjlartsanctuary@gmail.com">kjlartsanctuary@gmail.com</a> | Phone: 609-372-6022
+  &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
 
 <script>
   // Countdown Timer
-  const countdownElement = document.getElementById('countdown');
-  const auctionEnd = new Date("August 22, 2025 23:59:59").getTime();
+  const countdownDate = new Date("August 28, 2025 23:59:59").getTime();
+  const timerElement = document.getElementById("auction-timer");
 
-  const timer = setInterval(function() {
+  const countdown = setInterval(() => {
     const now = new Date().getTime();
-    const distance = auctionEnd - now;
+    const distance = countdownDate - now;
 
-    if (distance < 0) {
-      clearInterval(timer);
-      countdownElement.innerHTML = "Auction Closed";
-    } else {
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdownElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timerElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if(distance < 0) {
+      clearInterval(countdown);
+      timerElement.innerHTML = "The auction has ended.";
     }
   }, 1000);
-
-  // Scroll to Google Form
-  function scrollToForm() {
-    const formSection = document.getElementById('bid-form');
-    formSection.scrollIntoView({ behavior: 'smooth' });
-  }
 </script>
 
 </body>

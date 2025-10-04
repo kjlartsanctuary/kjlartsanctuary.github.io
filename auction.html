@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Current Auction | Artist Kenneth J Lewis Sr</title>
+<title>Upcoming Auction | Artist Kenneth J Lewis Sr</title>
 <style>
   body {
     margin: 0;
@@ -167,20 +167,19 @@
 <body>
 
 <header>
-  <h1>Current Auction</h1>
+  <h1>Upcoming Auction</h1>
 </header>
 
 <section class="auction-section">
-  <h2>Dream Fragments 3</h2>
-  <p><strong>Opens:</strong> August 24, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> August 28, 2025</p>
+  <h2>Next Auction: October 10–12, 2025</h2>
+  <p><strong>Opens:</strong> October 10, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 12, 2025</p>
   <div id="auction-timer"></div>
 
   <div class="auction-item">
-    <img src="images/Dream Fragments 3.jpg" alt="Dream Fragments 3">
-    <h3>Dream Fragments 3</h3>
-    <p><strong>Starting Bid:</strong> $1,200</p>
+    <img src="images/onlineauction.jpg" alt="Auction Artwork">
+    <h3>Featured Artwork</h3>
     <span>Reserve price not shown</span>
-    <p>Bid privately and confidentially during this 4-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
+    <p>Bid privately and confidentially during this 3-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
   </div>
 
   <!-- Bid Form -->
@@ -197,7 +196,7 @@
     <input type="tel" id="phone" name="phone" required>
 
     <label for="bid">Your Bid (USD)</label>
-    <input type="number" id="bid" name="bid" step="50" min="1200" required>
+    <input type="number" id="bid" name="bid" step="50" required>
 
     <label for="comments">Comments (optional)</label>
     <textarea id="comments" name="comments" rows="4"></textarea>
@@ -210,7 +209,7 @@
     <h3>Auction Rules</h3>
     <ul>
       <li>All bids are private and confidential.</li>
-      <li>Auction opens August 24, 2025 and closes August 28, 2025 at 11:59 PM EST.</li>
+      <li>Auction opens October 10, 2025 and closes October 12, 2025 at 11:59 PM EST.</li>
       <li>Winning bidder will be notified directly by the artist.</li>
       <li>Payment must be completed within 48 hours of auction close.</li>
       <li>Shipping and delivery options will be arranged with the buyer.</li>
@@ -223,31 +222,4 @@
 </section>
 
 <footer>
-  &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
-</footer>
-
-<script>
-  // Countdown Timer
-  const countdownDate = new Date("August 28, 2025 23:59:59").getTime();
-  const timerElement = document.getElementById("auction-timer");
-
-  const countdown = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    timerElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    if(distance < 0) {
-      clearInterval(countdown);
-      timerElement.innerHTML = "The auction has ended.";
-    }
-  }, 1000);
-</script>
-
-</body>
-</html>
+  &copy; 2025 Kenne

@@ -171,15 +171,15 @@
 </header>
 
 <section class="auction-section">
-  <h2>Next Auction: October 10–12, 2025</h2>
-  <p><strong>Opens:</strong> October 10, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 12, 2025</p>
+  <h2>Next Auction: October 17–18, 2025</h2>
+  <p><strong>Opens:</strong> October 17, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 18, 2025</p>
   <div id="auction-timer"></div>
 
   <div class="auction-item">
     <img src="images/onlineauction.jpg" alt="Auction Artwork">
     <h3>Featured Artwork</h3>
     <span>Reserve price not shown</span>
-    <p>Bid privately and confidentially during this 3-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
+    <p>Bid privately and confidentially during this 2-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
   </div>
 
   <!-- Bid Form -->
@@ -209,7 +209,7 @@
     <h3>Auction Rules</h3>
     <ul>
       <li>All bids are private and confidential.</li>
-      <li>Auction opens October 10, 2025 and closes October 12, 2025 at 11:59 PM EST.</li>
+      <li>Auction opens October 17, 2025 and closes October 18, 2025 at 11:59 PM EST.</li>
       <li>Winning bidder will be notified directly by the artist.</li>
       <li>Payment must be completed within 48 hours of auction close.</li>
       <li>Shipping and delivery options will be arranged with the buyer.</li>
@@ -222,4 +222,30 @@
 </section>
 
 <footer>
-  &copy; 2025 Kenne
+  &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
+</footer>
+
+<script>
+  // ===== Countdown Timer =====
+  const countdownDate = new Date("October 18, 2025 23:59:59").getTime();
+  const timerElement = document.getElementById("auction-timer");
+
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timerElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if(distance < 0) {
+      clearInterval(countdown);
+      timerElement.innerHTML = "The auction has ended.";
+    }
+  }, 1000);
+</script>
+</body>
+</html>

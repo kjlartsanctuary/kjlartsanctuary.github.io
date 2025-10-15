@@ -41,6 +41,7 @@
 
   .auction-section p {
     margin: 6px 0;
+    font-size: 17px;
   }
 
   #auction-timer {
@@ -162,6 +163,24 @@
   a.back-link:hover {
     color: #b56b27;
   }
+
+  .back-home {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .btn-home {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  .btn-home:hover {
+    background: #444;
+  }
 </style>
 </head>
 <body>
@@ -171,15 +190,17 @@
 </header>
 
 <section class="auction-section">
-  <h2>Next Auction: October 17–18, 2025</h2>
-  <p><strong>Opens:</strong> October 17, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 18, 2025</p>
+  <h2>Current Auction: October 15–18, 2025</h2>
+  <p><strong>Opens:</strong> October 15, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 18, 2025 at Midnight (EST)</p>
   <div id="auction-timer"></div>
 
   <div class="auction-item">
-    <img src="images/onlineauction.jpg" alt="Auction Artwork">
-    <h3>Featured Artwork</h3>
-    <span>Reserve price not shown</span>
-    <p>Bid privately and confidentially during this 2-day auction window. Secure this one-of-a-kind original artwork before the auction closes.</p>
+    <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/abstract26.jpg?raw=true" alt="Abstract #26 - Diptych Painting">
+    <h3>Abstract #26 (Diptych)</h3>
+    <p><strong>Medium:</strong> Acrylic on Canvas</p>
+    <p><strong>Dimensions:</strong> Two panels, each 36&quot; W x 48&quot; H (Total: 72&quot; W x 48&quot; H)</p>
+    <p><strong>Starting Bid:</strong> $1,300</p>
+    <p>This striking abstract diptych, titled <em>Abstract #26</em>, offers a bold interplay of color, form, and gesture. Painted in acrylic, it captures movement and depth across two panels, creating a commanding visual presence perfect for contemporary interiors or serious collectors. Don’t miss this opportunity to acquire an original work by Kenneth J. Lewis Sr.</p>
   </div>
 
   <!-- Bid Form -->
@@ -209,11 +230,11 @@
     <h3>Auction Rules</h3>
     <ul>
       <li>All bids are private and confidential.</li>
-      <li>Auction opens October 17, 2025 and closes October 18, 2025 at 11:59 PM EST.</li>
+      <li>Auction opens October 15, 2025 and closes October 18, 2025 at 11:59 PM EST.</li>
+      <li>Starting bid for Abstract #26 is $1,300.</li>
       <li>Winning bidder will be notified directly by the artist.</li>
       <li>Payment must be completed within 48 hours of auction close.</li>
       <li>Shipping and delivery options will be arranged with the buyer.</li>
-      <li>Reserve price is not shown.</li>
       <li>All sales are final.</li>
     </ul>
   </div>
@@ -247,28 +268,10 @@
     }
   }, 1000);
 </script>
-</body>
-</html>
+
 <div class="back-home">
   <a href="index.html" class="btn-home">← Back to Home</a>
 </div>
 
-<style>
-  .back-home {
-    text-align: center;
-    margin: 2rem 0;
-  }
-  .btn-home {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-  .btn-home:hover {
-    background: #444;
-  }
-</style>
+</body>
+</html>

@@ -3,209 +3,208 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Upcoming Auction | Artist Kenneth J Lewis Sr</title>
+<title>Auction Lot 4 | Artist Kenneth J. Lewis Sr.</title>
 <style>
+  :root {
+    --ink:#222;
+    --bg:#ffffff;
+    --card:#fafafa;
+    --accent:#b56b27;
+  }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     font-family: Garamond, "Times New Roman", serif;
-    background: #ffffff;
-    color: #333;
+    background: var(--bg);
+    color: var(--ink);
   }
-
   header {
     text-align: center;
-    padding: 20px;
+    padding: 24px 16px;
     background: #fff;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--ink);
   }
-
-  header h1 {
-    margin: 0;
-    font-size: 32px;
-  }
+  header h1 { margin: 0 0 6px; font-size: 34px; }
+  header p { margin: 0; font-size: 16px; letter-spacing: .3px; }
 
   .auction-section {
-    max-width: 900px;
-    margin: 30px auto;
+    max-width: 980px;
+    margin: 32px auto;
     padding: 20px;
-    background: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
   }
 
-  .auction-section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
+  .row { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  @media (min-width: 720px){ .row { grid-template-columns: 1fr 1fr; } }
 
-  .auction-section p {
-    margin: 6px 0;
-    font-size: 17px;
-  }
-
+  .lot-meta { text-align: center; margin-bottom: 6px; }
+  .lot-meta h2 { font-size: 28px; margin: 0 0 4px; }
+  .lot-meta p { margin: 4px 0; font-size: 17px; }
   #auction-timer {
     font-size: 18px;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 12px 0 18px;
+    text-align: center;
   }
 
   .auction-item {
-    margin-top: 25px;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
   }
-
-  .auction-item img {
+  .media {
+    background:#fff;
+    padding: 14px;
+    border-bottom:1px solid #eee;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .media img {
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    height:auto;
+    border-radius:8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.12);
   }
-
-  .auction-item h3 {
-    font-size: 22px;
-    margin: 15px 0 5px;
+  .auction-item .content { padding:16px 18px 20px; }
+  .auction-item h3 { margin: 0 0 6px; font-size: 22px; }
+  .auction-item p { margin: 6px 0; font-size: 16px; line-height: 1.5; }
+  .pill {
+    display:inline-block; padding:.25rem .6rem; border-radius:999px;
+    background:#000; color:#fff; font-size:12px; letter-spacing:.4px;
   }
-
-  .auction-item p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-
-  .auction-item span {
-    font-style: italic;
-    font-size: 0.9em;
-  }
+  .start { color: var(--accent); font-weight: 700; }
 
   /* Bid Form */
   .bid-form {
-    margin-top: 30px;
+    margin-top: 28px;
     padding: 20px;
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: left;
+    border-radius: 10px;
   }
-
-  .bid-form h3 {
-    margin-top: 0;
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .bid-form label {
-    display: block;
-    margin: 12px 0 6px;
-    font-weight: bold;
-  }
-
+  .bid-form h3 { margin:0 0 10px; text-align:center; font-size:22px; }
+  .bid-form label { display:block; margin:12px 0 6px; font-weight:700; }
   .bid-form input, .bid-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    font-size: 15px;
-    font-family: inherit;
+    width: 100%; padding: 10px; border: 1px solid #bbb; border-radius: 6px; font-family: inherit;
   }
-
   .bid-form button {
-    display: block;
-    width: 100%;
-    margin-top: 15px;
-    padding: 12px;
-    font-size: 16px;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+    width: 100%; margin-top: 14px; padding: 12px; border: none; border-radius: 8px;
+    background:#000; color:#fff; font-weight:700; cursor:pointer; font-size:16px;
   }
+  .bid-form button:hover { background:#444; }
 
-  .bid-form button:hover {
-    background: #b56b27;
-  }
-
-  /* Auction Rules */
+  /* Rules */
   .auction-rules {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: left;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    margin-top: 28px; padding: 20px; background:#fff; border:1px solid #ddd; border-radius:10px;
   }
-
-  .auction-rules h3 {
-    margin-top: 0;
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .auction-rules ul {
-    padding-left: 20px;
-    line-height: 1.6;
-  }
+  .auction-rules h3 { margin: 0 0 10px; text-align:center; font-size:22px; }
+  .auction-rules ul { margin:0; padding-left: 20px; line-height:1.6; }
 
   footer {
-    margin-top: 40px;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    border-top: 1px solid #ccc;
+    margin: 36px 0 20px; text-align: center; font-size: 14px; color:#666;
   }
-
-  a.back-link {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  a.back-link:hover {
-    color: #b56b27;
-  }
-
-  .back-home {
-    text-align: center;
-    margin: 2rem 0;
-  }
+  .back-home { text-align:center; margin: 18px 0 8px; }
   .btn-home {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s ease;
+    display:inline-block; padding:.75rem 1.25rem; background:#000; color:#fff; text-decoration:none; border-radius:8px;
   }
-  .btn-home:hover {
-    background: #444;
-  }
+  .btn-home:hover { background:#444; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Upcoming Auction</h1>
+  <h1>Auction Lot 4</h1>
+  <p>Artist Kenneth J. Lewis Sr. — Auction starts <strong>now</strong> and ends <strong>Friday, Oct 31, 2025 at 11:59 PM ET</strong>.</p>
 </header>
 
-<section class="auction-section">
-  <h2>Current Auction: October 15–18, 2025</h2>
-  <p><strong>Opens:</strong> October 15, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 18, 2025 at Midnight (EST)</p>
-  <div id="auction-timer"></div>
-
-  <div class="auction-item">
-    <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/abstract26.jpg?raw=true" alt="Abstract #26 - Diptych Painting">
-    <h3>Abstract #26 (Diptych)</h3>
-    <p><strong>Medium:</strong> Acrylic on Canvas</p>
-    <p><strong>Dimensions:</strong> Two panels, each 36&quot; W x 48&quot; H (Total: 72&quot; W x 48&quot; H)</p>
-    <p><strong>Starting Bid:</strong> $1,300</p>
-    <p>This striking abstract diptych, titled <em>Abstract #26</em>, offers a bold interplay of color, form, and gesture. Painted in acrylic, it captures movement and depth across two panels, creating a commanding visual presence perfect for contemporary interiors or serious collectors. Don’t miss this opportunity to acquire an original work by Kenneth J. Lewis Sr.</p>
+<main class="auction-section">
+  <div class="lot-meta">
+    <h2>Live Now • Ends Oct 31, 2025</h2>
+    <p id="auction-timer">Loading timer…</p>
+    <span class="pill">Private &amp; Confidential Bidding</span>
   </div>
+
+  <section class="row">
+
+    <!-- 1. The Great Migration -->
+    <article class="auction-item">
+      <div class="media">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Great%20Migration.jpg?raw=true"
+             alt="The Great Migration — acrylic on archival paper in black frame">
+      </div>
+      <div class="content">
+        <h3>1) The Great Migration</h3>
+        <p><strong>Medium:</strong> Acrylic on archival paper</p>
+        <p><strong>Frame:</strong> Black contemporary frame</p>
+        <p><strong>Size:</strong> 28 × 32 inches</p>
+        <p><strong class="start">Starting Bid: $500</strong></p>
+        <p>A powerful monochromatic composition capturing a historic moment of resilience and transition. The expressive brushwork and stark contrast bring to life a family portrait that speaks to the courage and endurance of those who journeyed northward seeking opportunity and hope during the Great Migration. The textured orange-gold background radiates warmth, while the silhouetted figures evoke both dignity and memory.</p>
+      </div>
+    </article>
+
+    <!-- 2. Basquiat Tri-Fold -->
+    <article class="auction-item">
+      <div class="media">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Tri%20Fold%20Side%20A.jpg?raw=true"
+             alt="Basquiat Tri Fold — Side A" style="max-width:49%;">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Tri%20Fold%20Side%20B.jpg?raw=true"
+             alt="Basquiat Tri Fold — Side B" style="max-width:49%;">
+      </div>
+      <div class="content">
+        <h3>2) Basquiat Tri-Fold (Side A &amp; Side B)</h3>
+        <p><strong>Medium:</strong> Mixed media on linen panel</p>
+        <p><strong>Size:</strong> 70 × 48 inches (tri-fold)</p>
+        <p><strong class="start">Starting Bid: $700</strong></p>
+        <p>A vibrant, two-sided folding panel inspired by the raw energy of street art and the visual language of Jean-Michel Basquiat.</p>
+        <p><em>Side A</em> bursts with chromatic intensity—layered skull motifs, graffiti-style text, and abstract symbols create a rhythm of chaos and commentary on culture and identity.</p>
+        <p><em>Side B</em> features skeletal musicians and crowned figures, blending humor and critique in a spirited conversation about creativity, struggle, and truth. Both sides pulse with electric color and emotional urgency, transforming the tri-fold into a standing dialogue between life, art, and mortality.</p>
+      </div>
+    </article>
+
+    <!-- 3. Ephemeral Glow -->
+    <article class="auction-item">
+      <div class="media">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Ephemeral%20Glow%206%20Framed.jpg?raw=true"
+             alt="Ephemeral Glow — hourglass and candle in black frame">
+      </div>
+      <div class="content">
+        <h3>3) Ephemeral Glow</h3>
+        <p><strong>Medium:</strong> Acrylic on presentation panel</p>
+        <p><strong>Frame:</strong> Traditional black frame</p>
+        <p><strong>Image Size:</strong> 26 × 32 inches</p>
+        <p><strong>Frame Size:</strong> 30 × 40 inches</p>
+        <p><strong class="start">Starting Bid: $600</strong></p>
+        <p>A haunting yet luminous still life of an hourglass and candle rendered in molten oranges and deep shadows. The work symbolizes the fleeting nature of time and the burning persistence of spirit. The textured strokes capture the interplay between light and decay—a meditation on mortality and the quiet beauty of moments that fade yet continue to glow in memory.</p>
+      </div>
+    </article>
+
+    <!-- 4. Pencil Point People #10 -->
+    <article class="auction-item">
+      <div class="media">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Pencil%20Pointe%20People%20%2310.jpg?raw=true"
+             alt="Pencil Point People #10 — mixed media group composition">
+      </div>
+      <div class="content">
+        <h3>4) Pencil Point People #10</h3>
+        <p><strong>Medium:</strong> Mixed media on canvas</p>
+        <p><strong>Size:</strong> 30 × 40 inches</p>
+        <p><strong class="start">Starting Bid: $650</strong></p>
+        <p>From the “Pencil Point People” series, this piece reimagines community and individuality through stylized elongated forms dressed in vivid patterns and geometric precision. The group stands confidently against an architectural backdrop, blending rhythm, fashion, and posture into a celebration of self-expression. Each figure’s shape and color reflect a distinct story—together forming a collective narrative of unity and identity within diversity.</p>
+      </div>
+    </article>
+
+  </section>
 
   <!-- Bid Form -->
   <form class="bid-form" action="submit_bid.php" method="POST">
     <h3>Bid Now</h3>
+    <label for="lot">Artwork Number (1–4)</label>
+    <input type="number" id="lot" name="lot" min="1" max="4" required>
 
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required>
@@ -217,7 +216,7 @@
     <input type="tel" id="phone" name="phone" required>
 
     <label for="bid">Your Bid (USD)</label>
-    <input type="number" id="bid" name="bid" step="50" required>
+    <input type="number" id="bid" name="bid" step="25" required>
 
     <label for="comments">Comments (optional)</label>
     <textarea id="comments" name="comments" rows="4"></textarea>
@@ -225,53 +224,53 @@
     <button type="submit">Place Bid</button>
   </form>
 
-  <!-- Auction Rules -->
-  <div class="auction-rules">
+  <!-- Rules -->
+  <section class="auction-rules">
     <h3>Auction Rules</h3>
     <ul>
+      <li>Auction opens immediately and closes <strong>Friday, October 31, 2025 at 11:59 PM ET</strong>.</li>
       <li>All bids are private and confidential.</li>
-      <li>Auction opens October 15, 2025 and closes October 18, 2025 at 11:59 PM EST.</li>
-      <li>Starting bid for Abstract #26 is $1,300.</li>
-      <li>Winning bidder will be notified directly by the artist.</li>
-      <li>Payment must be completed within 48 hours of auction close.</li>
-      <li>Shipping and delivery options will be arranged with the buyer.</li>
+      <li>Starting bids: #1 $500 • #2 $700 • #3 $600 • #4 $650.</li>
+      <li>Winning bidders will be notified directly by the artist.</li>
+      <li>Payment due within 48 hours of auction close.</li>
+      <li>Shipping/delivery arranged with the buyer; costs not included in bid.</li>
       <li>All sales are final.</li>
     </ul>
-  </div>
+  </section>
 
-  <a href="index.html" class="back-link">← Back to Home</a>
-</section>
+  <div class="back-home">
+    <a href="index.html" class="btn-home">← Back to Home</a>
+  </div>
+</main>
 
 <footer>
   &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
 
 <script>
-  // ===== Countdown Timer =====
-  const countdownDate = new Date("October 18, 2025 23:59:59").getTime();
-  const timerElement = document.getElementById("auction-timer");
+  // Countdown to Oct 31, 2025 11:59:59 PM ET (EDT still active on 10/31)
+  // Equivalent UTC time: Nov 1, 2025 03:59:59 Z
+  const endTime = new Date("2025-11-01T03:59:59Z").getTime();
+  const el = document.getElementById("auction-timer");
 
-  const countdown = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+  function tick() {
+    const now = Date.now();
+    const dist = endTime - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    timerElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    if(distance < 0) {
-      clearInterval(countdown);
-      timerElement.innerHTML = "The auction has ended.";
+    if (dist <= 0) {
+      el.textContent = "The auction has ended.";
+      clearInterval(timer);
+      return;
     }
-  }, 1000);
+    const d = Math.floor(dist / (1000*60*60*24));
+    const h = Math.floor((dist % (1000*60*60*24)) / (1000*60*60));
+    const m = Math.floor((dist % (1000*60*60)) / (1000*60));
+    const s = Math.floor((dist % (1000*60)) / 1000);
+    el.textContent = `Time Remaining: ${d}d ${h}h ${m}m ${s}s`;
+  }
+  const timer = setInterval(tick, 1000);
+  tick();
 </script>
-
-<div class="back-home">
-  <a href="index.html" class="btn-home">← Back to Home</a>
-</div>
 
 </body>
 </html>

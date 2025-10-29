@@ -61,9 +61,13 @@
     padding: 4px 6px;
   }
 
-  nav.main-nav a:hover {
-    color: #b56b27;
-  }
+  nav.main-nav a:hover { color: #b56b27; }
+
+  /* Exhibition */
+  .upcoming-exhibition { text-align:center; margin:40px 0; }
+  .upcoming-exhibition h2 { font-size: 28px; margin-bottom: 10px; }
+  .exhibition-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .exhibition-details { font-size: 15px; line-height: 1.6; }
 
   /* Current Auction Section */
   .auction-section {
@@ -74,24 +78,35 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-
   .auction-section h2 {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+  }
+  .auction-sub {
+    text-align:center;
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  #auction-timer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 20px;
   }
 
   .auction-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 8px;
+  }
+  @media (min-width: 720px) {
+    .auction-grid { grid-template-columns: 1fr 1fr; }
   }
 
   .auction-item {
-    width: 60%;
-    min-width: 280px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -104,6 +119,7 @@
     width: 100%;
     height: auto;
     border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   }
 
   .auction-item h3 {
@@ -111,14 +127,8 @@
     font-size: 20px;
   }
 
-  .auction-item p {
-    margin: 5px 0;
-  }
-
-  .auction-item span {
-    font-style: italic;
-    font-size: 0.9em;
-  }
+  .auction-item p { margin: 6px 0; font-size: 15px; }
+  .auction-item .start { color: #b56b27; font-weight: 700; }
 
   .auction-item a {
     display: inline-block;
@@ -129,28 +139,17 @@
     text-decoration: none;
     border-radius: 4px;
   }
+  .auction-item a:hover { background: #444; }
 
-  .auction-item a:hover {
-    background: #444;
+  .rules-box {
+    margin-top: 18px;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding: 12px 16px;
   }
-
-  /* Featured Gallery */
-  .featured-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: 40px auto;
-    flex-wrap: wrap;
-  }
-
-  .featured-gallery img {
-    max-width: 100%;
-    width: 45%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
+  .rules-box h4 { margin: 0 0 8px; text-align:center; font-size: 18px; }
+  .rules-box ul { margin:0; padding-left: 18px; line-height:1.6; font-size: 14px; }
 
   footer {
     margin-top: auto;
@@ -161,21 +160,8 @@
     border-top: 1px solid #ccc;
   }
 
-  /* Countdown Timer */
-  #auction-timer {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-
   @media(max-width: 900px){
-    .auction-item { width: 80%; }
     .featured-gallery img { width: 90%; }
-  }
-
-  @media(max-width: 600px){
-    .auction-item { width: 95%; }
   }
 </style>
 </head>
@@ -191,7 +177,7 @@
   </p>
   <p>
     Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
-    (609) 372-6022 · www.kjlartsanctuary@gmail.com
+    (609) 372-6022 · kjlartsanctuary@gmail.com
   </p>
 </section>
 
@@ -217,9 +203,8 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<section class="upcoming-exhibition" style="text-align:center; margin:40px 0;">
-  <h2> Current Exhibition</h2>
-
+<section class="upcoming-exhibition">
+  <h2>Current Exhibition</h2>
   <div class="exhibition">
     <div class="exhibition-title">Multitudes: The Art of Kenneth J. Lewis Sr.</div>
     <div class="exhibition-details">
@@ -228,42 +213,66 @@
       <strong>Artist Reception:</strong> Wednesday, October 08, 2025 • 5:00 – 6:30 PM
     </div>
   </div>
-
   <div class="exhibition-image" style="margin-top:20px;">
     <img src="images/Multitudes.jpg" alt="Multitudes: The Art of Kenneth J. Lewis Sr." style="max-width:80%; height:auto; border-radius:12px;">
   </div>
 </section>
 
-<!-- ===== Current Auction Section ===== -->
+<!-- ===== Current Auction Section (Auction Lot 4) ===== -->
 <section class="auction-section">
-  <h2>Current Auction: October 15–18, 2025</h2>
-  <p style="text-align:center;">
-    <strong>Opens:</strong> October 15, 2025 &nbsp; | &nbsp; <strong>Closes:</strong> October 18, 2025 at Midnight (EST)
-  </p>
-  <div id="auction-timer"></div>
-  
+  <h2>Auction Lot 4 — Live Now</h2>
+  <p class="auction-sub"><strong>Ends:</strong> Friday, October 31, 2025 at 11:59 PM ET</p>
+  <div id="auction-timer">Loading timer…</div>
+
   <div class="auction-grid">
+    <!-- 1 -->
     <div class="auction-item">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/abstract26.jpg?raw=true" alt="Abstract #26 - Diptych Painting">
-      <h3>Abstract #26 (Diptych)</h3>
-      <p><strong>Medium:</strong> Acrylic on Canvas</p>
-      <p><strong>Dimensions:</strong> Two panels, each 36&quot; W x 48&quot; H (Total: 72&quot; W x 48&quot; H)</p>
-      <p><strong>Starting Bid:</strong> $1,300</p>
-      <p><span>Bids are private & confidential</span></p>
-      <p><a href="auction.html">View Auction</a></p>
+      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Great%20Migration.jpg?raw=true" alt="The Great Migration">
+      <h3>1) The Great Migration</h3>
+      <p><strong>Medium:</strong> Acrylic on archival paper</p>
+      <p><strong>Size:</strong> 28 × 32 in</p>
+      <p class="start">Starting Bid: $500</p>
+      <p><a href="auction.html">View Auction Lot 4</a></p>
+    </div>
+
+    <!-- 2 -->
+    <div class="auction-item">
+      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Tri%20Fold%20Side%20A.jpg?raw=true" alt="Basquiat Tri-Fold (Side A)">
+      <h3>2) Basquiat Tri-Fold (A &amp; B)</h3>
+      <p><strong>Medium:</strong> Mixed media on linen panel</p>
+      <p><strong>Size:</strong> 70 × 48 in (tri-fold)</p>
+      <p class="start">Starting Bid: $700</p>
+      <p><a href="auction.html">View Auction Lot 4</a></p>
+    </div>
+
+    <!-- 3 -->
+    <div class="auction-item">
+      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Ephemeral%20Glow%206%20Framed.jpg?raw=true" alt="Ephemeral Glow">
+      <h3>3) Ephemeral Glow</h3>
+      <p><strong>Medium:</strong> Acrylic on presentation panel</p>
+      <p><strong>Frame Size:</strong> 30 × 40 in</p>
+      <p class="start">Starting Bid: $600</p>
+      <p><a href="auction.html">View Auction Lot 4</a></p>
+    </div>
+
+    <!-- 4 -->
+    <div class="auction-item">
+      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Pencil%20Pointe%20People%20%2310.jpg?raw=true" alt="Pencil Point People #10">
+      <h3>4) Pencil Point People #10</h3>
+      <p><strong>Medium:</strong> Mixed media on canvas</p>
+      <p><strong>Size:</strong> 30 × 40 in</p>
+      <p class="start">Starting Bid: $650</p>
+      <p><a href="auction.html">View Auction Lot 4</a></p>
     </div>
   </div>
 
-  <div class="auction-rules">
-    <h4>Auction Rules</h4>
+  <div class="rules-box">
+    <h4>Auction Notes</h4>
     <ul>
-      <li>Bids are confidential and binding.</li>
-      <li>All artworks are original and signed by Kenneth J. Lewis Sr.</li>
-      <li>Auction opens October 15 and closes October 18 at Midnight (EST).</li>
-      <li>Starting bid for Abstract #26 is $1,300.</li>
-      <li>Winning bidders will be notified by email and phone.</li>
-      <li>Payment must be completed within 48 hours of winning.</li>
-      <li>Shipping and delivery options will be arranged with the buyer.</li>
+      <li>Bidding is private & confidential.</li>
+      <li>Winners will be contacted directly by the artist.</li>
+      <li>Payment due within 48 hours of auction close.</li>
+      <li>Shipping/delivery arranged with buyer; costs separate from bid.</li>
     </ul>
   </div>
 </section>
@@ -273,26 +282,29 @@
 </footer>
 
 <script>
-  // ===== Countdown Timer =====
-  const countdownDate = new Date("October 18, 2025 23:59:59").getTime();
-  const timerElement = document.getElementById("auction-timer");
+  // Countdown to Oct 31, 2025 11:59:59 PM ET (EDT in effect)
+  // Equivalent UTC: Nov 1, 2025 03:59:59 Z
+  const endTime = new Date("2025-11-01T03:59:59Z").getTime();
+  const el = document.getElementById("auction-timer");
 
-  const countdown = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+  function tick() {
+    const now = Date.now();
+    const dist = endTime - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    timerElement.innerHTML = `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    if(distance < 0) {
-      clearInterval(countdown);
-      timerElement.innerHTML = "The auction has ended.";
+    if (dist <= 0) {
+      el.textContent = "The auction has ended.";
+      clearInterval(timer);
+      return;
     }
-  }, 1000);
+    const d = Math.floor(dist / (1000*60*60*24));
+    const h = Math.floor((dist % (1000*60*60*24)) / (1000*60*60));
+    const m = Math.floor((dist % (1000*60*60)) / (1000*60));
+    const s = Math.floor((dist % (1000*60)) / 1000);
+    el.textContent = `Time Remaining: ${d}d ${h}h ${m}m ${s}s`;
+  }
+  const timer = setInterval(tick, 1000);
+  tick();
 </script>
+
 </body>
 </html>

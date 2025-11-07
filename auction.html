@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Auction Lot 4 | Artist Kenneth J. Lewis Sr.</title>
+<title>KJL Art Sanctuary | Live Auction (Nov 9, 2025)</title>
 <style>
   :root {
     --ink:#222;
@@ -11,190 +12,172 @@
     --card:#fafafa;
     --accent:#b56b27;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: Garamond, "Times New Roman", serif;
-    background: var(--bg);
-    color: var(--ink);
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Garamond,"Times New Roman",serif;
+    background:var(--bg);
+    color:var(--ink);
   }
-  header {
-    text-align: center;
-    padding: 24px 16px;
-    background: #fff;
-    border-bottom: 2px solid var(--ink);
-  }
-  header h1 { margin: 0 0 6px; font-size: 34px; }
-  header p { margin: 0; font-size: 16px; letter-spacing: .3px; }
-
-  .auction-section {
-    max-width: 980px;
-    margin: 32px auto;
-    padding: 20px;
-    background: var(--card);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  }
-
-  .row { display: grid; grid-template-columns: 1fr; gap: 28px; }
-  @media (min-width: 720px){ .row { grid-template-columns: 1fr 1fr; } }
-
-  .lot-meta { text-align: center; margin-bottom: 6px; }
-  .lot-meta h2 { font-size: 28px; margin: 0 0 4px; }
-  .lot-meta p { margin: 4px 0; font-size: 17px; }
-  #auction-timer {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 12px 0 18px;
-    text-align: center;
-  }
-
-  .auction-item {
+  header{
+    text-align:center;
+    padding:24px 16px;
     background:#fff;
-    border:1px solid #ddd;
-    border-radius:10px;
-    overflow:hidden;
+    border-bottom:2px solid var(--ink);
   }
-  .media {
-    background:#fff;
-    padding: 14px;
-    border-bottom:1px solid #eee;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
+  header h1{ margin:0 0 6px; font-size:34px; }
+  header p{ margin:0; font-size:16px; letter-spacing:.3px; }
+
+  .auction-section{
+    max-width:980px; margin:32px auto; padding:20px;
+    background:var(--card); border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
   }
-  .media img {
-    max-width: 100%;
-    height:auto;
-    border-radius:8px;
-    box-shadow: 0 3px 8px rgba(0,0,0,.12);
+
+  .row{ display:grid; grid-template-columns:1fr; gap:28px; }
+  @media (min-width:720px){ .row{ grid-template-columns:1fr 1fr; } }
+
+  .lot-meta{ text-align:center; margin-bottom:6px; }
+  .lot-meta h2{ font-size:28px; margin:0 0 4px; }
+  .lot-meta p{ margin:4px 0; font-size:17px; }
+  #auction-timer{
+    font-size:18px; font-weight:bold; margin:12px 0 18px; text-align:center;
   }
-  .auction-item .content { padding:16px 18px 20px; }
-  .auction-item h3 { margin: 0 0 6px; font-size: 22px; }
-  .auction-item p { margin: 6px 0; font-size: 16px; line-height: 1.5; }
-  .pill {
+  .pill{
     display:inline-block; padding:.25rem .6rem; border-radius:999px;
     background:#000; color:#fff; font-size:12px; letter-spacing:.4px;
   }
-  .start { color: var(--accent); font-weight: 700; }
+
+  .auction-item{
+    background:#fff; border:1px solid #ddd; border-radius:10px; overflow:hidden;
+  }
+  .media{
+    background:#fff; padding:14px; border-bottom:1px solid #eee;
+    display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
+  }
+  .media img{
+    max-width:100%; height:auto; border-radius:8px;
+    box-shadow:0 3px 8px rgba(0,0,0,.12);
+  }
+  .auction-item .content{ padding:16px 18px 20px; }
+  .auction-item h3{ margin:0 0 6px; font-size:22px; }
+  .auction-item p{ margin:6px 0; font-size:16px; line-height:1.5; }
+  .start{ color:var(--accent); font-weight:700; }
 
   /* Bid Form */
-  .bid-form {
-    margin-top: 28px;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+  .bid-form{
+    margin-top:28px; padding:20px; background:#fff;
+    border:1px solid #ddd; border-radius:10px;
   }
-  .bid-form h3 { margin:0 0 10px; text-align:center; font-size:22px; }
-  .bid-form label { display:block; margin:12px 0 6px; font-weight:700; }
-  .bid-form input, .bid-form textarea {
-    width: 100%; padding: 10px; border: 1px solid #bbb; border-radius: 6px; font-family: inherit;
+  .bid-form h3{ margin:0 0 10px; text-align:center; font-size:22px; }
+  .bid-form label{ display:block; margin:12px 0 6px; font-weight:700; }
+  .bid-form input, .bid-form textarea{
+    width:100%; padding:10px; border:1px solid #bbb; border-radius:6px; font-family:inherit;
   }
-  .bid-form button {
-    width: 100%; margin-top: 14px; padding: 12px; border: none; border-radius: 8px;
+  .bid-form button{
+    width:100%; margin-top:14px; padding:12px; border:none; border-radius:8px;
     background:#000; color:#fff; font-weight:700; cursor:pointer; font-size:16px;
   }
-  .bid-form button:hover { background:#444; }
+  .bid-form button:hover{ background:#444; }
 
   /* Rules */
-  .auction-rules {
-    margin-top: 28px; padding: 20px; background:#fff; border:1px solid #ddd; border-radius:10px;
+  .auction-rules{
+    margin-top:28px; padding:20px; background:#fff; border:1px solid #ddd; border-radius:10px;
   }
-  .auction-rules h3 { margin: 0 0 10px; text-align:center; font-size:22px; }
-  .auction-rules ul { margin:0; padding-left: 20px; line-height:1.6; }
+  .auction-rules h3{ margin:0 0 10px; text-align:center; font-size:22px; }
+  .auction-rules ul{ margin:0; padding-left:20px; line-height:1.6; }
 
-  footer {
-    margin: 36px 0 20px; text-align: center; font-size: 14px; color:#666;
-  }
-  .back-home { text-align:center; margin: 18px 0 8px; }
-  .btn-home {
+  footer{ margin:36px 0 20px; text-align:center; font-size:14px; color:#666; }
+  .back-home{ text-align:center; margin:18px 0 8px; }
+  .btn-home{
     display:inline-block; padding:.75rem 1.25rem; background:#000; color:#fff; text-decoration:none; border-radius:8px;
   }
-  .btn-home:hover { background:#444; }
+  .btn-home:hover{ background:#444; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Auction Lot 4</h1>
-  <p>Artist Kenneth J. Lewis Sr. — Auction starts <strong>now</strong> and ends <strong>Friday, Oct 31, 2025 at 11:59 PM ET</strong>.</p>
+  <h1>KJL Art Sanctuary — Live Auction</h1>
+  <p>Starts <strong>now</strong> • Ends <strong>Sunday, Nov 9, 2025 at 11:59 PM ET</strong></p>
 </header>
 
 <main class="auction-section">
   <div class="lot-meta">
-    <h2>Live Now • Ends Oct 31, 2025</h2>
+    <h2>Live Now</h2>
     <p id="auction-timer">Loading timer…</p>
     <span class="pill">Private &amp; Confidential Bidding</span>
   </div>
 
   <section class="row">
 
-    <!-- 1. The Great Migration -->
+    <!-- 1) Charlie -->
     <article class="auction-item">
       <div class="media">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Great%20Migration.jpg?raw=true"
-             alt="The Great Migration — acrylic on archival paper in black frame">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Charlie.jpg?raw=true"
+             alt="Charlie — acrylic on presentation panel">
       </div>
       <div class="content">
-        <h3>1) The Great Migration</h3>
-        <p><strong>Medium:</strong> Acrylic on archival paper</p>
-        <p><strong>Frame:</strong> Black contemporary frame</p>
-        <p><strong>Size:</strong> 28 × 32 inches</p>
-        <p><strong class="start">Starting Bid: $500</strong></p>
-        <p>A powerful monochromatic composition capturing a historic moment of resilience and transition. The expressive brushwork and stark contrast bring to life a family portrait that speaks to the courage and endurance of those who journeyed northward seeking opportunity and hope during the Great Migration. The textured orange-gold background radiates warmth, while the silhouetted figures evoke both dignity and memory.</p>
+        <h3>1) Charlie — 30 × 40 in</h3>
+        <p><strong>Medium:</strong> Acrylic on presentation panel, mounted</p>
+        <p><strong class="start">Starting Bid: $750</strong></p>
+        <p>A vibrant, textured homage to one of cinema’s greatest icons, this expressive portrait captures the timeless charm and melancholy of early film history. Thick impasto strokes and a nostalgic palette evoke both humor and humanity — a reflection on the spirit of performance and perseverance that transcends the silent screen. Painted in Kenneth J. Lewis Sr.’s signature bold color blocking and sculptural brushwork, <em>Charlie</em> bridges classic imagery with a contemporary painterly edge.</p>
       </div>
     </article>
 
-    <!-- 2. Basquiat Tri-Fold -->
+    <!-- 2) My Luggage My Life -->
     <article class="auction-item">
       <div class="media">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Tri%20Fold%20Side%20A.jpg?raw=true"
-             alt="Basquiat Tri Fold — Side A" style="max-width:49%;">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Tri%20Fold%20Side%20B.jpg?raw=true"
-             alt="Basquiat Tri Fold — Side B" style="max-width:49%;">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/My%20Luggage%20My%20Life.jpg?raw=true"
+             alt="My Luggage My Life — acrylic and collage on canvas">
       </div>
       <div class="content">
-        <h3>2) Basquiat Tri-Fold (Side A &amp; Side B)</h3>
-        <p><strong>Medium:</strong> Mixed media on linen panel</p>
-        <p><strong>Size:</strong> 70 × 48 inches (tri-fold)</p>
-        <p><strong class="start">Starting Bid: $700</strong></p>
-        <p>A vibrant, two-sided folding panel inspired by the raw energy of street art and the visual language of Jean-Michel Basquiat.</p>
-        <p><em>Side A</em> bursts with chromatic intensity—layered skull motifs, graffiti-style text, and abstract symbols create a rhythm of chaos and commentary on culture and identity.</p>
-        <p><em>Side B</em> features skeletal musicians and crowned figures, blending humor and critique in a spirited conversation about creativity, struggle, and truth. Both sides pulse with electric color and emotional urgency, transforming the tri-fold into a standing dialogue between life, art, and mortality.</p>
+        <h3>2) My Luggage My Life — 40 × 48 in</h3>
+        <p><strong>Medium:</strong> Acrylic and collage on canvas</p>
+        <p><strong class="start">Starting Bid: $1,200</strong></p>
+        <p>A powerful mixed-media work that chronicles the personal and spiritual journey of self-discovery. Through painted suitcases, affirmations, and layered textures, this piece invites viewers into the process of unpacking identity, healing wounds, and embracing transformation. Text fragments like “I Am,” “Reclaim,” and “Becoming” form a visual map of resilience — a testament to survival and renewal. Each color, word, and symbol is an emotional checkpoint in the artist’s evolving story.</p>
       </div>
     </article>
 
-    <!-- 3. Ephemeral Glow -->
+    <!-- 3) Basquiat Portrait 6 (Framed) -->
     <article class="auction-item">
       <div class="media">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Ephemeral%20Glow%206%20Framed.jpg?raw=true"
-             alt="Ephemeral Glow — hourglass and candle in black frame">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Portrait%206%20Framed.jpg?raw=true"
+             alt="Basquiat Portrait 6 — acrylic on Luan board with lime frame">
       </div>
       <div class="content">
-        <h3>3) Ephemeral Glow</h3>
-        <p><strong>Medium:</strong> Acrylic on presentation panel</p>
-        <p><strong>Frame:</strong> Traditional black frame</p>
-        <p><strong>Image Size:</strong> 26 × 32 inches</p>
-        <p><strong>Frame Size:</strong> 30 × 40 inches</p>
+        <h3>3) Basquiat Portrait 6 (Framed) — ~24 × 36 in</h3>
+        <p><strong>Medium:</strong> Acrylic on Luan board, custom lime-green frame</p>
         <p><strong class="start">Starting Bid: $600</strong></p>
-        <p>A haunting yet luminous still life of an hourglass and candle rendered in molten oranges and deep shadows. The work symbolizes the fleeting nature of time and the burning persistence of spirit. The textured strokes capture the interplay between light and decay—a meditation on mortality and the quiet beauty of moments that fade yet continue to glow in memory.</p>
+        <p>A raw and expressive tribute to the spirit of rebellion and genius, <em>Basquiat Portrait 6</em> pulses with energy and urban rhythm. With gestural brushwork, graphic marks, and bright graffiti-inspired color, this portrait captures the fearless creativity and street-edge innovation that reshaped modern art. The hand-painted lime frame acts as a bold extension of the work, turning the entire piece into a statement of individuality and power.</p>
       </div>
     </article>
 
-    <!-- 4. Pencil Point People #10 -->
+    <!-- 4) Spa Day -->
     <article class="auction-item">
       <div class="media">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Pencil%20Pointe%20People%20%2310.jpg?raw=true"
-             alt="Pencil Point People #10 — mixed media group composition">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Spa%20Day.jpg?raw=true"
+             alt="Spa Day — acrylic on architectural panel in white frame">
       </div>
       <div class="content">
-        <h3>4) Pencil Point People #10</h3>
-        <p><strong>Medium:</strong> Mixed media on canvas</p>
-        <p><strong>Size:</strong> 30 × 40 inches</p>
-        <p><strong class="start">Starting Bid: $650</strong></p>
-        <p>From the “Pencil Point People” series, this piece reimagines community and individuality through stylized elongated forms dressed in vivid patterns and geometric precision. The group stands confidently against an architectural backdrop, blending rhythm, fashion, and posture into a celebration of self-expression. Each figure’s shape and color reflect a distinct story—together forming a collective narrative of unity and identity within diversity.</p>
+        <h3>4) Spa Day — 12 × 12 in (art); 21½ × 21½ in framed</h3>
+        <p><strong>Medium:</strong> Acrylic on architectural panel, white traditional frame</p>
+        <p><strong class="start">Starting Bid: $350</strong></p>
+        <p>An abstract meditation in turquoise, ochre, and cream, <em>Spa Day</em> channels a sense of peace and reflection through rhythmic line and texture. The composition flows like water, offering a visual pause — a moment of calm and restoration within a structured balance of form and color. Framed elegantly in white, this work radiates freshness and serenity, ideal for intimate spaces or as part of a modern collection.</p>
+      </div>
+    </article>
+
+    <!-- 5) Laundry Day -->
+    <article class="auction-item">
+      <div class="media">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Laundry%20Day.jpg?raw=true"
+             alt="Laundry Day — acrylic on architectural panel in white frame">
+      </div>
+      <div class="content">
+        <h3>5) Laundry Day — 12 × 12 in (art); 21½ × 21½ in framed</h3>
+        <p><strong>Medium:</strong> Acrylic on architectural panel, white traditional frame</p>
+        <p><strong class="start">Starting Bid: $350</strong></p>
+        <p>Dynamic and layered, <em>Laundry Day</em> translates the routine of everyday life into abstraction. Blocks of sky blue, ochre, and cream merge with expressive lines that evoke movement, rhythm, and renewal — like freshly washed fabric fluttering in sunlight. A joyful study in texture and color balance, framed for contemporary display.</p>
       </div>
     </article>
 
@@ -203,8 +186,8 @@
   <!-- Bid Form -->
   <form class="bid-form" action="submit_bid.php" method="POST">
     <h3>Bid Now</h3>
-    <label for="lot">Artwork Number (1–4)</label>
-    <input type="number" id="lot" name="lot" min="1" max="4" required>
+    <label for="lot">Artwork Number (1–5)</label>
+    <input type="number" id="lot" name="lot" min="1" max="5" required>
 
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required>
@@ -228,9 +211,9 @@
   <section class="auction-rules">
     <h3>Auction Rules</h3>
     <ul>
-      <li>Auction opens immediately and closes <strong>Friday, October 31, 2025 at 11:59 PM ET</strong>.</li>
+      <li>Auction opens immediately and closes <strong>Sunday, Nov 9, 2025 at 11:59 PM ET</strong>.</li>
       <li>All bids are private and confidential.</li>
-      <li>Starting bids: #1 $500 • #2 $700 • #3 $600 • #4 $650.</li>
+      <li>Starting bids: #1 $750 • #2 $1,200 • #3 $600 • #4 $350 • #5 $350.</li>
       <li>Winning bidders will be notified directly by the artist.</li>
       <li>Payment due within 48 hours of auction close.</li>
       <li>Shipping/delivery arranged with the buyer; costs not included in bid.</li>
@@ -248,24 +231,24 @@
 </footer>
 
 <script>
-  // Countdown to Oct 31, 2025 11:59:59 PM ET (EDT still active on 10/31)
-  // Equivalent UTC time: Nov 1, 2025 03:59:59 Z
-  const endTime = new Date("2025-11-01T03:59:59Z").getTime();
+  // Countdown to Nov 9, 2025 11:59:59 PM ET.
+  // Nov 9 is after DST change, so ET is EST (UTC-5).
+  // Equivalent UTC: Nov 10, 2025 04:59:59 Z
+  const endTime = new Date("2025-11-10T04:59:59Z").getTime();
   const el = document.getElementById("auction-timer");
 
-  function tick() {
+  function tick(){
     const now = Date.now();
     const dist = endTime - now;
-
-    if (dist <= 0) {
+    if(dist <= 0){
       el.textContent = "The auction has ended.";
       clearInterval(timer);
       return;
     }
-    const d = Math.floor(dist / (1000*60*60*24));
-    const h = Math.floor((dist % (1000*60*60*24)) / (1000*60*60));
-    const m = Math.floor((dist % (1000*60*60)) / (1000*60));
-    const s = Math.floor((dist % (1000*60)) / 1000);
+    const d = Math.floor(dist/(1000*60*60*24));
+    const h = Math.floor((dist%(1000*60*60*24))/(1000*60*60));
+    const m = Math.floor((dist%(1000*60*60))/(1000*60));
+    const s = Math.floor((dist%(1000*60))/1000);
     el.textContent = `Time Remaining: ${d}d ${h}h ${m}m ${s}s`;
   }
   const timer = setInterval(tick, 1000);
@@ -274,3 +257,4 @@
 
 </body>
 </html>
+```

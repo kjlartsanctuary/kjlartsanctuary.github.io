@@ -1,6 +1,3 @@
-Here’s a fresh **index.html** that matches your new auction (starts now, ends **Sunday, Nov 9, 2025 at 11:59 PM ET**), shows the five new works, and removes any reserve references. Just paste this over your current `index.html`.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,13 +63,11 @@ Here’s a fresh **index.html** that matches your new auction (starts now, ends 
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  /* Exhibition */
   .upcoming-exhibition { text-align:center; margin:40px 0; }
   .upcoming-exhibition h2 { font-size: 28px; margin-bottom: 10px; }
   .exhibition-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
   .exhibition-details { font-size: 15px; line-height: 1.6; }
 
-  /* Current Auction Section */
   .auction-section {
     max-width: 1100px;
     margin: 40px auto;
@@ -154,6 +149,35 @@ Here’s a fresh **index.html** that matches your new auction (starts now, ends 
   .rules-box h4 { margin: 0 0 8px; text-align:center; font-size: 18px; }
   .rules-box ul { margin:0; padding-left: 18px; line-height:1.6; font-size: 14px; }
 
+  /* Works in Progress Section */
+  .jazz-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: #fff8f2;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  .jazz-section img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .jazz-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #b56b27;
+  }
+  .jazz-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 10px auto;
+    max-width: 850px;
+  }
+
   footer {
     margin-top: auto;
     text-align: center;
@@ -176,11 +200,10 @@ Here’s a fresh **index.html** that matches your new auction (starts now, ends 
 
 <section class="intro">
   <p>
-    Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation. Explore a world where storytelling meets color, and every brushstroke has purpose.
+    Welcome to the official website of Artist Kenneth J. Lewis Sr.—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums. From abstract forms to figurative expressions, Kenneth’s work invites viewers into a world shaped by geometry, emotion, and bold experimentation.
   </p>
   <p>
-    Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Interested in learning more about a specific piece? Feel free to contact me for details including painting size, surface material, delivery and shipping options. I have created a large body of original artwork (too much to list here)—if you'd like a closer look, I'm happy to schedule online appointments or in-person gallery visits by appointment. Let's connect and bring the art closer to you.<br>
-    (609) 372-6022 · kjlartsanctuary@gmail.com
+    Here you’ll find original artwork, behind-the-scenes studio content, podcast episodes, and announcements for upcoming exhibitions and gallery events. Step inside the sanctuary—where art lives, breathes, and speaks. Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
   </p>
 </section>
 
@@ -208,86 +231,94 @@ Here’s a fresh **index.html** that matches your new auction (starts now, ends 
 
 <section class="upcoming-exhibition">
   <h2>Current Exhibition</h2>
-  <div class="exhibition">
-    <div class="exhibition-title">Multitudes: The Art of Kenneth J. Lewis Sr.</div>
-    <div class="exhibition-details">
-      Capital Health Art Gallery, Hopewell, NJ<br>
-      September 08, 2025 – December 31, 2025 — Solo<br>
-      <strong>Artist Reception:</strong> Wednesday, October 08, 2025 • 5:00 – 6:30 PM
-    </div>
+  <div class="exhibition-title">Multitudes: The Art of Kenneth J. Lewis Sr.</div>
+  <div class="exhibition-details">
+    Capital Health Art Gallery, Hopewell, NJ<br>
+    September 08 – December 31, 2025 • Solo Exhibition<br>
+    <strong>Reception:</strong> Wednesday, October 08, 2025 • 5:00 – 6:30 PM
   </div>
   <div class="exhibition-image" style="margin-top:20px;">
-    <img src="images/Multitudes.jpg" alt="Multitudes: The Art of Kenneth J. Lewis Sr." style="max-width:80%; height:auto; border-radius:12px;">
+    <img src="images/Multitudes.jpg" alt="Multitudes Exhibition" style="max-width:80%; border-radius:12px;">
   </div>
 </section>
 
-<!-- ===== Current Auction (Live) ===== -->
+<!-- ===== Current Auction ===== -->
 <section class="auction-section">
   <h2>Live Auction — Now Open</h2>
   <p class="auction-sub"><strong>Ends:</strong> Sunday, Nov 9, 2025 at 11:59 PM ET</p>
   <div id="auction-timer">Loading timer…</div>
-
   <div class="auction-grid">
-    <!-- 1) Charlie -->
     <div class="auction-item">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Charlie.jpg?raw=true" alt="Charlie">
+      <img src="images/Charlie.jpg" alt="Charlie">
       <h3>1) Charlie</h3>
-      <p><strong>Medium:</strong> Acrylic on presentation panel (mounted)</p>
+      <p><strong>Medium:</strong> Acrylic on panel</p>
       <p><strong>Size:</strong> 30 × 40 in</p>
       <p class="start">Starting Bid: $750</p>
       <p><a href="auction.html">View & Bid</a></p>
     </div>
-
-    <!-- 2) My Luggage My Life -->
     <div class="auction-item">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/My%20Luggage%20My%20Life.jpg?raw=true" alt="My Luggage My Life">
+      <img src="images/My%20Luggage%20My%20Life.jpg" alt="My Luggage My Life">
       <h3>2) My Luggage My Life</h3>
       <p><strong>Medium:</strong> Acrylic & collage on canvas</p>
       <p><strong>Size:</strong> 40 × 48 in</p>
       <p class="start">Starting Bid: $1,200</p>
       <p><a href="auction.html">View & Bid</a></p>
     </div>
-
-    <!-- 3) Basquiat Portrait 6 (Framed) -->
     <div class="auction-item">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Basquiat%20Portrait%206%20Framed.jpg?raw=true" alt="Basquiat Portrait 6 (Framed)">
+      <img src="images/Basquiat%20Portrait%206%20Framed.jpg" alt="Basquiat Portrait 6">
       <h3>3) Basquiat Portrait 6 (Framed)</h3>
-      <p><strong>Medium:</strong> Acrylic on Luan board, custom lime-green frame</p>
-      <p><strong>Size:</strong> ~24 × 36 in</p>
+      <p><strong>Medium:</strong> Acrylic on Luan board</p>
+      <p><strong>Size:</strong> 24 × 36 in</p>
       <p class="start">Starting Bid: $600</p>
       <p><a href="auction.html">View & Bid</a></p>
     </div>
-
-    <!-- 4) Spa Day -->
     <div class="auction-item">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Spa%20Day.jpg?raw=true" alt="Spa Day">
+      <img src="images/Spa%20Day.jpg" alt="Spa Day">
       <h3>4) Spa Day</h3>
-      <p><strong>Medium:</strong> Acrylic on architectural panel, white traditional frame</p>
-      <p><strong>Size:</strong> 12 × 12 in (art) • 21½ × 21½ in framed</p>
+      <p><strong>Medium:</strong> Acrylic on panel</p>
+      <p><strong>Size:</strong> 12 × 12 in</p>
       <p class="start">Starting Bid: $350</p>
       <p><a href="auction.html">View & Bid</a></p>
     </div>
-
-    <!-- 5) Laundry Day -->
     <div class="auction-item">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Laundry%20Day.jpg?raw=true" alt="Laundry Day">
+      <img src="images/Laundry%20Day.jpg" alt="Laundry Day">
       <h3>5) Laundry Day</h3>
-      <p><strong>Medium:</strong> Acrylic on architectural panel, white traditional frame</p>
-      <p><strong>Size:</strong> 12 × 12 in (art) • 21½ × 21½ in framed</p>
+      <p><strong>Medium:</strong> Acrylic on panel</p>
+      <p><strong>Size:</strong> 12 × 12 in</p>
       <p class="start">Starting Bid: $350</p>
       <p><a href="auction.html">View & Bid</a></p>
     </div>
   </div>
-
   <div class="rules-box">
     <h4>Auction Notes</h4>
     <ul>
       <li>Bidding is private & confidential.</li>
       <li>Winners will be contacted directly by the artist.</li>
       <li>Payment due within 48 hours of auction close.</li>
-      <li>Shipping/delivery arranged with buyer; costs separate from bid.</li>
+      <li>Shipping/delivery arranged separately.</li>
     </ul>
   </div>
+</section>
+
+<!-- 🎷 Works in Progress Section -->
+<section class="jazz-section">
+  <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Jazz%20Works%20In%20Progress.jpg?raw=true" alt="Jazz Works In Progress">
+  <h2>🎷 Works in Progress – Where Art Meets Jazz</h2>
+  <p>
+    Step into the groove where color swings and brushstrokes play in rhythm with the music. Each painting carries the soul of improvisation — bold, expressive, and alive — just like jazz itself.
+  </p>
+  <p>
+    🎨 Now accepting collectors and venue collaborations.<br>
+    If you own or manage a jazz venue, bring the visual rhythm of my original artwork to your walls — transforming your space into a gallery of sound and color.
+  </p>
+  <p>
+    ✨ Each piece is an original — a fusion of abstract expression and figurative movement designed to elevate your guests’ experience.<br>
+    🎶 Let the art match the music.
+  </p>
+  <p><strong>👉 Explore the collection:</strong> <a href="https://www.kjlartsanctuary.com" target="_blank">www.kjlartsanctuary.com</a></p>
+  <p>
+    #JazzArt #ExpressionistArt #FineArt #ArtCollectors #JazzVenues #ArtLovers #NYCArt #GlobalArtist #ArtCommissions #ArtExhibitions #ArtGallery #ArtBuyers #AbstractArt #FigurativeArt #InteriorDecor #ModernArt #AcrylicPainting #OilPainting #OriginalArtwork #JazzInspired
+  </p>
 </section>
 
 <footer>
@@ -295,15 +326,11 @@ Here’s a fresh **index.html** that matches your new auction (starts now, ends 
 </footer>
 
 <script>
-  // Countdown to Nov 9, 2025 11:59:59 PM ET (after DST change, ET = EST, UTC-5)
-  // Equivalent UTC time: Nov 10, 2025 04:59:59 Z
   const endTime = new Date("2025-11-10T04:59:59Z").getTime();
   const el = document.getElementById("auction-timer");
-
   function tick() {
     const now = Date.now();
     const dist = endTime - now;
-
     if (dist <= 0) {
       el.textContent = "The auction has ended.";
       clearInterval(timer);
@@ -321,4 +348,3 @@ Here’s a fresh **index.html** that matches your new auction (starts now, ends 
 
 </body>
 </html>
-```

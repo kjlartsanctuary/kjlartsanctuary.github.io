@@ -1,3 +1,8 @@
+Here’s your updated full `index.html` with the **Current Exhibition** and **Auction** sections removed and replaced by a new **Kayden’s Dream holiday promo section** using the two images and the exact wording you gave (plus the purchase link).
+
+You can copy and paste this right over your existing `index.html` in GitHub.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,12 +68,8 @@
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  .upcoming-exhibition { text-align:center; margin:40px 0; }
-  .upcoming-exhibition h2 { font-size: 28px; margin-bottom: 10px; }
-  .exhibition-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
-  .exhibition-details { font-size: 15px; line-height: 1.6; }
-
-  .auction-section {
+  /* Kayden's Dream Holiday Promo Section */
+  .kaydens-section {
     max-width: 1100px;
     margin: 40px auto;
     padding: 20px;
@@ -76,78 +77,67 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-  .auction-section h2 {
+
+  .kaydens-section h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 6px;
+    font-size: 30px;
+    margin-bottom: 10px;
   }
-  .auction-sub {
-    text-align:center;
-    font-size: 16px;
-    margin: 0 0 10px;
-  }
-  #auction-timer {
+
+  .kaydens-section h3 {
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 20px;
-  }
-
-  .auction-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 8px;
-  }
-  @media (min-width: 720px) {
-    .auction-grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  .auction-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-
-  .auction-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  }
-
-  .auction-item h3 {
-    margin: 10px 0 5px 0;
     font-size: 20px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
-  .auction-item p { margin: 6px 0; font-size: 15px; }
-  .auction-item .start { color: #b56b27; font-weight: 700; }
+  .kaydens-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+  }
 
-  .auction-item a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: #222;
-    color: #fff;
+  .kaydens-images {
+    flex: 1 1 260px;
+    min-width: 260px;
+    text-align: center;
+  }
+
+  .kaydens-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    margin-bottom: 16px;
+  }
+
+  .kaydens-text {
+    flex: 2 1 320px;
+    min-width: 280px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .kaydens-text p {
+    margin: 0 0 12px;
+  }
+
+  .kaydens-text strong {
+    font-weight: 700;
+  }
+
+  .kaydens-text a {
+    color: #b56b27;
     text-decoration: none;
-    border-radius: 4px;
+    font-weight: bold;
   }
-  .auction-item a:hover { background: #444; }
 
-  .rules-box {
-    margin-top: 18px;
-    background:#fff;
-    border:1px solid #ddd;
-    border-radius:8px;
-    padding: 12px 16px;
+  .kaydens-text a:hover {
+    text-decoration: underline;
   }
-  .rules-box h4 { margin: 0 0 8px; text-align:center; font-size: 18px; }
-  .rules-box ul { margin:0; padding-left: 18px; line-height:1.6; font-size: 14px; }
 
   /* Works in Progress Section */
   .jazz-section {
@@ -230,27 +220,38 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<section class="upcoming-exhibition">
-  <h2>Current Exhibition</h2>
-  <div class="exhibition-title">Multitudes: The Art of Kenneth J. Lewis Sr.</div>
-  <div class="exhibition-details">
-    Capital Health Art Gallery, Hopewell, NJ<br>
-    September 08 – December 31, 2025 • Solo Exhibition<br>
-    <strong>Reception:</strong> Wednesday, October 08, 2025 • 5:00 – 6:30 PM
-  </div>
-  <div class="exhibition-image" style="margin-top:20px;">
-    <img src="images/Multitudes.jpg" alt="Multitudes Exhibition" style="max-width:80%; border-radius:12px;">
-  </div>
-</section>
+<!-- Kayden's Dream Holiday Promo Section -->
+<section class="kaydens-section">
+  <h2>Kayden’s Dream – Holiday Hardcover Release</h2>
+  <h3>48-page, full-color 8×10 children's book</h3>
 
-<!-- ===== Current Auction ===== -->
-<section class="auction-section">
-  <h2>Live Auction — Now Open</h2>
-  <p class="auction-sub"><strong>Ends:</strong> Sunday, Nov 9, 2025 at 11:59 PM ET</p>
-  <div id="auction-timer">Loading timer…</div>
-  <div class="auction-grid">
-    <!-- Auction items -->
-    <!-- [unchanged content omitted for brevity] -->
+  <div class="kaydens-flex">
+    <div class="kaydens-images">
+      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Kayden%20Landscape.png?raw=true" alt="Kayden’s Dream landscape illustration">
+      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Book%20Kaydens%20Dream.jpg?raw=true" alt="Kayden’s Dream hardcover book cover">
+    </div>
+
+    <div class="kaydens-text">
+      <p>
+        This holiday season, give a child a story they will remember.
+      </p>
+      <p>
+        <em>Kayden’s Dream</em> is a beautifully crafted 48-page, full-color hardcover children’s book (8×10 inches) written and illustrated by Kenneth J. Lewis Sr. It follows a young boy who wishes the world could be kind again, and the remarkable dream that follows.
+      </p>
+      <p><strong>Black Friday Week Special</strong><br>
+        Regular Price: $39.99<br>
+        Sale Price: $34.95<br>
+        And for this week only, each hardcover comes with a free 8×10 signed art print of “Kayden Looking in the Mirror.”
+      </p>
+      <p>
+        Sale ends 11/28.<br>
+        The QR code to order is printed on the downloadable flyer PDF, or click the payment link here:<br>
+        <a href="https://square.link/u/SOA7OVsI" target="_blank" rel="noopener noreferrer">https://square.link/u/SOA7OVsI</a>
+      </p>
+      <p>
+        Give the gift of imagination, kindness, and art.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -279,26 +280,8 @@
   &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
 
-<script>
-  const endTime = new Date("2025-11-10T04:59:59Z").getTime();
-  const el = document.getElementById("auction-timer");
-  function tick() {
-    const now = Date.now();
-    const dist = endTime - now;
-    if (dist <= 0) {
-      el.textContent = "The auction has ended.";
-      clearInterval(timer);
-      return;
-    }
-    const d = Math.floor(dist / (1000*60*60*24));
-    const h = Math.floor((dist % (1000*60*60*24)) / (1000*60*60));
-    const m = Math.floor((dist % (1000*60*60)) / (1000*60));
-    const s = Math.floor((dist % (1000*60)) / 1000);
-    el.textContent = `Time Remaining: ${d}d ${h}h ${m}m ${s}s`;
-  }
-  const timer = setInterval(tick, 1000);
-  tick();
-</script>
-
 </body>
 </html>
+```
+
+If you’d like, I can next help you make a separate `kaydens-dream.html` page that this section links to, with more images, testimonials later, or a video embed when you record your promo.

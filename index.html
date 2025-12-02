@@ -1,8 +1,3 @@
-Here’s your updated full `index.html` with the **Current Exhibition** and **Auction** sections removed and replaced by a new **Kayden’s Dream holiday promo section** using the two images and the exact wording you gave (plus the purchase link).
-
-You can copy and paste this right over your existing `index.html` in GitHub.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,10 +134,44 @@ You can copy and paste this right over your existing `index.html` in GitHub.
     text-decoration: underline;
   }
 
+  /* Auction Info Section */
+  .auction-section {
+    max-width: 1000px;
+    margin: 30px auto 10px;
+    padding: 20px;
+    background-color: #fffdf7;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+
+  .auction-section h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #b56b27;
+  }
+
+  .auction-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 6px auto;
+    max-width: 800px;
+  }
+
+  .auction-section a {
+    color: #b56b27;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .auction-section a:hover {
+    text-decoration: underline;
+  }
+
   /* Works in Progress Section */
   .jazz-section {
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 40px auto 50px;
     padding: 20px;
     text-align: center;
     background: #fff8f2;
@@ -205,14 +234,12 @@ You can copy and paste this right over your existing `index.html` in GitHub.
   <a href="bio.html">Artist Bio</a>
   <a href="podcast.html">Podcast</a>
   <a href="social.html">Social</a>
-  <a href="canvas-reproductions.html">Canvas Reproductions</a>
   <a href="exhibitions.html">Exhibitions</a>
   <a href="abstract.html">Abstract Series</a>
   <a href="patterns-series.html">Patterns Series</a>
   <a href="basquiat.html">Basquiat Series</a>
   <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
   <a href="figurative-series.html">Figurative Series</a>
-  <a href="harlem-renaissance.html">Harlem Renaissance Series</a>
   <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
   <a href="luggage-series.html">Luggage Series</a>
   <a href="mens-series.html">Men’s Series</a>
@@ -238,14 +265,13 @@ You can copy and paste this right over your existing `index.html` in GitHub.
       <p>
         <em>Kayden’s Dream</em> is a beautifully crafted 48-page, full-color hardcover children’s book (8×10 inches) written and illustrated by Kenneth J. Lewis Sr. It follows a young boy who wishes the world could be kind again, and the remarkable dream that follows.
       </p>
-      <p><strong>Black Friday Week Special</strong><br>
-        Regular Price: $39.99<br>
-        Sale Price: $34.95<br>
-        And for this week only, each hardcover comes with a free 8×10 signed art print of “Kayden Looking in the Mirror.”
+      <p>
+        <strong>Holiday Special – All December</strong><br>
+        Retail Price: $34.99<br>
+        For the entire month of December, each hardcover book comes with a free 8×10 signed art print of “Kayden Looking in the Mirror.”
       </p>
       <p>
-        Sale ends 11/28.<br>
-        The QR code to order is printed on the downloadable flyer PDF, or click the payment link here:<br>
+        Order your copy here:<br>
         <a href="https://square.link/u/SOA7OVsI" target="_blank" rel="noopener noreferrer">https://square.link/u/SOA7OVsI</a>
       </p>
       <p>
@@ -253,6 +279,21 @@ You can copy and paste this right over your existing `index.html` in GitHub.
       </p>
     </div>
   </div>
+</section>
+
+<!-- Next Auction Section -->
+<section class="auction-section">
+  <h2>Next Auction – Wednesday, December 3rd</h2>
+  <p>
+    Join us for the next KJL Art Sanctuary online auction on <strong>Wednesday, December 3rd</strong>, featuring a curated selection of original works by Artist Kenneth J. Lewis Sr.
+  </p>
+  <p>
+    Collectors will have the opportunity to bid on paintings across multiple series, with special starting bids and limited-time offers.
+  </p>
+  <p>
+    For full details, preview images, and bidding information, visit the auction page:<br>
+    <a href="auction.html">View Upcoming Auction</a>
+  </p>
 </section>
 
 <!-- 🎷 Works in Progress Section -->
@@ -282,6 +323,3 @@ You can copy and paste this right over your existing `index.html` in GitHub.
 
 </body>
 </html>
-```
-
-If you’d like, I can next help you make a separate `kaydens-dream.html` page that this section links to, with more images, testimonials later, or a video embed when you record your promo.

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clock Series | Artist Kenneth J Lewis Sr</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Garamond, "Times New Roman", serif;
+    background: #ffffff;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 30px 20px 10px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+
+  .series-intro {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .art-card {
+    text-align: center;
+  }
+
+  .art-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 12px;
+  }
+
+  .art-card h2 {
+    margin: 10px 0 6px;
+    font-size: 22px;
+  }
+
+  .art-card .meta {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .art-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  @media(max-width: 900px){
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media(max-width: 600px){
+    .gallery { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Clock Series</h1>
+</header>
+
+<section class="series-intro">
+  <p>
+    The Clock Series explores time not as a neutral measure, but as a governing force.
+    Each painting encodes a pivotal historical first using the clock face to represent
+    the month and day of the event, with the year embedded within the composition.
+    Figures, structures, and machines emerge through loose, expressive brushwork and
+    layered surfaces, allowing history and emotion to coexist.
+  </p>
+  <p>
+    These works examine how innovation transformed time into authority, shaping
+    movement, labor, and modern life.
+  </p>
+</section>
+
+<section class="gallery">
+
+  <div class="art-card">
+    <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/First%20Airplane.jpg" alt="Airplane Clock Series Painting">
+    <h2>Airplane</h2>
+    <div class="meta">Oil on canvas · 24 x 36 inches · December 17, 1903</div>
+    <p>
+      Referencing the Wright brothers’ first successful powered flight, this painting uses
+      cool tones, fractured space, and loosely suggested figures to convey uncertainty,
+      ambition, and experimentation. The aircraft appears as an impression rather than a
+      fixed image, emphasizing risk and possibility. The clock anchors the moment while
+      the surrounding surface remains open and gestural.
+    </p>
+  </div>
+
+  <div class="art-card">
+    <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/First%203%20Signal%20Traffic%20Light.jpg" alt="Traffic Light Clock Series Painting">
+    <h2>Traffic Light</h2>
+    <div class="meta">Oil on canvas · 24 x 36 inches · November 20, 1923</div>
+    <p>
+      This work references Garrett Augustus Morgan’s three-position traffic signal.
+      Built through layered color and assertive mark-making, the street system reads as
+      a symbol of pause, permission, and control. The clock dominates as an authority,
+      while the surrounding space stays loose and expressive.
+    </p>
+  </div>
+
+  <div class="art-card">
+    <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/First%20Bike.jpg" alt="Bicycle Clock Series Painting">
+    <h2>Bicycle</h2>
+    <div class="meta">Oil on luan board · 28 x 37 inches · April 12, 1817</div>
+    <p>
+      Referencing Karl von Drais’ first documented ride of the Draisine, this piece reduces
+      the bicycle and rider into essential forms built through heavy texture and restrained
+      tone. The raw surface and loose brushwork echo early experimentation, where balance
+      and movement were inseparable from time.
+    </p>
+  </div>
+
+  <div class="art-card">
+    <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/First%20Locomotive%20Steam%20Engine.jpg" alt="Steam Locomotive Clock Series Painting">
+    <h2>Steam Locomotive</h2>
+    <div class="meta">Oil on canvas · 24 x 36 inches · February 21, 1804</div>
+    <p>
+      This painting marks Richard Trevithick’s first successful run of a steam locomotive
+      on rails. The train emerges through thick, gestural paint and loosely defined forms,
+      evoking heat, weight, and motion. The clock reads as a quiet authority inside the
+      composition, signaling mechanized time.
+    </p>
+  </div>
+
+  <div class="art-card">
+    <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/Standard%20Work%20Week.jpg" alt="Standard Work Week Clock Series Painting">
+    <h2>Standard Work Week</h2>
+    <div class="meta">Acrylic on canvas · 24 x 36 inches · June 19, 1868</div>
+    <p>
+      Referencing the establishment of the eight-hour workday for federal employees,
+      this work centers the human body inside regulated time. Elongated figures and
+      symbolic forms are rendered through simplified lines and layered color fields.
+      The clock becomes a governing presence rather than a neutral object.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  &copy; 2025 Kenneth J. Lewis Sr. | KJL Art Sanctuary
+</footer>
+
+</body>
+</html>

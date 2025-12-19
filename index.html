@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,56 +64,76 @@
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  .kaydens-section {
+  /* Quaker Bridge Mall Live Painting Section */
+  .qb-section {
     max-width: 1100px;
     margin: 40px auto;
     padding: 20px;
     background-color: #fafafa;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
   }
 
-  .kaydens-section h2 {
+  .qb-section h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
+    color: #b56b27;
   }
 
-  .kaydens-section h3 {
+  .qb-section h3 {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
-  .kaydens-flex {
+  .qb-images {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 14px 0 18px;
   }
 
-  .kaydens-images {
-    flex: 1 1 260px;
-    min-width: 260px;
-    text-align: center;
+  .qb-logo {
+    max-width: 260px;
+    width: 90%;
+    height: auto;
   }
 
-  .kaydens-images img {
-    max-width: 100%;
+  .qb-flyer {
+    max-width: 820px;
+    width: 95%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-    margin-bottom: 16px;
   }
 
-  .kaydens-text {
-    flex: 2 1 320px;
-    min-width: 280px;
-    font-size: 15px;
+  .qb-mall {
+    max-width: 900px;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+
+  .qb-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 16px;
     line-height: 1.8;
+    text-align: left;
+  }
+
+  .qb-text p {
+    margin: 0 0 12px;
+  }
+
+  .qb-text strong {
+    font-weight: 700;
   }
 
   .auction-section {
@@ -136,6 +157,16 @@
     line-height: 1.7;
     margin: 6px auto;
     max-width: 800px;
+  }
+
+  .auction-section a {
+    color: #b56b27;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .auction-section a:hover {
+    text-decoration: underline;
   }
 
   .jazz-section {
@@ -177,6 +208,10 @@
     font-size: 14px;
     border-top: 1px solid #ccc;
   }
+
+  @media(max-width: 900px){
+    .qb-text { text-align: left; }
+  }
 </style>
 </head>
 <body>
@@ -214,50 +249,87 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<section class="kaydens-section">
-  <h2>Kayden’s Dream – Holiday Hardcover Release</h2>
-  <h3>48-page, full-color 8×10 children's book</h3>
+<!-- Live Painting at Quaker Bridge Mall Section -->
+<section class="qb-section">
+  <h2>Live Painting at Quaker Bridge Mall</h2>
+  <h3>Holiday Magic is happening at Quaker Bridge Mall</h3>
 
-  <div class="kaydens-flex">
-    <div class="kaydens-images">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Kayden%20Landscape.png?raw=true" alt="Kayden’s Dream landscape illustration">
-      <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Book%20Kaydens%20Dream.jpg?raw=true" alt="Kayden’s Dream hardcover book cover">
-    </div>
+  <div class="qb-images">
+    <img class="qb-logo"
+         src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/QB%20Logo.png"
+         alt="Quaker Bridge Mall Logo">
+    <img class="qb-flyer"
+         src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/Live%20Paint%20QB%20Mall.jpg"
+         alt="Live Painting at Quaker Bridge Mall Flyer">
+  </div>
 
-    <div class="kaydens-text">
-      <p>This holiday season, give a child a story they will remember.</p>
-      <p><em>Kayden’s Dream</em> is a beautifully crafted 48-page, full-color hardcover children’s book (8×10 inches) written and illustrated by Kenneth J. Lewis Sr.</p>
-      <p>
-        <strong>Holiday Special – All December</strong><br>
-        Retail Price: $34.99<br>
-        Each hardcover includes a free 8×10 signed art print.
-      </p>
-      <p>
-        Order here:<br>
-        <a href="https://square.link/u/SOA7OVsI" target="_blank">https://square.link/u/SOA7OVsI</a>
-      </p>
-    </div>
+  <div class="qb-text">
+    <p>
+      Holiday Magic is happening at Quaker Bridge Mall.
+    </p>
+    <p>
+      Join me on <strong>Sunday, December 21</strong> from <strong>10 AM to 8 PM</strong> for a full day of live painting near <strong>Center Court</strong>.
+      I’ll be creating a brand-new <strong>48&quot; × 60&quot;</strong> artwork on site, and everyone is welcome to stop by, watch, and enjoy the creative process.
+    </p>
+    <p>
+      We’re also hosting a <strong>Community Painting Canvas</strong> where kids, families, and visitors of all ages can add their own brushstroke to a collaborative holiday masterpiece.
+      It’s a warm, festive, family-friendly experience designed to bring people together through art during this special season.
+    </p>
+    <p>
+      Bring the family, stop in, say hello, and be part of something creative and memorable this holiday season.
+    </p>
+    <p>
+      Presented by Quaker Bridge Mall and Artist Kenneth J. Lewis Sr.
+    </p>
+  </div>
+
+  <div class="qb-images" style="margin-top:16px;">
+    <img class="qb-mall"
+         src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/QB%20Mall.jpg"
+         alt="Quaker Bridge Mall">
   </div>
 </section>
 
+<!-- Next Auction Section -->
 <section class="auction-section">
-  <h2>Next Auction – Wednesday, December 3rd</h2>
-  <p>Join us for the next KJL Art Sanctuary online auction featuring a curated selection of original works.</p>
+  <h2>Next Auction – Saturday, December 20, 2025</h2>
   <p>
+    Join us for the next KJL Art Sanctuary online auction on <strong>Saturday, December 20, 2025</strong>, featuring a curated selection of original works by Artist Kenneth J. Lewis Sr.
+  </p>
+  <p>
+    Collectors will have the opportunity to bid on paintings across multiple series, with special starting bids and limited-time offers.
+  </p>
+  <p>
+    For full details, preview images, and bidding information, visit the auction page:<br>
     <a href="auction.html">View Upcoming Auction</a>
   </p>
 </section>
 
+<!-- Works in Progress Section -->
 <section class="jazz-section">
   <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Jazz%20Works%20In%20Progress.jpg?raw=true" alt="Jazz Works In Progress">
   <h2>Works in Progress – Where Art Meets Jazz</h2>
-  <p>Each painting carries the soul of improvisation — bold, expressive, and alive.</p>
+  <p>
+    Step into the groove where color swings and brushstrokes play in rhythm with the music. Each painting carries the soul of improvisation — bold, expressive, and alive — just like jazz itself.
+  </p>
+  <p>
+    Now accepting collectors and venue collaborations.<br>
+    If you own or manage a jazz venue, bring the visual rhythm of my original artwork to your walls — transforming your space into a gallery of sound and color.
+  </p>
+  <p>
+    Each piece is an original — a fusion of abstract expression and figurative movement designed to elevate your guests’ experience.<br>
+    Let the art match the music.
+  </p>
   <p><strong>Explore the collection:</strong> <a href="/jazz.html">View the Jazz Series</a></p>
+  <p>
+    #JazzArt #ExpressionistArt #FineArt #ArtCollectors #JazzVenues #ArtLovers #NYCArt #GlobalArtist #ArtCommissions #ArtExhibitions #ArtGallery #ArtBuyers #AbstractArt #FigurativeArt #InteriorDecor #ModernArt #AcrylicPainting #OilPainting #OriginalArtwork #JazzInspired
+  </p>
 </section>
 
 <footer>
-  &copy; 2025 Kenneth J. Lewis Sr. All rights reserved.
+  &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
 
 </body>
 </html>
+```

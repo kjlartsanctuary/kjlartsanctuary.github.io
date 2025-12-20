@@ -131,7 +131,7 @@
     color:var(--accent);
   }
 
-  /* Best display layout: BIG hero image + wall view as thumbnail */
+  /* Media */
   .media{
     padding:16px;
     display:grid;
@@ -148,22 +148,7 @@
     width:100%;
     height:auto;
     display:block;
-  }
-  .thumbs{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-  .thumb{
-    border-radius:12px;
-    overflow:hidden;
-    border:1px solid #e7e7e7;
-    background:#fff;
-  }
-  .thumb img{
-    width:100%;
-    height:auto;
-    display:block;
+    cursor: zoom-in;
   }
   .cap{
     padding:8px 10px 10px;
@@ -266,6 +251,59 @@
     font-size:14px;
     color:#666;
   }
+
+  /* Lightbox Modal */
+  .lightbox{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(0,0,0,.86);
+    z-index: 9999;
+  }
+  .lightbox.is-open{ display:flex; }
+  .lightbox-inner{
+    max-width: 1100px;
+    width: 100%;
+    max-height: 92vh;
+    position: relative;
+  }
+  .lightbox-img{
+    width: 100%;
+    height: auto;
+    max-height: 92vh;
+    object-fit: contain;
+    display:block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    background:#111;
+  }
+  .lightbox-close{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:999px;
+    background:#fff;
+    color:#000;
+    font-weight:900;
+    cursor:pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,.35);
+    font-size:18px;
+    line-height:40px;
+  }
+  .lightbox-close:hover{ background:#f0f0f0; }
+  .lightbox-hint{
+    margin:10px auto 0;
+    text-align:center;
+    color:#ddd;
+    font-size:13px;
+    letter-spacing:.25px;
+  }
 </style>
 </head>
 
@@ -284,7 +322,7 @@
       <span class="pill">Reserve Auction</span>
     </div>
     <div id="auction-timer">Loading timer…</div>
-    <p class="subnote">Reserve price listed below for each lot. Place your best bid—winning bidders will be contacted directly by the artist.</p>
+    <p class="subnote">Click any artwork image to view it close up.</p>
   </section>
 
   <section class="grid">
@@ -305,33 +343,14 @@
       </div>
 
       <div class="media">
-        <!-- Primary artwork image -->
         <div class="primary">
           <img
+            class="zoomable"
             src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202.jpg?raw=true"
+            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202.jpg?raw=true"
             alt="Fierce 2 — acrylic on canvas"
           />
-          <div class="cap">Artwork view</div>
-        </div>
-
-        <!-- Supporting wall view (and optional second slot if you add another detail image later) -->
-        <div class="thumbs">
-          <div class="thumb">
-            <img
-              src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202%20Wall.jpg?raw=true"
-              alt="Fierce 2 — on wall"
-            />
-            <div class="cap">In-room / wall view</div>
-          </div>
-
-          <div class="thumb">
-            <!-- Repeat artwork image as a clean secondary view (swap later for a close-up if desired) -->
-            <img
-              src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202.jpg?raw=true"
-              alt="Fierce 2 — detail view"
-            />
-            <div class="cap">Detail / color &amp; texture</div>
-          </div>
+          <div class="cap">Click to zoom</div>
         </div>
       </div>
 
@@ -357,32 +376,14 @@
       </div>
 
       <div class="media">
-        <!-- Primary artwork image -->
         <div class="primary">
           <img
+            class="zoomable"
             src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202.jpg?raw=true"
+            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202.jpg?raw=true"
             alt="Vortex 2 — mixed media and acrylic on Luan board and bark paper"
           />
-          <div class="cap">Artwork view</div>
-        </div>
-
-        <div class="thumbs">
-          <div class="thumb">
-            <img
-              src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202%20wall.jpg?raw=true"
-              alt="Vortex 2 — on wall"
-            />
-            <div class="cap">In-room / wall view</div>
-          </div>
-
-          <div class="thumb">
-            <!-- Repeat artwork image as a clean secondary view (swap later for a close-up if desired) -->
-            <img
-              src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202.jpg?raw=true"
-              alt="Vortex 2 — detail view"
-            />
-            <div class="cap">Detail / surface &amp; layers</div>
-          </div>
+          <div class="cap">Click to zoom</div>
         </div>
       </div>
 
@@ -462,6 +463,15 @@
 
 </main>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Artwork close-up">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Artwork close-up" />
+    <div class="lightbox-hint">Tip: Press ESC to close</div>
+  </div>
+</div>
+
 <script>
   // Countdown to Sunday, Dec 21, 2025 at 11:59:59 PM ET.
   // Dec 21 is after DST ends, so ET is EST (UTC-5).
@@ -488,6 +498,42 @@
 
   const timer = setInterval(tick, 1000);
   tick();
+
+  // Simple Lightbox
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  function openLightbox(src){
+    lightboxImg.src = src;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", () => {
+      const full = img.getAttribute("data-full") || img.src;
+      openLightbox(full);
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if(e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+  });
 </script>
 
 </body>

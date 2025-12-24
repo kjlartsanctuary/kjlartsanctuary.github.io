@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Artist Kenneth J Lewis Sr | Home</title>
+
 <style>
   html, body {
     height: 100%;
@@ -68,7 +69,7 @@
   /* Featured Current Auction Section */
   .current-auction {
     max-width: 1100px;
-    margin: 28px auto 10px;
+    margin: 28px auto 30px;
     padding: 20px;
     background-color: #fffdf7;
     border-radius: 12px;
@@ -109,6 +110,8 @@
     white-space: nowrap;
   }
 
+  .pill.alt { background:#b56b27; }
+
   #auction-timer-home {
     font-size: 18px;
     font-weight: bold;
@@ -135,7 +138,6 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   }
 
-  /* Updated: single image only (removed room/wall display images) */
   .auction-card .img-wrap {
     padding: 14px;
     background: #fff;
@@ -192,6 +194,7 @@
 
   .cta-row {
     margin-top: 16px;
+    text-align: center;
   }
 
   .btn-auction {
@@ -215,108 +218,35 @@
     line-height: 1.6;
   }
 
-  /* Quaker Bridge Mall Live Painting Section */
-  .qb-section {
+  /* Simple section for optional future content */
+  .section {
     max-width: 1100px;
-    margin: 36px auto;
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
+    margin: 26px auto 40px;
+    padding: 0 16px;
   }
 
-  .qb-section h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #b56b27;
+  .section-card{
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 18px;
+    background:#fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    text-align:center;
   }
 
-  .qb-section h3 {
-    text-align: center;
-    font-size: 18px;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 18px;
+  .section-card h2{
+    margin:0 0 10px;
+    font-size:26px;
+    color:#b56b27;
   }
 
-  .qb-images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    margin: 14px 0 18px;
-  }
-
-  .qb-logo {
-    max-width: 260px;
-    width: 90%;
-    height: auto;
-  }
-
-  .qb-flyer {
-    max-width: 820px;
-    width: 95%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-  }
-
-  .qb-mall {
-    max-width: 900px;
-    width: 95%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-  }
-
-  .qb-text {
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: left;
-  }
-
-  .qb-text p {
-    margin: 0 0 12px;
-  }
-
-  .qb-text strong {
-    font-weight: 700;
-  }
-
-  /* Works in Progress Section */
-  .jazz-section {
-    max-width: 1000px;
-    margin: 40px auto 50px;
-    padding: 20px;
-    text-align: center;
-    background: #fff8f2;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  }
-
-  .jazz-section img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  }
-
-  .jazz-section h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #b56b27;
-  }
-
-  .jazz-section p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 10px auto;
-    max-width: 850px;
+  .section-card p{
+    margin:0;
+    font-size:15px;
+    line-height:1.7;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
   }
 
   footer {
@@ -326,10 +256,6 @@
     background-color: #ffffff;
     font-size: 14px;
     border-top: 1px solid #ccc;
-  }
-
-  @media(max-width: 900px){
-    .qb-text { text-align: left; }
   }
 </style>
 </head>
@@ -369,51 +295,51 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<!-- CURRENT AUCTION (LIVE NOW) -->
+<!-- CURRENT AUCTION (CHRISTMAS DAY) -->
 <section class="current-auction">
-  <h2>Current Auction – Live Now</h2>
+  <h2>Christmas Day Auction – Live Now</h2>
   <p class="sub">
-    Bidding is open now and closes <strong>Sunday, December 21, 2025 at 11:59 PM ET</strong>.
-    Two original works are available in this reserve auction: <strong>Fierce 2</strong> and <strong>Vortex 2</strong>.
+    Bidding is open now and closes <strong>Thursday, December 25, 2025 at 11:59 PM ET</strong>.
+    Bid on the <strong>full Peplum Jacket Series set</strong> or bid on each painting individually.
   </p>
 
   <div class="auction-pill-row">
     <span class="pill">Private &amp; Confidential Bidding</span>
     <span class="pill">Reserve Auction</span>
+    <span class="pill alt">Christmas Day</span>
   </div>
 
   <div id="auction-timer-home">Loading timer…</div>
 
   <div class="auction-grid">
-    <!-- Fierce 2 -->
+    <!-- Full Set -->
     <article class="auction-card">
       <div class="img-wrap">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202.jpg?raw=true" alt="Fierce 2 — artwork view">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true" alt="Peplum Jacket Series — set of three paintings">
       </div>
       <div class="content">
-        <h3>Fierce 2</h3>
-        <p><strong>Size:</strong> 45&quot; × 58&quot;</p>
-        <p><strong>Medium:</strong> Acrylic on canvas</p>
-        <p><strong>Technique:</strong> Palette knife</p>
+        <h3>Peplum Jacket Series — Full Set (3 Works)</h3>
+        <p><strong>Medium:</strong> Oil on canvas</p>
+        <p><strong>Includes:</strong> Crimson • Blue • Tan</p>
         <div class="price-row">
-          <div class="label">Reserve / Opening Bid</div>
-          <div class="price">$1,400</div>
+          <div class="label">Reserve / Starting Bid (Set)</div>
+          <div class="price">$600</div>
         </div>
       </div>
     </article>
 
-    <!-- Vortex 2 -->
+    <!-- Individual Highlight -->
     <article class="auction-card">
       <div class="img-wrap">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202.jpg?raw=true" alt="Vortex 2 — artwork view">
+        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Crimson%20Jacket.jpg?raw=true" alt="Peplum Jacket Crimson — oil on canvas">
       </div>
       <div class="content">
-        <h3>Vortex 2</h3>
-        <p><strong>Size:</strong> 36&quot; × 36&quot;</p>
-        <p><strong>Medium:</strong> Mixed media, acrylic on Luan board &amp; bark paper</p>
+        <h3>Bid Individually</h3>
+        <p><strong>Available:</strong> Peplum Jacket Crimson • Peplum Jacket Blue • Peplum Jacket Tan</p>
+        <p><strong>Medium:</strong> Oil on canvas</p>
         <div class="price-row">
-          <div class="label">Reserve / Opening Bid</div>
-          <div class="price">$800</div>
+          <div class="label">Reserve / Starting Bid (Each)</div>
+          <div class="price">$250</div>
         </div>
       </div>
     </article>
@@ -424,73 +350,20 @@
   </div>
 
   <p class="small-note">
-    Bids are submitted privately through the auction page. Winning bidders will be contacted directly by the artist. Payment is due within 48 hours of the auction close. Shipping/delivery is arranged with the buyer.
+    Bids are submitted privately through the auction page. Winning bidders will be contacted directly by the artist.
+    Payment is due within 48 hours of the auction close. Shipping/delivery is arranged with the buyer.
   </p>
 </section>
 
-<!-- Live Painting at Quaker Bridge Mall Section -->
-<section class="qb-section">
-  <h2>Live Painting at Quaker Bridge Mall</h2>
-  <h3>Holiday Magic is happening at Quaker Bridge Mall</h3>
-
-  <div class="qb-images">
-    <img class="qb-logo"
-         src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/QB%20Logo.png"
-         alt="Quaker Bridge Mall Logo">
-    <img class="qb-flyer"
-         src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/Live%20Paint%20QB%20Mall.jpg"
-         alt="Live Painting at Quaker Bridge Mall Flyer">
-  </div>
-
-  <div class="qb-text">
+<!-- OPTIONAL SIMPLE SECTION (keeps page balanced without old event/WIP content) -->
+<section class="section">
+  <div class="section-card">
+    <h2>Visit the Studio</h2>
     <p>
-      Holiday Magic is happening at Quaker Bridge Mall.
-    </p>
-    <p>
-      Join me on <strong>Sunday, December 21</strong> from <strong>10 AM to 8 PM</strong> for a full day of live painting near <strong>Center Court</strong>.
-      I’ll be creating a brand-new <strong>48&quot; × 60&quot;</strong> artwork on site, and everyone is welcome to stop by, watch, and enjoy the creative process.
-    </p>
-    <p>
-      We’re also hosting a <strong>Community Painting Canvas</strong> where kids, families, and visitors of all ages can add their own brushstroke to a collaborative holiday masterpiece.
-      It’s a warm, festive, family-friendly experience designed to bring people together through art during this special season.
-    </p>
-    <p>
-      Kids can also make their own <strong>5&quot; × 7&quot; holiday card</strong> with an envelope. Limited supply, so come early.
-    </p>
-    <p>
-      Bring the family, stop in, say hello, and be part of something creative and memorable this holiday season.
-    </p>
-    <p>
-      Presented by Quaker Bridge Mall and Artist Kenneth J. Lewis Sr.
+      Schedule a visit to KJL Art Sanctuary Gallery &amp; Studio to view original works in person and discuss collecting.
+      Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
     </p>
   </div>
-
-  <div class="qb-images" style="margin-top:16px;">
-    <img class="qb-mall"
-         src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/QB%20Mall.jpg"
-         alt="Quaker Bridge Mall">
-  </div>
-</section>
-
-<!-- Works in Progress Section -->
-<section class="jazz-section">
-  <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Jazz%20Works%20In%20Progress.jpg?raw=true" alt="Jazz Works In Progress">
-  <h2>Works in Progress – Where Art Meets Jazz</h2>
-  <p>
-    Step into the groove where color swings and brushstrokes play in rhythm with the music. Each painting carries the soul of improvisation — bold, expressive, and alive — just like jazz itself.
-  </p>
-  <p>
-    Now accepting collectors and venue collaborations.<br>
-    If you own or manage a jazz venue, bring the visual rhythm of my original artwork to your walls — transforming your space into a gallery of sound and color.
-  </p>
-  <p>
-    Each piece is an original — a fusion of abstract expression and figurative movement designed to elevate your guests’ experience.<br>
-    Let the art match the music.
-  </p>
-  <p><strong>Explore the collection:</strong> <a href="/jazz.html">View the Jazz Series</a></p>
-  <p>
-    #JazzArt #ExpressionistArt #FineArt #ArtCollectors #JazzVenues #ArtLovers #NYCArt #GlobalArtist #ArtCommissions #ArtExhibitions #ArtGallery #ArtBuyers #AbstractArt #FigurativeArt #InteriorDecor #ModernArt #AcrylicPainting #OilPainting #OriginalArtwork #JazzInspired
-  </p>
 </section>
 
 <footer>
@@ -498,10 +371,9 @@
 </footer>
 
 <script>
-  // Countdown to Sunday, Dec 21, 2025 at 11:59:59 PM ET.
-  // Dec 21 is after DST ends, so ET is EST (UTC-5).
-  // Equivalent UTC: Dec 22, 2025 04:59:59 Z
-  const endTimeHome = new Date("2025-12-22T04:59:59Z").getTime();
+  // Countdown to Thu, Dec 25, 2025 at 11:59:59 PM ET.
+  // ET on Dec 25, 2025 is EST (UTC-5). Equivalent UTC: Dec 26, 2025 04:59:59 Z
+  const endTimeHome = new Date("2025-12-26T04:59:59Z").getTime();
   const elHome = document.getElementById("auction-timer-home");
 
   function tickHome(){
@@ -518,7 +390,7 @@
     const m = Math.floor((dist%(1000*60*60))/(1000*60));
     const s = Math.floor((dist%(1000*60))/1000);
 
-    elHome.textContent = `Current Auction Ends In: ${d}d ${h}h ${m}m ${s}s`;
+    elHome.textContent = `Christmas Day Auction Ends In: ${d}d ${h}h ${m}m ${s}s`;
   }
 
   const timerHome = setInterval(tickHome, 1000);

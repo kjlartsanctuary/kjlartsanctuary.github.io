@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KJL Art Sanctuary | Live Auction (Ends Dec 21, 2025)</title>
+<title>KJL Art Sanctuary | Christmas Day Auction (Ends Dec 25, 2025)</title>
 
 <style>
   :root{
@@ -33,7 +33,7 @@
   header p{ margin:0; font-size:16px; letter-spacing:.25px; line-height:1.35; }
 
   .wrap{
-    max-width:1080px;
+    max-width:1120px;
     margin:28px auto 40px;
     padding:0 16px;
   }
@@ -47,7 +47,7 @@
   }
   .hero-top{
     display:flex;
-    gap:14px;
+    gap:10px;
     align-items:center;
     justify-content:center;
     flex-wrap:wrap;
@@ -55,7 +55,7 @@
   }
   .pill{
     display:inline-block;
-    padding:.25rem .65rem;
+    padding:.28rem .70rem;
     border-radius:999px;
     background:#000;
     color:#fff;
@@ -63,16 +63,38 @@
     letter-spacing:.45px;
     white-space:nowrap;
   }
+  .pill.alt{ background:var(--accent); }
   #auction-timer{
     font-size:18px;
     font-weight:700;
     margin:10px 0 2px;
+    text-align:center;
   }
   .subnote{
     margin:6px 0 0;
     font-size:15px;
     color:#444;
+    text-align:center;
   }
+
+  /* Series image (together) */
+  .series{
+    margin-top:18px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 6px 16px rgba(0,0,0,.08);
+  }
+  .series-head{
+    padding:14px 16px 12px;
+    border-bottom:1px solid #ededed;
+    background:linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    text-align:center;
+  }
+  .series-head h2{ margin:0; font-size:22px; }
+  .series-head p{ margin:6px 0 0; font-size:15px; color:#444; }
+  .series-media{ padding:14px; }
 
   .grid{
     display:grid;
@@ -108,6 +130,7 @@
     line-height:1.45;
   }
   .meta strong{ font-weight:700; }
+
   .price-row{
     margin-top:10px;
     padding:10px 12px;
@@ -132,12 +155,6 @@
   }
 
   /* Media */
-  .media{
-    padding:16px;
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-  }
   .primary{
     border-radius:12px;
     overflow:hidden;
@@ -156,11 +173,11 @@
     color:#444;
     background:#fff;
     border-top:1px solid #ededed;
+    text-align:center;
   }
+  .media{ padding:16px; }
 
-  .content{
-    padding:2px 18px 18px;
-  }
+  .content{ padding:2px 18px 18px; }
   .content p{
     margin:10px 0 0;
     font-size:16px;
@@ -230,10 +247,7 @@
   .rules h3{ margin:0 0 10px; text-align:center; font-size:22px; }
   .rules ul{ margin:0; padding-left:18px; line-height:1.7; font-size:15.5px; }
 
-  .back-home{
-    text-align:center;
-    margin-top:18px;
-  }
+  .back-home{ text-align:center; margin-top:18px; }
   .btn-home{
     display:inline-block;
     padding:.75rem 1.25rem;
@@ -310,8 +324,8 @@
 <body>
 
 <header>
-  <h1>KJL Art Sanctuary — Live Auction</h1>
-  <p>Starts <strong>now</strong> • Ends <strong>Sunday, December 21, 2025 at 11:59 PM ET</strong></p>
+  <h1>KJL Art Sanctuary — Christmas Day Auction</h1>
+  <p>Ends <strong>Thursday, December 25, 2025 at 11:59 PM ET</strong> • Bid on the full set or individually</p>
 </header>
 
 <main class="wrap">
@@ -320,25 +334,45 @@
     <div class="hero-top">
       <span class="pill">Private &amp; Confidential Bidding</span>
       <span class="pill">Reserve Auction</span>
+      <span class="pill alt">Christmas Day</span>
     </div>
     <div id="auction-timer">Loading timer…</div>
     <p class="subnote">Click any artwork image to view it close up.</p>
   </section>
 
+  <!-- Series Image -->
+  <section class="series">
+    <div class="series-head">
+      <h2>The Peplum Jacket Series (Set of 3)</h2>
+      <p>Three original oil paintings inspired by the architectural peplum silhouette—elegant waist, sculpted flare, and timeless structure.</p>
+    </div>
+    <div class="series-media">
+      <div class="primary">
+        <img
+          class="zoomable"
+          src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
+          data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
+          alt="The Peplum Jacket Series — set of three paintings"
+        />
+        <div class="cap">Peplum Jacket Series — Click to zoom</div>
+      </div>
+    </div>
+  </section>
+
   <section class="grid">
 
-    <!-- 1) Fierce 2 -->
+    <!-- LOT A: FULL SET -->
     <article class="lot">
       <div class="lot-head">
-        <h2>1) Fierce 2</h2>
+        <h2>A) Peplum Jacket Series — Full Set (3 Works)</h2>
         <p class="meta">
-          <strong>Size:</strong> 45&quot; × 58&quot;<br>
-          <strong>Medium:</strong> Acrylic on canvas<br>
-          <strong>Technique:</strong> Palette knife
+          <strong>Includes:</strong> Peplum Jacket Crimson • Peplum Jacket Blue • Peplum Jacket Tan<br>
+          <strong>Medium:</strong> Oil on canvas<br>
+          <strong>Bidding:</strong> Bid on the complete set as one collection
         </p>
         <div class="price-row">
-          <div class="label">Reserve / Opening Bid</div>
-          <div class="price">$1,400</div>
+          <div class="label">Reserve / Starting Bid (Set)</div>
+          <div class="price">$600</div>
         </div>
       </div>
 
@@ -346,32 +380,33 @@
         <div class="primary">
           <img
             class="zoomable"
-            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202.jpg?raw=true"
-            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Fierce%202.jpg?raw=true"
-            alt="Fierce 2 — acrylic on canvas"
+            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
+            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
+            alt="Peplum Jacket Series — full set"
           />
-          <div class="cap">Click to zoom</div>
+          <div class="cap">Full Set — Click to zoom</div>
         </div>
       </div>
 
       <div class="content">
         <p>
-          <em>Fierce 2</em> is built with bold, sculptural palette-knife energy—thick paint, high-contrast edges, and fearless color that pushes the figure forward with attitude and presence. The work plays like a statement: power, style, and confidence—captured in layered texture and decisive marks.
+          A fashion-inspired trio painted as architecture—structured waists, sculpted flare, and bold painterly energy.
+          Collect the full series as a single statement set.
         </p>
       </div>
     </article>
 
-    <!-- 2) Vortex 2 -->
+    <!-- LOT 1: CRIMSON -->
     <article class="lot">
       <div class="lot-head">
-        <h2>2) Vortex 2</h2>
+        <h2>1) Peplum Jacket Crimson</h2>
         <p class="meta">
-          <strong>Size:</strong> 36&quot; × 36&quot;<br>
-          <strong>Medium:</strong> Mixed media, acrylic on Luan board &amp; bark paper
+          <strong>Medium:</strong> Oil on canvas<br>
+          <strong>Series:</strong> Peplum Jacket Series
         </p>
         <div class="price-row">
-          <div class="label">Reserve / Opening Bid</div>
-          <div class="price">$800</div>
+          <div class="label">Reserve / Starting Bid (Individual)</div>
+          <div class="price">$250</div>
         </div>
       </div>
 
@@ -379,9 +414,9 @@
         <div class="primary">
           <img
             class="zoomable"
-            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202.jpg?raw=true"
-            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Vortex%202.jpg?raw=true"
-            alt="Vortex 2 — mixed media and acrylic on Luan board and bark paper"
+            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Crimson%20Jacket.jpg?raw=true"
+            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Crimson%20Jacket.jpg?raw=true"
+            alt="Peplum Jacket Crimson — oil on canvas"
           />
           <div class="cap">Click to zoom</div>
         </div>
@@ -389,7 +424,73 @@
 
       <div class="content">
         <p>
-          <em>Vortex 2</em> moves like momentum—layers of acrylic and mixed media pulling the eye into circular motion, then throwing it back out through sharp diagonals and scraped texture. The bark paper and Luan board bring a grounded physicality to the surface, turning the piece into a charged object—raw, rhythmic, and alive.
+          A crimson statement—warm, bold, and sculptural. The silhouette holds its structure while the brushwork keeps it alive.
+        </p>
+      </div>
+    </article>
+
+    <!-- LOT 2: BLUE -->
+    <article class="lot">
+      <div class="lot-head">
+        <h2>2) Peplum Jacket Blue</h2>
+        <p class="meta">
+          <strong>Medium:</strong> Oil on canvas<br>
+          <strong>Series:</strong> Peplum Jacket Series
+        </p>
+        <div class="price-row">
+          <div class="label">Reserve / Starting Bid (Individual)</div>
+          <div class="price">$250</div>
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="primary">
+          <img
+            class="zoomable"
+            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Blue%20Jacket.jpg?raw=true"
+            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Blue%20Jacket.jpg?raw=true"
+            alt="Peplum Jacket Blue — oil on canvas"
+          />
+          <div class="cap">Click to zoom</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <p>
+          Cool elegance with architectural poise—blue tones, confident edges, and a refined flare that reads like design.
+        </p>
+      </div>
+    </article>
+
+    <!-- LOT 3: TAN -->
+    <article class="lot">
+      <div class="lot-head">
+        <h2>3) Peplum Jacket Tan</h2>
+        <p class="meta">
+          <strong>Medium:</strong> Oil on canvas<br>
+          <strong>Series:</strong> Peplum Jacket Series
+        </p>
+        <div class="price-row">
+          <div class="label">Reserve / Starting Bid (Individual)</div>
+          <div class="price">$250</div>
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="primary">
+          <img
+            class="zoomable"
+            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Tan%20Jacket.jpg?raw=true"
+            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Tan%20Jacket.jpg?raw=true"
+            alt="Peplum Jacket Tan — oil on canvas"
+          />
+          <div class="cap">Click to zoom</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <p>
+          Neutral luxury—tan and earth tones with a tailored silhouette. Understated, warm, and timeless.
         </p>
       </div>
     </article>
@@ -402,11 +503,13 @@
 
     <div class="form-grid">
       <div>
-        <label for="lot">Artwork</label>
+        <label for="lot">Select Item</label>
         <select id="lot" name="lot" required>
-          <option value="" selected disabled>Select a lot</option>
-          <option value="1">1) Fierce 2 — Reserve $1,400</option>
-          <option value="2">2) Vortex 2 — Reserve $800</option>
+          <option value="" selected disabled>Select the set or an individual painting</option>
+          <option value="A">A) Full Set — Peplum Jacket Series (Starting Bid $600)</option>
+          <option value="1">1) Peplum Jacket Crimson (Starting Bid $250)</option>
+          <option value="2">2) Peplum Jacket Blue (Starting Bid $250)</option>
+          <option value="3">3) Peplum Jacket Tan (Starting Bid $250)</option>
         </select>
       </div>
 
@@ -432,7 +535,7 @@
 
       <div class="full">
         <label for="comments">Comments (optional)</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
+        <textarea id="comments" name="comments" rows="4" placeholder="If bidding on multiple items, note it here."></textarea>
       </div>
     </div>
 
@@ -443,9 +546,10 @@
   <section class="rules">
     <h3>Auction Rules</h3>
     <ul>
-      <li>Auction opens immediately and closes <strong>Sunday, December 21, 2025 at 11:59 PM ET</strong>.</li>
+      <li>Auction is live now and closes <strong>Thursday, December 25, 2025 at 11:59 PM ET</strong>.</li>
       <li>All bids are private and confidential.</li>
-      <li>This is a reserve auction. Reserves: <strong>#1 Fierce 2 $1,400</strong> • <strong>#2 Vortex 2 $800</strong>.</li>
+      <li>This is a reserve auction. Starting bids: <strong>Set $600</strong> • <strong>Individuals $250</strong>.</li>
+      <li>You may bid on the full set or any individual work.</li>
       <li>Winning bidders will be notified directly by the artist.</li>
       <li>Payment due within 48 hours of auction close.</li>
       <li>Shipping/delivery arranged with the buyer; costs not included in bid.</li>
@@ -473,10 +577,9 @@
 </div>
 
 <script>
-  // Countdown to Sunday, Dec 21, 2025 at 11:59:59 PM ET.
-  // Dec 21 is after DST ends, so ET is EST (UTC-5).
-  // Equivalent UTC: Dec 22, 2025 04:59:59 Z
-  const endTime = new Date("2025-12-22T04:59:59Z").getTime();
+  // Countdown to Thu, Dec 25, 2025 at 11:59:59 PM ET.
+  // ET on Dec 25, 2025 is EST (UTC-5). Equivalent UTC: Dec 26, 2025 04:59:59 Z
+  const endTime = new Date("2025-12-26T04:59:59Z").getTime();
   const el = document.getElementById("auction-timer");
 
   function tick(){
@@ -499,7 +602,7 @@
   const timer = setInterval(tick, 1000);
   tick();
 
-  // Simple Lightbox
+  // Lightbox
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const lightboxClose = document.getElementById("lightboxClose");
@@ -534,6 +637,18 @@
   document.addEventListener("keydown", (e) => {
     if(e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
   });
+
+  // Smart minimum bid based on selection
+  const lotSelect = document.getElementById("lot");
+  const bidInput = document.getElementById("bid");
+
+  function setMinBid(){
+    const v = lotSelect.value;
+    const min = (v === "A") ? 600 : 250;
+    bidInput.min = String(min);
+    if(!bidInput.value || Number(bidInput.value) < min) bidInput.value = min;
+  }
+  lotSelect.addEventListener("change", setMinBid);
 </script>
 
 </body>

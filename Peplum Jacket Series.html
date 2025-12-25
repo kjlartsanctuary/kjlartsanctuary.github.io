@@ -1,1 +1,162 @@
-coming soon 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Peplum Jacket Series | Kenneth J. Lewis Sr.</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Garamond, "Times New Roman", serif;
+  background: #ffffff;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 30px 15px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+header p {
+  max-width: 900px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 15px 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  border: 1px solid #eee;
+  padding: 12px;
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.meta {
+  padding-top: 10px;
+}
+
+.meta h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+.meta p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 10px 30px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Peplum Jacket Series</h1>
+  <p>
+    Inspired by the sculptural elegance of the peplum jacket silhouette, this series by
+    Kenneth J. Lewis Sr. explores fashion as architecture — translating tailored form,
+    movement, and structure into expressive painterly compositions.
+  </p>
+</header>
+
+<main>
+<section class="grid">
+
+<div class="card">
+  <img src="images/Peplum%20Blue%20Jacket.jpg" alt="Peplum Jacket Blue">
+  <div class="meta">
+    <h3>Peplum Jacket Blue</h3>
+    <p>Oil on canvas</p>
+    <p>24 x 30 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Peplum%20Crimson%20Jacket.jpg" alt="Peplum Jacket Crimson">
+  <div class="meta">
+    <h3>Peplum Jacket Crimson</h3>
+    <p>Oil on canvas</p>
+    <p>24 x 30 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Peplum%20Tan%20Jacket.jpg" alt="Peplum Jacket Tan">
+  <div class="meta">
+    <h3>Peplum Jacket Tan</h3>
+    <p>Oil on canvas</p>
+    <p>24 x 30 inches</p>
+  </div>
+</div>
+
+</section>
+
+<div class="cta">
+  To inquire about availability or to collect a work from the Peplum Jacket Series:<br>
+  Visit <strong>www.kjlartsanctuary.com</strong> or call/text <strong>609-372-6022</strong>
+</div>
+</main>
+
+<footer>
+© <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

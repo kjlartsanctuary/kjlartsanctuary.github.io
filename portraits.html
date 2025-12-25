@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portraits | Kenneth J. Lewis Sr.</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Garamond, "Times New Roman", serif;
+  background: #ffffff;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 30px 15px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+header p {
+  max-width: 900px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  border: 1px solid #eee;
+  padding: 12px;
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.meta {
+  padding-top: 10px;
+}
+
+.meta h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+.meta p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 10px 30px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Portraits</h1>
+  <p>
+    A collection of iconic portrait works by Kenneth J. Lewis Sr., capturing history,
+    imagination, and presence through expressive brushwork, texture, and scale.
+  </p>
+</header>
+
+<main>
+<section class="grid">
+
+<div class="card">
+  <img src="images/Booker%20T%20Washington%20%2048x64%20oil%20damaged%20plywood%20.jpg" alt="Booker T. Washington">
+  <div class="meta">
+    <h3>Booker T. Washington</h3>
+    <p>Oil on damaged plywood</p>
+    <p>48 x 64 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Frida%2048x60in%20Oil%20Canvas.jpg" alt="Frida Kahlo">
+  <div class="meta">
+    <h3>Frida</h3>
+    <p>Oil on canvas</p>
+    <p>48 x 60 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Ray%2048x48in%20oil%20luan.jpg" alt="Ray">
+  <div class="meta">
+    <h3>Ray</h3>
+    <p>Oil on luan board</p>
+    <p>48 x 48 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Tesla%2044x60in%20oil%20architectural%20panel%20.jpg" alt="Nikola Tesla">
+  <div class="meta">
+    <h3>Tesla</h3>
+    <p>Oil on architectural panel</p>
+    <p>44 x 60 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Brooklyn%20Bridge%20%2045x59.5in%20oil%20canvas.jpg" alt="Brooklyn Bridge">
+  <div class="meta">
+    <h3>Brooklyn Bridge</h3>
+    <p>Oil on canvas</p>
+    <p>45 x 59.5 inches</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/Coltrane%2048x48in%20oil%20luan%20.jpg" alt="John Coltrane">
+  <div class="meta">
+    <h3>Coltrane</h3>
+    <p>Oil on luan board</p>
+    <p>48 x 48 inches</p>
+  </div>
+</div>
+
+</section>
+
+<div class="cta">
+  To inquire about availability or to collect a portrait:<br>
+  Visit <strong>www.kjlartsanctuary.com</strong> or call/text <strong>609-372-6022</strong>
+</div>
+</main>
+
+<footer>
+© <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

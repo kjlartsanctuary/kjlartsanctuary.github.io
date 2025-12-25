@@ -26,7 +26,7 @@ header h1 {
 }
 
 header p {
-  max-width: 900px;
+  max-width: 950px;
   margin: 10px auto 0;
   font-size: 16px;
   line-height: 1.6;
@@ -50,11 +50,14 @@ main {
   background: #fff;
 }
 
+.card a { display: block; }
+
 .card img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
+  cursor: pointer;
 }
 
 .meta {
@@ -91,6 +94,35 @@ footer {
   color: #666;
 }
 
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 92%;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -107,279 +139,53 @@ footer {
   <h1>Small Works</h1>
   <p>
     A curated collection of intimate original works by Kenneth J. Lewis Sr.  
-    Each piece carries the same energy, texture, and vision as my large-scale paintings,
-    offered in smaller formats for collectors and gifts.
+    Perfect for new collectors, gifts, and studio visits — small in scale, big in presence.
   </p>
 </header>
 
 <main>
 <section class="grid">
 
-<!-- BUILDINGS A–G -->
-<div class="card">
-  <img src="images/Building%20A%208x10in%20oil%20canvas.jpg" alt="Building A">
-  <div class="meta">
-    <h3>Building A</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
+<!-- Buildings A–G (Oil on canvas, 8x10) -->
+<div class="card"><a href="#s1"><img src="images/Building%20A%208x10in%20oil%20canvas.jpg" alt="Building A"></a><div class="meta"><h3>Building A</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s2"><img src="images/Building%20B%208x10in%20oil%20canvas.jpg" alt="Building B"></a><div class="meta"><h3>Building B</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s3"><img src="images/Building%20C%208x10in%20oil%20canvas.jpg" alt="Building C"></a><div class="meta"><h3>Building C</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s4"><img src="images/Building%20D%208x10in%20oil%20canvas.jpg" alt="Building D"></a><div class="meta"><h3>Building D</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s5"><img src="images/Building%20E%208x10in%20oil%20canvas.jpg" alt="Building E"></a><div class="meta"><h3>Building E</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s6"><img src="images/Building%20F%208x10in%20oil%20canvas.jpg" alt="Building F"></a><div class="meta"><h3>Building F</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s7"><img src="images/Building%20G%208x10in%20oil%20canvas.jpg" alt="Building G"></a><div class="meta"><h3>Building G</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
 
-<div class="card">
-  <img src="images/Building%20B%208x10in%20oil%20canvas.jpg" alt="Building B">
-  <div class="meta">
-    <h3>Building B</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
+<!-- Building Studies 20–24 (Acrylic on canvas, 8x10) -->
+<div class="card"><a href="#s8"><img src="images/Building%20Study%2020%208x10in%20acrylic%20canvas.jpg" alt="Building Study 20"></a><div class="meta"><h3>Building Study 20</h3><p>Acrylic on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s9"><img src="images/Building%20Study%2021%208x10in%20acrylic%20canvas.jpg" alt="Building Study 21"></a><div class="meta"><h3>Building Study 21</h3><p>Acrylic on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s10"><img src="images/Building%20Study%2022%208x10in%20acrylic%20canvas.jpg" alt="Building Study 22"></a><div class="meta"><h3>Building Study 22</h3><p>Acrylic on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s11"><img src="images/Building%20Study%2023%208x10in%20acrylic%20canvas.jpg" alt="Building Study 23"></a><div class="meta"><h3>Building Study 23</h3><p>Acrylic on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s12"><img src="images/Building%20Study%2024%208x10in%20acrylic%20canvas.jpg" alt="Building Study 24"></a><div class="meta"><h3>Building Study 24</h3><p>Acrylic on canvas</p><p>8 x 10 inches</p></div></div>
 
-<div class="card">
-  <img src="images/Building%20C%208x10in%20oil%20canvas.jpg" alt="Building C">
-  <div class="meta">
-    <h3>Building C</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
+<!-- NYC Steel #1–#4 (Mixed media on plywood, 10x10) -->
+<div class="card"><a href="#s13"><img src="images/NYC%20Steel%20%231%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #1"></a><div class="meta"><h3>NYC Steel #1</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s14"><img src="images/NYC%20Steel%20%232%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #2"></a><div class="meta"><h3>NYC Steel #2</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s15"><img src="images/NYC%20Steel%20%233%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #3"></a><div class="meta"><h3>NYC Steel #3</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s16"><img src="images/NYC%20Steel%20%234%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #4"></a><div class="meta"><h3>NYC Steel #4</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
 
-<div class="card">
-  <img src="images/Building%20D%208x10in%20oil%20canvas.jpg" alt="Building D">
-  <div class="meta">
-    <h3>Building D</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
+<!-- Nautical (Oil on canvas, 10x10) -->
+<div class="card"><a href="#s17"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(1).jpg" alt="Nautical I"></a><div class="meta"><h3>Nautical I</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s18"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(2).jpg" alt="Nautical II"></a><div class="meta"><h3>Nautical II</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s19"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(3).jpg" alt="Nautical III"></a><div class="meta"><h3>Nautical III</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s20"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(4).jpg" alt="Nautical IV"></a><div class="meta"><h3>Nautical IV</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s21"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(5).jpg" alt="Nautical V"></a><div class="meta"><h3>Nautical V</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s22"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(6).jpg" alt="Nautical VI"></a><div class="meta"><h3>Nautical VI</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s23"><img src="images/Nautical%2010x10%20Oil%20Canvas%20(7).jpg" alt="Nautical VII"></a><div class="meta"><h3>Nautical VII</h3><p>Oil on canvas</p><p>10 x 10 inches</p></div></div>
 
-<div class="card">
-  <img src="images/Building%20E%208x10in%20oil%20canvas.jpg" alt="Building E">
-  <div class="meta">
-    <h3>Building E</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
+<!-- Nautical VIII–IX (Oil on canvas, 8x10) -->
+<div class="card"><a href="#s24"><img src="images/Nautical%208x10%20oil%20canvas%20(8).jpg" alt="Nautical VIII"></a><div class="meta"><h3>Nautical VIII</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
+<div class="card"><a href="#s25"><img src="images/Nautical%208x10%20oil%20canvas%20(9).jpg" alt="Nautical IX"></a><div class="meta"><h3>Nautical IX</h3><p>Oil on canvas</p><p>8 x 10 inches</p></div></div>
 
-<div class="card">
-  <img src="images/Building%20F%208x10in%20oil%20canvas.jpg" alt="Building F">
-  <div class="meta">
-    <h3>Building F</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Building%20G%208x10in%20oil%20canvas.jpg" alt="Building G">
-  <div class="meta">
-    <h3>Building G</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<!-- BUILDING STUDIES -->
-<div class="card">
-  <img src="images/Building%20Study%2020%208x10in%20acrylic%20canvas.jpg" alt="Building Study 20">
-  <div class="meta">
-    <h3>Building Study 20</h3>
-    <p>Acrylic on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Building%20Study%2021%208x10in%20acrylic%20canvas.jpg" alt="Building Study 21">
-  <div class="meta">
-    <h3>Building Study 21</h3>
-    <p>Acrylic on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Building%20Study%2022%208x10in%20acrylic%20canvas.jpg" alt="Building Study 22">
-  <div class="meta">
-    <h3>Building Study 22</h3>
-    <p>Acrylic on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Building%20Study%2023%208x10in%20acrylic%20canvas.jpg" alt="Building Study 23">
-  <div class="meta">
-    <h3>Building Study 23</h3>
-    <p>Acrylic on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Building%20Study%2024%208x10in%20acrylic%20canvas.jpg" alt="Building Study 24">
-  <div class="meta">
-    <h3>Building Study 24</h3>
-    <p>Acrylic on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<!-- NYC STEEL -->
-<div class="card">
-  <img src="images/NYC%20Steel%20%231%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #1">
-  <div class="meta">
-    <h3>NYC Steel #1</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/NYC%20Steel%20%232%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #2">
-  <div class="meta">
-    <h3>NYC Steel #2</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/NYC%20Steel%20%233%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #3">
-  <div class="meta">
-    <h3>NYC Steel #3</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/NYC%20Steel%20%234%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #4">
-  <div class="meta">
-    <h3>NYC Steel #4</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<!-- NAUTICAL SERIES -->
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(1).jpg" alt="Nautical I">
-  <div class="meta">
-    <h3>Nautical I</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(2).jpg" alt="Nautical II">
-  <div class="meta">
-    <h3>Nautical II</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(3).jpg" alt="Nautical III">
-  <div class="meta">
-    <h3>Nautical III</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(4).jpg" alt="Nautical IV">
-  <div class="meta">
-    <h3>Nautical IV</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(5).jpg" alt="Nautical V">
-  <div class="meta">
-    <h3>Nautical V</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(6).jpg" alt="Nautical VI">
-  <div class="meta">
-    <h3>Nautical VI</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%2010x10%20Oil%20Canvas%20(7).jpg" alt="Nautical VII">
-  <div class="meta">
-    <h3>Nautical VII</h3>
-    <p>Oil on canvas</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%208x10%20oil%20canvas%20(8).jpg" alt="Nautical VIII">
-  <div class="meta">
-    <h3>Nautical VIII</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Nautical%208x10%20oil%20canvas%20(9).jpg" alt="Nautical IX">
-  <div class="meta">
-    <h3>Nautical IX</h3>
-    <p>Oil on canvas</p>
-    <p>8 x 10 inches</p>
-  </div>
-</div>
-
-<!-- FINAL FOUR -->
-<div class="card">
-  <img src="images/Intention%20and%20Desire%2010x10in%20mixed%20media%20plywood.jpg" alt="Intention and Desire">
-  <div class="meta">
-    <h3>Intention and Desire</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Karma%2010x10in%20mixed%20media%20plywood.jpg" alt="Karma">
-  <div class="meta">
-    <h3>Karma</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Least%20Effort%2010x10in%20mixed%20media%20plywood.jpg" alt="Least Effort">
-  <div class="meta">
-    <h3>Least Effort</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="images/Giving%2010x10in%20mixed%20media%20plywood.jpg" alt="Giving">
-  <div class="meta">
-    <h3>Giving</h3>
-    <p>Mixed media on plywood</p>
-    <p>10 x 10 inches</p>
-  </div>
-</div>
+<!-- Final Four (Mixed media on plywood, 10x10) -->
+<div class="card"><a href="#s26"><img src="images/Intention%20and%20Desire%2010x10in%20mixed%20media%20plywood.jpg" alt="Intention and Desire"></a><div class="meta"><h3>Intention and Desire</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s27"><img src="images/Karma%2010x10in%20mixed%20media%20plywood.jpg" alt="Karma"></a><div class="meta"><h3>Karma</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s28"><img src="images/Least%20Effort%2010x10in%20mixed%20media%20plywood.jpg" alt="Least Effort"></a><div class="meta"><h3>Least Effort</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
+<div class="card"><a href="#s29"><img src="images/Giving%2010x10in%20mixed%20media%20plywood.jpg" alt="Giving"></a><div class="meta"><h3>Giving</h3><p>Mixed media on plywood</p><p>10 x 10 inches</p></div></div>
 
 </section>
 
@@ -392,6 +198,37 @@ footer {
 <footer>
 © <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary
 </footer>
+
+<!-- Lightbox targets -->
+<div id="s1" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20A%208x10in%20oil%20canvas.jpg" alt="Building A"></div>
+<div id="s2" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20B%208x10in%20oil%20canvas.jpg" alt="Building B"></div>
+<div id="s3" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20C%208x10in%20oil%20canvas.jpg" alt="Building C"></div>
+<div id="s4" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20D%208x10in%20oil%20canvas.jpg" alt="Building D"></div>
+<div id="s5" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20E%208x10in%20oil%20canvas.jpg" alt="Building E"></div>
+<div id="s6" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20F%208x10in%20oil%20canvas.jpg" alt="Building F"></div>
+<div id="s7" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20G%208x10in%20oil%20canvas.jpg" alt="Building G"></div>
+<div id="s8" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20Study%2020%208x10in%20acrylic%20canvas.jpg" alt="Building Study 20"></div>
+<div id="s9" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20Study%2021%208x10in%20acrylic%20canvas.jpg" alt="Building Study 21"></div>
+<div id="s10" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20Study%2022%208x10in%20acrylic%20canvas.jpg" alt="Building Study 22"></div>
+<div id="s11" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20Study%2023%208x10in%20acrylic%20canvas.jpg" alt="Building Study 23"></div>
+<div id="s12" class="lightbox"><a href="#" class="close">×</a><img src="images/Building%20Study%2024%208x10in%20acrylic%20canvas.jpg" alt="Building Study 24"></div>
+<div id="s13" class="lightbox"><a href="#" class="close">×</a><img src="images/NYC%20Steel%20%231%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #1"></div>
+<div id="s14" class="lightbox"><a href="#" class="close">×</a><img src="images/NYC%20Steel%20%232%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #2"></div>
+<div id="s15" class="lightbox"><a href="#" class="close">×</a><img src="images/NYC%20Steel%20%233%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #3"></div>
+<div id="s16" class="lightbox"><a href="#" class="close">×</a><img src="images/NYC%20Steel%20%234%2010x10in%20mixed%20media%20plywood.jpg" alt="NYC Steel #4"></div>
+<div id="s17" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(1).jpg" alt="Nautical I"></div>
+<div id="s18" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(2).jpg" alt="Nautical II"></div>
+<div id="s19" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(3).jpg" alt="Nautical III"></div>
+<div id="s20" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(4).jpg" alt="Nautical IV"></div>
+<div id="s21" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(5).jpg" alt="Nautical V"></div>
+<div id="s22" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(6).jpg" alt="Nautical VI"></div>
+<div id="s23" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%2010x10%20Oil%20Canvas%20(7).jpg" alt="Nautical VII"></div>
+<div id="s24" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%208x10%20oil%20canvas%20(8).jpg" alt="Nautical VIII"></div>
+<div id="s25" class="lightbox"><a href="#" class="close">×</a><img src="images/Nautical%208x10%20oil%20canvas%20(9).jpg" alt="Nautical IX"></div>
+<div id="s26" class="lightbox"><a href="#" class="close">×</a><img src="images/Intention%20and%20Desire%2010x10in%20mixed%20media%20plywood.jpg" alt="Intention and Desire"></div>
+<div id="s27" class="lightbox"><a href="#" class="close">×</a><img src="images/Karma%2010x10in%20mixed%20media%20plywood.jpg" alt="Karma"></div>
+<div id="s28" class="lightbox"><a href="#" class="close">×</a><img src="images/Least%20Effort%2010x10in%20mixed%20media%20plywood.jpg" alt="Least Effort"></div>
+<div id="s29" class="lightbox"><a href="#" class="close">×</a><img src="images/Giving%2010x10in%20mixed%20media%20plywood.jpg" alt="Giving"></div>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();

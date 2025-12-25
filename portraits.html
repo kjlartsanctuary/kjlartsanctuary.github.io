@@ -26,7 +26,7 @@ header h1 {
 }
 
 header p {
-  max-width: 900px;
+  max-width: 950px;
   margin: 10px auto 0;
   font-size: 16px;
   line-height: 1.6;
@@ -50,11 +50,14 @@ main {
   background: #fff;
 }
 
+.card a { display: block; }
+
 .card img {
   width: 100%;
-  height: 360px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
+  cursor: pointer;
 }
 
 .meta {
@@ -91,6 +94,35 @@ footer {
   color: #666;
 }
 
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 92%;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -115,7 +147,7 @@ footer {
 <section class="grid">
 
 <div class="card">
-  <img src="images/Booker%20T%20Washington%20%2048x64%20oil%20damaged%20plywood%20.jpg" alt="Booker T. Washington">
+  <a href="#p1"><img src="images/Booker%20T%20Washington%20%2048x64%20oil%20damaged%20plywood%20.jpg" alt="Booker T. Washington"></a>
   <div class="meta">
     <h3>Booker T. Washington</h3>
     <p>Oil on damaged plywood</p>
@@ -124,7 +156,7 @@ footer {
 </div>
 
 <div class="card">
-  <img src="images/Frida%2048x60in%20Oil%20Canvas.jpg" alt="Frida Kahlo">
+  <a href="#p2"><img src="images/Frida%2048x60in%20Oil%20Canvas.jpg" alt="Frida"></a>
   <div class="meta">
     <h3>Frida</h3>
     <p>Oil on canvas</p>
@@ -133,7 +165,7 @@ footer {
 </div>
 
 <div class="card">
-  <img src="images/Ray%2048x48in%20oil%20luan.jpg" alt="Ray">
+  <a href="#p3"><img src="images/Ray%2048x48in%20oil%20luan.jpg" alt="Ray"></a>
   <div class="meta">
     <h3>Ray</h3>
     <p>Oil on luan board</p>
@@ -142,7 +174,7 @@ footer {
 </div>
 
 <div class="card">
-  <img src="images/Tesla%2044x60in%20oil%20architectural%20panel%20.jpg" alt="Nikola Tesla">
+  <a href="#p4"><img src="images/Tesla%2044x60in%20oil%20architectural%20panel%20.jpg" alt="Tesla"></a>
   <div class="meta">
     <h3>Tesla</h3>
     <p>Oil on architectural panel</p>
@@ -151,7 +183,7 @@ footer {
 </div>
 
 <div class="card">
-  <img src="images/Brooklyn%20Bridge%20%2045x59.5in%20oil%20canvas.jpg" alt="Brooklyn Bridge">
+  <a href="#p5"><img src="images/Brooklyn%20Bridge%20%2045x59.5in%20oil%20canvas.jpg" alt="Brooklyn Bridge"></a>
   <div class="meta">
     <h3>Brooklyn Bridge</h3>
     <p>Oil on canvas</p>
@@ -160,7 +192,7 @@ footer {
 </div>
 
 <div class="card">
-  <img src="images/Coltrane%2048x48in%20oil%20luan%20.jpg" alt="John Coltrane">
+  <a href="#p6"><img src="images/Coltrane%2048x48in%20oil%20luan%20.jpg" alt="Coltrane"></a>
   <div class="meta">
     <h3>Coltrane</h3>
     <p>Oil on luan board</p>
@@ -179,6 +211,14 @@ footer {
 <footer>
 © <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary
 </footer>
+
+<!-- Lightbox targets -->
+<div id="p1" class="lightbox"><a href="#" class="close">×</a><img src="images/Booker%20T%20Washington%20%2048x64%20oil%20damaged%20plywood%20.jpg" alt="Booker T. Washington"></div>
+<div id="p2" class="lightbox"><a href="#" class="close">×</a><img src="images/Frida%2048x60in%20Oil%20Canvas.jpg" alt="Frida"></div>
+<div id="p3" class="lightbox"><a href="#" class="close">×</a><img src="images/Ray%2048x48in%20oil%20luan.jpg" alt="Ray"></div>
+<div id="p4" class="lightbox"><a href="#" class="close">×</a><img src="images/Tesla%2044x60in%20oil%20architectural%20panel%20.jpg" alt="Tesla"></div>
+<div id="p5" class="lightbox"><a href="#" class="close">×</a><img src="images/Brooklyn%20Bridge%20%2045x59.5in%20oil%20canvas.jpg" alt="Brooklyn Bridge"></div>
+<div id="p6" class="lightbox"><a href="#" class="close">×</a><img src="images/Coltrane%2048x48in%20oil%20luan%20.jpg" alt="Coltrane"></div>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KJL Art Sanctuary | Christmas Day Auction (Ends Dec 25, 2025)</title>
+<title>KJL Art Sanctuary | Auction</title>
 
 <style>
   :root{
@@ -44,7 +44,9 @@
     border-radius:14px;
     padding:18px 18px 16px;
     box-shadow:0 6px 16px rgba(0,0,0,.08);
+    text-align:center;
   }
+
   .hero-top{
     display:flex;
     gap:10px;
@@ -53,6 +55,7 @@
     flex-wrap:wrap;
     text-align:center;
   }
+
   .pill{
     display:inline-block;
     padding:.28rem .70rem;
@@ -64,128 +67,70 @@
     white-space:nowrap;
   }
   .pill.alt{ background:var(--accent); }
-  #auction-timer{
-    font-size:18px;
-    font-weight:700;
-    margin:10px 0 2px;
-    text-align:center;
-  }
-  .subnote{
-    margin:6px 0 0;
-    font-size:15px;
-    color:#444;
-    text-align:center;
+
+  .hero h2{
+    margin:14px 0 6px;
+    font-size:30px;
+    color:var(--accent);
   }
 
-  /* Series image (together) */
-  .series{
+  .subnote{
+    margin:6px auto 0;
+    font-size:15px;
+    color:#444;
+    max-width:900px;
+    line-height:1.6;
+  }
+
+  .notice{
     margin-top:18px;
     background:#fff;
     border:1px solid var(--line);
     border-radius:14px;
-    overflow:hidden;
+    padding:18px;
     box-shadow:0 6px 16px rgba(0,0,0,.08);
   }
-  .series-head{
-    padding:14px 16px 12px;
-    border-bottom:1px solid #ededed;
-    background:linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  .notice h3{
+    margin:0 0 10px;
     text-align:center;
+    font-size:22px;
   }
-  .series-head h2{ margin:0; font-size:22px; }
-  .series-head p{ margin:6px 0 0; font-size:15px; color:#444; }
-  .series-media{ padding:14px; }
-
-  .grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:22px;
-    margin-top:22px;
-  }
-  @media (min-width:920px){
-    .grid{ grid-template-columns:1fr 1fr; }
-  }
-
-  .lot{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 6px 16px rgba(0,0,0,.08);
-  }
-
-  .lot-head{
-    padding:16px 18px 12px;
-    border-bottom:1px solid #ededed;
-    background:linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
-  }
-  .lot-head h2{
-    margin:0 0 6px;
-    font-size:26px;
-    line-height:1.1;
-  }
-  .meta{
+  .notice p{
     margin:0;
     font-size:16px;
-    line-height:1.45;
-  }
-  .meta strong{ font-weight:700; }
-
-  .price-row{
-    margin-top:10px;
-    padding:10px 12px;
-    border-radius:12px;
-    background:var(--soft);
-    border:1px solid #e6e6e6;
-    display:flex;
-    gap:10px;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-  }
-  .price-row .label{
-    font-size:14px;
-    letter-spacing:.25px;
+    line-height:1.6;
+    text-align:center;
     color:#333;
   }
-  .price-row .price{
-    font-size:18px;
-    font-weight:800;
-    color:var(--accent);
+
+  .cta-row{
+    margin-top:16px;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
   }
 
-  /* Media */
-  .primary{
-    border-radius:12px;
-    overflow:hidden;
-    border:1px solid #e7e7e7;
-    background:#fff;
+  .btn{
+    display:inline-block;
+    padding:.75rem 1.25rem;
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:700;
   }
-  .primary img{
-    width:100%;
-    height:auto;
-    display:block;
-    cursor: zoom-in;
-  }
-  .cap{
-    padding:8px 10px 10px;
-    font-size:13px;
-    color:#444;
-    background:#fff;
-    border-top:1px solid #ededed;
-    text-align:center;
-  }
-  .media{ padding:16px; }
+  .btn:hover{ background:#444; }
 
-  .content{ padding:2px 18px 18px; }
-  .content p{
-    margin:10px 0 0;
-    font-size:16px;
-    line-height:1.55;
+  .btn.alt{
+    background:var(--accent);
+  }
+  .btn.alt:hover{
+    background:#9f5f23;
   }
 
-  /* Bid form */
-  .bid-form{
+  /* Optional: Interest form (no ended-auction references) */
+  .interest{
     margin-top:22px;
     background:#fff;
     border:1px solid var(--line);
@@ -193,25 +138,34 @@
     padding:18px;
     box-shadow:0 6px 16px rgba(0,0,0,.08);
   }
-  .bid-form h3{
+  .interest h3{
     margin:0 0 10px;
     text-align:center;
     font-size:22px;
+  }
+  .interest p{
+    margin:0 0 12px;
+    text-align:center;
+    color:#444;
+    font-size:15.5px;
+    line-height:1.6;
   }
   .form-grid{
     display:grid;
     grid-template-columns:1fr;
     gap:12px;
+    max-width:900px;
+    margin:0 auto;
   }
   @media (min-width:760px){
     .form-grid{ grid-template-columns:1fr 1fr; }
   }
-  .bid-form label{
+  label{
     display:block;
     margin:10px 0 6px;
     font-weight:700;
   }
-  .bid-form input, .bid-form select, .bid-form textarea{
+  input, select, textarea{
     width:100%;
     padding:10px;
     border:1px solid #bbb;
@@ -221,7 +175,7 @@
     background:#fff;
   }
   .full{ grid-column:1 / -1; }
-  .bid-form button{
+  button{
     width:100%;
     margin-top:14px;
     padding:12px;
@@ -233,19 +187,7 @@
     cursor:pointer;
     font-size:16px;
   }
-  .bid-form button:hover{ background:#444; }
-
-  /* Rules */
-  .rules{
-    margin-top:18px;
-    padding:18px;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    box-shadow:0 6px 16px rgba(0,0,0,.08);
-  }
-  .rules h3{ margin:0 0 10px; text-align:center; font-size:22px; }
-  .rules ul{ margin:0; padding-left:18px; line-height:1.7; font-size:15.5px; }
+  button:hover{ background:#444; }
 
   .back-home{ text-align:center; margin-top:18px; }
   .btn-home{
@@ -265,67 +207,14 @@
     font-size:14px;
     color:#666;
   }
-
-  /* Lightbox Modal */
-  .lightbox{
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-    background: rgba(0,0,0,.86);
-    z-index: 9999;
-  }
-  .lightbox.is-open{ display:flex; }
-  .lightbox-inner{
-    max-width: 1100px;
-    width: 100%;
-    max-height: 92vh;
-    position: relative;
-  }
-  .lightbox-img{
-    width: 100%;
-    height: auto;
-    max-height: 92vh;
-    object-fit: contain;
-    display:block;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.35);
-    background:#111;
-  }
-  .lightbox-close{
-    position:absolute;
-    top:-10px;
-    right:-10px;
-    width:40px;
-    height:40px;
-    border:none;
-    border-radius:999px;
-    background:#fff;
-    color:#000;
-    font-weight:900;
-    cursor:pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,.35);
-    font-size:18px;
-    line-height:40px;
-  }
-  .lightbox-close:hover{ background:#f0f0f0; }
-  .lightbox-hint{
-    margin:10px auto 0;
-    text-align:center;
-    color:#ddd;
-    font-size:13px;
-    letter-spacing:.25px;
-  }
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>KJL Art Sanctuary — Christmas Day Auction</h1>
-  <p>Ends <strong>Thursday, December 25, 2025 at 11:59 PM ET</strong> • Bid on the full set or individually</p>
+  <h1>KJL Art Sanctuary — Auction</h1>
+  <p>Original artwork auctions curated by Kenneth J. Lewis Sr.</p>
 </header>
 
 <main class="wrap">
@@ -334,190 +223,41 @@
     <div class="hero-top">
       <span class="pill">Private &amp; Confidential Bidding</span>
       <span class="pill">Reserve Auction</span>
-      <span class="pill alt">Christmas Day</span>
+      <span class="pill alt">Next Auction</span>
     </div>
-    <div id="auction-timer">Loading timer…</div>
-    <p class="subnote">Click any artwork image to view it close up.</p>
+
+    <h2>Next Auction — To Be Announced</h2>
+
+    <p class="subnote">
+      The next online auction is being curated now. Featured works, bidding details, and the official start/close dates will be posted here soon.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn" href="index.html">Back to Home</a>
+      <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com">Email for Early Access</a>
+    </div>
+
+    <p class="subnote" style="margin-top:10px;">
+      Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
+    </p>
   </section>
 
-  <!-- Series Image -->
-  <section class="series">
-    <div class="series-head">
-      <h2>The Peplum Jacket Series (Set of 3)</h2>
-      <p>Three original oil paintings inspired by the architectural peplum silhouette—elegant waist, sculpted flare, and timeless structure.</p>
-    </div>
-    <div class="series-media">
-      <div class="primary">
-        <img
-          class="zoomable"
-          src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
-          data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
-          alt="The Peplum Jacket Series — set of three paintings"
-        />
-        <div class="cap">Peplum Jacket Series — Click to zoom</div>
-      </div>
-    </div>
+  <section class="notice">
+    <h3>How Auctions Work</h3>
+    <p>
+      When the auction is announced, you will see the full list of lots with images, descriptions, reserve/starting bids,
+      and a private bid submission form. Winning bidders are contacted directly by the artist.
+    </p>
   </section>
 
-  <section class="grid">
-
-    <!-- LOT A: FULL SET -->
-    <article class="lot">
-      <div class="lot-head">
-        <h2>A) Peplum Jacket Series — Full Set (3 Works)</h2>
-        <p class="meta">
-          <strong>Includes:</strong> Peplum Jacket Crimson • Peplum Jacket Blue • Peplum Jacket Tan<br>
-          <strong>Medium:</strong> Oil on canvas<br>
-          <strong>Bidding:</strong> Bid on the complete set as one collection
-        </p>
-        <div class="price-row">
-          <div class="label">Reserve / Starting Bid (Set)</div>
-          <div class="price">$600</div>
-        </div>
-      </div>
-
-      <div class="media">
-        <div class="primary">
-          <img
-            class="zoomable"
-            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
-            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true"
-            alt="Peplum Jacket Series — full set"
-          />
-          <div class="cap">Full Set — Click to zoom</div>
-        </div>
-      </div>
-
-      <div class="content">
-        <p>
-          A fashion-inspired trio painted as architecture—structured waists, sculpted flare, and bold painterly energy.
-          Collect the full series as a single statement set.
-        </p>
-      </div>
-    </article>
-
-    <!-- LOT 1: CRIMSON -->
-    <article class="lot">
-      <div class="lot-head">
-        <h2>1) Peplum Jacket Crimson</h2>
-        <p class="meta">
-          <strong>Medium:</strong> Oil on canvas<br>
-          <strong>Series:</strong> Peplum Jacket Series
-        </p>
-        <div class="price-row">
-          <div class="label">Reserve / Starting Bid (Individual)</div>
-          <div class="price">$250</div>
-        </div>
-      </div>
-
-      <div class="media">
-        <div class="primary">
-          <img
-            class="zoomable"
-            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Crimson%20Jacket.jpg?raw=true"
-            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Crimson%20Jacket.jpg?raw=true"
-            alt="Peplum Jacket Crimson — oil on canvas"
-          />
-          <div class="cap">Click to zoom</div>
-        </div>
-      </div>
-
-      <div class="content">
-        <p>
-          A crimson statement—warm, bold, and sculptural. The silhouette holds its structure while the brushwork keeps it alive.
-        </p>
-      </div>
-    </article>
-
-    <!-- LOT 2: BLUE -->
-    <article class="lot">
-      <div class="lot-head">
-        <h2>2) Peplum Jacket Blue</h2>
-        <p class="meta">
-          <strong>Medium:</strong> Oil on canvas<br>
-          <strong>Series:</strong> Peplum Jacket Series
-        </p>
-        <div class="price-row">
-          <div class="label">Reserve / Starting Bid (Individual)</div>
-          <div class="price">$250</div>
-        </div>
-      </div>
-
-      <div class="media">
-        <div class="primary">
-          <img
-            class="zoomable"
-            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Blue%20Jacket.jpg?raw=true"
-            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Blue%20Jacket.jpg?raw=true"
-            alt="Peplum Jacket Blue — oil on canvas"
-          />
-          <div class="cap">Click to zoom</div>
-        </div>
-      </div>
-
-      <div class="content">
-        <p>
-          Cool elegance with architectural poise—blue tones, confident edges, and a refined flare that reads like design.
-        </p>
-      </div>
-    </article>
-
-    <!-- LOT 3: TAN -->
-    <article class="lot">
-      <div class="lot-head">
-        <h2>3) Peplum Jacket Tan</h2>
-        <p class="meta">
-          <strong>Medium:</strong> Oil on canvas<br>
-          <strong>Series:</strong> Peplum Jacket Series
-        </p>
-        <div class="price-row">
-          <div class="label">Reserve / Starting Bid (Individual)</div>
-          <div class="price">$250</div>
-        </div>
-      </div>
-
-      <div class="media">
-        <div class="primary">
-          <img
-            class="zoomable"
-            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Tan%20Jacket.jpg?raw=true"
-            data-full="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Tan%20Jacket.jpg?raw=true"
-            alt="Peplum Jacket Tan — oil on canvas"
-          />
-          <div class="cap">Click to zoom</div>
-        </div>
-      </div>
-
-      <div class="content">
-        <p>
-          Neutral luxury—tan and earth tones with a tailored silhouette. Understated, warm, and timeless.
-        </p>
-      </div>
-    </article>
-
-  </section>
-
-  <!-- Bid Form -->
-  <form class="bid-form" action="submit_bid.php" method="POST">
-    <h3>Bid Now</h3>
+  <!-- Optional: Interest form (remove if you don’t want a form on this page) -->
+  <form class="interest" action="auction_interest.php" method="POST">
+    <h3>Get Notified</h3>
+    <p>
+      Want to be notified when the next auction goes live? Submit your contact info below and you’ll receive the announcement.
+    </p>
 
     <div class="form-grid">
-      <div>
-        <label for="lot">Select Item</label>
-        <select id="lot" name="lot" required>
-          <option value="" selected disabled>Select the set or an individual painting</option>
-          <option value="A">A) Full Set — Peplum Jacket Series (Starting Bid $600)</option>
-          <option value="1">1) Peplum Jacket Crimson (Starting Bid $250)</option>
-          <option value="2">2) Peplum Jacket Blue (Starting Bid $250)</option>
-          <option value="3">3) Peplum Jacket Tan (Starting Bid $250)</option>
-        </select>
-      </div>
-
-      <div>
-        <label for="bid">Your Bid (USD)</label>
-        <input type="number" id="bid" name="bid" step="25" required>
-      </div>
-
       <div>
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required>
@@ -525,7 +265,7 @@
 
       <div>
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone">
       </div>
 
       <div class="full">
@@ -534,28 +274,13 @@
       </div>
 
       <div class="full">
-        <label for="comments">Comments (optional)</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="If bidding on multiple items, note it here."></textarea>
+        <label for="interests">What are you interested in? (optional)</label>
+        <textarea id="interests" name="interests" rows="4" placeholder="Examples: Portraits, abstracts, small works, jazz series, peplum jacket series, large statement pieces."></textarea>
       </div>
     </div>
 
-    <button type="submit">Place Bid</button>
+    <button type="submit">Submit</button>
   </form>
-
-  <!-- Rules -->
-  <section class="rules">
-    <h3>Auction Rules</h3>
-    <ul>
-      <li>Auction is live now and closes <strong>Thursday, December 25, 2025 at 11:59 PM ET</strong>.</li>
-      <li>All bids are private and confidential.</li>
-      <li>This is a reserve auction. Starting bids: <strong>Set $600</strong> • <strong>Individuals $250</strong>.</li>
-      <li>You may bid on the full set or any individual work.</li>
-      <li>Winning bidders will be notified directly by the artist.</li>
-      <li>Payment due within 48 hours of auction close.</li>
-      <li>Shipping/delivery arranged with the buyer; costs not included in bid.</li>
-      <li>All sales are final.</li>
-    </ul>
-  </section>
 
   <div class="back-home">
     <a href="index.html" class="btn-home">← Back to Home</a>
@@ -566,90 +291,6 @@
   </footer>
 
 </main>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Artwork close-up">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="Artwork close-up" />
-    <div class="lightbox-hint">Tip: Press ESC to close</div>
-  </div>
-</div>
-
-<script>
-  // Countdown to Thu, Dec 25, 2025 at 11:59:59 PM ET.
-  // ET on Dec 25, 2025 is EST (UTC-5). Equivalent UTC: Dec 26, 2025 04:59:59 Z
-  const endTime = new Date("2025-12-26T04:59:59Z").getTime();
-  const el = document.getElementById("auction-timer");
-
-  function tick(){
-    const now = Date.now();
-    const dist = endTime - now;
-
-    if(dist <= 0){
-      el.textContent = "The auction has ended.";
-      clearInterval(timer);
-      return;
-    }
-    const d = Math.floor(dist/(1000*60*60*24));
-    const h = Math.floor((dist%(1000*60*60*24))/(1000*60*60));
-    const m = Math.floor((dist%(1000*60*60))/(1000*60));
-    const s = Math.floor((dist%(1000*60))/1000);
-
-    el.textContent = `Time Remaining: ${d}d ${h}h ${m}m ${s}s`;
-  }
-
-  const timer = setInterval(tick, 1000);
-  tick();
-
-  // Lightbox
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-  const lightboxClose = document.getElementById("lightboxClose");
-
-  function openLightbox(src){
-    lightboxImg.src = src;
-    lightbox.classList.add("is-open");
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox(){
-    lightbox.classList.remove("is-open");
-    lightbox.setAttribute("aria-hidden", "true");
-    lightboxImg.src = "";
-    document.body.style.overflow = "";
-  }
-
-  document.querySelectorAll(".zoomable").forEach(img => {
-    img.addEventListener("click", () => {
-      const full = img.getAttribute("data-full") || img.src;
-      openLightbox(full);
-    });
-  });
-
-  lightboxClose.addEventListener("click", closeLightbox);
-
-  lightbox.addEventListener("click", (e) => {
-    if(e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if(e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
-  });
-
-  // Smart minimum bid based on selection
-  const lotSelect = document.getElementById("lot");
-  const bidInput = document.getElementById("bid");
-
-  function setMinBid(){
-    const v = lotSelect.value;
-    const min = (v === "A") ? 600 : 250;
-    bidInput.min = String(min);
-    if(!bidInput.value || Number(bidInput.value) < min) bidInput.value = min;
-  }
-  lotSelect.addEventListener("change", setMinBid);
-</script>
 
 </body>
 </html>

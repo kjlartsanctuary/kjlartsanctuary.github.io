@@ -66,11 +66,11 @@
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  /* Featured Current Auction Section */
-  .current-auction {
+  /* Upcoming Auction (Announcement) */
+  .next-auction {
     max-width: 1100px;
     margin: 28px auto 30px;
-    padding: 20px;
+    padding: 22px 20px;
     background-color: #fffdf7;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
@@ -78,30 +78,30 @@
     border: 1px solid #eadfcf;
   }
 
-  .current-auction h2 {
+  .next-auction h2 {
     font-size: 30px;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     color: #b56b27;
   }
 
-  .current-auction .sub {
+  .next-auction .sub {
     font-size: 15px;
     line-height: 1.7;
     margin: 6px auto 14px;
     max-width: 900px;
   }
 
-  .auction-pill-row {
+  .pill-row {
     display: flex;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px 0 14px;
+    margin: 10px 0 10px;
   }
 
   .pill {
     display: inline-block;
-    padding: .3rem .75rem;
+    padding: .35rem .8rem;
     border-radius: 999px;
     background: #000;
     color: #fff;
@@ -112,92 +112,12 @@
 
   .pill.alt { background:#b56b27; }
 
-  #auction-timer-home {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 8px 0 6px;
-  }
-
-  .auction-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 16px;
-  }
-
-  @media (min-width: 900px){
-    .auction-grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  .auction-card {
-    background: #fff;
-    border: 1px solid #e2dccf;
-    border-radius: 12px;
-    overflow: hidden;
-    text-align: left;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  }
-
-  .auction-card .img-wrap {
-    padding: 14px;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-  }
-
-  .auction-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  }
-
-  .auction-card .content {
-    padding: 14px 16px 16px;
-  }
-
-  .auction-card h3 {
-    margin: 0 0 8px;
-    font-size: 22px;
-  }
-
-  .auction-card p {
-    margin: 6px 0;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .price-row {
-    margin-top: 10px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    background: #f5f1e8;
-    border: 1px solid #eadfcf;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .price-row .label {
-    font-size: 13px;
-    letter-spacing: .2px;
-    color: #333;
-  }
-
-  .price-row .price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #b56b27;
-  }
-
-  .cta-row {
+  .btn-row {
     margin-top: 16px;
     text-align: center;
   }
 
-  .btn-auction {
+  .btn {
     display: inline-block;
     padding: .8rem 1.2rem;
     background: #000;
@@ -208,7 +128,7 @@
     font-size: 14px;
   }
 
-  .btn-auction:hover { background: #444; }
+  .btn:hover { background: #444; }
 
   .small-note {
     font-size: 13px;
@@ -276,7 +196,6 @@
 </section>
 
 <nav class="main-nav">
-
   <a href="index.html">Home</a>
   <a href="auction.html">Auction</a>
   <a href="bio.html">Artist Bio</a>
@@ -299,67 +218,29 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<!-- CURRENT AUCTION (CHRISTMAS DAY) -->
-<section class="current-auction">
-  <h2>Christmas Day Auction – Live Now</h2>
+<!-- NEXT AUCTION (TO BE ANNOUNCED) -->
+<section class="next-auction">
+  <h2>Next Auction — To Be Announced</h2>
+
   <p class="sub">
-    Bidding is open now and closes <strong>Thursday, December 25, 2025 at 11:59 PM ET</strong>.
-    Bid on the <strong>full Peplum Jacket Series set</strong> or bid on each painting individually.
+    The next KJL Art Sanctuary online auction is being curated now. Details, featured works, and the official opening/closing dates will be announced soon.
   </p>
 
-  <div class="auction-pill-row">
+  <div class="pill-row">
     <span class="pill">Private &amp; Confidential Bidding</span>
     <span class="pill">Reserve Auction</span>
-    <span class="pill alt">Christmas Day</span>
+    <span class="pill alt">Announcement Coming Soon</span>
   </div>
 
-  <div id="auction-timer-home">Loading timer…</div>
-
-  <div class="auction-grid">
-    <!-- Full Set -->
-    <article class="auction-card">
-      <div class="img-wrap">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Jacket%20Series.jpg?raw=true" alt="Peplum Jacket Series — set of three paintings">
-      </div>
-      <div class="content">
-        <h3>Peplum Jacket Series — Full Set (3 Works)</h3>
-        <p><strong>Medium:</strong> Oil on canvas</p>
-        <p><strong>Includes:</strong> Crimson • Blue • Tan</p>
-        <div class="price-row">
-          <div class="label">Reserve / Starting Bid (Set)</div>
-          <div class="price">$600</div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Individual Highlight -->
-    <article class="auction-card">
-      <div class="img-wrap">
-        <img src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Peplum%20Crimson%20Jacket.jpg?raw=true" alt="Peplum Jacket Crimson — oil on canvas">
-      </div>
-      <div class="content">
-        <h3>Bid Individually</h3>
-        <p><strong>Available:</strong> Peplum Jacket Crimson • Peplum Jacket Blue • Peplum Jacket Tan</p>
-        <p><strong>Medium:</strong> Oil on canvas</p>
-        <div class="price-row">
-          <div class="label">Reserve / Starting Bid (Each)</div>
-          <div class="price">$250</div>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div class="cta-row">
-    <a class="btn-auction" href="auction.html">View Auction &amp; Place a Bid</a>
+  <div class="btn-row">
+    <a class="btn" href="auction.html">Go to Auction Page</a>
   </div>
 
   <p class="small-note">
-    Bids are submitted privately through the auction page. Winning bidders will be contacted directly by the artist.
-    Payment is due within 48 hours of the auction close. Shipping/delivery is arranged with the buyer.
+    Want early access when the auction goes live? Contact the studio at (609) 372-6022 or kjlartsanctuary@gmail.com.
   </p>
 </section>
 
-<!-- OPTIONAL SIMPLE SECTION (keeps page balanced without old event/WIP content) -->
 <section class="section">
   <div class="section-card">
     <h2>Visit the Studio</h2>
@@ -373,33 +254,6 @@
 <footer>
   &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
-
-<script>
-  // Countdown to Thu, Dec 25, 2025 at 11:59:59 PM ET.
-  // ET on Dec 25, 2025 is EST (UTC-5). Equivalent UTC: Dec 26, 2025 04:59:59 Z
-  const endTimeHome = new Date("2025-12-26T04:59:59Z").getTime();
-  const elHome = document.getElementById("auction-timer-home");
-
-  function tickHome(){
-    const now = Date.now();
-    const dist = endTimeHome - now;
-
-    if(dist <= 0){
-      elHome.textContent = "The auction has ended.";
-      clearInterval(timerHome);
-      return;
-    }
-    const d = Math.floor(dist/(1000*60*60*24));
-    const h = Math.floor((dist%(1000*60*60*24))/(1000*60*60));
-    const m = Math.floor((dist%(1000*60*60))/(1000*60));
-    const s = Math.floor((dist%(1000*60))/1000);
-
-    elHome.textContent = `Christmas Day Auction Ends In: ${d}d ${h}h ${m}m ${s}s`;
-  }
-
-  const timerHome = setInterval(tickHome, 1000);
-  tickHome();
-</script>
 
 </body>
 </html>

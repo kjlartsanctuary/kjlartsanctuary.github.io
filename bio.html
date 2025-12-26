@@ -68,9 +68,32 @@
       border-radius: 2px;
     }
 
-    /* Gallery */
+    /* Bio text */
+    .bio{
+      padding: 22px 30px 18px;
+    }
+
+    .bio p{
+      font-size: 1.08rem;
+      line-height: 1.85;
+      margin: 0 0 18px;
+      text-align: justify;
+    }
+
+    .quote{
+      margin: 26px 0 0;
+      padding: 18px 18px;
+      border-left: 4px solid var(--line);
+      background: rgba(181,169,135,.10);
+      border-radius: 10px;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Gallery (now AFTER bio) */
     .gallery-wrap{
-      padding: 26px 26px 8px;
+      padding: 26px 26px 26px;
       border-top: 1px solid rgba(181,169,135,.35);
     }
 
@@ -119,29 +142,6 @@
       color: var(--muted);
       line-height: 1.4;
       border-top: 1px solid rgba(181,169,135,.25);
-    }
-
-    /* Bio text */
-    .bio{
-      padding: 22px 30px 30px;
-    }
-
-    .bio p{
-      font-size: 1.08rem;
-      line-height: 1.85;
-      margin: 0 0 18px;
-      text-align: justify;
-    }
-
-    .quote{
-      margin: 26px 0 0;
-      padding: 18px 18px;
-      border-left: 4px solid var(--line);
-      background: rgba(181,169,135,.10);
-      border-radius: 10px;
-      font-style: italic;
-      color: var(--muted);
-      text-align: center;
     }
 
     /* Lightbox */
@@ -242,16 +242,16 @@
     @media (max-width: 980px){
       .gitem{ grid-column: span 6; }
       .thumb{ height: 240px; }
-      .bio{ padding: 18px 22px 26px; }
+      .bio{ padding: 18px 22px 16px; }
     }
 
     @media (max-width: 620px){
       .container{ margin: 28px auto; }
       .header{ padding: 26px 18px 16px; }
-      .gallery-wrap{ padding: 20px 18px 8px; }
+      .gallery-wrap{ padding: 20px 18px 22px; }
       .gitem{ grid-column: span 12; }
       .thumb{ height: 240px; }
-      .bio{ padding: 16px 18px 22px; }
+      .bio{ padding: 16px 18px 14px; }
       .bio p{ text-align: left; }
     }
   </style>
@@ -265,58 +265,13 @@
         <h1>Kenneth J. Lewis Sr.</h1>
         <div class="rule"></div>
         <p class="sub">
-          Contemporary visual artist • Self-taught • Trenton, New Jersey • Studio/Gallery: KJL Art Sanctuary (Ewing, NJ)
+          Contemporary visual artist • Self-taught • Studio/Gallery: KJL Art Sanctuary (Ewing, NJ)
         </p>
-      </div>
-
-      <div class="gallery-wrap">
-        <div class="section-title">Artist Images</div>
-
-        <!-- IMPORTANT:
-          Use RAW GitHub URLs so images display on your website.
-          If any image filename/capitalization differs in your repo, update the URLs below to match exactly.
-        -->
-        <div class="gallery" id="gallery">
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%201.jpg" data-title="Bio Image 1">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%201.jpg" alt="Bio Image 1" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%202.jpg" data-title="Bio Image 2">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%202.jpg" alt="Bio Image 2" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%203.jpg" data-title="Bio Image 3">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%203.jpg" alt="Bio Image 3" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%204.jpg" data-title="Bio Image 4">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%204.jpg" alt="Bio Image 4" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%205.jpg" data-title="Bio Image 5">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%205.jpg" alt="Bio Image 5" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%206.jpg" data-title="Bio Image 6">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%206.jpg" alt="Bio Image 6" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-
-          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%207.jpg" data-title="Bio Image 7">
-            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%207.jpg" alt="Bio Image 7" loading="lazy">
-            <figcaption class="caption">Click to view larger</figcaption>
-          </figure>
-        </div>
       </div>
 
       <div class="bio">
         <p>
-          Kenneth J. Lewis Sr. is a self-taught contemporary visual artist, born and raised in Trenton, New Jersey.
+          Kenneth J. Lewis Sr. is a self-taught contemporary visual artist, born and raised in New Jersey.
           Remarkably, he did not paint at all until the age of 47—creating his first work after experiencing a sudden,
           overwhelming urge to express himself through art. Since that pivotal moment, he has developed a powerful and
           personal visual language that blends abstraction, symbolism, geometry, and landscape.
@@ -358,6 +313,48 @@
 
         <div class="quote">
           "I didn’t choose art—it chose me at 47. And I’ve been answering the call ever since." — Kenneth J. Lewis Sr.
+        </div>
+      </div>
+
+      <!-- IMAGES MOVED AFTER BIO -->
+      <div class="gallery-wrap">
+        <div class="section-title">Artist Images</div>
+
+        <div class="gallery" id="gallery">
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%201.jpg" data-title="Bio Image 1">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%201.jpg" alt="Bio Image 1" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
+
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%202.jpg" data-title="Bio Image 2">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Bio%202.jpg" alt="Bio Image 2" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
+
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%203.jpg" data-title="Bio Image 3">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%203.jpg" alt="Bio Image 3" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
+
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%204.jpg" data-title="Bio Image 4">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%204.jpg" alt="Bio Image 4" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
+
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%205.jpg" data-title="Bio Image 5">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%205.jpg" alt="Bio Image 5" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
+
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%206.jpg" data-title="Bio Image 6">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%206.jpg" alt="Bio Image 6" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
+
+          <figure class="gitem" data-full="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%207.jpg" data-title="Bio Image 7">
+            <img class="thumb" src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bio%207.jpg" alt="Bio Image 7" loading="lazy">
+            <figcaption class="caption">Click to view larger</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -422,13 +419,8 @@
         document.body.style.overflow = "";
       }
 
-      function prev(){
-        openAt((index - 1 + items.length) % items.length);
-      }
-
-      function next(){
-        openAt((index + 1) % items.length);
-      }
+      function prev(){ openAt((index - 1 + items.length) % items.length); }
+      function next(){ openAt((index + 1) % items.length); }
 
       items.forEach((el, i) => {
         el.addEventListener("click", () => openAt(i));

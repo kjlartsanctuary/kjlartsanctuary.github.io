@@ -33,6 +33,18 @@
     letter-spacing: 1px;
   }
 
+  .studio-cover {
+    max-width: 1100px;
+    margin: 18px auto 0;
+    padding: 0 16px;
+  }
+
+  .studio-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .intro {
     max-width: 900px;
     margin: 0 auto 18px;
@@ -66,7 +78,6 @@
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  /* Upcoming Auction (Announcement) */
   .next-auction {
     max-width: 1100px;
     margin: 28px auto 30px;
@@ -96,26 +107,19 @@
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px 0 10px;
+    margin: 10px 0;
   }
 
   .pill {
-    display: inline-block;
     padding: .35rem .8rem;
     border-radius: 999px;
     background: #000;
     color: #fff;
     font-size: 12px;
     letter-spacing: .4px;
-    white-space: nowrap;
   }
 
   .pill.alt { background:#b56b27; }
-
-  .btn-row {
-    margin-top: 16px;
-    text-align: center;
-  }
 
   .btn {
     display: inline-block;
@@ -130,22 +134,13 @@
 
   .btn:hover { background: #444; }
 
-  .small-note {
-    font-size: 13px;
-    color: #555;
-    margin: 10px auto 0;
-    max-width: 900px;
-    line-height: 1.6;
-  }
-
-  /* Simple section for optional future content */
   .section {
     max-width: 1100px;
     margin: 26px auto 40px;
     padding: 0 16px;
   }
 
-  .section-card{
+  .section-card {
     border: 1px solid #e6e6e6;
     border-radius: 12px;
     padding: 18px;
@@ -154,13 +149,13 @@
     text-align:center;
   }
 
-  .section-card h2{
+  .section-card h2 {
     margin:0 0 10px;
     font-size:26px;
     color:#b56b27;
   }
 
-  .section-card p{
+  .section-card p {
     margin:0;
     font-size:15px;
     line-height:1.7;
@@ -185,6 +180,10 @@
 <header>
   <h1>Artist Kenneth J Lewis Sr</h1>
 </header>
+
+<div class="studio-cover">
+  <img src="images/Studio%20Cover.png" alt="KJL Art Sanctuary Studio">
+</div>
 
 <section class="intro">
   <p>
@@ -218,12 +217,10 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<!-- NEXT AUCTION (TO BE ANNOUNCED) -->
 <section class="next-auction">
   <h2>Next Auction — To Be Announced</h2>
-
   <p class="sub">
-    The next KJL Art Sanctuary online auction is being curated now. Details, featured works, and the official opening/closing dates will be announced soon.
+    The next KJL Art Sanctuary online auction is being curated now. Details, featured works, and official dates will be announced soon.
   </p>
 
   <div class="pill-row">
@@ -232,13 +229,7 @@
     <span class="pill alt">Announcement Coming Soon</span>
   </div>
 
-  <div class="btn-row">
-    <a class="btn" href="auction.html">Go to Auction Page</a>
-  </div>
-
-  <p class="small-note">
-    Want early access when the auction goes live? Contact the studio at (609) 372-6022 or kjlartsanctuary@gmail.com.
-  </p>
+  <a class="btn" href="auction.html">Go to Auction Page</a>
 </section>
 
 <section class="section">

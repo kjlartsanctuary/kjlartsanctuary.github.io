@@ -3,210 +3,470 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Peplum Jacket Series | Kenneth J. Lewis Sr.</title>
+<title>The Expanded Peplum Jacket Series | Kenneth J. Lewis Sr.</title>
 
 <style>
-html, body{
-  margin:0;
-  padding:0;
-  font-family: Garamond, "Times New Roman", serif;
-  background:#ffffff;
-  color:#333;
-}
+  :root{
+    --text:#222;
+    --muted:#555;
+    --line:#eee;
+    --bg:#ffffff;
+    --chip:#f6f2ee;
+    --btn:#1f1f1f;
+    --btnHover:#000000;
+    --btnAlt:#ffffff;
+  }
 
-header{
-  text-align:center;
-  padding:30px 15px 15px;
-}
+  html, body{
+    margin:0;
+    padding:0;
+    font-family: Garamond, "Times New Roman", serif;
+    background:var(--bg);
+    color:var(--text);
+  }
 
-header h1{
-  margin:0;
-  font-size:36px;
-  letter-spacing:1px;
-}
+  a{ color:inherit; }
 
-header p{
-  max-width:950px;
-  margin:10px auto 0;
-  font-size:16px;
-  line-height:1.6;
-}
+  header{
+    text-align:center;
+    padding:34px 16px 18px;
+    border-bottom:1px solid var(--line);
+  }
 
-main{
-  max-width:1200px;
-  margin:0 auto;
-  padding:30px 15px 50px;
-}
+  header h1{
+    margin:0;
+    font-size:38px;
+    letter-spacing:1px;
+  }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:22px;
-}
+  header .sub{
+    max-width:980px;
+    margin:10px auto 0;
+    font-size:16px;
+    line-height:1.65;
+    color:var(--muted);
+  }
 
-.card{
-  border:1px solid #eee;
-  padding:12px;
-  background:#fff;
-}
+  main{
+    max-width:1180px;
+    margin:0 auto;
+    padding:26px 16px 54px;
+  }
 
-.card a{ display:block; }
+  /* Top offer block */
+  .offer{
+    display:grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap:18px;
+    align-items:stretch;
+    margin-bottom:22px;
+  }
 
-.card img{
-  width:100%;
-  height:auto;            /* full image */
-  object-fit:contain;     /* no cropping */
-  display:block;
-  cursor:pointer;
-}
+  .panel{
+    border:1px solid var(--line);
+    background:#fff;
+    padding:18px;
+  }
 
-.meta{
-  padding-top:10px;
-}
+  .panel h2{
+    margin:0 0 10px;
+    font-size:22px;
+    letter-spacing:.4px;
+  }
 
-.meta h3{
-  margin:0 0 4px;
-  font-size:18px;
-  letter-spacing:0.4px;
-}
+  .panel p{
+    margin:0 0 10px;
+    font-size:16px;
+    line-height:1.6;
+    color:var(--muted);
+  }
 
-.meta p{
-  margin:0;
-  font-size:15px;
-  line-height:1.5;
-  color:#444;
-}
+  .priceRow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:12px;
+    align-items:center;
+  }
 
-.cta{
-  text-align:center;
-  margin-top:40px;
-  padding-top:20px;
-  border-top:1px solid #eee;
-  font-size:16px;
-  line-height:1.7;
-}
+  .chip{
+    display:inline-block;
+    background:var(--chip);
+    border:1px solid #efe6dc;
+    padding:8px 10px;
+    font-size:14px;
+    color:#3a2f25;
+    border-radius:999px;
+    line-height:1;
+  }
 
-footer{
-  text-align:center;
-  padding:20px 10px 30px;
-  border-top:1px solid #eee;
-  font-size:14px;
-  color:#666;
-}
+  .btnRow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:12px;
+  }
 
-/* Lightbox */
-.lightbox{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
+  .btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:12px 14px;
+    border-radius:10px;
+    background:var(--btn);
+    color:#fff;
+    font-size:15px;
+    letter-spacing:.2px;
+    border:1px solid var(--btn);
+    cursor:pointer;
+  }
+  .btn:hover{ background:var(--btnHover); }
 
-.lightbox img{
-  max-width:92%;
-  max-height:92%;
-}
+  .btn.alt{
+    background:var(--btnAlt);
+    color:var(--btn);
+    border:1px solid var(--btn);
+  }
+  .btn.alt:hover{
+    background:#f7f7f7;
+  }
 
-.lightbox:target{
-  display:flex;
-}
+  .small{
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.55;
+  }
 
-.lightbox .close{
-  position:absolute;
-  top:20px;
-  right:30px;
-  font-size:30px;
-  color:#fff;
-  text-decoration:none;
-}
+  /* Grid of works */
+  .sectionTitle{
+    margin:18px 0 10px;
+    font-size:20px;
+    letter-spacing:.4px;
+  }
 
-@media (max-width: 900px){
-  .grid{ grid-template-columns:repeat(2, 1fr); }
-}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
 
-@media (max-width: 600px){
-  .grid{ grid-template-columns:1fr; }
-}
+  .card{
+    border:1px solid var(--line);
+    background:#fff;
+    padding:12px;
+  }
+
+  .thumbWrap{
+    position:relative;
+  }
+
+  .card img{
+    width:100%;
+    height:auto;            /* full image */
+    object-fit:contain;     /* no cropping */
+    display:block;
+    cursor:pointer;
+  }
+
+  .tag{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(255,255,255,.92);
+    border:1px solid var(--line);
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:13px;
+    color:#333;
+  }
+
+  .meta{
+    padding-top:10px;
+  }
+
+  .meta h3{
+    margin:0 0 6px;
+    font-size:18px;
+    letter-spacing:0.4px;
+  }
+
+  .meta p{
+    margin:0;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--muted);
+  }
+
+  .meta .price{
+    margin-top:8px;
+    font-size:16px;
+    color:#111;
+  }
+
+  .meta .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+  }
+
+  .meta .actions a{
+    font-size:14px;
+    padding:10px 12px;
+    border-radius:10px;
+  }
+
+  /* Bottom CTA */
+  .cta{
+    margin-top:26px;
+    padding:18px;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  .cta h2{
+    margin:0 0 8px;
+    font-size:22px;
+    letter-spacing:.4px;
+  }
+  .cta p{
+    margin:0;
+    color:var(--muted);
+    line-height:1.65;
+    font-size:16px;
+  }
+  .cta .btnRow{ margin-top:14px; }
+
+  footer{
+    text-align:center;
+    padding:20px 10px 34px;
+    border-top:1px solid var(--line);
+    font-size:14px;
+    color:#666;
+  }
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+  }
+  .lightbox img{
+    max-width:92%;
+    max-height:92%;
+  }
+  .lightbox:target{
+    display:flex;
+  }
+  .lightbox .close{
+    position:absolute;
+    top:18px;
+    right:26px;
+    font-size:34px;
+    color:#fff;
+    text-decoration:none;
+    line-height:1;
+  }
+  .lightbox .caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:18px;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    opacity:.9;
+    padding:0 14px;
+  }
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .offer{ grid-template-columns:1fr; }
+    .grid{ grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width: 620px){
+    header h1{ font-size:30px; }
+    .grid{ grid-template-columns:1fr; }
+  }
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Peplum Jacket Series</h1>
-  <p>
-    Inspired by the sculptural elegance of the peplum jacket silhouette, this series by
-    Kenneth J. Lewis Sr. explores fashion as architecture—translating tailored form,
-    movement, and structure into expressive painterly compositions.
+  <h1>The Expanded Peplum Jacket Series</h1>
+  <p class="sub">
+    Inspired by the sculptural elegance of the peplum jacket silhouette, this series by Kenneth J. Lewis Sr.
+    explores fashion as architecture—translating tailored form, movement, and structure into expressive painterly compositions.
+    Originals are available to collect, and a limited edition print offering is available for collectors who want the series in archival form.
   </p>
 </header>
 
 <main>
-<section class="grid">
 
-<div class="card">
-  <a href="#pj1"><img src="images/Peplum%20Blue%20Jacket.jpg" alt="Peplum Jacket Blue"></a>
-  <div class="meta">
-    <h3>Peplum Jacket Blue</h3>
-    <p>Oil on canvas</p>
-    <p>24 x 30 inches</p>
-  </div>
-</div>
+  <!-- Top: Two clear purchase paths -->
+  <section class="offer" aria-label="Collecting options">
+    <div class="panel">
+      <h2>Collect the Originals</h2>
+      <p>
+        Each work is an original oil painting that begins with a sketch and acrylic wash and is finished with loose,
+        expressive brushwork. The Peplum Jacket Series is designed to be collected individually or as a cohesive set.
+      </p>
+      <div class="priceRow">
+        <span class="chip">Originals: $1,800 each</span>
+        <span class="chip">Oil on canvas • 24 x 30 inches</span>
+      </div>
+      <div class="btnRow">
+        <a class="btn" href="tel:+16093726022">Call to Purchase: 609-372-6022</a>
+        <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Series%20Original%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20purchasing%20an%20original%20from%20The%20Expanded%20Peplum%20Jacket%20Series.%0A%0APlease%20let%20me%20know%20availability%2C%20shipping%2C%20and%20payment%20options.%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Email Inquiry</a>
+      </div>
+      <p class="small">
+        Prefer a studio visit? Appointments are available at KJL Art Sanctuary Gallery and Studio, 310 4th St, Ewing, NJ 08638.
+      </p>
+    </div>
 
-<div class="card">
-  <a href="#pj2"><img src="images/Peplum%20Crimson%20Jacket.jpg" alt="Peplum Jacket Crimson"></a>
-  <div class="meta">
-    <h3>Peplum Jacket Crimson</h3>
-    <p>Oil on canvas</p>
-    <p>24 x 30 inches</p>
-  </div>
-</div>
+    <div class="panel">
+      <h2>Limited Edition Prints</h2>
+      <p>
+        Premium giclée prints on museum-quality fine art paper with a natural-white matte finish and textured watercolor feel.
+        Ideal for loose, expressive painting reproduction.
+      </p>
+      <div class="priceRow">
+        <span class="chip">Limited Edition: $395</span>
+        <span class="chip">Signed and numbered</span>
+        <span class="chip">Includes certificate of authenticity</span>
+      </div>
+      <div class="btnRow">
+        <a class="btn" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Series%20Print%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20would%20like%20to%20purchase%20a%20limited%20edition%20print%20from%20The%20Expanded%20Peplum%20Jacket%20Series.%0A%0APlease%20tell%20me%20which%20prints%20are%20available%2C%20edition%20details%2C%20and%20payment%20options.%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Reserve a Print by Email</a>
+        <a class="btn alt" href="tel:+16093726022">Call for Prints</a>
+      </div>
+      <p class="small">
+        Prints are produced on premium fine art paper using pigment inks and are intended for collectors who want archival quality.
+      </p>
+    </div>
+  </section>
 
-<div class="card">
-  <a href="#pj3"><img src="images/Peplum%20Tan%20Jacket.jpg" alt="Peplum Jacket Tan"></a>
-  <div class="meta">
-    <h3>Peplum Jacket Tan</h3>
-    <p>Oil on canvas</p>
-    <p>24 x 30 inches</p>
-  </div>
-</div>
+  <!-- Works -->
+  <h2 class="sectionTitle">Available Works in the Series</h2>
 
-<div class="card">
-  <a href="#pj4"><img src="images/Peplum%20Jacket%20Green%20%2024x30in.%20Oil%20canvas.jpg" alt="Peplum Jacket Green"></a>
-  <div class="meta">
-    <h3>Peplum Jacket Green</h3>
-    <p>Oil on canvas</p>
-    <p>24 x 30 inches</p>
-  </div>
-</div>
+  <section class="grid" aria-label="Peplum Jacket works">
 
-<div class="card">
-  <a href="#pj5"><img src="images/Peplum%20Jacket%20Violet%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Violet"></a>
-  <div class="meta">
-    <h3>Peplum Jacket Violet</h3>
-    <p>Oil on canvas</p>
-    <p>24 x 30 inches</p>
-  </div>
-</div>
+    <div class="card">
+      <div class="thumbWrap">
+        <a href="#pj1"><img src="images/Peplum%20Blue%20Jacket.jpg" alt="Peplum Jacket Blue"></a>
+        <span class="tag">Original $1,800</span>
+      </div>
+      <div class="meta">
+        <h3>Peplum Jacket Blue</h3>
+        <p>Oil on canvas • 24 x 30 inches</p>
+        <p class="price"><strong>Original:</strong> $1,800 • <strong>Limited Edition Print:</strong> $395</p>
+        <div class="actions">
+          <a class="btn" href="tel:+16093726022">Buy Original</a>
+          <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Blue%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Peplum%20Jacket%20Blue.%0A%0APlease%20confirm%20availability%20and%20next%20steps%20for%20purchase%20(original%20or%20print).%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Inquire</a>
+        </div>
+      </div>
+    </div>
 
-<div class="card">
-  <a href="#pj6"><img src="images/Peplum%20Jacket%20Yellow%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Yellow"></a>
-  <div class="meta">
-    <h3>Peplum Jacket Yellow</h3>
-    <p>Oil on canvas</p>
-    <p>24 x 30 inches</p>
-  </div>
-</div>
+    <div class="card">
+      <div class="thumbWrap">
+        <a href="#pj2"><img src="images/Peplum%20Crimson%20Jacket.jpg" alt="Peplum Jacket Crimson"></a>
+        <span class="tag">Original $1,800</span>
+      </div>
+      <div class="meta">
+        <h3>Peplum Jacket Crimson</h3>
+        <p>Oil on canvas • 24 x 30 inches</p>
+        <p class="price"><strong>Original:</strong> $1,800 • <strong>Limited Edition Print:</strong> $395</p>
+        <div class="actions">
+          <a class="btn" href="tel:+16093726022">Buy Original</a>
+          <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Crimson%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Peplum%20Jacket%20Crimson.%0A%0APlease%20confirm%20availability%20and%20next%20steps%20for%20purchase%20(original%20or%20print).%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Inquire</a>
+        </div>
+      </div>
+    </div>
 
-</section>
+    <div class="card">
+      <div class="thumbWrap">
+        <a href="#pj3"><img src="images/Peplum%20Tan%20Jacket.jpg" alt="Peplum Jacket Tan"></a>
+        <span class="tag">Original $1,800</span>
+      </div>
+      <div class="meta">
+        <h3>Peplum Jacket Tan</h3>
+        <p>Oil on canvas • 24 x 30 inches</p>
+        <p class="price"><strong>Original:</strong> $1,800 • <strong>Limited Edition Print:</strong> $395</p>
+        <div class="actions">
+          <a class="btn" href="tel:+16093726022">Buy Original</a>
+          <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Tan%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Peplum%20Jacket%20Tan.%0A%0APlease%20confirm%20availability%20and%20next%20steps%20for%20purchase%20(original%20or%20print).%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Inquire</a>
+        </div>
+      </div>
+    </div>
 
-<div class="cta">
-  To inquire about availability or to collect a work from the Peplum Jacket Series:<br>
-  Visit <strong>www.kjlartsanctuary.com</strong> or call/text <strong>609-372-6022</strong>
-</div>
+    <div class="card">
+      <div class="thumbWrap">
+        <a href="#pj4"><img src="images/Peplum%20Jacket%20Green%20%2024x30in.%20Oil%20canvas.jpg" alt="Peplum Jacket Green"></a>
+        <span class="tag">Original $1,800</span>
+      </div>
+      <div class="meta">
+        <h3>Peplum Jacket Green</h3>
+        <p>Oil on canvas • 24 x 30 inches</p>
+        <p class="price"><strong>Original:</strong> $1,800 • <strong>Limited Edition Print:</strong> $395</p>
+        <div class="actions">
+          <a class="btn" href="tel:+16093726022">Buy Original</a>
+          <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Green%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Peplum%20Jacket%20Green.%0A%0APlease%20confirm%20availability%20and%20next%20steps%20for%20purchase%20(original%20or%20print).%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Inquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="thumbWrap">
+        <a href="#pj5"><img src="images/Peplum%20Jacket%20Violet%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Violet"></a>
+        <span class="tag">Original $1,800</span>
+      </div>
+      <div class="meta">
+        <h3>Peplum Jacket Violet</h3>
+        <p>Oil on canvas • 24 x 30 inches</p>
+        <p class="price"><strong>Original:</strong> $1,800 • <strong>Limited Edition Print:</strong> $395</p>
+        <div class="actions">
+          <a class="btn" href="tel:+16093726022">Buy Original</a>
+          <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Violet%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Peplum%20Jacket%20Violet.%0A%0APlease%20confirm%20availability%20and%20next%20steps%20for%20purchase%20(original%20or%20print).%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Inquire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="thumbWrap">
+        <a href="#pj6"><img src="images/Peplum%20Jacket%20Yellow%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Yellow"></a>
+        <span class="tag">Original $1,800</span>
+      </div>
+      <div class="meta">
+        <h3>Peplum Jacket Yellow</h3>
+        <p>Oil on canvas • 24 x 30 inches</p>
+        <p class="price"><strong>Original:</strong> $1,800 • <strong>Limited Edition Print:</strong> $395</p>
+        <div class="actions">
+          <a class="btn" href="tel:+16093726022">Buy Original</a>
+          <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Yellow%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Peplum%20Jacket%20Yellow.%0A%0APlease%20confirm%20availability%20and%20next%20steps%20for%20purchase%20(original%20or%20print).%0A%0AName%3A%0APhone%3A%0ACity%2C%20State%3A%0A%0AThank%20you%2C">Inquire</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="cta" aria-label="Buy now or inquire">
+    <h2>Buy Now or Inquire</h2>
+    <p>
+      For fastest purchase, call or text directly. If you prefer email, use the inquiry button and include the painting title you want.
+      Limited edition prints are signed and numbered and include a certificate of authenticity.
+    </p>
+    <div class="btnRow">
+      <a class="btn" href="tel:+16093726022">Call or Text: 609-372-6022</a>
+      <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=Peplum%20Jacket%20Series%20Inquiry&body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20collecting%20from%20The%20Expanded%20Peplum%20Jacket%20Series.%0A%0AI%20am%20interested%20in%3A%20(original%20or%20print)%0A%0APainting%20title(s)%3A%0A%0AShipping%20city%2C%20state%3A%0A%0APhone%3A%0A%0AThank%20you%2C">Email Inquiry</a>
+    </div>
+    <p class="small" style="margin-top:10px;">
+      Studio visits by appointment: KJL Art Sanctuary Gallery and Studio, 310 4th St, Ewing, NJ 08638.
+    </p>
+  </section>
+
 </main>
 
 <footer>
@@ -214,15 +474,15 @@ footer{
 </footer>
 
 <!-- Lightbox targets -->
-<div id="pj1" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Blue%20Jacket.jpg" alt="Peplum Jacket Blue"></div>
-<div id="pj2" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Crimson%20Jacket.jpg" alt="Peplum Jacket Crimson"></div>
-<div id="pj3" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Tan%20Jacket.jpg" alt="Peplum Jacket Tan"></div>
-<div id="pj4" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Jacket%20Green%20%2024x30in.%20Oil%20canvas.jpg" alt="Peplum Jacket Green"></div>
-<div id="pj5" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Jacket%20Violet%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Violet"></div>
-<div id="pj6" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Jacket%20Yellow%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Yellow"></div>
+<div id="pj1" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Blue%20Jacket.jpg" alt="Peplum Jacket Blue"><div class="caption">Peplum Jacket Blue • Original $1,800 • Limited Edition Print $395</div></div>
+<div id="pj2" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Crimson%20Jacket.jpg" alt="Peplum Jacket Crimson"><div class="caption">Peplum Jacket Crimson • Original $1,800 • Limited Edition Print $395</div></div>
+<div id="pj3" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Tan%20Jacket.jpg" alt="Peplum Jacket Tan"><div class="caption">Peplum Jacket Tan • Original $1,800 • Limited Edition Print $395</div></div>
+<div id="pj4" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Jacket%20Green%20%2024x30in.%20Oil%20canvas.jpg" alt="Peplum Jacket Green"><div class="caption">Peplum Jacket Green • Original $1,800 • Limited Edition Print $395</div></div>
+<div id="pj5" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Jacket%20Violet%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Violet"><div class="caption">Peplum Jacket Violet • Original $1,800 • Limited Edition Print $395</div></div>
+<div id="pj6" class="lightbox"><a href="#" class="close">×</a><img src="images/Peplum%20Jacket%20Yellow%2024x30in%20oil%20canvas.jpg" alt="Peplum Jacket Yellow"><div class="caption">Peplum Jacket Yellow • Original $1,800 • Limited Edition Print $395</div></div>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>

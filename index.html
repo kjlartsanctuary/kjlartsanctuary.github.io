@@ -1,10 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Artist Kenneth J Lewis Sr | Home</title>
+
+<!-- SEO: Primary -->
+<meta name="description" content="Kenneth J. Lewis Sr is a self-taught contemporary artist and painter based in Ewing, New Jersey. Explore original paintings, series collections, exhibitions, and the KJL Podcast Channel." />
+<link rel="canonical" href="https://kjlartsanctuary.com/" />
+
+<!-- SEO: Social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Artist Kenneth J. Lewis Sr | KJL Art Sanctuary" />
+<meta property="og:description" content="Explore original paintings, series collections, exhibitions, and the KJL Podcast Channel by contemporary artist Kenneth J. Lewis Sr." />
+<meta property="og:url" content="https://kjlartsanctuary.com/" />
+<meta property="og:image" content="https://kjlartsanctuary.com/images/Studio%20Cover.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- SEO: Improve indexing -->
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
 <style>
   html, body {
@@ -168,6 +182,42 @@
     font-size:14px;
     border-top:1px solid #ccc;
   }
+
+  /* Snippet / FAQ block (SEO) */
+  .seo-wrap{
+    max-width:1100px;
+    margin:26px auto 10px;
+    padding:0 16px;
+  }
+  .seo-card{
+    border:1px solid #eadfcf;
+    background:#fffdf7;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    padding:22px 20px;
+  }
+  .seo-card h2{
+    margin:0 0 10px;
+    font-size:30px;
+    color:#b56b27;
+    text-align:center;
+  }
+  .seo-card p{
+    font-size:15px;
+    line-height:1.75;
+    margin:10px 0;
+    max-width:980px;
+  }
+  .seo-card .center{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .seo-card h3{
+    margin:18px 0 8px;
+    font-size:18px;
+    letter-spacing:.3px;
+  }
 </style>
 </head>
 
@@ -178,7 +228,7 @@
 </header>
 
 <div class="studio-cover">
-  <img src="images/Studio%20Cover.png" alt="KJL Art Sanctuary Studio">
+  <img src="images/Studio%20Cover.png" alt="KJL Art Sanctuary Studio cover image of the artist studio in Ewing New Jersey">
 </div>
 
 <section class="intro">
@@ -214,9 +264,43 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
+<!-- SEO / Featured Snippet Block -->
+<section class="seo-wrap">
+  <div class="seo-card">
+    <h2>KJL Art Sanctuary</h2>
+    <p class="center">
+      Kenneth J. Lewis Sr is a self-taught contemporary artist and painter based in Ewing, New Jersey. Explore original paintings, series collections,
+      <a href="exhibitions.html">exhibitions</a>, and the <a href="podcast.html">KJL Podcast Channel</a>.
+      For collecting inquiries, call (609) 372-6022 or email kjlartsanctuary@gmail.com.
+    </p>
+
+    <h3>Frequently Asked Questions</h3>
+
+    <p>
+      <strong>Who is Kenneth J. Lewis Sr?</strong><br>
+      Kenneth J. Lewis Sr is a self-taught contemporary artist known for expressive painting across abstract and figurative series.
+    </p>
+
+    <p>
+      <strong>Where is KJL Art Sanctuary located?</strong><br>
+      KJL Art Sanctuary Gallery and Studio is located in Ewing, New Jersey.
+    </p>
+
+    <p>
+      <strong>How can I purchase artwork or inquire?</strong><br>
+      Call (609) 372-6022 or email kjlartsanctuary@gmail.com for availability, pricing, and collecting options.
+    </p>
+
+    <p>
+      <strong>What is the KJL Podcast Channel?</strong><br>
+      The KJL Podcast Channel features Art with Kenneth, Art History episodes, studio sessions, and artist interviews.
+    </p>
+  </div>
+</section>
+
 <!-- Featured Work: Kayden's Dream Hardback -->
 <section class="feature-wrap">
-  <img class="feature-image" src="images/Kayden%20Landscape.png" alt="Kayden Landscape by Kenneth J. Lewis Sr.">
+  <img class="feature-image" src="images/Kayden%20Landscape.png" alt="Kayden's Dream Hardback book feature image by Kenneth J. Lewis Sr">
   <div class="feature-card">
     <h2>Kayden's Dream Hardback</h2>
     <div class="pill-row">
@@ -232,7 +316,7 @@
 
 <!-- Featured Work: Orange Moon -->
 <section class="feature-wrap">
-  <img class="feature-image" src="images/Orange%20Moon.jpg" alt="Orange Moon by Kenneth J. Lewis Sr.">
+  <img class="feature-image" src="images/Orange%20Moon.jpg" alt="Orange Moon painting by Kenneth J. Lewis Sr">
   <div class="feature-card">
     <h2>Orange Moon</h2>
     <div class="pill-row">
@@ -254,7 +338,45 @@
   &copy; 2025 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
 
+<!-- Structured Data (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kenneth J. Lewis Sr",
+  "jobTitle": "Artist",
+  "url": "https://kjlartsanctuary.com/",
+  "image": "https://kjlartsanctuary.com/images/Studio%20Cover.png",
+  "sameAs": [
+    "https://www.youtube.com/@KJLPodcastChannel"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ewing",
+    "addressRegion": "NJ",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KJL Art Sanctuary",
+  "url": "https://kjlartsanctuary.com/",
+  "email": "kjlartsanctuary@gmail.com",
+  "telephone": "+1-609-372-6022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "310 4th St",
+    "addressLocality": "Ewing",
+    "addressRegion": "NJ",
+    "postalCode": "08638",
+    "addressCountry": "US"
+  }
+}
+</script>
+
 </body>
 </html>
-
-

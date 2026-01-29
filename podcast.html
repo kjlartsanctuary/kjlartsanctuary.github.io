@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The KJL Podcast Channel</title>
+  <title>Art with Kenneth</title>
+
   <style>
     body {
       margin: 0;
@@ -12,27 +13,43 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+
+    .cover {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 30px;
+    }
+
+    .cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     a.youtube-button {
       display: inline-block;
       background-color: #cc0000;
       color: #fff;
       text-decoration: none;
-      padding: 12px 24px;
+      padding: 14px 26px;
       font-size: 16px;
       border-radius: 8px;
-      margin: 20px 0;
+      margin: 20px 0 30px;
       font-weight: bold;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
     }
+
     a.youtube-button:hover {
       background-color: #990000;
     }
+
     .video-container {
       max-width: 900px;
       width: 90vw;
-      margin: 0 auto 40px;
+      margin: 0 auto 50px;
     }
+
     .video-container iframe {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -41,97 +58,42 @@
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
       display: block;
     }
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-      max-width: 300px;
-      margin: 0 auto 60px;
-    }
-    .gallery a {
-      display: block;
-      width: 250px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(255,255,255,0.15);
-      transition: transform 0.3s ease;
-      overflow: hidden;
-    }
-    .gallery a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 14px rgba(255,255,255,0.3);
-    }
-    .gallery img {
-      width: 100%;
-      display: block;
-      border-radius: 8px;
-    }
-    .show-title {
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
+
+    h1 {
       margin: 10px 0 5px;
+      font-size: 34px;
     }
-    .section-header {
-      font-size: 28px;
-      color: #cc0000;
-      font-weight: bold;
-      margin: 40px 0 20px;
-    }
-    h1, h2, p {
-      margin: 10px 0;
-    }
+
     p {
       color: #ccc;
       font-size: 18px;
+      margin: 10px 0 20px;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>🎙️ The KJL Podcast Channel</h1>
+  <!-- Page Image (local, not externally posted) -->
+  <div class="cover">
+    <img src="/images/Art With Kenneth Cover.jpg" alt="Art with Kenneth Cover">
+  </div>
 
-  <a href="https://www.youtube.com/@KJLPodcastChannel" target="_blank" class="youtube-button">
-    ▶ Visit The KJL Podcast Channel
+  <h1>🎙️ Art with Kenneth</h1>
+
+  <a href="https://www.youtube.com/@ArtwithKenneth" target="_blank" class="youtube-button">
+    ▶ Visit Art with Kenneth on YouTube
   </a>
 
-  <p>Watch this episode below:</p>
+  <p>Watch the featured episode below:</p>
 
   <div class="video-container">
     <iframe 
-      src="https://www.youtube.com/embed/1Y17HrXKCiA" 
-      title="KJL Podcast YouTube Video" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      src="https://www.youtube.com/embed/1Y17HrXKCiA"
+      title="Art with Kenneth YouTube Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
-  </div>
-
-  <!-- Red Section Title -->
-  <div class="section-header">KJL Podcast Show Listing</div>
-
-  <!-- Image Gallery Section -->
-  <div class="gallery">
-
-    <div class="show-title">Art Gallery and Museum Tour Show</div>
-    <a href="https://www.youtube.com/watch?v=hUk0uGF4ew4&list=PLgYT7Eze6sd3-hlLPpwRqN6sZmHKrgkMH&pp=gAQB" target="_blank">
-      <img src="/images/Gallery Museum Tours (1).jpg" alt="Gallery and Museum Tours" />
-    </a>
-
-    <div class="show-title">The Muse Unveiled Show Experience</div>
-    <a href="https://www.youtube.com/watch?v=Fh1vUcCUUx4&list=PLgYT7Eze6sd1WpvxIphESY8PcStL7d-3Q&pp=gAQB" target="_blank">
-      <img src="/images/muse.jpg" alt="Muse Show" />
-    </a>
-
-    <div class="show-title">Art with Kenneth Show</div>
-    <a href="https://www.youtube.com/watch?v=58PrjhEma9o&list=PLgYT7Eze6sd3TrOiWg1KBssRYHhupBdvS&pp=gAQB" target="_blank">
-      <img src="/images/art with kenneth.jpg" alt="Art with Kenneth Show" />
-    </a>
-
-    <div class="show-title">The Art History Show</div>
-    <a href="https://www.youtube.com/watch?v=jCenDDeSs8c&list=PLgYT7Eze6sd1SxmFbU9N-EJKLYmP-8pQc&pp=gAQB" target="_blank">
-      <img src="/images/kjl pocast channel.jpg" alt="Art History Show" />
-    </a>
-
   </div>
 
 </body>

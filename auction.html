@@ -399,7 +399,6 @@
       <!-- LOT 1 -->
       <article class="lot" id="lot-ephemeral-glow-5">
         <div class="lot-media">
-          <!-- Use your site image path (recommended) -->
           <img src="images/Ephemeral%20Glow%205%20Framed%20.jpg" alt="Ephemeral Glow 5 framed artwork featuring an hourglass and candle in turquoise and deep teal tones">
         </div>
         <div class="lot-body">
@@ -423,10 +422,11 @@
         </div>
       </article>
 
-      <!-- LOT 2 -->
+      <!-- LOT 2 (UPDATED IMAGE) -->
       <article class="lot" id="lot-laundry-day">
         <div class="lot-media">
-          <img src="images/Laundry%20Day.jpg" alt="Laundry Day framed 10 by 10 architectural panel with expressive cobalt blue shapes and linework on a light field">
+          <!-- UPDATED: replace Laundry Day image with Laundry.jpg -->
+          <img src="images/Laundry.jpg" alt="Laundry Day framed 10 by 10 architectural panel with expressive cobalt blue shapes and linework on a light field">
         </div>
         <div class="lot-body">
           <h4 class="lot-title">Laundry Day</h4>
@@ -603,8 +603,6 @@
     elH.textContent = pad2(hours);
     elM.textContent = pad2(mins);
     elS.textContent = pad2(secs);
-
-    requestAnimationFrame(() => {});
   }
 
   tick();
@@ -625,7 +623,6 @@
   }
 
   function isValidIncrement(opening, bid){
-    // bids must be opening or higher AND (bid - opening) divisible by 10
     if(bid < opening) return false;
     return ((bid - opening) % 10) === 0;
   }
@@ -634,7 +631,6 @@
     e.preventDefault();
     clearError();
 
-    // If auction ended, don't submit
     if(Date.now() >= endTime){
       showError("Auction is closed. If you have questions, please email or call the studio.");
       return;

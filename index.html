@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +94,7 @@
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  /* Feature shared styles */
+  /* Shared container */
   .feature-wrap{
     max-width:1100px;
     margin:26px auto 10px;
@@ -108,32 +108,6 @@
     border-radius:12px;
     box-shadow:0 4px 14px rgba(0,0,0,0.10);
     border:1px solid #eee;
-  }
-
-  .next-auction{
-    max-width:1100px;
-    margin:28px auto 30px;
-    padding:22px 20px;
-    background-color:#fffdf7;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.10);
-    text-align:center;
-    border:1px solid #eadfcf;
-  }
-
-  .next-auction h2{
-    font-size:30px;
-    margin:0 0 10px;
-    color:#b56b27;
-  }
-
-  footer{
-    margin-top:auto;
-    text-align:center;
-    padding:20px;
-    background-color:#ffffff;
-    font-size:14px;
-    border-top:1px solid #ccc;
   }
 
   /* Snippet / FAQ block (SEO) */
@@ -172,7 +146,7 @@
     letter-spacing:.3px;
   }
 
-  /* Small callout text above images */
+  /* Callout text */
   .notice {
     font-size:15px;
     line-height:1.75;
@@ -181,6 +155,176 @@
     text-align:center;
   }
   .notice strong { color:#b56b27; }
+
+  /* AUCTION PROMO (new) */
+  .auction-hero{
+    border:1px solid #eadfcf;
+    background:#fffdf7;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+    padding:22px 20px;
+    text-align:center;
+  }
+  .auction-hero h2{
+    margin:0 0 8px;
+    font-size:30px;
+    color:#b56b27;
+  }
+  .pill-row{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:10px 0 12px;
+  }
+  .pill{
+    padding:.35rem .8rem;
+    border-radius:999px;
+    background:#000;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:.4px;
+  }
+  .pill.alt{ background:#b56b27; }
+  .auction-hero p{
+    margin:10px auto 0;
+    max-width:980px;
+    font-size:15px;
+    line-height:1.75;
+    color:#333;
+  }
+
+  .btn-row{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .btn{
+    display:inline-block;
+    padding:.80rem 1.20rem;
+    border-radius:10px;
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    font-weight:800;
+    letter-spacing:.2px;
+  }
+  .btn:hover{ background:#444; }
+  .btn.alt{ background:#b56b27; }
+  .btn.alt:hover{ background:#9f5f23; }
+
+  /* Countdown timer */
+  .timer{
+    margin:16px auto 0;
+    max-width:980px;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    border-radius:12px;
+    padding:16px 14px 14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  }
+  .timer h3{
+    margin:0 0 10px;
+    font-size:18px;
+    text-align:center;
+    letter-spacing:.2px;
+  }
+  .clock{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  .unit{
+    min-width:110px;
+    padding:10px 10px;
+    border:1px solid #d8d8d8;
+    border-radius:12px;
+    background:#f2f2f2;
+    text-align:center;
+  }
+  .num{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:.5px;
+    line-height:1;
+  }
+  .lbl{
+    margin-top:6px;
+    font-size:12px;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:#444;
+  }
+  .ends{
+    margin:10px 0 0;
+    text-align:center;
+    font-size:14px;
+    color:#333;
+    line-height:1.55;
+  }
+  .ended{
+    margin-top:10px;
+    padding:12px 12px;
+    border-radius:12px;
+    border:1px solid #e6cbb0;
+    background:#fff7ef;
+    text-align:center;
+    font-weight:800;
+    color:#7a3f0d;
+    display:none;
+  }
+
+  /* Lot preview grid */
+  .lot-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-top:16px;
+  }
+  @media (min-width:780px){
+    .lot-grid{ grid-template-columns:repeat(3, 1fr); }
+  }
+  .lot-card{
+    border:1px solid #d8d8d8;
+    border-radius:12px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    text-align:left;
+  }
+  .lot-card img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .lot-body{
+    padding:12px 12px 12px;
+  }
+  .lot-title{
+    margin:0 0 6px;
+    font-size:18px;
+    color:#b56b27;
+    letter-spacing:.2px;
+  }
+  .lot-meta{
+    margin:0;
+    font-size:13px;
+    color:#333;
+    line-height:1.5;
+  }
+
+  footer{
+    margin-top:auto;
+    text-align:center;
+    padding:20px;
+    background-color:#ffffff;
+    font-size:14px;
+    border-top:1px solid #ccc;
+  }
 </style>
 </head>
 
@@ -261,6 +405,86 @@
   </div>
 </section>
 
+<!-- LIVE AUCTION PROMO (INSERTED BEFORE INTERNATIONAL WOMEN'S DAY EVENT) -->
+<section class="feature-wrap">
+  <div class="auction-hero">
+    <h2>Live Auction — Open Now</h2>
+
+    <div class="pill-row">
+      <span class="pill">Private Bidding</span>
+      <span class="pill">Bid Increments: $10</span>
+      <span class="pill alt">Ends Sat, Feb 28 (9:00 PM ET)</span>
+    </div>
+
+    <p>
+      Three original works are available right now. View details and place your bid on the auction page.
+      Winning bidders are contacted directly after the auction closes.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn alt" href="auction.html">Place a Bid / View Auction</a>
+      <a class="btn" href="mailto:kjlartsanctuary@gmail.com?subject=KJL%20Auction%20Bid">Email a Bid</a>
+    </div>
+
+    <div class="timer" aria-live="polite">
+      <h3>Time Remaining</h3>
+
+      <div class="clock" role="group" aria-label="Auction countdown timer">
+        <div class="unit">
+          <div class="num" id="d">00</div>
+          <div class="lbl">Days</div>
+        </div>
+        <div class="unit">
+          <div class="num" id="h">00</div>
+          <div class="lbl">Hours</div>
+        </div>
+        <div class="unit">
+          <div class="num" id="m">00</div>
+          <div class="lbl">Minutes</div>
+        </div>
+        <div class="unit">
+          <div class="num" id="s">00</div>
+          <div class="lbl">Seconds</div>
+        </div>
+      </div>
+
+      <p class="ends">
+        Auction ends: <strong>Saturday, February 28, 2026 at 9:00 PM (ET)</strong>
+      </p>
+
+      <div class="ended" id="endedBanner">
+        Auction Closed — Thank you for bidding. If you placed a bid, you will be contacted directly.
+      </div>
+    </div>
+
+    <div class="lot-grid" aria-label="Auction lots preview">
+      <div class="lot-card">
+        <img src="images/Ephemeral%20Glow%205%20Framed%20.jpg" alt="Ephemeral Glow 5 framed artwork">
+        <div class="lot-body">
+          <h3 class="lot-title">Ephemeral Glow 5</h3>
+          <p class="lot-meta">24 x 30 · Oil on Heavy Board · Opening Bid: $599</p>
+        </div>
+      </div>
+
+      <div class="lot-card">
+        <img src="images/Laundry.jpg" alt="Laundry Day framed architectural panel">
+        <div class="lot-body">
+          <h3 class="lot-title">Laundry Day</h3>
+          <p class="lot-meta">10 x 10 · Architectural Panel (White Frame) · Opening Bid: $125</p>
+        </div>
+      </div>
+
+      <div class="lot-card">
+        <img src="images/Relaxation%20.jpg" alt="Relaxation framed architectural panel">
+        <div class="lot-body">
+          <h3 class="lot-title">Relaxation</h3>
+          <p class="lot-meta">10 x 10 · Architectural Panel (White Frame) · Opening Bid: $125</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Quaker Bridge Mall Live Painting (International Women's Day Weekend) -->
 <section class="feature-wrap">
   <p class="notice">
@@ -273,17 +497,12 @@
     And here’s something special… I will be giving away a <strong>FREE custom portrait</strong> to the woman who shows up wearing the most powerful and
     creative crown during the event. <strong>Yes—wear your crown.</strong> Bring your daughters. Bring your friends. Bring your presence.
     <br><br>
-    <strong>Free & Family Friendly</strong> · Quaker Bridge Mall, Center Court – 1st Floor · <strong>Open to Closing</strong>
+    <strong>Free &amp; Family Friendly</strong> · Quaker Bridge Mall, Center Court – 1st Floor · <strong>Open to Closing</strong>
   </p>
 
-  <!-- Updated image -->
   <img class="feature-image"
        src="images/womens%20day%20saturday.png"
        alt="International Women’s Day Weekend live painting at Quaker Bridge Mall - Saturday March 07, 2026 - Artist Kenneth J Lewis Sr">
-</section>
-
-<section class="next-auction">
-  <h2>Next Auction — To Be Announced</h2>
 </section>
 
 <footer>
@@ -328,6 +547,48 @@
     "addressCountry": "US"
   }
 }
+</script>
+
+<script>
+  // Countdown for: Saturday, February 28, 2026 at 9:00 PM ET
+  const AUCTION_END_ISO = "2026-02-28T21:00:00-05:00";
+  const endTime = new Date(AUCTION_END_ISO).getTime();
+
+  const elD = document.getElementById("d");
+  const elH = document.getElementById("h");
+  const elM = document.getElementById("m");
+  const elS = document.getElementById("s");
+  const endedBanner = document.getElementById("endedBanner");
+
+  function pad2(n){ return String(n).padStart(2,"0"); }
+
+  function tick(){
+    const now = Date.now();
+    const diff = endTime - now;
+
+    if(diff <= 0){
+      elD.textContent = "00";
+      elH.textContent = "00";
+      elM.textContent = "00";
+      elS.textContent = "00";
+      endedBanner.style.display = "block";
+      return;
+    }
+
+    const sec = Math.floor(diff / 1000);
+    const days = Math.floor(sec / (3600 * 24));
+    const hours = Math.floor((sec % (3600 * 24)) / 3600);
+    const mins = Math.floor((sec % 3600) / 60);
+    const secs = sec % 60;
+
+    elD.textContent = pad2(days);
+    elH.textContent = pad2(hours);
+    elM.textContent = pad2(mins);
+    elS.textContent = pad2(secs);
+  }
+
+  tick();
+  setInterval(tick, 1000);
 </script>
 
 </body>

@@ -22,6 +22,7 @@
     color:var(--ink);
   }
   a{ color:inherit; }
+  img{ max-width:100%; height:auto; display:block; }
 
   header{
     text-align:center;
@@ -33,8 +34,8 @@
   header p{ margin:0; font-size:16px; letter-spacing:.25px; line-height:1.35; }
 
   .wrap{
-    max-width:1120px;
-    margin:28px auto 40px;
+    max-width:1180px;
+    margin:26px auto 42px;
     padding:0 16px;
   }
 
@@ -53,7 +54,6 @@
     align-items:center;
     justify-content:center;
     flex-wrap:wrap;
-    text-align:center;
   }
 
   .pill{
@@ -78,82 +78,174 @@
     margin:6px auto 0;
     font-size:15px;
     color:#444;
-    max-width:900px;
-    line-height:1.6;
+    max-width:980px;
+    line-height:1.65;
   }
 
-  .notice{
-    margin-top:18px;
+  .timer{
+    margin:14px auto 0;
+    max-width:980px;
     background:#fff;
     border:1px solid var(--line);
     border-radius:14px;
-    padding:18px;
+    padding:16px 16px 14px;
     box-shadow:0 6px 16px rgba(0,0,0,.08);
   }
-  .notice h3{
+  .timer h3{
     margin:0 0 10px;
+    font-size:20px;
     text-align:center;
-    font-size:22px;
+    letter-spacing:.2px;
   }
-  .notice p{
-    margin:0;
-    font-size:16px;
-    line-height:1.6;
-    text-align:center;
-    color:#333;
-  }
-
-  .cta-row{
-    margin-top:16px;
+  .clock{
     display:flex;
     gap:10px;
     justify-content:center;
     flex-wrap:wrap;
+    margin-top:8px;
+  }
+  .unit{
+    min-width:120px;
+    padding:12px 10px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:var(--soft);
+    text-align:center;
+  }
+  .num{
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:.5px;
+    line-height:1;
+  }
+  .lbl{
+    margin-top:6px;
+    font-size:12px;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:#444;
+  }
+  .ends{
+    margin:10px 0 0;
+    text-align:center;
+    font-size:14px;
+    color:#333;
+    line-height:1.55;
+  }
+  .ended{
+    margin-top:10px;
+    padding:12px 12px;
+    border-radius:12px;
+    border:1px solid #e6cbb0;
+    background:#fff7ef;
+    text-align:center;
+    font-weight:800;
+    color:#7a3f0d;
   }
 
-  .btn{
-    display:inline-block;
-    padding:.75rem 1.25rem;
-    background:#000;
-    color:#fff;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:700;
-  }
-  .btn:hover{ background:#444; }
-
-  .btn.alt{
-    background:var(--accent);
-  }
-  .btn.alt:hover{
-    background:#9f5f23;
-  }
-
-  .interest{
+  .grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
     margin-top:22px;
+  }
+  @media (min-width:880px){
+    .grid{ grid-template-columns:1.15fr .85fr; }
+  }
+
+  .rules, .lots, .bid{
     background:#fff;
     border:1px solid var(--line);
     border-radius:14px;
     padding:18px;
     box-shadow:0 6px 16px rgba(0,0,0,.08);
   }
-  .interest h3{
+
+  .rules h3, .lots h3, .bid h3{
     margin:0 0 10px;
     text-align:center;
     font-size:22px;
   }
-  .interest p{
-    margin:0 0 12px;
-    text-align:center;
-    color:#444;
+
+  .rules ul{
+    margin:10px auto 0;
+    max-width:980px;
+    padding-left:18px;
+    line-height:1.65;
     font-size:15.5px;
-    line-height:1.6;
+    color:#333;
   }
+  .rules li{ margin:8px 0; }
+
+  .lots h3{ margin-bottom:14px; }
+
+  .lot{
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:#fff;
+    margin:0 0 14px;
+  }
+  .lot:last-child{ margin-bottom:0; }
+
+  .lot-media{
+    background:#111;
+  }
+  .lot-media img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .lot-body{
+    padding:14px 14px 12px;
+  }
+  .lot-title{
+    margin:0 0 6px;
+    font-size:22px;
+    color:var(--accent);
+  }
+  .lot-meta{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin:10px 0 10px;
+  }
+  .tag{
+    display:inline-block;
+    padding:.22rem .60rem;
+    border-radius:999px;
+    background:#000;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:.4px;
+    white-space:nowrap;
+  }
+  .tag.alt{ background:var(--accent); }
+  .tag.soft{
+    background:var(--soft);
+    color:#222;
+    border:1px solid var(--line);
+  }
+  .lot-body p{
+    margin:8px 0;
+    font-size:15.5px;
+    line-height:1.65;
+    color:#333;
+  }
+
+  .bid p{
+    margin:0 0 10px;
+    font-size:15.5px;
+    line-height:1.65;
+    text-align:center;
+    color:#333;
+  }
+
   .form-grid{
     display:grid;
     grid-template-columns:1fr;
     gap:12px;
-    max-width:900px;
+    max-width:980px;
     margin:0 auto;
   }
   @media (min-width:760px){
@@ -168,16 +260,26 @@
     width:100%;
     padding:10px;
     border:1px solid #bbb;
-    border-radius:8px;
+    border-radius:10px;
     font-family:inherit;
     font-size:16px;
     background:#fff;
   }
   .full{ grid-column:1 / -1; }
-  button{
-    width:100%;
+  .hint{
+    font-size:13px;
+    color:#555;
+    margin-top:6px;
+    line-height:1.45;
+  }
+  .btnrow{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
     margin-top:14px;
-    padding:12px;
+  }
+  button, .btn{
     border:none;
     border-radius:10px;
     background:#000;
@@ -185,21 +287,35 @@
     font-weight:800;
     cursor:pointer;
     font-size:16px;
+    padding:12px 16px;
+    text-decoration:none;
+    display:inline-block;
   }
-  button:hover{ background:#444; }
+  button:hover, .btn:hover{ background:#444; }
+  .btn.alt{ background:var(--accent); }
+  .btn.alt:hover{ background:#9f5f23; }
+
+  .error{
+    display:none;
+    margin-top:10px;
+    border:1px solid #d33;
+    background:#fff3f3;
+    color:#7a0d0d;
+    border-radius:12px;
+    padding:10px 12px;
+    font-weight:700;
+    text-align:center;
+  }
+
+  .contact{
+    margin-top:14px;
+    text-align:center;
+    color:#444;
+    font-size:14px;
+    line-height:1.55;
+  }
 
   .back-home{ text-align:center; margin-top:18px; }
-  .btn-home{
-    display:inline-block;
-    padding:.75rem 1.25rem;
-    background:#000;
-    color:#fff;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:700;
-  }
-  .btn-home:hover{ background:#444; }
-
   footer{
     margin:26px 0 20px;
     text-align:center;
@@ -218,73 +334,226 @@
 
 <main class="wrap">
 
+  <!-- HERO / STATUS -->
   <section class="hero">
     <div class="hero-top">
-      <span class="pill">Private &amp; Confidential Bidding</span>
-      <span class="pill">Reserve Auction</span>
-      <span class="pill alt">Next Auction</span>
+      <span class="pill">Private Bidding</span>
+      <span class="pill alt" id="auctionStatusPill">Auction Open Now</span>
+      <span class="pill">Bid Increments: $10</span>
     </div>
 
-    <h2>Next Auction Starts Soon!</h2>
+    <h2>Live Auction — Now Through Saturday, February 28, 2026 (9:00 PM)</h2>
 
     <p class="subnote">
-      The next online auction opens soon. Featured works, bidding details,
-      and submission instructions will be posted here as the date approaches.
+      Bidding is open immediately and remains open until the countdown reaches zero.
+      Bids are private and submitted directly to the artist. Winning bidders are contacted directly.
     </p>
 
-    <div class="cta-row">
-      <a class="btn" href="index.html">Back to Home</a>
-      <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com">Email for Early Access</a>
+    <div class="timer" aria-live="polite">
+      <h3>Time Remaining</h3>
+
+      <div class="clock" role="group" aria-label="Auction countdown timer">
+        <div class="unit">
+          <div class="num" id="d">00</div>
+          <div class="lbl">Days</div>
+        </div>
+        <div class="unit">
+          <div class="num" id="h">00</div>
+          <div class="lbl">Hours</div>
+        </div>
+        <div class="unit">
+          <div class="num" id="m">00</div>
+          <div class="lbl">Minutes</div>
+        </div>
+        <div class="unit">
+          <div class="num" id="s">00</div>
+          <div class="lbl">Seconds</div>
+        </div>
+      </div>
+
+      <p class="ends" id="endsText">
+        Auction ends: <strong>Saturday, February 28, 2026 at 9:00 PM (ET)</strong>
+      </p>
+
+      <div class="ended" id="endedBanner" style="display:none;">
+        Auction Closed — Thank you for bidding. If you placed a bid, you will be contacted directly.
+      </div>
     </div>
 
-    <p class="subnote" style="margin-top:10px;">
+    <div class="btnrow" style="margin-top:16px;">
+      <a class="btn" href="index.html">Back to Home</a>
+      <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com">Email a Bid</a>
+    </div>
+
+    <p class="contact">
       Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
     </p>
   </section>
 
-  <section class="notice">
-    <h3>How Auctions Work</h3>
-    <p>
-      When the auction opens, you will see the full list of lots with images, descriptions,
-      reserve or starting bids, and a private bid submission form. Winning bidders are contacted
-      directly by the artist.
-    </p>
+  <section class="grid">
+
+    <!-- LOTS -->
+    <section class="lots">
+      <h3>Lots</h3>
+
+      <!-- LOT 1 -->
+      <article class="lot" id="lot-ephemeral-glow-5">
+        <div class="lot-media">
+          <!-- Use your site image path (recommended) -->
+          <img src="images/Ephemeral%20Glow%205%20Framed%20.jpg" alt="Ephemeral Glow 5 framed artwork featuring an hourglass and candle in turquoise and deep teal tones">
+        </div>
+        <div class="lot-body">
+          <h4 class="lot-title">Ephemeral Glow 5</h4>
+
+          <div class="lot-meta">
+            <span class="tag alt">Opening Bid: $599</span>
+            <span class="tag">Increment: $10</span>
+            <span class="tag soft">24 x 30</span>
+            <span class="tag soft">Oil on Heavy Board</span>
+            <span class="tag soft">Recycled Wood &amp; Rattan Frame (Black)</span>
+          </div>
+
+          <p>
+            A bold still-life moment built around time and presence: an hourglass and a candle rendered in saturated turquoise, teal, and deep charcoal.
+            The paint handling stays direct and energetic—edges snap, drips breathe, and warm orange accents cut through the cool field.
+          </p>
+          <p>
+            Framed in a black recycled wood and rattan frame. One-of-a-kind original.
+          </p>
+        </div>
+      </article>
+
+      <!-- LOT 2 -->
+      <article class="lot" id="lot-laundry-day">
+        <div class="lot-media">
+          <img src="images/Laundry%20Day.jpg" alt="Laundry Day framed 10 by 10 architectural panel with expressive cobalt blue shapes and linework on a light field">
+        </div>
+        <div class="lot-body">
+          <h4 class="lot-title">Laundry Day</h4>
+
+          <div class="lot-meta">
+            <span class="tag alt">Opening Bid: $125</span>
+            <span class="tag">Increment: $10</span>
+            <span class="tag soft">10 x 10</span>
+            <span class="tag soft">Architectural Panel</span>
+            <span class="tag soft">White Frame</span>
+          </div>
+
+          <p>
+            An architectural abstraction with a bright cobalt structure and quick, confident linework.
+            The composition suggests a lived-in interior rhythm—markers, blocks, and gestures assembled like a visual blueprint.
+          </p>
+        </div>
+      </article>
+
+      <!-- LOT 3 -->
+      <article class="lot" id="lot-relaxation">
+        <div class="lot-media">
+          <img src="images/Relaxation%20.jpg" alt="Relaxation framed 10 by 10 architectural panel with blue fields, warm gold passages, and a seated abstract figure">
+        </div>
+        <div class="lot-body">
+          <h4 class="lot-title">Relaxation</h4>
+
+          <div class="lot-meta">
+            <span class="tag alt">Opening Bid: $125</span>
+            <span class="tag">Increment: $10</span>
+            <span class="tag soft">10 x 10</span>
+            <span class="tag soft">Architectural Panel</span>
+            <span class="tag soft">White Frame</span>
+          </div>
+
+          <p>
+            A calm, grounded panel built from stacked blues and warm golds, with a simplified seated figure presence.
+            The surface reads like a quiet room—structured, airy, and open—where the marks carry the mood.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- RULES + BID FORM -->
+    <aside>
+
+      <section class="rules">
+        <h3>Auction Rules</h3>
+        <ul>
+          <li><strong>Auction is open now</strong> and closes at <strong>9:00 PM (ET)</strong> on <strong>Saturday, February 28, 2026</strong>.</li>
+          <li><strong>Bids are in $10 increments</strong> (example: $125, $135, $145… and $599, $609, $619…).</li>
+          <li><strong>Private bidding:</strong> bids are submitted directly to the artist by email (or by phone/text if you prefer).</li>
+          <li><strong>Winning bid:</strong> highest valid bid received by the deadline wins. In the event of a tie, the earliest received timestamp wins.</li>
+          <li><strong>Confirmation:</strong> the winning bidder will be contacted directly after the auction closes for payment and pickup/shipping.</li>
+          <li><strong>Payment &amp; delivery:</strong> local pickup in Ewing, NJ is available. Shipping is available at buyer’s expense unless otherwise stated.</li>
+          <li><strong>Authenticity:</strong> each original work is sold with artist confirmation / provenance upon request.</li>
+          <li><strong>Integrity:</strong> the artist reserves the right to reject invalid bids, suspected fraudulent bids, or bids that do not follow the rules.</li>
+        </ul>
+      </section>
+
+      <section class="bid" style="margin-top:16px;">
+        <h3>Submit a Bid (Private)</h3>
+        <p>
+          Fill this out and click <strong>Send Bid</strong>. It will open your email with the bid details pre-filled.
+          You can also call/text <strong>(609) 372-6022</strong>.
+        </p>
+
+        <div class="error" id="formError"></div>
+
+        <form id="bidForm">
+          <div class="form-grid">
+            <div>
+              <label for="bidName">Full Name</label>
+              <input type="text" id="bidName" required>
+            </div>
+
+            <div>
+              <label for="bidPhone">Phone (recommended)</label>
+              <input type="tel" id="bidPhone" placeholder="(optional)">
+            </div>
+
+            <div class="full">
+              <label for="bidEmail">Email Address</label>
+              <input type="email" id="bidEmail" required>
+            </div>
+
+            <div>
+              <label for="bidLot">Select Lot</label>
+              <select id="bidLot" required>
+                <option value="" disabled selected>Select a lot</option>
+                <option value="Ephemeral Glow 5|599">Ephemeral Glow 5 (Opening $599)</option>
+                <option value="Laundry Day|125">Laundry Day (Opening $125)</option>
+                <option value="Relaxation|125">Relaxation (Opening $125)</option>
+              </select>
+              <div class="hint">Opening bids: Ephemeral Glow 5 = $599, Laundry Day = $125, Relaxation = $125</div>
+            </div>
+
+            <div>
+              <label for="bidAmount">Your Bid (USD)</label>
+              <input type="number" id="bidAmount" min="0" step="1" placeholder="Example: 135" required>
+              <div class="hint">Must be the opening bid or higher, in $10 increments.</div>
+            </div>
+
+            <div class="full">
+              <label for="bidNotes">Notes (optional)</label>
+              <textarea id="bidNotes" rows="4" placeholder="Optional: pickup/shipping preference, questions, etc."></textarea>
+            </div>
+          </div>
+
+          <div class="btnrow">
+            <button type="submit">Send Bid</button>
+            <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=KJL%20Auction%20Bid">Email Without Form</a>
+          </div>
+
+          <div class="contact">
+            Email: kjlartsanctuary@gmail.com<br>
+            Phone/Text: (609) 372-6022
+          </div>
+        </form>
+      </section>
+
+    </aside>
   </section>
 
-  <form class="interest" action="auction_interest.php" method="POST">
-    <h3>Get Notified</h3>
-    <p>
-      Want a reminder when the auction goes live?
-      Submit your contact info below and you’ll receive the announcement.
-    </p>
-
-    <div class="form-grid">
-      <div>
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div>
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-
-      <div class="full">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="full">
-        <label for="interests">What are you interested in? (optional)</label>
-        <textarea id="interests" name="interests" rows="4" placeholder="Examples: Portraits, abstracts, small works, jazz series, peplum jacket series, large statement pieces."></textarea>
-      </div>
-    </div>
-
-    <button type="submit">Submit</button>
-  </form>
-
   <div class="back-home">
-    <a href="index.html" class="btn-home">← Back to Home</a>
+    <a href="index.html" class="btn">← Back to Home</a>
   </div>
 
   <footer>
@@ -292,6 +561,132 @@
   </footer>
 
 </main>
+
+<script>
+  // Auction end time: Saturday, Feb 28, 2026 at 9:00 PM Eastern Time
+  // (explicit offset to avoid browser timezone confusion)
+  const AUCTION_END_ISO = "2026-02-28T21:00:00-05:00";
+  const endTime = new Date(AUCTION_END_ISO).getTime();
+
+  const elD = document.getElementById("d");
+  const elH = document.getElementById("h");
+  const elM = document.getElementById("m");
+  const elS = document.getElementById("s");
+  const endedBanner = document.getElementById("endedBanner");
+  const statusPill = document.getElementById("auctionStatusPill");
+
+  function pad2(n){ return String(n).padStart(2,"0"); }
+
+  function tick(){
+    const now = Date.now();
+    let diff = endTime - now;
+
+    if(diff <= 0){
+      elD.textContent = "00";
+      elH.textContent = "00";
+      elM.textContent = "00";
+      elS.textContent = "00";
+      endedBanner.style.display = "block";
+      statusPill.textContent = "Auction Closed";
+      statusPill.classList.remove("alt");
+      statusPill.style.background = "#333";
+      return;
+    }
+
+    const sec = Math.floor(diff / 1000);
+    const days = Math.floor(sec / (3600 * 24));
+    const hours = Math.floor((sec % (3600 * 24)) / 3600);
+    const mins = Math.floor((sec % 3600) / 60);
+    const secs = sec % 60;
+
+    elD.textContent = pad2(days);
+    elH.textContent = pad2(hours);
+    elM.textContent = pad2(mins);
+    elS.textContent = pad2(secs);
+
+    requestAnimationFrame(() => {});
+  }
+
+  tick();
+  setInterval(tick, 1000);
+
+  // Bid form -> opens email with prefilled bid details
+  const form = document.getElementById("bidForm");
+  const err = document.getElementById("formError");
+
+  function showError(msg){
+    err.textContent = msg;
+    err.style.display = "block";
+    err.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  function clearError(){
+    err.textContent = "";
+    err.style.display = "none";
+  }
+
+  function isValidIncrement(opening, bid){
+    // bids must be opening or higher AND (bid - opening) divisible by 10
+    if(bid < opening) return false;
+    return ((bid - opening) % 10) === 0;
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    clearError();
+
+    // If auction ended, don't submit
+    if(Date.now() >= endTime){
+      showError("Auction is closed. If you have questions, please email or call the studio.");
+      return;
+    }
+
+    const name = document.getElementById("bidName").value.trim();
+    const phone = document.getElementById("bidPhone").value.trim();
+    const email = document.getElementById("bidEmail").value.trim();
+    const lotValue = document.getElementById("bidLot").value;
+    const bidRaw = document.getElementById("bidAmount").value;
+    const notes = document.getElementById("bidNotes").value.trim();
+
+    if(!name || !email || !lotValue || !bidRaw){
+      showError("Please complete name, email, lot selection, and bid amount.");
+      return;
+    }
+
+    const parts = lotValue.split("|");
+    const lotName = parts[0];
+    const opening = parseInt(parts[1], 10);
+    const bid = parseInt(bidRaw, 10);
+
+    if(Number.isNaN(bid) || bid <= 0){
+      showError("Please enter a valid bid amount.");
+      return;
+    }
+
+    if(!isValidIncrement(opening, bid)){
+      showError(`Bid must be $${opening} or higher, in $10 increments (example: $${opening}, $${opening+10}, $${opening+20}...).`);
+      return;
+    }
+
+    const subject = encodeURIComponent(`KJL Auction Bid — ${lotName} — $${bid}`);
+    const bodyLines = [
+      "KJL Art Sanctuary Auction Bid",
+      "----------------------------",
+      `Lot: ${lotName}`,
+      `Bid Amount: $${bid}`,
+      "",
+      `Bidder Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone ? phone : "(not provided)"}`,
+      "",
+      `Submitted: ${new Date().toLocaleString()}`,
+      "",
+      notes ? `Notes: ${notes}` : "Notes: (none)"
+    ];
+
+    const body = encodeURIComponent(bodyLines.join("\n"));
+    window.location.href = `mailto:kjlartsanctuary@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
 
 </body>
 </html>

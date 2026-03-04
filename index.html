@@ -156,7 +156,7 @@
   }
   .notice strong { color:#b56b27; }
 
-  /* AUCTION PROMO (new) */
+  /* AUCTION PROMO */
   .auction-hero{
     border:1px solid #eadfcf;
     background:#fffdf7;
@@ -186,6 +186,7 @@
     letter-spacing:.4px;
   }
   .pill.alt{ background:#b56b27; }
+
   .auction-hero p{
     margin:10px auto 0;
     max-width:980px;
@@ -278,15 +279,15 @@
     display:none;
   }
 
-  /* Lot preview grid */
+  /* Single lot preview (image links to auction) */
   .lot-grid{
     display:grid;
     grid-template-columns:1fr;
     gap:14px;
     margin-top:16px;
-  }
-  @media (min-width:780px){
-    .lot-grid{ grid-template-columns:repeat(3, 1fr); }
+    max-width:980px;
+    margin-left:auto;
+    margin-right:auto;
   }
   .lot-card{
     border:1px solid #d8d8d8;
@@ -296,6 +297,7 @@
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     text-align:left;
   }
+  .lot-card a{ text-decoration:none; color:inherit; display:block; }
   .lot-card img{
     width:100%;
     height:auto;
@@ -405,7 +407,7 @@
   </div>
 </section>
 
-<!-- LIVE AUCTION PROMO (INSERTED BEFORE INTERNATIONAL WOMEN'S DAY EVENT) -->
+<!-- LIVE AUCTION PROMO -->
 <section class="feature-wrap">
   <div class="auction-hero">
     <h2>Live Auction — Open Now</h2>
@@ -413,11 +415,11 @@
     <div class="pill-row">
       <span class="pill">Private Bidding</span>
       <span class="pill">Bid Increments: $10</span>
-      <span class="pill alt">Ends Sat, Feb 28 (9:00 PM ET)</span>
+      <span class="pill alt" id="auctionPill">Ends Thu, Mar 5 (6:00 PM ET)</span>
     </div>
 
     <p>
-      Three original works are available right now. View details and place your bid on the auction page.
+      One original work is available right now. Click the image to view details and place your bid on the auction page.
       Winning bidders are contacted directly after the auction closes.
     </p>
 
@@ -448,8 +450,8 @@
         </div>
       </div>
 
-      <p class="ends">
-        Auction ends: <strong>Saturday, February 28, 2026 at 9:00 PM (ET)</strong>
+      <p class="ends" id="endsText">
+        Auction ends: <strong>Thursday, March 5, 2026 at 6:00 PM (ET)</strong>
       </p>
 
       <div class="ended" id="endedBanner">
@@ -457,31 +459,19 @@
       </div>
     </div>
 
-    <div class="lot-grid" aria-label="Auction lots preview">
+    <!-- LOT PREVIEW (clickable image links to auction.html) -->
+    <div class="lot-grid" aria-label="Auction lot preview">
       <div class="lot-card">
-        <img src="images/Ephemeral%20Glow%205%20Framed%20.jpg" alt="Ephemeral Glow 5 framed artwork">
-        <div class="lot-body">
-          <h3 class="lot-title">Ephemeral Glow 5</h3>
-          <p class="lot-meta">24 x 30 · Oil on Heavy Board · Opening Bid: $599</p>
-        </div>
-      </div>
-
-      <div class="lot-card">
-        <img src="images/Laundry.jpg" alt="Laundry Day framed architectural panel">
-        <div class="lot-body">
-          <h3 class="lot-title">Laundry Day</h3>
-          <p class="lot-meta">10 x 10 · Architectural Panel (White Frame) · Opening Bid: $125</p>
-        </div>
-      </div>
-
-      <div class="lot-card">
-        <img src="images/Relaxation%20.jpg" alt="Relaxation framed architectural panel">
-        <div class="lot-body">
-          <h3 class="lot-title">Relaxation</h3>
-          <p class="lot-meta">10 x 10 · Architectural Panel (White Frame) · Opening Bid: $125</p>
-        </div>
+        <a href="auction.html" aria-label="View auction page for Amber Street Afternoon">
+          <img src="images/Amber%20Street%20Afternoon.jpg" alt="Amber Street Afternoon original artwork preview image">
+          <div class="lot-body">
+            <h3 class="lot-title">Amber Street Afternoon</h3>
+            <p class="lot-meta">Opening Bid: $799 · Private bidding · $10 increments</p>
+          </div>
+        </a>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -550,8 +540,9 @@
 </script>
 
 <script>
-  // Countdown for: Saturday, February 28, 2026 at 9:00 PM ET
-  const AUCTION_END_ISO = "2026-02-28T21:00:00-05:00";
+  // Countdown for: Thursday, March 5, 2026 at 6:00 PM ET
+  // Explicit offset avoids browser timezone confusion.
+  const AUCTION_END_ISO = "2026-03-05T18:00:00-05:00";
   const endTime = new Date(AUCTION_END_ISO).getTime();
 
   const elD = document.getElementById("d");
@@ -559,6 +550,8 @@
   const elM = document.getElementById("m");
   const elS = document.getElementById("s");
   const endedBanner = document.getElementById("endedBanner");
+  const endsText = document.getElementById("endsText");
+  const auctionPill = document.getElementById("auctionPill");
 
   function pad2(n){ return String(n).padStart(2,"0"); }
 
@@ -572,6 +565,8 @@
       elM.textContent = "00";
       elS.textContent = "00";
       endedBanner.style.display = "block";
+      if(auctionPill) auctionPill.textContent = "Auction Closed";
+      if(endsText) endsText.innerHTML = "Auction ended: <strong>Thursday, March 5, 2026 at 6:00 PM (ET)</strong>";
       return;
     }
 

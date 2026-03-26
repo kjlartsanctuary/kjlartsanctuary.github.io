@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +93,6 @@
 
   nav.main-nav a:hover { color: #b56b27; }
 
-  /* Shared container */
   .feature-wrap{
     max-width:1100px;
     margin:26px auto 10px;
@@ -110,12 +108,12 @@
     border:1px solid #eee;
   }
 
-  /* Snippet / FAQ block (SEO) */
   .seo-wrap{
     max-width:1100px;
     margin:26px auto 10px;
     padding:0 16px;
   }
+
   .seo-card{
     border:1px solid #eadfcf;
     background:#fffdf7;
@@ -123,30 +121,33 @@
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     padding:22px 20px;
   }
+
   .seo-card h2{
     margin:0 0 10px;
     font-size:30px;
     color:#b56b27;
     text-align:center;
   }
+
   .seo-card p{
     font-size:15px;
     line-height:1.75;
     margin:10px 0;
     max-width:980px;
   }
+
   .seo-card .center{
     text-align:center;
     margin-left:auto;
     margin-right:auto;
   }
+
   .seo-card h3{
     margin:18px 0 8px;
     font-size:18px;
     letter-spacing:.3px;
   }
 
-  /* Callout text */
   .notice {
     font-size:15px;
     line-height:1.75;
@@ -154,10 +155,11 @@
     max-width:960px;
     text-align:center;
   }
+
   .notice strong { color:#b56b27; }
 
-  /* AUCTION PROMO */
-  .auction-hero{
+  .event-hero,
+  .exhibition-hero{
     border:1px solid #eadfcf;
     background:#fffdf7;
     border-radius:12px;
@@ -165,18 +167,31 @@
     padding:22px 20px;
     text-align:center;
   }
-  .auction-hero h2{
+
+  .event-hero h2,
+  .exhibition-hero h2{
     margin:0 0 8px;
     font-size:30px;
     color:#b56b27;
   }
+
+  .event-hero p,
+  .exhibition-hero p{
+    margin:10px auto 0;
+    max-width:980px;
+    font-size:15px;
+    line-height:1.75;
+    color:#333;
+  }
+
   .pill-row{
     display:flex;
     gap:10px;
     justify-content:center;
     flex-wrap:wrap;
-    margin:10px 0 12px;
+    margin:10px 0 14px;
   }
+
   .pill{
     padding:.35rem .8rem;
     border-radius:999px;
@@ -185,23 +200,17 @@
     font-size:12px;
     letter-spacing:.4px;
   }
-  .pill.alt{ background:#b56b27; }
 
-  .auction-hero p{
-    margin:10px auto 0;
-    max-width:980px;
-    font-size:15px;
-    line-height:1.75;
-    color:#333;
-  }
+  .pill.alt{ background:#b56b27; }
 
   .btn-row{
     display:flex;
     gap:10px;
     justify-content:center;
     flex-wrap:wrap;
-    margin-top:14px;
+    margin-top:16px;
   }
+
   .btn{
     display:inline-block;
     padding:.80rem 1.20rem;
@@ -212,111 +221,15 @@
     font-weight:800;
     letter-spacing:.2px;
   }
+
   .btn:hover{ background:#444; }
+
   .btn.alt{ background:#b56b27; }
+
   .btn.alt:hover{ background:#9f5f23; }
 
-  /* Countdown timer */
-  .timer{
-    margin:16px auto 0;
-    max-width:980px;
-    background:#fff;
-    border:1px solid #d8d8d8;
-    border-radius:12px;
-    padding:16px 14px 14px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  }
-  .timer h3{
-    margin:0 0 10px;
-    font-size:18px;
-    text-align:center;
-    letter-spacing:.2px;
-  }
-  .clock{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:6px;
-  }
-  .unit{
-    min-width:110px;
-    padding:10px 10px;
-    border:1px solid #d8d8d8;
-    border-radius:12px;
-    background:#f2f2f2;
-    text-align:center;
-  }
-  .num{
-    font-size:32px;
-    font-weight:800;
-    letter-spacing:.5px;
-    line-height:1;
-  }
-  .lbl{
-    margin-top:6px;
-    font-size:12px;
-    letter-spacing:.6px;
-    text-transform:uppercase;
-    color:#444;
-  }
-  .ends{
-    margin:10px 0 0;
-    text-align:center;
-    font-size:14px;
-    color:#333;
-    line-height:1.55;
-  }
-  .ended{
-    margin-top:10px;
-    padding:12px 12px;
-    border-radius:12px;
-    border:1px solid #e6cbb0;
-    background:#fff7ef;
-    text-align:center;
-    font-weight:800;
-    color:#7a3f0d;
-    display:none;
-  }
-
-  /* Single lot preview (image links to auction) */
-  .lot-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:14px;
-    margin-top:16px;
-    max-width:980px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .lot-card{
-    border:1px solid #d8d8d8;
-    border-radius:12px;
-    overflow:hidden;
-    background:#fff;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    text-align:left;
-  }
-  .lot-card a{ text-decoration:none; color:inherit; display:block; }
-  .lot-card img{
-    width:100%;
-    height:auto;
-    display:block;
-  }
-  .lot-body{
-    padding:12px 12px 12px;
-  }
-  .lot-title{
-    margin:0 0 6px;
-    font-size:18px;
-    color:#b56b27;
-    letter-spacing:.2px;
-  }
-  .lot-meta{
-    margin:0;
-    font-size:13px;
-    color:#333;
-    line-height:1.5;
+  .section-image-wrap{
+    margin-top:18px;
   }
 
   footer{
@@ -351,7 +264,6 @@
 
 <nav class="main-nav">
   <a href="index.html">Home</a>
-  <a href="auction.html">Auction</a>
   <a href="bio.html">Artist Bio</a>
   <a href="podcast.html">Podcast</a>
   <a href="social.html">Social</a>
@@ -407,92 +319,71 @@
   </div>
 </section>
 
-<!-- LIVE AUCTION PROMO -->
+<!-- AFRICAN AMERICAN ABSTRACTIONS EXHIBITION -->
 <section class="feature-wrap">
-  <div class="auction-hero">
-    <h2>Live Auction — Open Now</h2>
+  <div class="exhibition-hero">
+    <h2>African American Abstractions</h2>
 
     <div class="pill-row">
-      <span class="pill">Private Bidding</span>
-      <span class="pill">Bid Increments: $10</span>
-      <span class="pill alt" id="auctionPill">Ends Thu, Mar 5 (6:00 PM ET)</span>
+      <span class="pill">Ellarslie Museum</span>
+      <span class="pill">March 27 – May 31, 2026</span>
+      <span class="pill alt">Featuring Kenneth J. Lewis Sr</span>
     </div>
 
     <p>
-      One original work is available right now. Click the image to view details and place your bid on the auction page.
-      Winning bidders are contacted directly after the auction closes.
+      I am honored to be featured in <strong>African American Abstractions</strong> at Ellarslie Museum alongside
+      <strong>James Dupree</strong> and <strong>Femi Johnson</strong>. This exhibition celebrates the richness, energy,
+      and power of abstraction through the work of outstanding area artists.
+    </p>
+
+    <p>
+      Visit the official exhibition page to learn more about the show, dates, and museum details.
     </p>
 
     <div class="btn-row">
-      <a class="btn alt" href="auction.html">Place a Bid / View Auction</a>
-      <a class="btn" href="mailto:kjlartsanctuary@gmail.com?subject=KJL%20Auction%20Bid">Email a Bid</a>
+      <a class="btn alt" href="https://ellarslie.org/exhibition/african-american-abstractions/" target="_blank" rel="noopener noreferrer">View Exhibition</a>
+      <a class="btn" href="exhibitions.html">More Exhibitions</a>
     </div>
 
-    <div class="timer" aria-live="polite">
-      <h3>Time Remaining</h3>
-
-      <div class="clock" role="group" aria-label="Auction countdown timer">
-        <div class="unit">
-          <div class="num" id="d">00</div>
-          <div class="lbl">Days</div>
-        </div>
-        <div class="unit">
-          <div class="num" id="h">00</div>
-          <div class="lbl">Hours</div>
-        </div>
-        <div class="unit">
-          <div class="num" id="m">00</div>
-          <div class="lbl">Minutes</div>
-        </div>
-        <div class="unit">
-          <div class="num" id="s">00</div>
-          <div class="lbl">Seconds</div>
-        </div>
-      </div>
-
-      <p class="ends" id="endsText">
-        Auction ends: <strong>Thursday, March 5, 2026 at 6:00 PM (ET)</strong>
-      </p>
-
-      <div class="ended" id="endedBanner">
-        Auction Closed — Thank you for bidding. If you placed a bid, you will be contacted directly.
-      </div>
+    <div class="section-image-wrap">
+      <img class="feature-image"
+           src="images/Luggage06.jpg"
+           alt="African American Abstractions exhibition featured artwork by Kenneth J Lewis Sr">
     </div>
-
-    <!-- LOT PREVIEW (clickable image links to auction.html) -->
-    <div class="lot-grid" aria-label="Auction lot preview">
-      <div class="lot-card">
-        <a href="auction.html" aria-label="View auction page for Amber Street Afternoon">
-          <img src="images/Amber%20Street%20Afternoon.jpg" alt="Amber Street Afternoon original artwork preview image">
-          <div class="lot-body">
-            <h3 class="lot-title">Amber Street Afternoon</h3>
-            <p class="lot-meta">Opening Bid: $799 · Private bidding · $10 increments</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- Quaker Bridge Mall Live Painting (International Women's Day Weekend) -->
+<!-- EASTER LIVE PAINTING EVENT -->
 <section class="feature-wrap">
-  <p class="notice">
-    <strong>INTERNATIONAL WOMEN’S DAY WEEKEND — Saturday, March 07, 2026</strong>
-    <br><br>
-    In honor of <strong>International Women’s Day</strong>, I will be painting <strong>two powerful 48 x 48 oil portraits</strong> live from
-    <strong>open to close</strong> at <strong>Quaker Bridge Mall</strong> in <strong>Center Court (1st Floor)</strong>. These paintings celebrate
-    confidence, beauty, strength, and the presence every woman carries like a crown.
-    <br><br>
-    And here’s something special… I will be giving away a <strong>FREE custom portrait</strong> to the woman who shows up wearing the most powerful and
-    creative crown during the event. <strong>Yes—wear your crown.</strong> Bring your daughters. Bring your friends. Bring your presence.
-    <br><br>
-    <strong>Free &amp; Family Friendly</strong> · Quaker Bridge Mall, Center Court – 1st Floor · <strong>Open to Closing</strong>
-  </p>
+  <div class="event-hero">
+    <h2>Easter Saturday Live Painting Event</h2>
 
-  <img class="feature-image"
-       src="images/womens%20day%20saturday.png"
-       alt="International Women’s Day Weekend live painting at Quaker Bridge Mall - Saturday March 07, 2026 - Artist Kenneth J Lewis Sr">
+    <div class="pill-row">
+      <span class="pill">Saturday, April 4, 2026</span>
+      <span class="pill">Quaker Bridge Mall</span>
+      <span class="pill alt">Free &amp; Family Friendly</span>
+    </div>
+
+    <p>
+      Join me <strong>Easter Saturday, April 4, 2026</strong>, at <strong>Quaker Bridge Mall (Center Court – 1st Floor)</strong>
+      for a special live painting event the day before Easter. I’ll be creating a vibrant <strong>48 x 60 painting</strong>
+      live from open to close, and you’ll be able to watch the artwork come to life throughout the day.
+    </p>
+
+    <p>
+      This family-friendly event will also include a <strong>kids Easter card-making station</strong>, where children can
+      create their own handmade Easter cards while experiencing art in action. Bring the family, enjoy the spirit of the
+      Easter season, and spend the day surrounded by creativity and color.
+    </p>
+
+    <p><strong>Free &amp; Family Friendly</strong></p>
+
+    <div class="section-image-wrap">
+      <img class="feature-image"
+           src="images/Easter%20Flyer%20Live%20Painting.png"
+           alt="Easter Saturday live painting flyer for Quaker Bridge Mall featuring Artist Kenneth J Lewis Sr">
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -539,53 +430,5 @@
 }
 </script>
 
-<script>
-  // Countdown for: Thursday, March 5, 2026 at 6:00 PM ET
-  // Explicit offset avoids browser timezone confusion.
-  const AUCTION_END_ISO = "2026-03-05T18:00:00-05:00";
-  const endTime = new Date(AUCTION_END_ISO).getTime();
-
-  const elD = document.getElementById("d");
-  const elH = document.getElementById("h");
-  const elM = document.getElementById("m");
-  const elS = document.getElementById("s");
-  const endedBanner = document.getElementById("endedBanner");
-  const endsText = document.getElementById("endsText");
-  const auctionPill = document.getElementById("auctionPill");
-
-  function pad2(n){ return String(n).padStart(2,"0"); }
-
-  function tick(){
-    const now = Date.now();
-    const diff = endTime - now;
-
-    if(diff <= 0){
-      elD.textContent = "00";
-      elH.textContent = "00";
-      elM.textContent = "00";
-      elS.textContent = "00";
-      endedBanner.style.display = "block";
-      if(auctionPill) auctionPill.textContent = "Auction Closed";
-      if(endsText) endsText.innerHTML = "Auction ended: <strong>Thursday, March 5, 2026 at 6:00 PM (ET)</strong>";
-      return;
-    }
-
-    const sec = Math.floor(diff / 1000);
-    const days = Math.floor(sec / (3600 * 24));
-    const hours = Math.floor((sec % (3600 * 24)) / 3600);
-    const mins = Math.floor((sec % 3600) / 60);
-    const secs = sec % 60;
-
-    elD.textContent = pad2(days);
-    elH.textContent = pad2(hours);
-    elM.textContent = pad2(mins);
-    elS.textContent = pad2(secs);
-  }
-
-  tick();
-  setInterval(tick, 1000);
-</script>
-
 </body>
 </html>
-```

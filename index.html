@@ -5,94 +5,253 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Artist Kenneth J Lewis Sr | Home</title>
 
+<!-- SEO: Primary -->
 <meta name="description" content="Kenneth J. Lewis Sr is a self-taught contemporary artist and painter based in Ewing, New Jersey. Explore original paintings, series collections, exhibitions, and Art with Kenneth." />
 <link rel="canonical" href="https://kjlartsanctuary.com/" />
 
+<!-- SEO: Social preview -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Artist Kenneth J. Lewis Sr | KJL Art Sanctuary" />
-<meta property="og:description" content="Explore original paintings, exhibitions, and Art with Kenneth." />
+<meta property="og:description" content="Explore original paintings, series collections, exhibitions, and Art with Kenneth by contemporary artist Kenneth J. Lewis Sr." />
 <meta property="og:url" content="https://kjlartsanctuary.com/" />
 <meta property="og:image" content="https://kjlartsanctuary.com/images/Studio%20Cover.png" />
-
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="robots" content="index,follow" />
+
+<!-- SEO: Improve indexing -->
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
 <style>
-body {
-  margin: 0;
-  font-family: Garamond, serif;
-  background: #fff;
-  color: #333;
-}
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Garamond, "Times New Roman", serif;
+    background-color: #ffffff;
+    color: #333;
+  }
 
-header {
-  text-align: center;
-  padding: 20px;
-}
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
+  header {
+    background-color: #ffffff;
+    padding: 20px 0 12px;
+    text-align: center;
+  }
 
-.studio-cover img {
-  width: 100%;
-  max-width: 1100px;
-  display: block;
-  margin: auto;
-}
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
 
-nav {
-  text-align: center;
-  padding: 10px;
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
-}
+  .studio-cover {
+    max-width: 1100px;
+    margin: 18px auto 0;
+    padding: 0 16px;
+  }
 
-nav a {
-  margin: 0 8px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 12px;
-}
+  .studio-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-nav a:hover { color: #b56b27; }
+  .intro {
+    max-width: 900px;
+    margin: 0 auto 18px;
+    padding: 18px 20px 6px;
+    text-align: center;
+  }
 
-.section {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 16px;
-}
+  .intro p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 10px 0;
+  }
 
-.card {
-  background: #fffdf7;
-  border: 1px solid #eadfcf;
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-}
+  nav.main-nav {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 12px 0;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+  }
 
-.card h2 {
-  color: #b56b27;
-  margin-bottom: 10px;
-}
+  nav.main-nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 6px;
+    display: inline-block;
+  }
 
-.card p {
-  line-height: 1.7;
-}
+  nav.main-nav a:hover {
+    color: #b56b27;
+  }
 
-.image {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 20px;
-}
+  .feature-wrap {
+    max-width: 1100px;
+    margin: 26px auto 10px;
+    padding: 0 16px;
+  }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #ccc;
-}
+  .feature-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+    border: 1px solid #eee;
+  }
+
+  .seo-wrap {
+    max-width: 1100px;
+    margin: 26px auto 10px;
+    padding: 0 16px;
+  }
+
+  .seo-card {
+    border: 1px solid #eadfcf;
+    background: #fffdf7;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 22px 20px;
+  }
+
+  .seo-card h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    color: #b56b27;
+    text-align: center;
+  }
+
+  .seo-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 10px 0;
+    max-width: 980px;
+  }
+
+  .seo-card .center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .seo-card h3 {
+    margin: 18px 0 8px;
+    font-size: 18px;
+    letter-spacing: .3px;
+  }
+
+  .notice {
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0 auto 14px;
+    max-width: 960px;
+    text-align: center;
+  }
+
+  .notice strong {
+    color: #b56b27;
+  }
+
+  .event-hero,
+  .exhibition-hero {
+    border: 1px solid #eadfcf;
+    background: #fffdf7;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    padding: 22px 20px;
+    text-align: center;
+  }
+
+  .event-hero h2,
+  .exhibition-hero h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    color: #b56b27;
+  }
+
+  .event-hero p,
+  .exhibition-hero p {
+    margin: 10px auto 0;
+    max-width: 980px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #333;
+  }
+
+  .pill-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0 14px;
+  }
+
+  .pill {
+    padding: .35rem .8rem;
+    border-radius: 999px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: .4px;
+  }
+
+  .pill.alt {
+    background: #b56b27;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: .80rem 1.20rem;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: .2px;
+  }
+
+  .btn:hover {
+    background: #444;
+  }
+
+  .btn.alt {
+    background: #b56b27;
+  }
+
+  .btn.alt:hover {
+    background: #9f5f23;
+  }
+
+  .section-image-wrap {
+    margin-top: 18px;
+  }
+
+  footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+  }
 </style>
 </head>
 
@@ -103,74 +262,183 @@ footer {
 </header>
 
 <div class="studio-cover">
-  <img src="images/Studio%20Cover.png" alt="Studio">
+  <img src="images/Studio%20Cover.png" alt="KJL Art Sanctuary Studio cover image of the artist studio in Ewing New Jersey">
 </div>
 
-<nav>
+<section class="intro">
+  <p>
+    Welcome to the official website of Artist Kenneth J. Lewis Sr—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums.
+  </p>
+  <p>
+    Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
+  </p>
+</section>
+
+<nav class="main-nav">
   <a href="index.html">Home</a>
-  <a href="bio.html">Bio</a>
+  <a href="bio.html">Artist Bio</a>
   <a href="podcast.html">Podcast</a>
+  <a href="social.html">Social</a>
   <a href="exhibitions.html">Exhibitions</a>
-  <a href="abstract.html">Abstract</a>
+  <a href="inside-the-studio/">Inside the Studio</a>
+  <a href="abstract.html">Abstract Series</a>
   <a href="portraits.html">Portraits</a>
+  <a href="/jazz.html">Jazz Series</a>
+  <a href="patterns-series.html">Patterns Series</a>
+  <a href="small-works.html">Small Works</a>
+  <a href="Peplum%20Jacket%20Series.html">Peplum Jacket Series</a>
+  <a href="clock-series.html">Clock Series</a>
+  <a href="ephemeral-glow.html">Ephemeral Glow Series</a>
+  <a href="figurative-series.html">Figurative Series</a>
+  <a href="luggage mixed media series.html">Luggage Mixed Media Series</a>
+  <a href="luggage-series.html">Luggage Series</a>
+  <a href="mens-series.html">Men’s Series</a>
+  <a href="pots-and-pans.html">Pots and Pans Series</a>
+  <a href="structure.html">Structure Series</a>
 </nav>
 
-<!-- LIVE PAINTING EVENT -->
-<div class="section">
-  <div class="card">
-    <h2>Live Painting Event</h2>
+<section class="seo-wrap">
+  <div class="seo-card">
+    <h2>KJL Art Sanctuary</h2>
+    <p class="center">
+      Kenneth J. Lewis Sr is a self-taught contemporary artist and painter based in Ewing, New Jersey. Explore original paintings, series collections,
+      <a href="exhibitions.html">exhibitions</a>, and <a href="podcast.html">Art with Kenneth</a>.
+      For collecting inquiries, call (609) 372-6022 or email kjlartsanctuary@gmail.com.
+    </p>
 
-    <p><strong>Saturday, April 4, 2026 · Open to Close</strong></p>
-    <p><strong>Quaker Bridge Mall · Center Court</strong></p>
+    <h3>Frequently Asked Questions</h3>
 
     <p>
-      Join Artist Kenneth J Lewis Sr the day before Easter for a powerful live painting experience as he creates two 36 x 48 oil paintings inspired by the spirit of Easter and the liveliness of spring.
+      <strong>Who is Kenneth J. Lewis Sr?</strong><br>
+      Kenneth J. Lewis Sr is a self-taught contemporary artist known for expressive painting across abstract and figurative series.
     </p>
 
     <p>
-      From open to close, witness the process, the energy, and the transformation in real time.
+      <strong>Where is KJL Art Sanctuary located?</strong><br>
+      KJL Art Sanctuary Gallery and Studio is located in Ewing, New Jersey.
     </p>
-
-    <p><strong>All are invited.</strong></p>
 
     <p>
-      <a href="https://kjlartsanctuary.com/" target="_blank">
-        www.kjlartsanctuary.com
-      </a>
+      <strong>How can I purchase artwork or inquire?</strong><br>
+      Call (609) 372-6022 or email kjlartsanctuary@gmail.com for availability, pricing, and collecting options.
     </p>
 
-    <!-- UPDATED IMAGE -->
-    <img
-      class="image"
-      src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/live%20easter%20painting.png"
-      alt="Live Easter Painting Event Kenneth J Lewis Sr">
+    <p>
+      <strong>What is Art with Kenneth?</strong><br>
+      Art with Kenneth features studio sessions, live painting, Art History episodes, and behind-the-scenes creative process.
+    </p>
   </div>
-</div>
+</section>
 
-<!-- EXHIBITION -->
-<div class="section">
-  <div class="card">
+<!-- UPDATED EASTER LIVE PAINTING EVENT -->
+<section class="feature-wrap">
+  <div class="event-hero">
+    <h2>Live Painting Event at Quaker Bridge Mall</h2>
+
+    <div class="pill-row">
+      <span class="pill">Saturday, April 4, 2026</span>
+      <span class="pill">Center Court</span>
+      <span class="pill alt">Open to Close</span>
+    </div>
+
+    <p>
+      Join Artist Kenneth J Lewis Sr at Quaker Bridge Mall Center Court the day before Easter for a powerful live painting experience as he creates two 36 x 48 oil paintings inspired by the spirit of Easter and the liveliness of spring.
+    </p>
+
+    <p>
+      From open to close, come witness the process, the energy, and the transformation in real time. All are invited to experience the moment live.
+    </p>
+
+    <p>
+      Visit <strong><a href="https://kjlartsanctuary.com/" target="_blank" rel="noopener noreferrer">www.kjlartsanctuary.com</a></strong> for more.
+    </p>
+
+    <div class="section-image-wrap">
+      <img
+        class="feature-image"
+        src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/live%20easter%20painting.png"
+        alt="Live Easter painting event flyer for Artist Kenneth J Lewis Sr at Quaker Bridge Mall Center Court on April 4, 2026">
+    </div>
+  </div>
+</section>
+
+<!-- AFRICAN AMERICAN ABSTRACTIONS EXHIBITION -->
+<section class="feature-wrap">
+  <div class="exhibition-hero">
     <h2>African American Abstractions</h2>
 
-    <p><strong>Ellarslie Museum · March 27 – May 31, 2026</strong></p>
+    <div class="pill-row">
+      <span class="pill">Ellarslie Museum</span>
+      <span class="pill">March 27 – May 31, 2026</span>
+      <span class="pill alt">Featuring Kenneth J. Lewis Sr</span>
+    </div>
 
     <p>
-      Featuring Kenneth J Lewis Sr alongside James Dupree and Femi Johnson in a powerful exhibition of color, energy, and abstraction.
+      I am honored to be featured in <strong>African American Abstractions</strong> at Ellarslie Museum alongside
+      <strong>James Dupree</strong> and <strong>Femi Johnson</strong>. This exhibition celebrates the richness, energy,
+      and power of abstraction through the work of outstanding area artists.
     </p>
 
     <p>
-      <a href="https://ellarslie.org/exhibition/african-american-abstractions/" target="_blank">
-        View Exhibition
-      </a>
+      Visit the official exhibition page to learn more about the show, dates, and museum details.
     </p>
 
-    <img class="image" src="images/Luggage06.jpg">
+    <div class="btn-row">
+      <a class="btn alt" href="https://ellarslie.org/exhibition/african-american-abstractions/" target="_blank" rel="noopener noreferrer">View Exhibition</a>
+      <a class="btn" href="exhibitions.html">More Exhibitions</a>
+    </div>
+
+    <div class="section-image-wrap">
+      <img class="feature-image"
+           src="images/Luggage06.jpg"
+           alt="African American Abstractions exhibition featured artwork by Kenneth J Lewis Sr">
+    </div>
   </div>
-</div>
+</section>
 
 <footer>
-  © 2026 Kenneth J Lewis Sr
+  &copy; 2026 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
+
+<!-- Structured Data (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kenneth J. Lewis Sr",
+  "jobTitle": "Artist",
+  "url": "https://kjlartsanctuary.com/",
+  "image": "https://kjlartsanctuary.com/images/Studio%20Cover.png",
+  "sameAs": [
+    "https://www.youtube.com/@ArtwithKenneth"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ewing",
+    "addressRegion": "NJ",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KJL Art Sanctuary",
+  "url": "https://kjlartsanctuary.com/",
+  "email": "kjlartsanctuary@gmail.com",
+  "telephone": "+1-609-372-6022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "310 4th St",
+    "addressLocality": "Ewing",
+    "addressRegion": "NJ",
+    "postalCode": "08638",
+    "addressCountry": "US"
+  }
+}
+</script>
 
 </body>
 </html>

@@ -10,7 +10,7 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Kenneth J. Lewis Sr | Private Reserve Auction" />
-<meta property="og:description" content="Two original works available in a 48-hour private reserve auction. Serious inquiries only." />
+<meta property="og:description" content="Two original works available in a 48 hour private reserve auction. Serious inquiries only." />
 <meta property="og:url" content="https://kjlartsanctuary.com/" />
 <meta property="og:image" content="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Amber%20Street%20Afternoon%20in%20a%20room.png" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -27,6 +27,12 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   header {
@@ -246,39 +252,100 @@
     margin: 10px 0;
   }
 
-  .bid-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-  }
-
-  .btn {
+  .view-artwork {
     display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 18px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
     padding: 12px 16px;
     font-size: 14px;
-    transition: background 0.2s ease, color 0.2s ease;
+    background: #111;
+    color: #fff;
+    transition: background 0.2s ease;
   }
 
-  .btn-primary {
+  .view-artwork:hover {
+    background: #333;
+  }
+
+  .bid-form {
+    margin-top: 8px;
+    border-top: 1px solid #eadfcf;
+    padding-top: 18px;
+  }
+
+  .bid-form h4 {
+    margin: 0 0 14px;
+    font-size: 22px;
+    color: #a65d1b;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .form-grid.full {
+    grid-template-columns: 1fr;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .field label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #4f4842;
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    border: 1px solid #d8c9b7;
+    border-radius: 10px;
+    padding: 12px 12px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #2f2b28;
+    background: #fffdfa;
+  }
+
+  .field textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    margin-top: 14px;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 18px;
+    font-size: 15px;
+    font-weight: bold;
     background: #a65d1b;
     color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease;
   }
 
-  .btn-primary:hover {
+  .submit-btn:hover {
     background: #8d4f17;
   }
 
-  .btn-secondary {
-    background: #111;
-    color: #fff;
-  }
-
-  .btn-secondary:hover {
-    background: #333;
+  .small-note {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #6a625b;
+    margin-top: 10px;
+    text-align: left;
   }
 
   .collector-note {
@@ -309,11 +376,12 @@
     background: #ffffff;
     font-size: 14px;
     border-top: 1px solid #ccc;
-    margin-top: 32px;
+    margin-top: auto;
   }
 
   @media (max-width: 860px) {
-    .auction-grid {
+    .auction-grid,
+    .form-grid {
       grid-template-columns: 1fr;
     }
 
@@ -341,7 +409,7 @@
 
 <section class="intro">
   <p>
-    Welcome to the official website of Artist Kenneth J. Lewis Sr, a self-taught contemporary painter creating original works for collectors, art lovers, and those building meaningful collections.
+    Welcome to the official website of Artist Kenneth J. Lewis Sr, a self taught contemporary painter creating original works for collectors, art lovers, and those building meaningful collections.
   </p>
   <p>
     Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
@@ -373,7 +441,7 @@
 
 <section class="section-wrap">
   <div class="auction-hero">
-    <h2>48-Hour Private Reserve Auction</h2>
+    <h2>48 Hour Private Reserve Auction</h2>
 
     <div class="pill-row">
       <span class="pill">Begins April 17, 2026</span>
@@ -383,7 +451,7 @@
     </div>
 
     <p>
-      Two original works are now being offered in a private reserve auction for collectors and thoughtful buyers seeking distinctive, one-of-a-kind paintings. This auction is presented directly on the home page for ease of viewing and bidding, with all submissions going directly to the artist.
+      Two original works are being offered in a private reserve auction for collectors, art lovers, and thoughtful buyers seeking distinctive one of a kind paintings. This auction is presented directly on the home page for ease of viewing and bidding, with all submissions going directly to the artist.
     </p>
 
     <p>
@@ -400,10 +468,9 @@
       <h3>Auction Rules</h3>
       <ul>
         <li>The auction begins at 9:00 PM Eastern on April 17, 2026 and ends exactly 48 hours later.</li>
-        <li>All bids must be submitted by email to <strong>kjlartsanctuary@gmail.com</strong>.</li>
-        <li>Please include the artwork title and your bid amount in the subject line and body of your message.</li>
         <li>A reserve is in place on both works.</li>
-        <li>Opening bids are listed below. Bids below opening bid will not be considered.</li>
+        <li>Opening bids are listed below. Bids below the opening bid will not be considered.</li>
+        <li>All bids are submitted directly through the form on this page and sent to kjlartsanctuary@gmail.com.</li>
         <li>Only serious inquiries and serious collectors should submit bids.</li>
         <li>The artist reserves the right to accept, reject, or respond to bids at his discretion.</li>
         <li>Shipping, delivery, or pickup arrangements will be discussed directly with the winning buyer.</li>
@@ -421,13 +488,55 @@
         <div class="opening-bid">Opening Bid: $795</div>
 
         <p>
-          Bold blocks of orange, teal, and gold form a sun-washed row of buildings, while a vintage car idles in the foreground. Shadows stretch across the road, hinting at late-day calm. The world here feels paused, holding its breath before the evening glow.
+          Bold blocks of orange, teal, and gold form a sun washed row of buildings, while a vintage car idles in the foreground. Shadows stretch across the road, hinting at late day calm. The world here feels paused, holding its breath before the evening glow.
         </p>
 
-        <div class="bid-actions">
-          <a class="btn btn-primary" href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Submission%20-%20Amber%20Street%20Afternoon&body=I%20would%20like%20to%20submit%20a%20bid%20for%20Amber%20Street%20Afternoon.%0A%0ABid%20Amount:%20%0AFull%20Name:%20%0APhone:%20%0AEmail:%20%0A%0ASerious%20inquiry%20only.">Submit Bid</a>
-          <a class="btn btn-secondary" href="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Amber%20Street%20Afternoon.jpg" target="_blank" rel="noopener noreferrer">View Artwork</a>
-        </div>
+        <a class="view-artwork" href="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Amber%20Street%20Afternoon.jpg" target="_blank" rel="noopener noreferrer">View Artwork</a>
+
+        <form class="bid-form" action="https://formsubmit.co/kjlartsanctuary@gmail.com" method="POST">
+          <h4>Submit Bid</h4>
+
+          <input type="hidden" name="_subject" value="Auction Bid Submission - Amber Street Afternoon">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="Artwork Title" value="Amber Street Afternoon">
+          <input type="hidden" name="Opening Bid" value="$795">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="amber-name">Full Name</label>
+              <input id="amber-name" type="text" name="Full Name" required>
+            </div>
+
+            <div class="field">
+              <label for="amber-email">Email</label>
+              <input id="amber-email" type="email" name="Email" required>
+            </div>
+
+            <div class="field">
+              <label for="amber-phone">Phone</label>
+              <input id="amber-phone" type="text" name="Phone" required>
+            </div>
+
+            <div class="field">
+              <label for="amber-bid">Bid Amount</label>
+              <input id="amber-bid" type="text" name="Bid Amount" placeholder="$" required>
+            </div>
+          </div>
+
+          <div class="form-grid full">
+            <div class="field">
+              <label for="amber-message">Message</label>
+              <textarea id="amber-message" name="Message" placeholder="Optional note or collecting inquiry"></textarea>
+            </div>
+          </div>
+
+          <button class="submit-btn" type="submit">Submit Bid for Amber Street Afternoon</button>
+
+          <div class="small-note">
+            On first use, FormSubmit may send a confirmation email to activate delivery to your inbox. After that, bids will be sent directly to your email address.
+          </div>
+        </form>
       </div>
     </article>
 
@@ -442,10 +551,52 @@
           Layered circles, luminous color fields, and gestural marks gather like signals from different worlds meeting on a single plane. Blues, violets, and electric pinks pulse against darker passages, creating a rhythm of tension and release. The composition feels both archaeological and futuristic, as if memories, symbols, and architecture have been uncovered at once.
         </p>
 
-        <div class="bid-actions">
-          <a class="btn btn-primary" href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Submission%20-%20Constellation%20of%20Fragments&body=I%20would%20like%20to%20submit%20a%20bid%20for%20Constellation%20of%20Fragments.%0A%0ABid%20Amount:%20%0AFull%20Name:%20%0APhone:%20%0AEmail:%20%0A%0ASerious%20inquiry%20only.">Submit Bid</a>
-          <a class="btn btn-secondary" href="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Constellation%20of%20Fragments.png" target="_blank" rel="noopener noreferrer">View Artwork</a>
-        </div>
+        <a class="view-artwork" href="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Constellation%20of%20Fragments.png" target="_blank" rel="noopener noreferrer">View Artwork</a>
+
+        <form class="bid-form" action="https://formsubmit.co/kjlartsanctuary@gmail.com" method="POST">
+          <h4>Submit Bid</h4>
+
+          <input type="hidden" name="_subject" value="Auction Bid Submission - Constellation of Fragments">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="Artwork Title" value="Constellation of Fragments">
+          <input type="hidden" name="Opening Bid" value="$695">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="constellation-name">Full Name</label>
+              <input id="constellation-name" type="text" name="Full Name" required>
+            </div>
+
+            <div class="field">
+              <label for="constellation-email">Email</label>
+              <input id="constellation-email" type="email" name="Email" required>
+            </div>
+
+            <div class="field">
+              <label for="constellation-phone">Phone</label>
+              <input id="constellation-phone" type="text" name="Phone" required>
+            </div>
+
+            <div class="field">
+              <label for="constellation-bid">Bid Amount</label>
+              <input id="constellation-bid" type="text" name="Bid Amount" placeholder="$" required>
+            </div>
+          </div>
+
+          <div class="form-grid full">
+            <div class="field">
+              <label for="constellation-message">Message</label>
+              <textarea id="constellation-message" name="Message" placeholder="Optional note or collecting inquiry"></textarea>
+            </div>
+          </div>
+
+          <button class="submit-btn" type="submit">Submit Bid for Constellation of Fragments</button>
+
+          <div class="small-note">
+            On first use, FormSubmit may send a confirmation email to activate delivery to your inbox. After that, bids will be sent directly to your email address.
+          </div>
+        </form>
       </div>
     </article>
 
@@ -454,7 +605,7 @@
   <div class="collector-note">
     <h3>For Collectors and New Buyers</h3>
     <p>
-      Whether you are an established collector or acquiring original artwork for the first time, this auction offers an opportunity to secure distinctive works directly from the artist. For private questions regarding the pieces, bidding, or follow-up arrangements, contact Kenneth J. Lewis Sr directly at <strong>kjlartsanctuary@gmail.com</strong> or call <strong>(609) 372-6022</strong>.
+      Whether you are an established collector or acquiring original artwork for the first time, this auction offers an opportunity to secure distinctive works directly from the artist. For private questions regarding the pieces, bidding, or follow up arrangements, contact Kenneth J. Lewis Sr directly at <strong>kjlartsanctuary@gmail.com</strong> or call <strong>(609) 372-6022</strong>.
     </p>
   </div>
 </section>
@@ -474,12 +625,12 @@
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
 
-    const d = String(days).padStart(2, '0');
-    const h = String(hours).padStart(2, '0');
-    const m = String(minutes).padStart(2, '0');
-    const s = String(seconds).padStart(2, '0');
-
-    return `${d} : ${h} : ${m} : ${s}`;
+    return (
+      String(days).padStart(2, '0') + ' : ' +
+      String(hours).padStart(2, '0') + ' : ' +
+      String(minutes).padStart(2, '0') + ' : ' +
+      String(seconds).padStart(2, '0')
+    );
   }
 
   function updateCountdown() {

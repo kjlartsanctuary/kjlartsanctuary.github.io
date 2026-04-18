@@ -3,49 +3,42 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Artist Kenneth J Lewis Sr | Home</title>
+<title>Artist Kenneth J Lewis Sr | Private Reserve Auction</title>
 
-<!-- SEO: Primary -->
-<meta name="description" content="Kenneth J. Lewis Sr is a self-taught contemporary artist and painter based in Ewing, New Jersey. Explore original paintings, series collections, exhibitions, and Art with Kenneth." />
+<meta name="description" content="Private reserve auction featuring original works by Kenneth J. Lewis Sr. Bid on Amber Street Afternoon and Constellation of Fragments. Auction begins April 17, 2026 at 9 PM Eastern and runs for 48 hours." />
 <link rel="canonical" href="https://kjlartsanctuary.com/" />
 
-<!-- SEO: Social preview -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Artist Kenneth J. Lewis Sr | KJL Art Sanctuary" />
-<meta property="og:description" content="Explore original paintings, series collections, exhibitions, and Art with Kenneth by contemporary artist Kenneth J. Lewis Sr." />
+<meta property="og:title" content="Kenneth J. Lewis Sr | Private Reserve Auction" />
+<meta property="og:description" content="Two original works available in a 48-hour private reserve auction. Serious inquiries only." />
 <meta property="og:url" content="https://kjlartsanctuary.com/" />
-<meta property="og:image" content="https://kjlartsanctuary.com/images/Studio%20Cover.png" />
+<meta property="og:image" content="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Amber%20Street%20Afternoon%20in%20a%20room.png" />
 <meta name="twitter:card" content="summary_large_image" />
-
-<!-- SEO: Improve indexing -->
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
 <style>
   html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     font-family: Garamond, "Times New Roman", serif;
-    background-color: #ffffff;
-    color: #333;
+    background: #ffffff;
+    color: #2f2b28;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  * {
+    box-sizing: border-box;
   }
 
   header {
-    background-color: #ffffff;
-    padding: 20px 0 12px;
+    background: #ffffff;
     text-align: center;
+    padding: 24px 16px 14px;
   }
 
   header h1 {
     margin: 0;
-    font-size: 36px;
-    letter-spacing: 1px;
+    font-size: 38px;
+    letter-spacing: 0.5px;
   }
 
   .studio-cover {
@@ -61,22 +54,22 @@
   }
 
   .intro {
-    max-width: 900px;
-    margin: 0 auto 18px;
-    padding: 18px 20px 6px;
+    max-width: 920px;
+    margin: 0 auto 16px;
+    padding: 18px 20px 8px;
     text-align: center;
   }
 
   .intro p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 8px 0;
   }
 
   nav.main-nav {
     text-align: center;
-    background-color: #ffffff;
-    padding: 12px 0;
+    background: #ffffff;
+    padding: 12px 10px;
     border-top: 2px solid #333;
     border-bottom: 2px solid #333;
   }
@@ -92,165 +85,246 @@
   }
 
   nav.main-nav a:hover {
-    color: #b56b27;
+    color: #a65d1b;
   }
 
-  .feature-wrap {
-    max-width: 1100px;
-    margin: 26px auto 10px;
+  .section-wrap {
+    max-width: 1160px;
+    margin: 28px auto;
     padding: 0 16px;
   }
 
-  .feature-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
-    border: 1px solid #eee;
-  }
-
-  .seo-wrap {
-    max-width: 1100px;
-    margin: 26px auto 10px;
-    padding: 0 16px;
-  }
-
-  .seo-card {
+  .auction-hero {
+    background: linear-gradient(135deg, #fffaf2 0%, #fff 100%);
     border: 1px solid #eadfcf;
-    background: #fffdf7;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 22px 20px;
-  }
-
-  .seo-card h2 {
-    margin: 0 0 10px;
-    font-size: 30px;
-    color: #b56b27;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    padding: 28px 22px;
     text-align: center;
   }
 
-  .seo-card p {
-    font-size: 15px;
-    line-height: 1.75;
-    margin: 10px 0;
-    max-width: 980px;
-  }
-
-  .seo-card .center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .seo-card h3 {
-    margin: 18px 0 8px;
-    font-size: 18px;
-    letter-spacing: .3px;
-  }
-
-  .notice {
-    font-size: 15px;
-    line-height: 1.75;
-    margin: 0 auto 14px;
-    max-width: 960px;
-    text-align: center;
-  }
-
-  .notice strong {
-    color: #b56b27;
-  }
-
-  .event-hero,
-  .exhibition-hero {
-    border: 1px solid #eadfcf;
-    background: #fffdf7;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-    padding: 22px 20px;
-    text-align: center;
-  }
-
-  .event-hero h2,
-  .exhibition-hero h2 {
+  .auction-hero h2 {
     margin: 0 0 8px;
-    font-size: 30px;
-    color: #b56b27;
+    font-size: 34px;
+    color: #a65d1b;
   }
 
-  .event-hero p,
-  .exhibition-hero p {
-    margin: 10px auto 0;
+  .auction-hero p {
     max-width: 980px;
-    font-size: 15px;
-    line-height: 1.75;
-    color: #333;
+    margin: 10px auto;
+    font-size: 16px;
+    line-height: 1.8;
   }
 
   .pill-row {
     display: flex;
-    gap: 10px;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 10px 0 14px;
+    justify-content: center;
+    gap: 10px;
+    margin: 14px 0 18px;
   }
 
   .pill {
-    padding: .35rem .8rem;
-    border-radius: 999px;
-    background: #000;
+    background: #111;
     color: #fff;
     font-size: 12px;
-    letter-spacing: .4px;
+    letter-spacing: 0.3px;
+    border-radius: 999px;
+    padding: 8px 14px;
   }
 
   .pill.alt {
-    background: #b56b27;
+    background: #a65d1b;
   }
 
-  .btn-row {
+  .timer-wrap {
+    margin: 18px auto 10px;
+    max-width: 860px;
+    border: 1px solid #eadfcf;
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 16px;
+  }
+
+  .timer-label {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6f655c;
+    margin-bottom: 6px;
+  }
+
+  #auction-status {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a65d1b;
+    margin-bottom: 8px;
+  }
+
+  #countdown {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #111;
+  }
+
+  .auction-rules {
+    max-width: 920px;
+    margin: 18px auto 0;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #eadfcf;
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+
+  .auction-rules h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #a65d1b;
+  }
+
+  .auction-rules ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .auction-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  .art-card {
+    background: #fff;
+    border: 1px solid #eadfcf;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  .art-card img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .art-card-content {
+    padding: 22px 20px 24px;
+  }
+
+  .art-card h3 {
+    margin: 0 0 6px;
+    font-size: 29px;
+    color: #a65d1b;
+  }
+
+  .medium-line {
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: #6a625b;
+    letter-spacing: 0.2px;
+  }
+
+  .opening-bid {
+    display: inline-block;
+    margin: 0 0 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .art-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 10px 0;
+  }
+
+  .bid-actions {
     display: flex;
-    gap: 10px;
-    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 16px;
+    gap: 10px;
+    margin-top: 18px;
   }
 
   .btn {
     display: inline-block;
-    padding: .80rem 1.20rem;
-    border-radius: 10px;
-    background: #000;
-    color: #fff;
     text-decoration: none;
-    font-weight: 800;
-    letter-spacing: .2px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: background 0.2s ease, color 0.2s ease;
   }
 
-  .btn:hover {
-    background: #444;
+  .btn-primary {
+    background: #a65d1b;
+    color: #fff;
   }
 
-  .btn.alt {
-    background: #b56b27;
+  .btn-primary:hover {
+    background: #8d4f17;
   }
 
-  .btn.alt:hover {
-    background: #9f5f23;
+  .btn-secondary {
+    background: #111;
+    color: #fff;
   }
 
-  .section-image-wrap {
-    margin-top: 18px;
+  .btn-secondary:hover {
+    background: #333;
+  }
+
+  .collector-note {
+    margin-top: 28px;
+    background: #fffaf2;
+    border: 1px solid #eadfcf;
+    border-radius: 14px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+
+  .collector-note h3 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    color: #a65d1b;
+  }
+
+  .collector-note p {
+    max-width: 980px;
+    margin: 10px auto 0;
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   footer {
-    margin-top: auto;
     text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
+    padding: 22px 16px;
+    background: #ffffff;
     font-size: 14px;
     border-top: 1px solid #ccc;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 860px) {
+    .auction-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #countdown {
+      font-size: 26px;
+    }
+
+    .art-card h3,
+    .auction-hero h2 {
+      font-size: 28px;
+    }
   }
 </style>
 </head>
@@ -267,7 +341,7 @@
 
 <section class="intro">
   <p>
-    Welcome to the official website of Artist Kenneth J. Lewis Sr—a prolific, self-taught painter whose powerful, intuitive works span multiple styles and mediums.
+    Welcome to the official website of Artist Kenneth J. Lewis Sr, a self-taught contemporary painter creating original works for collectors, art lovers, and those building meaningful collections.
   </p>
   <p>
     Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
@@ -297,113 +371,91 @@
   <a href="structure.html">Structure Series</a>
 </nav>
 
-<section class="seo-wrap">
-  <div class="seo-card">
-    <h2>KJL Art Sanctuary</h2>
-    <p class="center">
-      Kenneth J. Lewis Sr is a self-taught contemporary artist and painter based in Ewing, New Jersey. Explore original paintings, series collections,
-      <a href="exhibitions.html">exhibitions</a>, and <a href="podcast.html">Art with Kenneth</a>.
-      For collecting inquiries, call (609) 372-6022 or email kjlartsanctuary@gmail.com.
-    </p>
-
-    <h3>Frequently Asked Questions</h3>
-
-    <p>
-      <strong>Who is Kenneth J. Lewis Sr?</strong><br>
-      Kenneth J. Lewis Sr is a self-taught contemporary artist known for expressive painting across abstract and figurative series.
-    </p>
-
-    <p>
-      <strong>Where is KJL Art Sanctuary located?</strong><br>
-      KJL Art Sanctuary Gallery and Studio is located in Ewing, New Jersey.
-    </p>
-
-    <p>
-      <strong>How can I purchase artwork or inquire?</strong><br>
-      Call (609) 372-6022 or email kjlartsanctuary@gmail.com for availability, pricing, and collecting options.
-    </p>
-
-    <p>
-      <strong>What is Art with Kenneth?</strong><br>
-      Art with Kenneth features studio sessions, live painting, Art History episodes, and behind-the-scenes creative process.
-    </p>
-  </div>
-</section>
-
-<!-- QUAKER BRIDGE MALL LIVE PAINTING -->
-<section class="feature-wrap">
-  <div class="event-hero">
-    <h2>Live Painting at Quaker Bridge Mall</h2>
+<section class="section-wrap">
+  <div class="auction-hero">
+    <h2>48-Hour Private Reserve Auction</h2>
 
     <div class="pill-row">
-      <span class="pill">Saturday, May 9</span>
-      <span class="pill">Center Court</span>
-      <span class="pill alt">Dedicated to All Mothers</span>
+      <span class="pill">Begins April 17, 2026</span>
+      <span class="pill">9:00 PM Eastern</span>
+      <span class="pill alt">Ends 48 Hours Later</span>
+      <span class="pill alt">Serious Inquiries Only</span>
     </div>
 
     <p>
-      Join Artist Kenneth J. Lewis Sr. for a full day of live painting at Quaker Bridge Mall on Saturday, May 9, the day before Mother’s Day. This special event is dedicated to all mothers and celebrates creativity, love, and the beauty of spring.
+      Two original works are now being offered in a private reserve auction for collectors and thoughtful buyers seeking distinctive, one-of-a-kind paintings. This auction is presented directly on the home page for ease of viewing and bidding, with all submissions going directly to the artist.
     </p>
 
     <p>
-      Watch as a large-scale painting comes to life from start to finish right before your eyes, and bring the family along—children can create their own Mother’s Day cards using provided notecards while supplies last.
+      Each work carries its own presence, scale, and atmosphere. Bids are reviewed privately, reserve applies, and only serious inquiries will be considered.
     </p>
 
-    <p>
-      Experience art in motion, meet the artist, and enjoy a meaningful and inspiring day in Center Court.
-    </p>
-
-    <p>
-      If you would like to support the work and future events, you can contribute here:
-      <a href="https://square.link/u/pft7Cjsd" target="_blank" rel="noopener noreferrer">https://square.link/u/pft7Cjsd</a>
-      thank you for your continued support.
-    </p>
-
-    <div class="btn-row">
-      <a class="btn alt" href="https://square.link/u/pft7Cjsd" target="_blank" rel="noopener noreferrer">Support the Event</a>
-      <a class="btn" href="https://kjlartsanctuary.com/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+    <div class="timer-wrap">
+      <div class="timer-label">Auction Countdown</div>
+      <div id="auction-status">Auction status loading...</div>
+      <div id="countdown">-- : -- : -- : --</div>
     </div>
 
-    <div class="section-image-wrap">
-      <img
-        class="feature-image"
-        src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/mothers%20day.jpg"
-        alt="Live painting event at Quaker Bridge Mall by Kenneth J Lewis Sr dedicated to all mothers">
+    <div class="auction-rules">
+      <h3>Auction Rules</h3>
+      <ul>
+        <li>The auction begins at 9:00 PM Eastern on April 17, 2026 and ends exactly 48 hours later.</li>
+        <li>All bids must be submitted by email to <strong>kjlartsanctuary@gmail.com</strong>.</li>
+        <li>Please include the artwork title and your bid amount in the subject line and body of your message.</li>
+        <li>A reserve is in place on both works.</li>
+        <li>Opening bids are listed below. Bids below opening bid will not be considered.</li>
+        <li>Only serious inquiries and serious collectors should submit bids.</li>
+        <li>The artist reserves the right to accept, reject, or respond to bids at his discretion.</li>
+        <li>Shipping, delivery, or pickup arrangements will be discussed directly with the winning buyer.</li>
+      </ul>
     </div>
   </div>
-</section>
 
-<!-- AFRICAN AMERICAN ABSTRACTIONS EXHIBITION -->
-<section class="feature-wrap">
-  <div class="exhibition-hero">
-    <h2>African American Abstractions</h2>
+  <div class="auction-grid">
 
-    <div class="pill-row">
-      <span class="pill">Ellarslie Museum</span>
-      <span class="pill">March 27 – May 31, 2026</span>
-      <span class="pill alt">Featuring Kenneth J. Lewis Sr</span>
-    </div>
+    <article class="art-card">
+      <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Amber%20Street%20Afternoon%20in%20a%20room.png" alt="Amber Street Afternoon by Kenneth J Lewis Sr displayed in a room">
+      <div class="art-card-content">
+        <h3>Amber Street Afternoon</h3>
+        <div class="medium-line">36 x 44 inches · Acrylic and oil pastel on architectural panel · Part of the Architectural Daydreams series</div>
+        <div class="opening-bid">Opening Bid: $795</div>
 
+        <p>
+          Bold blocks of orange, teal, and gold form a sun-washed row of buildings, while a vintage car idles in the foreground. Shadows stretch across the road, hinting at late-day calm. The world here feels paused, holding its breath before the evening glow.
+        </p>
+
+        <div class="bid-actions">
+          <a class="btn btn-primary" href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Submission%20-%20Amber%20Street%20Afternoon&body=I%20would%20like%20to%20submit%20a%20bid%20for%20Amber%20Street%20Afternoon.%0A%0ABid%20Amount:%20%0AFull%20Name:%20%0APhone:%20%0AEmail:%20%0A%0ASerious%20inquiry%20only.">Submit Bid</a>
+          <a class="btn btn-secondary" href="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Amber%20Street%20Afternoon.jpg" target="_blank" rel="noopener noreferrer">View Artwork</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="art-card">
+      <img src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Constellation%20of%20Fragments%20in%20a%20room.png" alt="Constellation of Fragments by Kenneth J Lewis Sr displayed in a room">
+      <div class="art-card-content">
+        <h3>Constellation of Fragments</h3>
+        <div class="medium-line">30 x 40 inches · Ink, oil pastel and acrylic on canvas</div>
+        <div class="opening-bid">Opening Bid: $695</div>
+
+        <p>
+          Layered circles, luminous color fields, and gestural marks gather like signals from different worlds meeting on a single plane. Blues, violets, and electric pinks pulse against darker passages, creating a rhythm of tension and release. The composition feels both archaeological and futuristic, as if memories, symbols, and architecture have been uncovered at once.
+        </p>
+
+        <div class="bid-actions">
+          <a class="btn btn-primary" href="mailto:kjlartsanctuary@gmail.com?subject=Bid%20Submission%20-%20Constellation%20of%20Fragments&body=I%20would%20like%20to%20submit%20a%20bid%20for%20Constellation%20of%20Fragments.%0A%0ABid%20Amount:%20%0AFull%20Name:%20%0APhone:%20%0AEmail:%20%0A%0ASerious%20inquiry%20only.">Submit Bid</a>
+          <a class="btn btn-secondary" href="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/Constellation%20of%20Fragments.png" target="_blank" rel="noopener noreferrer">View Artwork</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="collector-note">
+    <h3>For Collectors and New Buyers</h3>
     <p>
-      I am honored to be featured in <strong>African American Abstractions</strong> at Ellarslie Museum alongside
-      <strong>James Dupree</strong> and <strong>Femi Johnson</strong>. This exhibition celebrates the richness, energy,
-      and power of abstraction through the work of outstanding area artists.
+      Whether you are an established collector or acquiring original artwork for the first time, this auction offers an opportunity to secure distinctive works directly from the artist. For private questions regarding the pieces, bidding, or follow-up arrangements, contact Kenneth J. Lewis Sr directly at <strong>kjlartsanctuary@gmail.com</strong> or call <strong>(609) 372-6022</strong>.
     </p>
-
-    <p>
-      Visit the official exhibition page to learn more about the show, dates, and museum details.
-    </p>
-
-    <div class="btn-row">
-      <a class="btn alt" href="https://ellarslie.org/exhibition/african-american-abstractions/" target="_blank" rel="noopener noreferrer">View Exhibition</a>
-      <a class="btn" href="exhibitions.html">More Exhibitions</a>
-    </div>
-
-    <div class="section-image-wrap">
-      <img class="feature-image"
-           src="images/Luggage06.jpg"
-           alt="African American Abstractions exhibition featured artwork by Kenneth J Lewis Sr">
-    </div>
   </div>
 </section>
 
@@ -411,7 +463,46 @@
   &copy; 2026 Kenneth J. Lewis Sr. | All rights reserved.
 </footer>
 
-<!-- Structured Data (SEO) -->
+<script>
+  const auctionStart = new Date('2026-04-17T21:00:00-04:00').getTime();
+  const auctionEnd = new Date('2026-04-19T21:00:00-04:00').getTime();
+
+  function formatTime(ms) {
+    const totalSeconds = Math.floor(ms / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    const d = String(days).padStart(2, '0');
+    const h = String(hours).padStart(2, '0');
+    const m = String(minutes).padStart(2, '0');
+    const s = String(seconds).padStart(2, '0');
+
+    return `${d} : ${h} : ${m} : ${s}`;
+  }
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const countdownEl = document.getElementById('countdown');
+    const statusEl = document.getElementById('auction-status');
+
+    if (now < auctionStart) {
+      statusEl.textContent = 'Auction opens in';
+      countdownEl.textContent = formatTime(auctionStart - now);
+    } else if (now >= auctionStart && now < auctionEnd) {
+      statusEl.textContent = 'Auction ends in';
+      countdownEl.textContent = formatTime(auctionEnd - now);
+    } else {
+      statusEl.textContent = 'Auction has ended';
+      countdownEl.textContent = '00 : 00 : 00 : 00';
+    }
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

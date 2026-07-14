@@ -1,6 +1,4 @@
-I switched the **Collector** and **Founding Collector** Square links. The Signature Collector link remains unchanged.
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +9,7 @@ I switched the **Collector** and **Founding Collector** Square links. The Signat
 
 <meta
   name="description"
-  content="Official website of contemporary fine artist Kenneth J. Lewis Sr. Explore original artwork, exhibitions, studio content, commissions, and the KJL Collectors Circle."
+  content="Official website of contemporary fine artist Kenneth J. Lewis Sr. Explore original artwork, public art auctions, exhibitions, commissions, studio content, and the KJL Collectors Circle."
 />
 
 <link rel="canonical" href="https://kjlartsanctuary.com/" />
@@ -20,7 +18,7 @@ I switched the **Collector** and **Founding Collector** Square links. The Signat
 <meta property="og:title" content="Contemporary Fine Artist Kenneth J. Lewis Sr." />
 <meta
   property="og:description"
-  content="Explore original paintings, exhibitions, commissions, studio content, and the KJL Collectors Circle."
+  content="Explore original paintings, public art auctions, exhibitions, commissions, studio content, and the KJL Collectors Circle."
 />
 <meta property="og:url" content="https://kjlartsanctuary.com/" />
 <meta
@@ -29,7 +27,10 @@ I switched the **Collector** and **Founding Collector** Square links. The Signat
 />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<meta
+  name="robots"
+  content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+/>
 
 <style>
 html,
@@ -142,6 +143,288 @@ nav.main-nav a:hover {
 .home-actions a:hover {
   background: #a65d1b;
 }
+
+/* Public auction section */
+
+.public-auction {
+  max-width: 1180px;
+  margin: 50px auto;
+  padding: 48px 20px;
+  background: #111111;
+  color: #ffffff;
+  border-top: 6px solid #a65d1b;
+  border-bottom: 6px solid #a65d1b;
+}
+
+.auction-heading {
+  max-width: 920px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.auction-heading .auction-label {
+  margin: 0 0 8px;
+  color: #e5b67e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.auction-heading h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 44px;
+}
+
+.auction-heading h3 {
+  margin: 0 0 16px;
+  color: #e5b67e;
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.auction-heading p {
+  max-width: 850px;
+  margin: 10px auto;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.auction-status {
+  max-width: 850px;
+  margin: 26px auto 34px;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  color: #2f2b28;
+  border-radius: 12px;
+}
+
+.auction-status strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #a65d1b;
+  font-size: 21px;
+}
+
+.auction-countdown {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.auction-group-photo {
+  max-width: 950px;
+  margin: 0 auto 34px;
+}
+
+.auction-group-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 8px solid #ffffff;
+  border-radius: 10px;
+}
+
+.auction-group-photo p {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #dddddd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.auction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.auction-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  color: #2f2b28;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.auction-card img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  background: #f2eee8;
+}
+
+.auction-card-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 26px;
+}
+
+.auction-card h3 {
+  margin: 0 0 6px;
+  text-align: center;
+  color: #a65d1b;
+  font-size: 32px;
+}
+
+.auction-artist {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.auction-details {
+  margin: 0 0 18px;
+  padding: 16px;
+  background: #f8f4ee;
+  border-radius: 9px;
+}
+
+.auction-details p {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.auction-description {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.starting-bid {
+  margin: 22px 0 0;
+  padding: 15px;
+  text-align: center;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.starting-bid span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.starting-bid strong {
+  font-size: 30px;
+  color: #e5b67e;
+}
+
+.auction-rules {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  padding: 30px;
+  background: #ffffff;
+  color: #2f2b28;
+  border-radius: 14px;
+}
+
+.auction-rules h3 {
+  margin: 0 0 18px;
+  text-align: center;
+  color: #a65d1b;
+  font-size: 30px;
+}
+
+.auction-rules ol {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.auction-rules li {
+  margin-bottom: 11px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.bid-form-section {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  padding: 30px 20px;
+  background: #f8f4ee;
+  color: #2f2b28;
+  border-radius: 14px;
+}
+
+.bid-form-section h3 {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #a65d1b;
+  font-size: 32px;
+}
+
+.bid-form-section > p {
+  max-width: 780px;
+  margin: 8px auto 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.bid-form-frame {
+  width: 100%;
+  min-height: 900px;
+  border: 0;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.form-fallback {
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.form-fallback a {
+  display: inline-block;
+  padding: 13px 20px;
+  text-decoration: none;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.form-fallback a:hover {
+  background: #a65d1b;
+}
+
+.auction-closed-message {
+  display: none;
+  max-width: 850px;
+  margin: 35px auto 0;
+  padding: 28px;
+  text-align: center;
+  background: #ffffff;
+  color: #2f2b28;
+  border-radius: 12px;
+}
+
+.auction-closed-message h3 {
+  margin: 0 0 10px;
+  color: #a65d1b;
+  font-size: 30px;
+}
+
+.auction-closed-message p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Collectors Circle */
 
 .collectors-circle {
   max-width: 1180px;
@@ -398,6 +681,14 @@ footer {
 }
 
 @media (max-width: 950px) {
+  .auction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-card img {
+    height: auto;
+  }
+
   .membership-grid {
     grid-template-columns: 1fr;
   }
@@ -418,6 +709,31 @@ footer {
 
   .home-welcome h2 {
     font-size: 29px;
+  }
+
+  .auction-heading h2 {
+    font-size: 34px;
+  }
+
+  .auction-heading h3 {
+    font-size: 22px;
+  }
+
+  .auction-card h3 {
+    font-size: 27px;
+  }
+
+  .public-auction {
+    padding: 38px 14px;
+  }
+
+  .auction-rules,
+  .bid-form-section {
+    padding: 24px 16px;
+  }
+
+  .bid-form-frame {
+    min-height: 1050px;
   }
 
   .collectors-heading h2 {
@@ -509,6 +825,250 @@ footer {
     <a href="mailto:kjlartsanctuary@gmail.com">Contact the Studio</a>
   </div>
 </section>
+
+<!-- PUBLIC ART AUCTION -->
+
+<section class="public-auction" id="public-auction">
+
+  <div class="auction-heading">
+    <p class="auction-label">Open to the Public</p>
+
+    <h2>Original Art Auction</h2>
+
+    <h3>Ironing and Wash Day</h3>
+
+    <p>
+      Bid on two original figurative paintings by artist Kenneth J. Lewis Sr.
+      Each painting is offered separately and has its own starting bid.
+    </p>
+
+    <p>
+      The auction begins immediately and closes on
+      <strong>Wednesday, July 15, 2026 at 6:00 PM Eastern Time.</strong>
+    </p>
+  </div>
+
+  <div class="auction-status">
+    <strong>Auction Closing Time</strong>
+
+    Wednesday, July 15, 2026 at 6:00 PM Eastern Time
+
+    <div
+      class="auction-countdown"
+      id="auction-countdown"
+      aria-live="polite"
+    >
+      Calculating time remaining...
+    </div>
+  </div>
+
+  <div class="auction-group-photo">
+    <img
+      src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Set%20Wash%20and%20Iron.jpg?raw=true"
+      alt="Ironing and Wash Day original figurative paintings displayed together"
+    />
+
+    <p>
+      Ironing and Wash Day are two individual original paintings. Each artwork
+      is auctioned and sold separately.
+    </p>
+  </div>
+
+  <div class="auction-grid">
+
+    <article class="auction-card">
+      <img
+        src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Ironing.jpg?raw=true"
+        alt="Ironing original figurative painting by Kenneth J. Lewis Sr."
+      />
+
+      <div class="auction-card-content">
+        <h3>Ironing</h3>
+
+        <p class="auction-artist">
+          Original painting by Kenneth J. Lewis Sr.
+        </p>
+
+        <div class="auction-details">
+          <p><strong>Size:</strong> 12 × 12 inches</p>
+          <p><strong>Medium:</strong> Acrylic on architectural panel</p>
+          <p><strong>Presentation:</strong> Framed</p>
+          <p><strong>Starting bid:</strong> $150</p>
+        </div>
+
+        <p class="auction-description">
+          Ironing presents an expressive figure engaged in the familiar rhythm
+          of household work. Loose lines, layered textures, and cool blue tones
+          suggest movement, memory, and the quiet dignity found within an
+          everyday domestic task.
+        </p>
+
+        <div class="starting-bid">
+          <span>Starting Bid</span>
+          <strong>$150</strong>
+        </div>
+      </div>
+    </article>
+
+    <article class="auction-card">
+      <img
+        src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Wash%20Day.jpg?raw=true"
+        alt="Wash Day original figurative painting by Kenneth J. Lewis Sr."
+      />
+
+      <div class="auction-card-content">
+        <h3>Wash Day</h3>
+
+        <p class="auction-artist">
+          Original painting by Kenneth J. Lewis Sr.
+        </p>
+
+        <div class="auction-details">
+          <p><strong>Size:</strong> 12 × 12 inches</p>
+          <p><strong>Medium:</strong> Acrylic on architectural panel</p>
+          <p><strong>Presentation:</strong> Framed</p>
+          <p><strong>Starting bid:</strong> $150</p>
+        </div>
+
+        <p class="auction-description">
+          Wash Day uses expressive shapes, layered marks, and varying shades of
+          blue to suggest a figure surrounded by the activity of washing. The
+          painting transforms an ordinary household routine into a textured
+          reflection on labor, care, and daily life.
+        </p>
+
+        <div class="starting-bid">
+          <span>Starting Bid</span>
+          <strong>$150</strong>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="auction-rules">
+    <h3>Auction Rules</h3>
+
+    <ol>
+      <li>
+        This auction is open to the public. No membership is required to place
+        a bid.
+      </li>
+
+      <li>
+        Ironing and Wash Day are two separate auction lots. A separate bid must
+        be submitted for each painting you wish to purchase.
+      </li>
+
+      <li>
+        The starting bid for each original painting is $150. Bids below the
+        stated starting amount will not be accepted.
+      </li>
+
+      <li>
+        All bids must be submitted through the official bid form provided on
+        this page.
+      </li>
+
+      <li>
+        Bidders must provide a valid name, email address, telephone number, the
+        painting title, and the amount of their bid.
+      </li>
+
+      <li>
+        A submitted bid is considered a serious offer to purchase the selected
+        artwork. Please do not submit a bid unless you are prepared to complete
+        the purchase.
+      </li>
+
+      <li>
+        The highest valid bid received before the auction deadline will be
+        considered the winning bid for that painting.
+      </li>
+
+      <li>
+        In the event that identical highest bids are received, the bid submitted
+        first will receive priority.
+      </li>
+
+      <li>
+        The auction closes on Wednesday, July 15, 2026 at 6:00 PM Eastern Time.
+        Bids received after the closing time will not be considered.
+      </li>
+
+      <li>
+        The winning bidder will be contacted directly using the email address
+        or telephone number submitted with the bid.
+      </li>
+
+      <li>
+        The winning bidder must complete payment within 24 hours of receiving
+        notification. If payment is not completed, the artwork may be offered
+        to the next highest bidder.
+      </li>
+
+      <li>
+        Applicable shipping, delivery, insurance, and sales tax are additional
+        unless otherwise stated. Local pickup may be arranged through KJL Art
+        Sanctuary Gallery &amp; Studio.
+      </li>
+
+      <li>
+        All artwork is sold as shown and described. All completed auction sales
+        are final.
+      </li>
+
+      <li>
+        KJL Art Sanctuary and artist Kenneth J. Lewis Sr. reserve the right to
+        reject incomplete, fraudulent, or unverifiable bids.
+      </li>
+    </ol>
+  </div>
+
+  <div class="bid-form-section" id="bid-form-section">
+    <h3>Place Your Bid</h3>
+
+    <p>
+      Use the form below to place your bid. Be certain to select the correct
+      painting title and enter a bid of at least $150.
+    </p>
+
+    <iframe
+      class="bid-form-frame"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeNsYgKnysY7e52OmunVI2KColI0s7bU7bhVTkw6IzBw5iDRg/viewform?embedded=true"
+      title="Public art auction bid form"
+      loading="lazy"
+    >
+      Loading…
+    </iframe>
+
+    <p class="form-fallback">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeNsYgKnysY7e52OmunVI2KColI0s7bU7bhVTkw6IzBw5iDRg/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open the Bid Form in a New Window
+      </a>
+    </p>
+  </div>
+
+  <div class="auction-closed-message" id="auction-closed-message">
+    <h3>This Auction Has Ended</h3>
+
+    <p>
+      The public auction for Ironing and Wash Day closed on Wednesday,
+      July 15, 2026 at 6:00 PM Eastern Time.
+    </p>
+
+    <p>
+      Thank you to everyone who participated.
+    </p>
+  </div>
+
+</section>
+
+<!-- KJL COLLECTORS CIRCLE -->
 
 <section class="collectors-circle" id="collectors-circle">
 
@@ -739,6 +1299,46 @@ footer {
 <footer>
   &copy; 2026 Kenneth J. Lewis Sr. | All Rights Reserved
 </footer>
+
+<script>
+const auctionEndTime = new Date("2026-07-15T18:00:00-04:00").getTime();
+
+const countdownElement = document.getElementById("auction-countdown");
+const bidFormSection = document.getElementById("bid-form-section");
+const closedMessage = document.getElementById("auction-closed-message");
+
+function updateAuctionCountdown() {
+  const currentTime = new Date().getTime();
+  const remainingTime = auctionEndTime - currentTime;
+
+  if (remainingTime <= 0) {
+    countdownElement.textContent = "Auction Closed";
+    bidFormSection.style.display = "none";
+    closedMessage.style.display = "block";
+    return;
+  }
+
+  const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor(
+    (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+  );
+  const seconds = Math.floor(
+    (remainingTime % (1000 * 60)) / 1000
+  );
+
+  countdownElement.textContent =
+    days + " days, " +
+    hours + " hours, " +
+    minutes + " minutes, " +
+    seconds + " seconds remaining";
+}
+
+updateAuctionCountdown();
+setInterval(updateAuctionCountdown, 1000);
+</script>
 
 </body>
 </html>

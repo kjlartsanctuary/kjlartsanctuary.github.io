@@ -1,327 +1,485 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KJL Art Sanctuary | Auction</title>
+
+<title>Brooklyn Bridge Art Auction | KJL Art Sanctuary</title>
+
+<meta
+  name="description"
+  content="Bid on Brooklyn Bridge, an original 45 × 60 inch oil painting on canvas by contemporary fine artist Kenneth J. Lewis Sr."
+/>
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Brooklyn Bridge Original Art Auction" />
+<meta
+  property="og:description"
+  content="A 45 × 60 inch original oil painting on canvas by Kenneth J. Lewis Sr. Auction ends Thursday, July 30, 2026 at 6:00 PM Eastern Time."
+/>
+<meta
+  property="og:image"
+  content="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Brooklyn%20Bridge%20Office.png?raw=true"
+/>
+
+<meta name="twitter:card" content="summary_large_image" />
 
 <style>
-  :root{
-    --ink:#1f1f1f;
-    --bg:#ffffff;
-    --card:#fafafa;
-    --line:#d8d8d8;
-    --accent:#b56b27;
-    --soft:#f2f2f2;
-  }
-  *{ box-sizing:border-box; }
-  body{
-    margin:0;
-    font-family:Garamond,"Times New Roman",serif;
-    background:var(--bg);
-    color:var(--ink);
-  }
-  a{ color:inherit; }
-  img{ max-width:100%; height:auto; display:block; }
-
-  header{
-    text-align:center;
-    padding:26px 16px 18px;
-    background:#fff;
-    border-bottom:2px solid var(--ink);
-  }
-  header h1{ margin:0 0 8px; font-size:34px; letter-spacing:.2px; }
-  header p{ margin:0; font-size:16px; letter-spacing:.25px; line-height:1.35; }
-
-  .wrap{
-    max-width:1180px;
-    margin:26px auto 42px;
-    padding:0 16px;
+  :root {
+    --ink: #1f1f1f;
+    --bg: #ffffff;
+    --card: #fafafa;
+    --line: #d8d8d8;
+    --accent: #b56b27;
+    --soft: #f2f2f2;
   }
 
-  .hero{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 18px 16px;
-    box-shadow:0 6px 16px rgba(0,0,0,.08);
-    text-align:center;
+  * {
+    box-sizing: border-box;
   }
 
-  .hero-top{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
+  body {
+    margin: 0;
+    font-family: Garamond, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--ink);
   }
 
-  .pill{
-    display:inline-block;
-    padding:.28rem .70rem;
-    border-radius:999px;
-    background:#000;
-    color:#fff;
-    font-size:12px;
-    letter-spacing:.45px;
-    white-space:nowrap;
-  }
-  .pill.alt{ background:var(--accent); }
-
-  .hero h2{
-    margin:14px 0 6px;
-    font-size:30px;
-    color:var(--accent);
+  a {
+    color: inherit;
   }
 
-  .subnote{
-    margin:6px auto 0;
-    font-size:15px;
-    color:#444;
-    max-width:980px;
-    line-height:1.65;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
-  .timer{
-    margin:14px auto 0;
-    max-width:980px;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:16px 16px 14px;
-    box-shadow:0 6px 16px rgba(0,0,0,.08);
-  }
-  .timer h3{
-    margin:0 0 10px;
-    font-size:20px;
-    text-align:center;
-    letter-spacing:.2px;
-  }
-  .clock{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:8px;
-  }
-  .unit{
-    min-width:120px;
-    padding:12px 10px;
-    border:1px solid var(--line);
-    border-radius:12px;
-    background:var(--soft);
-    text-align:center;
-  }
-  .num{
-    font-size:34px;
-    font-weight:800;
-    letter-spacing:.5px;
-    line-height:1;
-  }
-  .lbl{
-    margin-top:6px;
-    font-size:12px;
-    letter-spacing:.6px;
-    text-transform:uppercase;
-    color:#444;
-  }
-  .ends{
-    margin:10px 0 0;
-    text-align:center;
-    font-size:14px;
-    color:#333;
-    line-height:1.55;
-  }
-  .ended{
-    margin-top:10px;
-    padding:12px 12px;
-    border-radius:12px;
-    border:1px solid #e6cbb0;
-    background:#fff7ef;
-    text-align:center;
-    font-weight:800;
-    color:#7a3f0d;
+  header {
+    padding: 26px 16px 18px;
+    text-align: center;
+    background: #ffffff;
+    border-bottom: 2px solid var(--ink);
   }
 
-  .grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:16px;
-    margin-top:22px;
-  }
-  @media (min-width:880px){
-    .grid{ grid-template-columns:1.15fr .85fr; }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    letter-spacing: 0.2px;
   }
 
-  .rules, .lots, .bid{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px;
-    box-shadow:0 6px 16px rgba(0,0,0,.08);
+  header p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.35;
+    letter-spacing: 0.25px;
   }
 
-  .rules h3, .lots h3, .bid h3{
-    margin:0 0 10px;
-    text-align:center;
-    font-size:22px;
+  .wrap {
+    max-width: 1180px;
+    margin: 26px auto 42px;
+    padding: 0 16px;
   }
 
-  .rules ul{
-    margin:10px auto 0;
-    max-width:980px;
-    padding-left:18px;
-    line-height:1.65;
-    font-size:15.5px;
-    color:#333;
-  }
-  .rules li{ margin:8px 0; }
-
-  .lots h3{ margin-bottom:14px; }
-
-  .lot{
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    background:#fff;
-    margin:0 0 14px;
-  }
-  .lot:last-child{ margin-bottom:0; }
-
-  .lot-media{
-    background:#111;
-  }
-  .lot-media img{
-    width:100%;
-    height:auto;
-    display:block;
-  }
-  .lot-body{
-    padding:14px 14px 12px;
-  }
-  .lot-title{
-    margin:0 0 6px;
-    font-size:22px;
-    color:var(--accent);
-  }
-  .lot-meta{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin:10px 0 10px;
-  }
-  .tag{
-    display:inline-block;
-    padding:.22rem .60rem;
-    border-radius:999px;
-    background:#000;
-    color:#fff;
-    font-size:12px;
-    letter-spacing:.4px;
-    white-space:nowrap;
-  }
-  .tag.alt{ background:var(--accent); }
-  .tag.soft{
-    background:var(--soft);
-    color:#222;
-    border:1px solid var(--line);
-  }
-  .lot-body p{
-    margin:8px 0;
-    font-size:15.5px;
-    line-height:1.65;
-    color:#333;
+  .hero {
+    padding: 18px 18px 16px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
 
-  .bid p{
-    margin:0 0 10px;
-    font-size:15.5px;
-    line-height:1.65;
-    text-align:center;
-    color:#333;
+  .hero-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
 
-  .form-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    max-width:980px;
-    margin:0 auto;
-  }
-  @media (min-width:760px){
-    .form-grid{ grid-template-columns:1fr 1fr; }
-  }
-  label{
-    display:block;
-    margin:10px 0 6px;
-    font-weight:700;
-  }
-  input, select, textarea{
-    width:100%;
-    padding:10px;
-    border:1px solid #bbb;
-    border-radius:10px;
-    font-family:inherit;
-    font-size:16px;
-    background:#fff;
-  }
-  .full{ grid-column:1 / -1; }
-  .hint{
-    font-size:13px;
-    color:#555;
-    margin-top:6px;
-    line-height:1.45;
-  }
-  .btnrow{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:14px;
-  }
-  button, .btn{
-    border:none;
-    border-radius:10px;
-    background:#000;
-    color:#fff;
-    font-weight:800;
-    cursor:pointer;
-    font-size:16px;
-    padding:12px 16px;
-    text-decoration:none;
-    display:inline-block;
-  }
-  button:hover, .btn:hover{ background:#444; }
-  .btn.alt{ background:var(--accent); }
-  .btn.alt:hover{ background:#9f5f23; }
-
-  .error{
-    display:none;
-    margin-top:10px;
-    border:1px solid #d33;
-    background:#fff3f3;
-    color:#7a0d0d;
-    border-radius:12px;
-    padding:10px 12px;
-    font-weight:700;
-    text-align:center;
+  .pill {
+    display: inline-block;
+    padding: 0.28rem 0.7rem;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0.45px;
+    white-space: nowrap;
+    background: #000000;
+    border-radius: 999px;
   }
 
-  .contact{
-    margin-top:14px;
-    text-align:center;
-    color:#444;
-    font-size:14px;
-    line-height:1.55;
+  .pill.alt {
+    background: var(--accent);
   }
 
-  .back-home{ text-align:center; margin-top:18px; }
-  footer{
-    margin:26px 0 20px;
-    text-align:center;
-    font-size:14px;
-    color:#666;
+  .hero h2 {
+    margin: 14px 0 6px;
+    color: var(--accent);
+    font-size: 30px;
+  }
+
+  .subnote {
+    max-width: 980px;
+    margin: 6px auto 0;
+    color: #444444;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .timer {
+    max-width: 980px;
+    margin: 14px auto 0;
+    padding: 16px 16px 14px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .timer h3 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .clock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .unit {
+    min-width: 120px;
+    padding: 12px 10px;
+    text-align: center;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .num {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+
+  .lbl {
+    margin-top: 6px;
+    color: #444444;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .ends {
+    margin: 10px 0 0;
+    color: #333333;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .ended {
+    margin-top: 10px;
+    padding: 12px;
+    color: #7a3f0d;
+    text-align: center;
+    font-weight: 800;
+    background: #fff7ef;
+    border: 1px solid #e6cbb0;
+    border-radius: 12px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  @media (min-width: 880px) {
+    .grid {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+
+  .rules,
+  .lots,
+  .bid {
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .rules h3,
+  .lots h3,
+  .bid h3 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .rules ul {
+    max-width: 980px;
+    margin: 10px auto 0;
+    padding-left: 18px;
+    color: #333333;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  .rules li {
+    margin: 8px 0;
+  }
+
+  .lots h3 {
+    margin-bottom: 14px;
+  }
+
+  .lot {
+    margin: 0 0 14px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+
+  .lot:last-child {
+    margin-bottom: 0;
+  }
+
+  .lot-media {
+    background: #111111;
+  }
+
+  .lot-media img {
+    width: 100%;
+    height: auto;
+  }
+
+  .room-image {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .image-caption {
+    margin: 0;
+    padding: 9px 12px;
+    color: #555555;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.45;
+    background: #f7f7f7;
+  }
+
+  .lot-body {
+    padding: 18px 16px 16px;
+  }
+
+  .lot-title {
+    margin: 0 0 6px;
+    color: var(--accent);
+    font-size: 27px;
+  }
+
+  .artist-name {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .lot-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 14px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.22rem 0.6rem;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    background: #000000;
+    border-radius: 999px;
+  }
+
+  .tag.alt {
+    background: var(--accent);
+  }
+
+  .tag.soft {
+    color: #222222;
+    background: var(--soft);
+    border: 1px solid var(--line);
+  }
+
+  .lot-body p {
+    margin: 10px 0;
+    color: #333333;
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .description-heading {
+    margin: 20px 0 8px;
+    color: var(--accent);
+    font-size: 21px;
+  }
+
+  .reserve-note {
+    margin-top: 16px;
+    padding: 13px;
+    color: #5d3514;
+    font-size: 14px;
+    line-height: 1.55;
+    background: #fff7ef;
+    border: 1px solid #e6cbb0;
+    border-radius: 10px;
+  }
+
+  .bid p {
+    margin: 0 0 10px;
+    color: #333333;
+    text-align: center;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 760px) {
+    .form-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 6px;
+    font-weight: 700;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ffffff;
+    border: 1px solid #bbbbbb;
+    border-radius: 10px;
+  }
+
+  .full {
+    grid-column: 1 / -1;
+  }
+
+  .hint {
+    margin-top: 6px;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .btnrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+  button,
+  .btn {
+    display: inline-block;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    background: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  button:hover,
+  .btn:hover {
+    background: #444444;
+  }
+
+  .btn.alt {
+    background: var(--accent);
+  }
+
+  .btn.alt:hover {
+    background: #9f5f23;
+  }
+
+  .error {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 12px;
+    color: #7a0d0d;
+    text-align: center;
+    font-weight: 700;
+    background: #fff3f3;
+    border: 1px solid #dd3333;
+    border-radius: 12px;
+  }
+
+  .contact {
+    margin-top: 14px;
+    color: #444444;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .back-home {
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  footer {
+    margin: 26px 0 20px;
+    color: #666666;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  @media (max-width: 620px) {
+    header h1 {
+      font-size: 28px;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+    }
+
+    .unit {
+      min-width: 44%;
+    }
+
+    .num {
+      font-size: 29px;
+    }
   }
 </style>
 </head>
@@ -335,19 +493,24 @@
 
 <main class="wrap">
 
-  <!-- HERO / STATUS -->
   <section class="hero">
     <div class="hero-top">
       <span class="pill">Private Bidding</span>
       <span class="pill alt" id="auctionStatusPill">Auction Open Now</span>
+      <span class="pill">Opening Bid: $1,399</span>
       <span class="pill">Bid Increments: $10</span>
+      <span class="pill">Reserve Auction</span>
     </div>
 
-    <h2>Live Auction — Now Through Thursday, March 5, 2026 (6:00 PM ET)</h2>
+    <h2>
+      Brooklyn Bridge Auction — July 27 Through July 30, 2026
+    </h2>
 
     <p class="subnote">
-      Bidding is open immediately and remains open until the countdown reaches zero.
-      Bids are private and submitted directly to the artist. Winning bidders are contacted directly.
+      Bidding is open immediately and continues until Thursday, July 30, 2026
+      at 6:00 PM Eastern Time. Bids are private and submitted directly to the
+      artist. This auction has an undisclosed reserve. The artwork will only be
+      sold if the reserve is met.
     </p>
 
     <div class="timer" aria-live="polite">
@@ -358,14 +521,17 @@
           <div class="num" id="d">00</div>
           <div class="lbl">Days</div>
         </div>
+
         <div class="unit">
           <div class="num" id="h">00</div>
           <div class="lbl">Hours</div>
         </div>
+
         <div class="unit">
           <div class="num" id="m">00</div>
           <div class="lbl">Minutes</div>
         </div>
+
         <div class="unit">
           <div class="num" id="s">00</div>
           <div class="lbl">Seconds</div>
@@ -373,17 +539,25 @@
       </div>
 
       <p class="ends" id="endsText">
-        Auction ends: <strong>Thursday, March 5, 2026 at 6:00 PM (ET)</strong>
+        Auction ends:
+        <strong>Thursday, July 30, 2026 at 6:00 PM Eastern Time</strong>
       </p>
 
       <div class="ended" id="endedBanner" style="display:none;">
-        Auction Closed — Thank you for bidding. If you placed a bid, you will be contacted directly.
+        Auction Closed — Thank you for bidding. The winning bidder will be
+        contacted directly if the reserve was met.
       </div>
     </div>
 
     <div class="btnrow" style="margin-top:16px;">
       <a class="btn" href="index.html">Back to Home</a>
-      <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com">Email a Bid</a>
+
+      <a
+        class="btn alt"
+        href="mailto:kjlartsanctuary@gmail.com?subject=Brooklyn%20Bridge%20Auction%20Bid"
+      >
+        Email a Bid
+      </a>
     </div>
 
     <p class="contact">
@@ -393,104 +567,268 @@
 
   <section class="grid">
 
-    <!-- LOTS -->
     <section class="lots">
-      <h3>Lot</h3>
+      <h3>Featured Auction Lot</h3>
 
-      <!-- LOT 1 (NEW AUCTION PIECE) -->
-      <article class="lot" id="lot-amber-street-afternoon">
-        <div class="lot-media">
-          <img src="images/Amber%20Street%20Afternoon.jpg" alt="Amber Street Afternoon original artwork by Kenneth J. Lewis Sr.">
+      <article class="lot" id="lot-brooklyn-bridge">
+
+        <div class="lot-media room-image">
+          <img
+            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Brooklyn%20Bridge%20Office.png?raw=true"
+            alt="Brooklyn Bridge oil painting displayed to scale in an upscale office"
+          />
+
+          <p class="image-caption">
+            Room presentation showing the approximate scale of the 45 × 60 inch
+            painting.
+          </p>
         </div>
+
+        <div class="lot-media">
+          <img
+            src="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Brooklyn%20Bridge%20%2045x59.5in%20oil%20canvas.jpg?raw=true"
+            alt="Brooklyn Bridge original oil painting by Kenneth J. Lewis Sr."
+          />
+
+          <p class="image-caption">
+            Original artwork shown above.
+          </p>
+        </div>
+
         <div class="lot-body">
-          <h4 class="lot-title">Amber Street Afternoon</h4>
+          <h4 class="lot-title">Brooklyn Bridge</h4>
+
+          <p class="artist-name">
+            Original painting by Kenneth J. Lewis Sr.
+          </p>
 
           <div class="lot-meta">
-            <span class="tag alt">Opening Bid: $799</span>
+            <span class="tag alt">Opening Bid: $1,399</span>
             <span class="tag">Increment: $10</span>
+            <span class="tag">Reserve Auction</span>
+            <span class="tag soft">45 × 60 Inches</span>
+            <span class="tag soft">Oil on Canvas</span>
             <span class="tag soft">Original Artwork</span>
             <span class="tag soft">Signed</span>
           </div>
 
+          <h5 class="description-heading">About the Painting</h5>
+
           <p>
-            Buildings in bold, sun-warmed tones rise above a street kissed by light. A lone car sits as if waiting for its next chapter.
-            The air feels thick with calm, the kind that only arrives when the day begins to fold into evening.
+            The Brooklyn Bridge has long stood as one of New York City's most
+            enduring symbols of ambition, resilience, and connection. In this
+            expressive interpretation, Kenneth J. Lewis Sr. captures more than
+            the architectural landmark itself—he conveys its energy, rhythm,
+            and presence through bold brushwork, layered texture, and vibrant
+            color.
           </p>
+
+          <p>
+            Rather than striving for photographic precision, the painting
+            embraces movement and emotion. Rich blues and turquoise waters
+            contrast with the warm golden tones of the bridge's stone towers,
+            while expressive marks and visible brushstrokes create a sense of
+            atmosphere and life. The surrounding skyline emerges through
+            gestural layers of paint, allowing the bridge to remain the
+            commanding focal point.
+          </p>
+
+          <p>
+            Executed in oil on canvas, the painting celebrates the tactile
+            qualities of the medium. Thick passages of paint, varied textures,
+            and confident application invite the viewer to experience the work
+            both from a distance and up close, where each brushstroke
+            contributes to the overall composition.
+          </p>
+
+          <p>
+            This original work reflects Kenneth J. Lewis Sr.'s distinctive
+            contemporary style—balancing recognizable architecture with
+            expressive abstraction to create a painting that is both timeless
+            and deeply personal. <em>Brooklyn Bridge</em> is a statement piece
+            designed for collectors who appreciate original fine art, strong
+            composition, and the enduring character of one of America's most
+            iconic landmarks.
+          </p>
+
+          <div class="reserve-note">
+            <strong>Reserve Auction:</strong> This artwork is being offered
+            subject to an undisclosed reserve price. The highest bid will only
+            result in a sale if the reserve has been met. The artist is not
+            required to disclose the reserve amount.
+          </div>
         </div>
       </article>
-
     </section>
 
-    <!-- RULES + BID FORM -->
     <aside>
 
       <section class="rules">
         <h3>Auction Rules</h3>
+
         <ul>
-          <li><strong>Auction is open now</strong> and closes at <strong>6:00 PM (ET)</strong> on <strong>Thursday, March 5, 2026</strong>.</li>
-          <li><strong>Bids are in $10 increments</strong> (example: $799, $809, $819…).</li>
-          <li><strong>Private bidding:</strong> bids are submitted directly to the artist by email (or by phone/text if you prefer).</li>
-          <li><strong>Winning bid:</strong> highest valid bid received by the deadline wins. In the event of a tie, the earliest received timestamp wins.</li>
-          <li><strong>Confirmation:</strong> the winning bidder will be contacted directly after the auction closes for payment and pickup/shipping.</li>
-          <li><strong>Payment &amp; delivery:</strong> local pickup in Ewing, NJ is available. Shipping is available at buyer’s expense unless otherwise stated.</li>
-          <li><strong>Authenticity:</strong> the original work is sold with artist confirmation / provenance upon request.</li>
-          <li><strong>Integrity:</strong> the artist reserves the right to reject invalid bids, suspected fraudulent bids, or bids that do not follow the rules.</li>
+          <li>
+            <strong>Auction opens Monday, July 27, 2026</strong> and closes at
+            <strong>6:00 PM Eastern Time</strong> on
+            <strong>Thursday, July 30, 2026</strong>.
+          </li>
+
+          <li>
+            The opening bid for <strong>Brooklyn Bridge</strong> is
+            <strong>$1,399</strong>.
+          </li>
+
+          <li>
+            Bids must increase in <strong>$10 increments</strong>. Valid bid
+            amounts include $1,399, $1,409, $1,419, $1,429, and continuing
+            upward in $10 increments.
+          </li>
+
+          <li>
+            <strong>This is a reserve auction.</strong> The artwork will only
+            be sold if the highest valid bid meets or exceeds the undisclosed
+            reserve price.
+          </li>
+
+          <li>
+            The reserve amount is private and will not be disclosed during the
+            auction.
+          </li>
+
+          <li>
+            <strong>Private bidding:</strong> bids are submitted directly to
+            the artist by email, telephone, or text message.
+          </li>
+
+          <li>
+            The highest valid bid received before the deadline will be
+            considered the leading bid. If identical bids are received, the
+            earliest received timestamp will receive priority.
+          </li>
+
+          <li>
+            The winning bidder will be contacted directly after the auction
+            closes, provided the reserve has been met.
+          </li>
+
+          <li>
+            The winning bidder must complete payment within 24 hours of
+            receiving notification unless another arrangement is approved by
+            the artist.
+          </li>
+
+          <li>
+            Local pickup is available through KJL Art Sanctuary Gallery &amp;
+            Studio in Ewing, New Jersey.
+          </li>
+
+          <li>
+            Shipping, delivery, handling, insurance, and applicable sales tax
+            are additional unless otherwise stated.
+          </li>
+
+          <li>
+            The artwork is sold as shown and described. All completed auction
+            sales are final.
+          </li>
+
+          <li>
+            Artist Kenneth J. Lewis Sr. and KJL Art Sanctuary reserve the right
+            to reject incomplete, fraudulent, unverifiable, or improperly
+            submitted bids.
+          </li>
         </ul>
       </section>
 
-      <section class="bid" style="margin-top:16px;">
-        <h3>Submit a Bid (Private)</h3>
+      <section class="bid" id="bidSection" style="margin-top:16px;">
+        <h3>Submit a Private Bid</h3>
+
         <p>
-          Fill this out and click <strong>Send Bid</strong>. It will open your email with the bid details pre-filled.
-          You can also call/text <strong>(609) 372-6022</strong>.
+          Complete the form and click <strong>Send Bid</strong>. Your email
+          application will open with the bid information already entered.
+          You may also call or text <strong>(609) 372-6022</strong>.
         </p>
 
         <div class="error" id="formError"></div>
 
         <form id="bidForm">
           <div class="form-grid">
+
             <div>
               <label for="bidName">Full Name</label>
-              <input type="text" id="bidName" required>
+              <input type="text" id="bidName" required />
             </div>
 
             <div>
-              <label for="bidPhone">Phone (recommended)</label>
-              <input type="tel" id="bidPhone" placeholder="(optional)">
+              <label for="bidPhone">Telephone Number</label>
+              <input
+                type="tel"
+                id="bidPhone"
+                placeholder="Recommended"
+              />
             </div>
 
             <div class="full">
               <label for="bidEmail">Email Address</label>
-              <input type="email" id="bidEmail" required>
+              <input type="email" id="bidEmail" required />
             </div>
 
             <div>
-              <label for="bidLot">Select Lot</label>
+              <label for="bidLot">Auction Lot</label>
+
               <select id="bidLot" required>
-                <option value="Amber Street Afternoon|799" selected>Amber Street Afternoon (Opening $799)</option>
+                <option value="Brooklyn Bridge|1399" selected>
+                  Brooklyn Bridge — Opening Bid $1,399
+                </option>
               </select>
-              <div class="hint">Opening bid: Amber Street Afternoon = $799</div>
+
+              <div class="hint">
+                Original 45 × 60 inch oil painting on canvas.
+              </div>
             </div>
 
             <div>
-              <label for="bidAmount">Your Bid (USD)</label>
-              <input type="number" id="bidAmount" min="0" step="1" placeholder="Example: 809" required>
-              <div class="hint">Must be the opening bid or higher, in $10 increments.</div>
+              <label for="bidAmount">Your Bid in USD</label>
+
+              <input
+                type="number"
+                id="bidAmount"
+                min="1399"
+                step="10"
+                placeholder="Example: 1409"
+                required
+              />
+
+              <div class="hint">
+                Bid must be $1,399 or higher and follow the $10 increment.
+              </div>
             </div>
 
             <div class="full">
-              <label for="bidNotes">Notes (optional)</label>
-              <textarea id="bidNotes" rows="4" placeholder="Optional: pickup/shipping preference, questions, etc."></textarea>
+              <label for="bidNotes">Notes</label>
+
+              <textarea
+                id="bidNotes"
+                rows="4"
+                placeholder="Optional: include pickup or shipping preference, questions, or other information."
+              ></textarea>
             </div>
+
           </div>
 
           <div class="btnrow">
             <button type="submit">Send Bid</button>
-            <a class="btn alt" href="mailto:kjlartsanctuary@gmail.com?subject=KJL%20Auction%20Bid">Email Without Form</a>
+
+            <a
+              class="btn alt"
+              href="mailto:kjlartsanctuary@gmail.com?subject=Brooklyn%20Bridge%20Auction%20Bid"
+            >
+              Email Without Form
+            </a>
           </div>
 
           <div class="contact">
-            Email: kjlartsanctuary@gmail.com<br>
+            Email: kjlartsanctuary@gmail.com<br />
             Phone/Text: (609) 372-6022
           </div>
         </form>
@@ -504,82 +842,124 @@
   </div>
 
   <footer>
-    &copy; 2026 Kenneth J. Lewis Sr. | All rights reserved.
+    &copy; 2026 Kenneth J. Lewis Sr. | All Rights Reserved
   </footer>
 
 </main>
 
 <script>
-  // Auction end time: Thursday, March 5, 2026 at 6:00 PM Eastern Time
-  // Explicit offset avoids browser timezone confusion.
-  const AUCTION_END_ISO = "2026-03-05T18:00:00-05:00";
+  /*
+    Auction ends Thursday, July 30, 2026 at 6:00 PM Eastern Time.
+
+    July is Eastern Daylight Time, which uses UTC-04:00.
+    The explicit offset prevents browser timezone confusion.
+  */
+
+  const AUCTION_END_ISO = "2026-07-30T18:00:00-04:00";
   const endTime = new Date(AUCTION_END_ISO).getTime();
 
   const elD = document.getElementById("d");
   const elH = document.getElementById("h");
   const elM = document.getElementById("m");
   const elS = document.getElementById("s");
+
   const endedBanner = document.getElementById("endedBanner");
   const statusPill = document.getElementById("auctionStatusPill");
+  const bidSection = document.getElementById("bidSection");
+  const bidForm = document.getElementById("bidForm");
 
-  function pad2(n){ return String(n).padStart(2,"0"); }
+  let countdownInterval;
 
-  function tick(){
+  function pad2(number) {
+    return String(number).padStart(2, "0");
+  }
+
+  function closeAuctionDisplay() {
+    elD.textContent = "00";
+    elH.textContent = "00";
+    elM.textContent = "00";
+    elS.textContent = "00";
+
+    endedBanner.style.display = "block";
+    statusPill.textContent = "Auction Closed";
+    statusPill.classList.remove("alt");
+    statusPill.style.background = "#333333";
+
+    if (bidForm) {
+      bidForm.style.display = "none";
+    }
+
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+    }
+  }
+
+  function tick() {
     const now = Date.now();
-    let diff = endTime - now;
+    const difference = endTime - now;
 
-    if(diff <= 0){
-      elD.textContent = "00";
-      elH.textContent = "00";
-      elM.textContent = "00";
-      elS.textContent = "00";
-      endedBanner.style.display = "block";
-      statusPill.textContent = "Auction Closed";
-      statusPill.classList.remove("alt");
-      statusPill.style.background = "#333";
+    if (difference <= 0) {
+      closeAuctionDisplay();
       return;
     }
 
-    const sec = Math.floor(diff / 1000);
-    const days = Math.floor(sec / (3600 * 24));
-    const hours = Math.floor((sec % (3600 * 24)) / 3600);
-    const mins = Math.floor((sec % 3600) / 60);
-    const secs = sec % 60;
+    const totalSeconds = Math.floor(difference / 1000);
+
+    const days = Math.floor(totalSeconds / (3600 * 24));
+
+    const hours = Math.floor(
+      (totalSeconds % (3600 * 24)) / 3600
+    );
+
+    const minutes = Math.floor(
+      (totalSeconds % 3600) / 60
+    );
+
+    const seconds = totalSeconds % 60;
 
     elD.textContent = pad2(days);
     elH.textContent = pad2(hours);
-    elM.textContent = pad2(mins);
-    elS.textContent = pad2(secs);
+    elM.textContent = pad2(minutes);
+    elS.textContent = pad2(seconds);
   }
 
   tick();
-  setInterval(tick, 1000);
+  countdownInterval = setInterval(tick, 1000);
 
-  // Bid form -> opens email with prefilled bid details
   const form = document.getElementById("bidForm");
-  const err = document.getElementById("formError");
+  const errorBox = document.getElementById("formError");
 
-  function showError(msg){
-    err.textContent = msg;
-    err.style.display = "block";
-    err.scrollIntoView({behavior:"smooth", block:"center"});
-  }
-  function clearError(){
-    err.textContent = "";
-    err.style.display = "none";
-  }
+  function showError(message) {
+    errorBox.textContent = message;
+    errorBox.style.display = "block";
 
-  function isValidIncrement(opening, bid){
-    if(bid < opening) return false;
-    return ((bid - opening) % 10) === 0;
+    errorBox.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
   }
 
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
+  function clearError() {
+    errorBox.textContent = "";
+    errorBox.style.display = "none";
+  }
+
+  function isValidIncrement(openingBid, submittedBid) {
+    if (submittedBid < openingBid) {
+      return false;
+    }
+
+    return ((submittedBid - openingBid) % 10) === 0;
+  }
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
     clearError();
 
-    if(Date.now() >= endTime){
-      showError("Auction is closed. If you have questions, please email or call the studio.");
+    if (Date.now() >= endTime) {
+      showError(
+        "This auction is closed. Please contact the studio if you have questions."
+      );
       return;
     }
 
@@ -590,47 +970,57 @@
     const bidRaw = document.getElementById("bidAmount").value;
     const notes = document.getElementById("bidNotes").value.trim();
 
-    if(!name || !email || !lotValue || !bidRaw){
-      showError("Please complete name, email, lot selection, and bid amount.");
+    if (!name || !email || !lotValue || !bidRaw) {
+      showError(
+        "Please complete your name, email address, auction lot, and bid amount."
+      );
       return;
     }
 
     const parts = lotValue.split("|");
     const lotName = parts[0];
-    const opening = parseInt(parts[1], 10);
-    const bid = parseInt(bidRaw, 10);
+    const openingBid = parseInt(parts[1], 10);
+    const submittedBid = parseInt(bidRaw, 10);
 
-    if(Number.isNaN(bid) || bid <= 0){
+    if (Number.isNaN(submittedBid) || submittedBid <= 0) {
       showError("Please enter a valid bid amount.");
       return;
     }
 
-    if(!isValidIncrement(opening, bid)){
-      showError(`Bid must be $${opening} or higher, in $10 increments (example: $${opening}, $${opening+10}, $${opening+20}...).`);
+    if (!isValidIncrement(openingBid, submittedBid)) {
+      showError(
+        `Your bid must be $${openingBid.toLocaleString("en-US")} or higher and follow the $10 increment. Valid examples include $${openingBid.toLocaleString("en-US")}, $${(openingBid + 10).toLocaleString("en-US")}, and $${(openingBid + 20).toLocaleString("en-US")}.`
+      );
       return;
     }
 
-    const subject = encodeURIComponent(`KJL Auction Bid — ${lotName} — $${bid}`);
+    const subject = encodeURIComponent(
+      `KJL Auction Bid — ${lotName} — $${submittedBid.toLocaleString("en-US")}`
+    );
+
     const bodyLines = [
-      "KJL Art Sanctuary Auction Bid",
-      "----------------------------",
-      `Lot: ${lotName}`,
-      `Bid Amount: $${bid}`,
+      "KJL Art Sanctuary Private Auction Bid",
+      "-------------------------------------",
+      "",
+      `Artwork: ${lotName}`,
+      `Bid Amount: $${submittedBid.toLocaleString("en-US")}`,
+      "Auction Type: Reserve Auction",
       "",
       `Bidder Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone ? phone : "(not provided)"}`,
+      `Email Address: ${email}`,
+      `Telephone Number: ${phone || "(not provided)"}`,
       "",
-      `Submitted: ${new Date().toLocaleString()}`,
+      `Submitted: ${new Date().toLocaleString("en-US")}`,
       "",
-      notes ? `Notes: ${notes}` : "Notes: (none)"
+      notes ? `Notes: ${notes}` : "Notes: None"
     ];
 
     const body = encodeURIComponent(bodyLines.join("\n"));
-    window.location.href = `mailto:kjlartsanctuary@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href =
+      `mailto:kjlartsanctuary@gmail.com?subject=${subject}&body=${body}`;
   });
 </script>
 
 </body>
 </html>
-```

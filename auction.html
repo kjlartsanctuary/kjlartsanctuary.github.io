@@ -497,8 +497,8 @@
     <div class="hero-top">
       <span class="pill">Private Bidding</span>
       <span class="pill alt" id="auctionStatusPill">Auction Open Now</span>
-      <span class="pill">Opening Bid: $1,399</span>
-      <span class="pill">Bid Increments: $10</span>
+      <span class="pill">Opening Bid: $1,999</span>
+      <span class="pill">Bid Increments: $100</span>
       <span class="pill">Reserve Auction</span>
     </div>
 
@@ -603,8 +603,8 @@
           </p>
 
           <div class="lot-meta">
-            <span class="tag alt">Opening Bid: $1,399</span>
-            <span class="tag">Increment: $10</span>
+            <span class="tag alt">Opening Bid: $1,999</span>
+            <span class="tag">Increment: $100</span>
             <span class="tag">Reserve Auction</span>
             <span class="tag soft">45 × 60 Inches</span>
             <span class="tag soft">Oil on Canvas</span>
@@ -675,13 +675,13 @@
 
           <li>
             The opening bid for <strong>Brooklyn Bridge</strong> is
-            <strong>$1,399</strong>.
+            <strong>$1,999</strong>.
           </li>
 
           <li>
-            Bids must increase in <strong>$10 increments</strong>. Valid bid
-            amounts include $1,399, $1,409, $1,419, $1,429, and continuing
-            upward in $10 increments.
+            Bids must increase in <strong>$100 increments</strong>. Valid bid
+            amounts include $1,999, $2,099, $2,199, $2,299, and continuing
+            upward in $100 increments.
           </li>
 
           <li>
@@ -777,8 +777,8 @@
               <label for="bidLot">Auction Lot</label>
 
               <select id="bidLot" required>
-                <option value="Brooklyn Bridge|1399" selected>
-                  Brooklyn Bridge — Opening Bid $1,399
+                <option value="Brooklyn Bridge|1999" selected>
+                  Brooklyn Bridge — Opening Bid $1,999
                 </option>
               </select>
 
@@ -793,14 +793,14 @@
               <input
                 type="number"
                 id="bidAmount"
-                min="1399"
-                step="10"
-                placeholder="Example: 1409"
+                min="1999"
+                step="100"
+                placeholder="Example: 2099"
                 required
               />
 
               <div class="hint">
-                Bid must be $1,399 or higher and follow the $10 increment.
+                Bid must be $1,999 or higher and follow the $100 increment.
               </div>
             </div>
 
@@ -865,7 +865,6 @@
 
   const endedBanner = document.getElementById("endedBanner");
   const statusPill = document.getElementById("auctionStatusPill");
-  const bidSection = document.getElementById("bidSection");
   const bidForm = document.getElementById("bidForm");
 
   let countdownInterval;
@@ -949,7 +948,7 @@
       return false;
     }
 
-    return ((submittedBid - openingBid) % 10) === 0;
+    return ((submittedBid - openingBid) % 100) === 0;
   }
 
   form.addEventListener("submit", function(event) {
@@ -989,7 +988,7 @@
 
     if (!isValidIncrement(openingBid, submittedBid)) {
       showError(
-        `Your bid must be $${openingBid.toLocaleString("en-US")} or higher and follow the $10 increment. Valid examples include $${openingBid.toLocaleString("en-US")}, $${(openingBid + 10).toLocaleString("en-US")}, and $${(openingBid + 20).toLocaleString("en-US")}.`
+        `Your bid must be $${openingBid.toLocaleString("en-US")} or higher and follow the $100 increment. Valid examples include $${openingBid.toLocaleString("en-US")}, $${(openingBid + 100).toLocaleString("en-US")}, and $${(openingBid + 200).toLocaleString("en-US")}.`
       );
       return;
     }

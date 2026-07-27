@@ -1,21 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Exhibitions | KJL Art Sanctuary</title>
 
-  <meta name="description" content="View current, upcoming, and past exhibitions featuring artist Kenneth J. Lewis Sr, including museum, gallery, and solo exhibitions in New Jersey and New York." />
-  <link rel="canonical" href="https://kjlartsanctuary.com/exhibitions.html" />
+  <meta
+    name="description"
+    content="View current, upcoming, and past exhibitions featuring artist Kenneth J. Lewis Sr., including Bound for Promise at KJL Art Sanctuary Gallery and Studio."
+  />
+
+  <link
+    rel="canonical"
+    href="https://kjlartsanctuary.com/exhibitions.html"
+  />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Exhibitions | Kenneth J. Lewis Sr" />
-  <meta property="og:description" content="Explore current, upcoming, and past exhibitions featuring Kenneth J. Lewis Sr." />
-  <meta property="og:url" content="https://kjlartsanctuary.com/exhibitions.html" />
-  <meta property="og:image" content="https://kjlartsanctuary.com/images/Luggage06.jpg" />
+  <meta
+    property="og:title"
+    content="Exhibitions | Kenneth J. Lewis Sr."
+  />
+  <meta
+    property="og:description"
+    content="Explore current, upcoming, and past exhibitions featuring Kenneth J. Lewis Sr., including Bound for Promise."
+  />
+  <meta
+    property="og:url"
+    content="https://kjlartsanctuary.com/exhibitions.html"
+  />
+  <meta
+    property="og:image"
+    content="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bound%20for%20promise%20september.png"
+  />
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Garamond, "Times New Roman", serif;
       background-color: #f4efe6;
@@ -59,7 +82,7 @@
       border: 1px solid #d9cdbd;
       border-radius: 10px;
       padding: 18px 18px 16px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     }
 
     .exhibition-title {
@@ -75,14 +98,139 @@
     }
 
     .highlight {
-      border: 1px solid #cfae7b;
-      background: #fff7eb;
+      border: 2px solid #c39a5b;
+      background: #fffaf1;
+      padding: 24px;
+    }
+
+    .featured-title {
+      text-align: center;
+      font-size: 30px;
+      color: #7b1f1f;
+      margin: 0 0 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .featured-subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #173d69;
+      font-style: italic;
+      margin: 0 0 22px;
+    }
+
+    .flyer-wrap {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      text-align: center;
+    }
+
+    .flyer-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #cbbda9;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .event-information {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .event-information strong {
+      color: #7b1f1f;
+    }
+
+    .event-date-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 760px;
+      margin: 22px auto;
+    }
+
+    .event-date-card {
+      background: #fff;
+      border: 1px solid #d4b581;
+      border-radius: 8px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .event-date-card .day {
+      display: block;
+      color: #7b1f1f;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .event-date-card .date {
+      display: block;
+      font-size: 23px;
+      font-weight: bold;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .event-date-card .time {
+      display: block;
+      color: #173d69;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .location-box {
+      max-width: 760px;
+      margin: 22px auto 12px;
+      padding: 18px;
+      background: #173d69;
+      color: #fff;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .location-box strong {
+      display: block;
+      color: #f2d28c;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .feature-list {
+      max-width: 650px;
+      margin: 22px auto;
+      text-align: left;
+      padding-left: 24px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .preorder-box {
+      max-width: 760px;
+      margin: 24px auto 0;
+      padding: 20px;
+      background: #f8edd6;
+      border: 1px solid #cda664;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .preorder-box strong {
+      color: #7b1f1f;
+      font-size: 20px;
     }
 
     .btn {
       display: inline-block;
       margin-top: 12px;
-      padding: 10px 16px;
+      padding: 11px 18px;
       background: #b56b27;
       color: #fff;
       text-decoration: none;
@@ -93,6 +241,7 @@
 
     .btn:hover {
       background: #9f5f23;
+      color: #fff;
     }
 
     .note {
@@ -127,6 +276,20 @@
       color: #555;
     }
 
+    @media (max-width: 700px) {
+      .event-date-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight {
+        padding: 16px;
+      }
+
+      .featured-title {
+        font-size: 25px;
+      }
+    }
+
     @media (max-width: 640px) {
       h1 {
         font-size: 34px;
@@ -139,21 +302,32 @@
       .exhibition-title {
         font-size: 20px;
       }
+
+      .event-information {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="page-wrap">
+
     <h1>Exhibitions</h1>
 
     <div class="intro">
-      Explore current, upcoming, and past exhibitions featuring the work of Kenneth J. Lewis Sr in museums, galleries, public spaces, and special venues.
+      Explore current, upcoming, and past exhibitions featuring the work of
+      Kenneth J. Lewis Sr. in museums, galleries, public spaces, and special
+      venues.
     </div>
 
     <h2>Current Exhibitions</h2>
 
     <div class="exhibition">
-      <div class="exhibition-title">Hamilton Township Library Rotating Exhibition</div>
+      <div class="exhibition-title">
+        Hamilton Township Library Rotating Exhibition
+      </div>
+
       <div class="exhibition-details">
         Hamilton Township Library, Hamilton, NJ<br>
         Ongoing rotating display updated every six months<br>
@@ -164,41 +338,137 @@
     <h2>Upcoming Exhibitions</h2>
 
     <div class="exhibition highlight">
-      <div class="exhibition-title">More Exhibitions to Be Announced</div>
-      <div class="exhibition-details">
-        Follow for upcoming exhibitions, museum presentations, gallery events, and special announcements featuring the work of Kenneth J. Lewis Sr.
-        <br>
-        To receive exhibition updates, send your email address to:
-        <br>
-        <a href="mailto:kjlartsanctuary@gmail.com?subject=Exhibition%20Updates%20Request">kjlartsanctuary@gmail.com</a>
+
+      <h3 class="featured-title">
+        Bound for Promise
+      </h3>
+
+      <div class="featured-subtitle">
+        Exhibition, Opening Reception, and Official Book Release
       </div>
+
+      <div class="flyer-wrap">
+        <img
+          class="flyer-image"
+          src="https://raw.githubusercontent.com/kjlartsanctuary/kjlartsanctuary.github.io/main/images/bound%20for%20promise%20september.png"
+          alt="Bound for Promise exhibition and book release flyer featuring artwork by Kenneth J. Lewis Sr."
+        />
+      </div>
+
+      <div class="event-information">
+        <p>
+          Join artist <strong>Kenneth J. Lewis Sr.</strong> for the opening
+          weekend of <em>Bound for Promise: Stories of Faith, Discipline,
+          Hope, and Becoming</em>.
+        </p>
+
+        <p>
+          The exhibition presents all 17 original paintings from the
+          <em>Bound for Promise</em> series together for the first time and
+          celebrates the official release of the signed and numbered
+          Collector Edition hardcover book.
+        </p>
+      </div>
+
+      <div class="event-date-grid">
+
+        <div class="event-date-card">
+          <span class="day">Saturday</span>
+          <span class="date">September 12, 2026</span>
+          <span class="time">11:00 AM – 7:00 PM</span>
+        </div>
+
+        <div class="event-date-card">
+          <span class="day">Sunday</span>
+          <span class="date">September 13, 2026</span>
+          <span class="time">12:00 PM – 5:00 PM</span>
+        </div>
+
+      </div>
+
+      <div class="location-box">
+        <strong>KJL Art Sanctuary Gallery &amp; Studio</strong>
+        310 4th Street<br>
+        Ewing, NJ 08638
+      </div>
+
+      <ul class="feature-list">
+        <li>All 17 original paintings on display</li>
+        <li>Official release of the Collector Edition hardcover book</li>
+        <li>Meet the artist</li>
+        <li>Artist talk and book signing</li>
+        <li>Limited edition prints available</li>
+        <li>Original artwork available for purchase</li>
+      </ul>
+
+      <div class="preorder-box">
+        <strong>Collector Edition Preorder</strong>
+
+        <p>
+          The signed and numbered Collector Edition hardcover book is
+          available for the special preorder price of <strong>$79 through
+          August 31, 2026</strong>.
+        </p>
+
+        <p>
+          Beginning September 1, the price will increase to
+          <strong>$109</strong>.
+        </p>
+
+        <a
+          class="btn"
+          href="https://square.link/u/gN4UOVIe"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Preorder Bound for Promise
+        </a>
+      </div>
+
     </div>
 
     <h2>Past Exhibitions</h2>
 
     <div class="exhibition">
-      <div class="exhibition-title">African American Abstractions</div>
+      <div class="exhibition-title">
+        African American Abstractions
+      </div>
+
       <div class="exhibition-details">
         Trenton City Museum at Ellarslie, Trenton, NJ<br>
         March 27, 2026 – May 31, 2026 — Group<br>
-        Featuring James Dupree, Femi Johnson, and Kenneth J. Lewis Sr<br>
+        Featuring James Dupree, Femi Johnson, and Kenneth J. Lewis Sr.<br>
         Opening Reception: Saturday, March 28, 2026 • 6:00 PM – 8:00 PM
         <br>
-        <a class="btn" href="https://ellarslie.org/exhibition/african-american-abstractions/" target="_blank" rel="noopener noreferrer">View Exhibition Details</a>
+
+        <a
+          class="btn"
+          href="https://ellarslie.org/exhibition/african-american-abstractions/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Exhibition Details
+        </a>
       </div>
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Multitudes: The Art of Kenneth J. Lewis Sr.</div>
+      <div class="exhibition-title">
+        Multitudes: The Art of Kenneth J. Lewis Sr.
+      </div>
+
       <div class="exhibition-details">
         Capital Health Art Gallery, Hopewell, NJ<br>
-        September 08, 2025 – January 05, 2026 — Solo<br>
-        Artist Reception: Wednesday, October 08, 2025 • 5:00 PM – 6:30 PM
+        September 8, 2025 – January 5, 2026 — Solo<br>
+        Artist Reception: Wednesday, October 8, 2025 • 5:00 PM – 6:30 PM
       </div>
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Eclectic Expressions</div>
+      <div class="exhibition-title">
+        Eclectic Expressions
+      </div>
+
       <div class="exhibition-details">
         Ewing Municipal Building, Ewing, NJ<br>
         November 18, 2023 – January 14, 2024 — Solo
@@ -206,7 +476,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Inside Out Exhibition</div>
+      <div class="exhibition-title">
+        Inside Out Exhibition
+      </div>
+
       <div class="exhibition-details">
         Arts Council of Princeton, Princeton, NJ<br>
         2023 — Group
@@ -214,15 +487,28 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Patterns Exhibition</div>
+      <div class="exhibition-title">
+        Patterns Exhibition
+      </div>
+
       <div class="exhibition-details">
-        <a href="https://chashama.org/event/patterns/" target="_blank" rel="noopener noreferrer">Chashama</a>, New York, NY<br>
+        <a
+          href="https://chashama.org/event/patterns/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chashama
+        </a>,
+        New York, NY<br>
         2023 — Solo
       </div>
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Basquiat and The Flower Girls</div>
+      <div class="exhibition-title">
+        Basquiat and The Flower Girls
+      </div>
+
       <div class="exhibition-details">
         KJL Art Sanctuary, Ewing, NJ<br>
         2021 – 2022 — Solo
@@ -230,7 +516,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Harlem Renaissance Exhibition</div>
+      <div class="exhibition-title">
+        Harlem Renaissance Exhibition
+      </div>
+
       <div class="exhibition-details">
         KJL Art Sanctuary, Ewing, NJ<br>
         June 5, 2021 – July 12, 2021 — Solo
@@ -238,7 +527,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Heterogeneous Exhibition</div>
+      <div class="exhibition-title">
+        Heterogeneous Exhibition
+      </div>
+
       <div class="exhibition-details">
         Trenton Social, Trenton, NJ<br>
         February 2020 – March 2020 — Solo
@@ -246,7 +538,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Figurative Expressions Exhibition</div>
+      <div class="exhibition-title">
+        Figurative Expressions Exhibition
+      </div>
+
       <div class="exhibition-details">
         Starbucks, Trenton, NJ<br>
         November 2019 — Solo
@@ -254,7 +549,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Thought Spirit Manifestations</div>
+      <div class="exhibition-title">
+        Thought Spirit Manifestations
+      </div>
+
       <div class="exhibition-details">
         Trenton Public Library, Trenton, NJ<br>
         July 18, 2019 – August 20, 2019 — Solo
@@ -262,7 +560,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Art Expo New York</div>
+      <div class="exhibition-title">
+        Art Expo New York
+      </div>
+
       <div class="exhibition-details">
         Pier 94, New York, NY<br>
         2019 — Solo
@@ -270,7 +571,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Manifestations Exhibition</div>
+      <div class="exhibition-title">
+        Manifestations Exhibition
+      </div>
+
       <div class="exhibition-details">
         Chashama, Long Island City, Queens, NY<br>
         August 2019 – September 2019 — Solo
@@ -278,7 +582,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Solo Exhibition</div>
+      <div class="exhibition-title">
+        Solo Exhibition
+      </div>
+
       <div class="exhibition-details">
         Smith Family Foundation, Trenton, NJ<br>
         July 14, 2018 – August 15, 2018 — Solo
@@ -286,7 +593,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Art of Intrigue</div>
+      <div class="exhibition-title">
+        Art of Intrigue
+      </div>
+
       <div class="exhibition-details">
         Hopewell Valley Vineyards, Pennington, NJ<br>
         2017 – 2018 — Group
@@ -294,7 +604,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Creators of Expression</div>
+      <div class="exhibition-title">
+        Creators of Expression
+      </div>
+
       <div class="exhibition-details">
         Hopewell Valley Vineyards, Pennington, NJ<br>
         September 2017 — Group
@@ -302,7 +615,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Infinite Expressions</div>
+      <div class="exhibition-title">
+        Infinite Expressions
+      </div>
+
       <div class="exhibition-details">
         Trenton Social, Trenton, NJ<br>
         November 2017 — Solo
@@ -310,7 +626,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Manifester of Vibrations</div>
+      <div class="exhibition-title">
+        Manifester of Vibrations
+      </div>
+
       <div class="exhibition-details">
         JB Kline and Sons Gallery, Lambertville, NJ<br>
         March 2017 – April 2017 — Solo
@@ -318,7 +637,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Langston Hughes Library Gallery Exhibition</div>
+      <div class="exhibition-title">
+        Langston Hughes Library Gallery Exhibition
+      </div>
+
       <div class="exhibition-details">
         Queens Public Library, Corona, NY<br>
         2016 — Solo
@@ -326,7 +648,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Art Expo New York</div>
+      <div class="exhibition-title">
+        Art Expo New York
+      </div>
+
       <div class="exhibition-details">
         Pier 94, New York, NY<br>
         2015 — Solo
@@ -334,7 +659,10 @@
     </div>
 
     <div class="exhibition">
-      <div class="exhibition-title">Trenton Social Show</div>
+      <div class="exhibition-title">
+        Trenton Social Show
+      </div>
+
       <div class="exhibition-details">
         Trenton, NJ<br>
         2014 — Solo
@@ -344,6 +672,7 @@
     <div class="back-home">
       <a href="index.html">← Back to Home</a>
     </div>
+
   </div>
 
   <footer>
@@ -351,4 +680,3 @@
   </footer>
 </body>
 </html>
-```

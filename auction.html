@@ -493,79 +493,108 @@
 
 <main class="wrap">
 
-  <section class="hero">
-    <div class="hero-top">
-      <span class="pill">Private Bidding</span>
-      <span class="pill alt" id="auctionStatusPill">Auction Open Now</span>
-      <span class="pill">Opening Bid: $1,999</span>
-      <span class="pill current-bid">
-  Current Bid: <strong>$1,999</strong>
-</span>
-      <span class="pill">Bid Increments: $100</span>
-      <span class="pill">Reserve Auction</span>
-    </div>
+ <section class="hero">
 
-    <h2>
-      Brooklyn Bridge Auction — July 27 Through July 30, 2026
-    </h2>
+  <div class="hero-top">
+    <span class="pill">Private Bidding</span>
+    <span class="pill alt" id="auctionStatusPill">Auction Open Now</span>
+    <span class="pill">Opening Bid: $1,999</span>
 
-    <p class="subnote">
-      Bidding is open immediately and continues until Thursday, July 30, 2026
-      at 6:00 PM Eastern Time. Bids are private and submitted directly to the
-      artist. This auction has an undisclosed reserve. The artwork will only be
-      sold if the reserve is met.
-    </p>
+    <span class="pill current-bid">
+      Current Bid: <strong>No Bids Yet</strong>
+    </span>
 
-    <div class="timer" aria-live="polite">
-      <h3>Time Remaining</h3>
+    <span class="pill">Bid Increments: $100</span>
+    <span class="pill">Reserve Auction</span>
+  </div>
 
-      <div class="clock" role="group" aria-label="Auction countdown timer">
-        <div class="unit">
-          <div class="num" id="d">00</div>
-          <div class="lbl">Days</div>
-        </div>
+  <h2>
+    Brooklyn Bridge Auction — July 27 Through July 30, 2026
+  </h2>
 
-        <div class="unit">
-          <div class="num" id="h">00</div>
-          <div class="lbl">Hours</div>
-        </div>
+  <p class="subnote">
+    Bidding is open immediately and continues until Thursday, July 30, 2026
+    at 6:00 PM Eastern Time. Bids are private and submitted directly to the
+    artist. This auction has an undisclosed reserve. The artwork will only be
+    sold if the reserve is met.
+  </p>
 
-        <div class="unit">
-          <div class="num" id="m">00</div>
-          <div class="lbl">Minutes</div>
-        </div>
+  <!-- CURRENT BID DISPLAY -->
+  <div class="current-bid-display">
 
-        <div class="unit">
-          <div class="num" id="s">00</div>
-          <div class="lbl">Seconds</div>
-        </div>
+    <span class="label">
+      Current Highest Bid
+    </span>
+
+    <strong class="amount">
+      No Bids Yet
+    </strong>
+
+    <span class="status">
+      Opening Bid: $1,999
+    </span>
+
+  </div>
+
+  <div class="timer" aria-live="polite">
+
+    <h3>Time Remaining</h3>
+
+    <div class="clock" role="group" aria-label="Auction countdown timer">
+
+      <div class="unit">
+        <div class="num" id="d">00</div>
+        <div class="lbl">Days</div>
       </div>
 
-      <p class="ends" id="endsText">
-        Auction ends:
-        <strong>Thursday, July 30, 2026 at 6:00 PM Eastern Time</strong>
-      </p>
-
-      <div class="ended" id="endedBanner" style="display:none;">
-        Auction Closed — Thank you for bidding. The winning bidder will be
-        contacted directly if the reserve was met.
+      <div class="unit">
+        <div class="num" id="h">00</div>
+        <div class="lbl">Hours</div>
       </div>
+
+      <div class="unit">
+        <div class="num" id="m">00</div>
+        <div class="lbl">Minutes</div>
+      </div>
+
+      <div class="unit">
+        <div class="num" id="s">00</div>
+        <div class="lbl">Seconds</div>
+      </div>
+
     </div>
 
-    <div class="btnrow" style="margin-top:16px;">
-      <a class="btn" href="index.html">Back to Home</a>
-
-      <a
-        class="btn alt"
-        href="mailto:kjlartsanctuary@gmail.com?subject=Brooklyn%20Bridge%20Auction%20Bid"
-      >
-        Email a Bid
-      </a>
-    </div>
-
-    <p class="contact">
-      Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
+    <p class="ends" id="endsText">
+      Auction ends:
+      <strong>Thursday, July 30, 2026 at 6:00 PM Eastern Time</strong>
     </p>
+
+    <div class="ended" id="endedBanner" style="display:none;">
+      Auction Closed — Thank you for bidding.
+      The winning bidder will be contacted directly if the reserve was met.
+    </div>
+
+  </div>
+
+  <div class="btnrow" style="margin-top:16px;">
+
+    <a class="btn" href="index.html">
+      Back to Home
+    </a>
+
+    <a
+      class="btn alt"
+      href="mailto:kjlartsanctuary@gmail.com?subject=Brooklyn%20Bridge%20Auction%20Bid">
+      Email a Bid
+    </a>
+
+  </div>
+
+  <p class="contact">
+    Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
+  </p>
+
+</section>
   </section>
 
   <section class="grid">

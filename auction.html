@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title> The Brooklyn Bridge Art Auction | KJL Art Sanctuary</title>
+<title>The Brooklyn Bridge Art Auction | KJL Art Sanctuary</title>
 
 <meta
   name="description"
@@ -13,10 +13,12 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Brooklyn Bridge Original Art Auction" />
+
 <meta
   property="og:description"
-  content="A 45 × 60 inch original oil painting on canvas by Kenneth J. Lewis Sr. Auction ends Thursday, July 30, 2026 at 6:00 PM Eastern Time."
+  content="Current bid: $2,400. Bid on a 45 × 60 inch original oil painting on canvas by Kenneth J. Lewis Sr. Auction ends Thursday, July 30, 2026 at 6:00 PM Eastern Time."
 />
+
 <meta
   property="og:image"
   content="https://github.com/kjlartsanctuary/kjlartsanctuary.github.io/blob/main/images/Brooklyn%20Bridge%20Office.png?raw=true"
@@ -41,8 +43,8 @@
   body {
     margin: 0;
     font-family: Garamond, "Times New Roman", serif;
-    background: var(--bg);
     color: var(--ink);
+    background: var(--bg);
   }
 
   a {
@@ -82,7 +84,7 @@
   }
 
   .hero {
-    padding: 18px 18px 16px;
+    padding: 18px 18px 20px;
     text-align: center;
     background: var(--card);
     border: 1px solid var(--line);
@@ -113,6 +115,10 @@
     background: var(--accent);
   }
 
+  .pill.current-bid {
+    background: #1f6034;
+  }
+
   .hero h2 {
     margin: 14px 0 6px;
     color: var(--accent);
@@ -127,9 +133,44 @@
     line-height: 1.65;
   }
 
+  .current-bid-display {
+    max-width: 560px;
+    margin: 20px auto 0;
+    padding: 18px 16px;
+    color: #ffffff;
+    text-align: center;
+    background: #1f6034;
+    border: 3px solid #ffffff;
+    border-radius: 14px;
+    outline: 1px solid #174a28;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .current-bid-display .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .current-bid-display .amount {
+    display: block;
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .current-bid-display .status {
+    display: block;
+    margin-top: 7px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
   .timer {
     max-width: 980px;
-    margin: 14px auto 0;
+    margin: 16px auto 0;
     padding: 16px 16px 14px;
     background: #ffffff;
     border: 1px solid var(--line);
@@ -316,6 +357,10 @@
     background: var(--accent);
   }
 
+  .tag.bid-now {
+    background: #1f6034;
+  }
+
   .tag.soft {
     color: #222222;
     background: var(--soft);
@@ -473,6 +518,10 @@
       font-size: 25px;
     }
 
+    .current-bid-display .amount {
+      font-size: 36px;
+    }
+
     .unit {
       min-width: 44%;
     }
@@ -493,108 +542,118 @@
 
 <main class="wrap">
 
- <section class="hero">
+  <section class="hero">
 
-  <div class="hero-top">
-    <span class="pill">Private Bidding</span>
-    <span class="pill alt" id="auctionStatusPill">Auction Open Now</span>
-    <span class="pill">Opening Bid: $1,999</span>
+    <div class="hero-top">
+      <span class="pill">Private Bidding</span>
 
-    <span class="pill current-bid">
-      Current Bid: <strong>No Bids Yet</strong>
-    </span>
+      <span class="pill alt" id="auctionStatusPill">
+        Auction Open Now
+      </span>
 
-    <span class="pill">Bid Increments: $100</span>
-    <span class="pill">Reserve Auction</span>
-  </div>
+      <span class="pill">
+        Opening Bid: $1,999
+      </span>
 
-  <h2>
-    Brooklyn Bridge Auction — July 27 Through July 30, 2026
-  </h2>
+      <span class="pill current-bid">
+        Current Bid: <strong>$2,400</strong>
+      </span>
 
-  <p class="subnote">
-    Bidding is open immediately and continues until Thursday, July 30, 2026
-    at 6:00 PM Eastern Time. Bids are private and submitted directly to the
-    artist. This auction has an undisclosed reserve. The artwork will only be
-    sold if the reserve is met.
-  </p>
+      <span class="pill">
+        Next Bid: $2,500
+      </span>
 
-  <!-- CURRENT BID DISPLAY -->
-  <div class="current-bid-display">
+      <span class="pill">
+        Bid Increments: $100
+      </span>
 
-    <span class="label">
-      Current Highest Bid
-    </span>
-
-    <strong class="amount">
-      No Bids Yet
-    </strong>
-
-    <span class="status">
-      Opening Bid: $1,999
-    </span>
-
-  </div>
-
-  <div class="timer" aria-live="polite">
-
-    <h3>Time Remaining</h3>
-
-    <div class="clock" role="group" aria-label="Auction countdown timer">
-
-      <div class="unit">
-        <div class="num" id="d">00</div>
-        <div class="lbl">Days</div>
-      </div>
-
-      <div class="unit">
-        <div class="num" id="h">00</div>
-        <div class="lbl">Hours</div>
-      </div>
-
-      <div class="unit">
-        <div class="num" id="m">00</div>
-        <div class="lbl">Minutes</div>
-      </div>
-
-      <div class="unit">
-        <div class="num" id="s">00</div>
-        <div class="lbl">Seconds</div>
-      </div>
-
+      <span class="pill">
+        Reserve Auction
+      </span>
     </div>
 
-    <p class="ends" id="endsText">
-      Auction ends:
-      <strong>Thursday, July 30, 2026 at 6:00 PM Eastern Time</strong>
+    <h2>
+      Brooklyn Bridge Auction — July 27 Through July 30, 2026
+    </h2>
+
+    <p class="subnote">
+      Bidding is open immediately and continues until Thursday, July 30, 2026
+      at 6:00 PM Eastern Time. Bids are private and submitted directly to the
+      artist. This auction has an undisclosed reserve. The artwork will only be
+      sold if the reserve is met.
     </p>
 
-    <div class="ended" id="endedBanner" style="display:none;">
-      Auction Closed — Thank you for bidding.
-      The winning bidder will be contacted directly if the reserve was met.
+    <div class="current-bid-display">
+      <span class="label">
+        Current Highest Bid
+      </span>
+
+      <strong class="amount">
+        $2,400
+      </strong>
+
+      <span class="status">
+        The next acceptable bid is $2,500.
+      </span>
     </div>
 
-  </div>
+    <div class="timer" aria-live="polite">
+      <h3>Time Remaining</h3>
 
-  <div class="btnrow" style="margin-top:16px;">
+      <div class="clock" role="group" aria-label="Auction countdown timer">
 
-    <a class="btn" href="index.html">
-      Back to Home
-    </a>
+        <div class="unit">
+          <div class="num" id="d">00</div>
+          <div class="lbl">Days</div>
+        </div>
 
-    <a
-      class="btn alt"
-      href="mailto:kjlartsanctuary@gmail.com?subject=Brooklyn%20Bridge%20Auction%20Bid">
-      Email a Bid
-    </a>
+        <div class="unit">
+          <div class="num" id="h">00</div>
+          <div class="lbl">Hours</div>
+        </div>
 
-  </div>
+        <div class="unit">
+          <div class="num" id="m">00</div>
+          <div class="lbl">Minutes</div>
+        </div>
 
-  <p class="contact">
-    Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
-  </p>
+        <div class="unit">
+          <div class="num" id="s">00</div>
+          <div class="lbl">Seconds</div>
+        </div>
 
-</section>
+      </div>
+
+      <p class="ends" id="endsText">
+        Auction ends:
+        <strong>
+          Thursday, July 30, 2026 at 6:00 PM Eastern Time
+        </strong>
+      </p>
+
+      <div class="ended" id="endedBanner" style="display:none;">
+        Auction Closed — Thank you for bidding. The winning bidder will be
+        contacted directly if the reserve was met.
+      </div>
+    </div>
+
+    <div class="btnrow" style="margin-top:16px;">
+      <a class="btn" href="index.html">
+        Back to Home
+      </a>
+
+      <a
+        class="btn alt"
+        href="mailto:kjlartsanctuary@gmail.com?subject=Brooklyn%20Bridge%20Auction%20Bid"
+      >
+        Email a Bid
+      </a>
+    </div>
+
+    <p class="contact">
+      Contact: (609) 372-6022 · kjlartsanctuary@gmail.com
+    </p>
+
   </section>
 
   <section class="grid">
@@ -611,8 +670,8 @@
           />
 
           <p class="image-caption">
-            Room presentation showing the approximate scale of the 45 × 60 inch
-            painting.
+            Room presentation showing the approximate scale of the
+            45 × 60 inch painting.
           </p>
         </div>
 
@@ -635,13 +694,37 @@
           </p>
 
           <div class="lot-meta">
-            <span class="tag alt">Opening Bid: $1,999</span>
-            <span class="tag">Increment: $100</span>
-            <span class="tag">Reserve Auction</span>
-            <span class="tag soft">45 × 60 Inches</span>
-            <span class="tag soft">Oil on Canvas</span>
-            <span class="tag soft">Original Artwork</span>
-            <span class="tag soft">Signed</span>
+            <span class="tag bid-now">
+              Current Bid: $2,400
+            </span>
+
+            <span class="tag alt">
+              Next Bid: $2,500
+            </span>
+
+            <span class="tag">
+              Increment: $100
+            </span>
+
+            <span class="tag">
+              Reserve Auction
+            </span>
+
+            <span class="tag soft">
+              45 × 60 Inches
+            </span>
+
+            <span class="tag soft">
+              Oil on Canvas
+            </span>
+
+            <span class="tag soft">
+              Original Artwork
+            </span>
+
+            <span class="tag soft">
+              Signed
+            </span>
           </div>
 
           <h5 class="description-heading">About the Painting</h5>
@@ -684,10 +767,11 @@
           </p>
 
           <div class="reserve-note">
-            <strong>Reserve Auction:</strong> This artwork is being offered
-            subject to an undisclosed reserve price. The highest bid will only
-            result in a sale if the reserve has been met. The artist is not
-            required to disclose the reserve amount.
+            <strong>Reserve Auction:</strong>
+            This artwork is being offered subject to an undisclosed reserve
+            price. The highest bid will only result in a sale if the reserve
+            has been met. The artist is not required to disclose the reserve
+            amount.
           </div>
         </div>
       </article>
@@ -700,20 +784,30 @@
 
         <ul>
           <li>
-            <strong>Auction opens Monday, July 27, 2026</strong> and closes at
+            <strong>Auction opened Monday, July 27, 2026</strong> and closes at
             <strong>6:00 PM Eastern Time</strong> on
             <strong>Thursday, July 30, 2026</strong>.
           </li>
 
           <li>
-            The opening bid for <strong>Brooklyn Bridge</strong> is
+            The opening bid for <strong>Brooklyn Bridge</strong> was
             <strong>$1,999</strong>.
           </li>
 
           <li>
-            Bids must increase in <strong>$100 increments</strong>. Valid bid
-            amounts include $1,999, $2,099, $2,199, $2,299, and continuing
-            upward in $100 increments.
+            The current highest bid is
+            <strong>$2,400</strong>.
+          </li>
+
+          <li>
+            The next acceptable bid is
+            <strong>$2,500</strong>.
+          </li>
+
+          <li>
+            New bids must increase in
+            <strong>$100 increments</strong>. Valid upcoming bid amounts
+            include $2,500, $2,600, $2,700, $2,800, and continuing upward.
           </li>
 
           <li>
@@ -776,9 +870,11 @@
         <h3>Submit a Private Bid</h3>
 
         <p>
-          Complete the form and click <strong>Send Bid</strong>. Your email
-          application will open with the bid information already entered.
-          You may also call or text <strong>(609) 372-6022</strong>.
+          The current bid is <strong>$2,400</strong>. The next acceptable bid
+          is <strong>$2,500</strong>. Complete the form and click
+          <strong>Send Bid</strong>. Your email application will open with the
+          bid information already entered. You may also call or text
+          <strong>(609) 372-6022</strong>.
         </p>
 
         <div class="error" id="formError"></div>
@@ -788,7 +884,11 @@
 
             <div>
               <label for="bidName">Full Name</label>
-              <input type="text" id="bidName" required />
+              <input
+                type="text"
+                id="bidName"
+                required
+              />
             </div>
 
             <div>
@@ -802,15 +902,19 @@
 
             <div class="full">
               <label for="bidEmail">Email Address</label>
-              <input type="email" id="bidEmail" required />
+              <input
+                type="email"
+                id="bidEmail"
+                required
+              />
             </div>
 
             <div>
               <label for="bidLot">Auction Lot</label>
 
               <select id="bidLot" required>
-                <option value="Brooklyn Bridge|1999" selected>
-                  Brooklyn Bridge — Opening Bid $1,999
+                <option value="Brooklyn Bridge" selected>
+                  Brooklyn Bridge — Current Bid $2,400
                 </option>
               </select>
 
@@ -825,14 +929,16 @@
               <input
                 type="number"
                 id="bidAmount"
-                min="1999"
+                min="2500"
                 step="100"
-                placeholder="Example: 2099"
+                value="2500"
+                placeholder="Minimum next bid: 2500"
                 required
               />
 
               <div class="hint">
-                Bid must be $1,999 or higher and follow the $100 increment.
+                The minimum next bid is $2,500. Additional bids must increase
+                in $100 increments.
               </div>
             </div>
 
@@ -849,7 +955,9 @@
           </div>
 
           <div class="btnrow">
-            <button type="submit">Send Bid</button>
+            <button type="submit">
+              Send Bid
+            </button>
 
             <a
               class="btn alt"
@@ -870,7 +978,9 @@
   </section>
 
   <div class="back-home">
-    <a href="index.html" class="btn">← Back to Home</a>
+    <a href="index.html" class="btn">
+      ← Back to Home
+    </a>
   </div>
 
   <footer>
@@ -881,13 +991,15 @@
 
 <script>
   /*
-    Auction ends Thursday, July 30, 2026 at 6:00 PM Eastern Time.
-
-    July is Eastern Daylight Time, which uses UTC-04:00.
-    The explicit offset prevents browser timezone confusion.
+    Auction information
   */
 
   const AUCTION_END_ISO = "2026-07-30T18:00:00-04:00";
+
+  const CURRENT_BID = 2400;
+  const BID_INCREMENT = 100;
+  const MINIMUM_NEXT_BID = CURRENT_BID + BID_INCREMENT;
+
   const endTime = new Date(AUCTION_END_ISO).getTime();
 
   const elD = document.getElementById("d");
@@ -912,6 +1024,7 @@
     elS.textContent = "00";
 
     endedBanner.style.display = "block";
+
     statusPill.textContent = "Auction Closed";
     statusPill.classList.remove("alt");
     statusPill.style.background = "#333333";
@@ -936,7 +1049,9 @@
 
     const totalSeconds = Math.floor(difference / 1000);
 
-    const days = Math.floor(totalSeconds / (3600 * 24));
+    const days = Math.floor(
+      totalSeconds / (3600 * 24)
+    );
 
     const hours = Math.floor(
       (totalSeconds % (3600 * 24)) / 3600
@@ -955,6 +1070,7 @@
   }
 
   tick();
+
   countdownInterval = setInterval(tick, 1000);
 
   const form = document.getElementById("bidForm");
@@ -975,12 +1091,14 @@
     errorBox.style.display = "none";
   }
 
-  function isValidIncrement(openingBid, submittedBid) {
-    if (submittedBid < openingBid) {
+  function isValidBid(submittedBid) {
+    if (submittedBid < MINIMUM_NEXT_BID) {
       return false;
     }
 
-    return ((submittedBid - openingBid) % 100) === 0;
+    return (
+      (submittedBid - MINIMUM_NEXT_BID) % BID_INCREMENT
+    ) === 0;
   }
 
   form.addEventListener("submit", function(event) {
@@ -994,34 +1112,54 @@
       return;
     }
 
-    const name = document.getElementById("bidName").value.trim();
-    const phone = document.getElementById("bidPhone").value.trim();
-    const email = document.getElementById("bidEmail").value.trim();
-    const lotValue = document.getElementById("bidLot").value;
-    const bidRaw = document.getElementById("bidAmount").value;
-    const notes = document.getElementById("bidNotes").value.trim();
+    const name =
+      document.getElementById("bidName").value.trim();
 
-    if (!name || !email || !lotValue || !bidRaw) {
+    const phone =
+      document.getElementById("bidPhone").value.trim();
+
+    const email =
+      document.getElementById("bidEmail").value.trim();
+
+    const lotName =
+      document.getElementById("bidLot").value;
+
+    const bidRaw =
+      document.getElementById("bidAmount").value;
+
+    const notes =
+      document.getElementById("bidNotes").value.trim();
+
+    if (!name || !email || !lotName || !bidRaw) {
       showError(
         "Please complete your name, email address, auction lot, and bid amount."
       );
       return;
     }
 
-    const parts = lotValue.split("|");
-    const lotName = parts[0];
-    const openingBid = parseInt(parts[1], 10);
-    const submittedBid = parseInt(bidRaw, 10);
+    const submittedBid = Number(bidRaw);
 
-    if (Number.isNaN(submittedBid) || submittedBid <= 0) {
-      showError("Please enter a valid bid amount.");
+    if (
+      !Number.isFinite(submittedBid) ||
+      !Number.isInteger(submittedBid)
+    ) {
+      showError(
+        "Please enter a valid whole-dollar bid amount."
+      );
       return;
     }
 
-    if (!isValidIncrement(openingBid, submittedBid)) {
+    if (!isValidBid(submittedBid)) {
       showError(
-        `Your bid must be $${openingBid.toLocaleString("en-US")} or higher and follow the $100 increment. Valid examples include $${openingBid.toLocaleString("en-US")}, $${(openingBid + 100).toLocaleString("en-US")}, and $${(openingBid + 200).toLocaleString("en-US")}.`
+        `The current bid is $${CURRENT_BID.toLocaleString("en-US")}. ` +
+        `Your bid must be at least $${MINIMUM_NEXT_BID.toLocaleString("en-US")} ` +
+        `and increase in $${BID_INCREMENT.toLocaleString("en-US")} increments. ` +
+        `Valid bids include $${MINIMUM_NEXT_BID.toLocaleString("en-US")}, ` +
+        `$${(MINIMUM_NEXT_BID + BID_INCREMENT).toLocaleString("en-US")}, ` +
+        `$${(MINIMUM_NEXT_BID + BID_INCREMENT * 2).toLocaleString("en-US")}, ` +
+        `and continuing upward.`
       );
+
       return;
     }
 
@@ -1034,7 +1172,8 @@
       "-------------------------------------",
       "",
       `Artwork: ${lotName}`,
-      `Bid Amount: $${submittedBid.toLocaleString("en-US")}`,
+      `Current Listed Bid: $${CURRENT_BID.toLocaleString("en-US")}`,
+      `New Bid Amount: $${submittedBid.toLocaleString("en-US")}`,
       "Auction Type: Reserve Auction",
       "",
       `Bidder Name: ${name}`,
@@ -1046,7 +1185,9 @@
       notes ? `Notes: ${notes}` : "Notes: None"
     ];
 
-    const body = encodeURIComponent(bodyLines.join("\n"));
+    const body = encodeURIComponent(
+      bodyLines.join("\n")
+    );
 
     window.location.href =
       `mailto:kjlartsanctuary@gmail.com?subject=${subject}&body=${body}`;

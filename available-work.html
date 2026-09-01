@@ -3,10 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Available Work | KJL Art Sanctuary</title>
+  <meta name="description" content="Browse available original artwork by Kenneth J. Lewis Sr. at KJL Art Sanctuary, arranged alphabetically.">
+  <title>Available Work | Kenneth J. Lewis Sr.</title>
+  <style>
+    :root { --ink:#252525; --muted:#666; --paper:#f7f5f1; --card:#fff; --rule:#dedbd5; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Garamond, Georgia, "Times New Roman", serif; }
+    header { padding:42px 18px 30px; text-align:center; background:#111; color:#fff; }
+    header h1 { margin:0 0 12px; font-size:clamp(2.25rem,5vw,3.8rem); letter-spacing:.03em; }
+    header p { max-width:850px; margin:0 auto; font-size:1.1rem; line-height:1.6; }
+    nav { margin-top:22px; }
+    nav a { display:inline-block; padding:10px 18px; border:1px solid #fff; color:#fff; text-decoration:none; font-weight:bold; }
+    nav a:hover, nav a:focus { background:#fff; color:#111; }
+    main { max-width:1200px; margin:0 auto; padding:42px 20px 55px; }
+    .collection-note { max-width:850px; margin:0 auto 34px; text-align:center; font-size:1.08rem; line-height:1.6; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+    .card { min-width:0; overflow:hidden; background:var(--card); border:1px solid var(--rule); box-shadow:0 3px 10px rgba(0,0,0,.07); }
+    .image-link { display:flex; align-items:center; justify-content:center; height:360px; padding:10px; background:#eeeae4; }
+    .image-link img { display:block; width:100%; height:100%; object-fit:contain; transition:transform .2s ease; }
+    .image-link:hover img { transform:scale(1.025); }
+    .details { padding:15px 16px 18px; text-align:center; }
+    .details h2 { margin:0 0 7px; font-size:1.22rem; line-height:1.25; }
+    .details p { margin:3px 0; color:var(--muted); font-family:Arial,sans-serif; font-size:.88rem; line-height:1.45; }
+    .details .series { color:var(--ink); font-weight:bold; }
+    .contact { margin:48px auto 0; padding:28px 20px; border-top:1px solid var(--rule); text-align:center; font-size:1.08rem; line-height:1.65; }
+    .contact a { color:var(--ink); font-weight:bold; }
+    footer { padding:24px 15px; text-align:center; background:#111; color:#ddd; font-family:Arial,sans-serif; font-size:.85rem; }
+    .lightbox { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:55px 20px 25px; background:rgba(0,0,0,.92); }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:94vw; max-height:84vh; object-fit:contain; }
+    .lightbox button { position:absolute; top:12px; right:20px; border:0; background:transparent; color:#fff; font-size:2.5rem; cursor:pointer; }
+    .lightbox-caption { position:absolute; bottom:8px; left:15px; right:15px; color:#fff; text-align:center; font-size:1rem; }
+    @media (max-width:900px) { .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .image-link{height:330px;} }
+    @media (max-width:600px) { main{padding:32px 14px 45px;} .gallery-grid{grid-template-columns:1fr;gap:18px;} .image-link{height:auto;min-height:280px;max-height:480px;} .image-link img{height:auto;max-height:450px;} }
+  </style>
 </head>
 <body>
-  <h1>Available Work</h1>
-  <p>This page is being updated.</p>
+  <header>
+    <h1>Available Work</h1>
+    <p>Original artwork by Kenneth J. Lewis Sr., presented in one alphabetical collection. Each listing identifies the series to which the artwork belongs.</p>
+    <nav><a href="index.html">Back to Home</a></nav>
+  </header>
+  <main>
+    <p class="collection-note">Select any image to view it larger. To confirm current availability, pricing, framing, or to arrange a private studio visit, call or text KJL Art Sanctuary.</p>
+    <section id="gallery" class="gallery-grid" aria-label="Available artwork"></section>
+    <div class="contact">To inquire about an artwork or schedule a visit:<br><a href="tel:+16093726022">609-372-6022</a> &nbsp;|&nbsp; <a href="https://www.kjlartsanctuary.com">www.kjlartsanctuary.com</a></div>
+  </main>
+  <footer>&copy; <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary. All Rights Reserved.</footer>
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged artwork">
+    <button type="button" aria-label="Close enlarged image">&times;</button>
+    <img id="lightbox-image" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+  <script>
+    const artworks = [];
+    const add = (title, image, series, medium = "", size = "") => artworks.push({title,image,series,medium,size});
+
+    for (let n=24; n<=45; n++) add(`abstract${n}`, `images/abstract${n}.jpg`, "Abstract Series");
+    [31,32,33,35].forEach(n => add(`UA${n}`, `images/UA${n}.jpg`, "Abstract Series"));
+    [
+      ["Untitled 1","images/Untitled%201.jpg"],["Untitled 2","images/untitled%202.jpg"],
+      ["Untitled 3","images/untitled%203.jpg"],["Untitled 4","images/untitled%204.jpg"],
+      ["Untitled 10","images/Untitled%2010.jpg"],["Untitled 11","images/Untitled%2011.jpg"],
+      ["Untitled 15","images/Untitled%2015.jpg"],["Untitled 15 - 16","images/Untitled%2015%20-%2016.jpg"],
+      ["Untitled 16","images/Untitled%2016.jpg"],["Untitled 6","images/untitled%206.jpg"],
+      ["Untitled 7","images/untitled%207.jpg"],["Untitled 8","images/untitled%208.jpg"],
+      ["Untitled 9","images/untitled%209.jpg"]
+    ].forEach(([t,i]) => add(t,i,"Abstract Series"));
+
+    [
+      ["After the Gig","images/AFTER%20THE%20GIG%2024x30in%20oil%20canvas%20.jpg","Oil on canvas","24 x 30 inches"],
+      ["After the Ballard","images/AFTER%20the%20Ballard%20%2036x36%20oil%20vinyl%20.jpg","Oil on vinyl","36 x 36 inches"],
+      ["After the Jazz","images/AFTER%20the%20Jazz%20%2024x30%20oil%20canvas.jpg","Oil on canvas","24 x 30 inches"],
+      ["After the Waltz","images/AFTER%20the%20Waltz%2036x36in%20oil%20vinyl.jpg","Oil on vinyl","36 x 36 inches"],
+      ["Accordion and Smoke","images/Accordion%20and%20Smoke%2048x48in%20acrylic%20luan.jpg","Acrylic on luan board","48 x 48 inches"],
+      ["Bass Night","images/Bass%20Night%20%2044x60in%20acrylic%20architectural%20panel%20.jpg","Acrylic on architectural panel","44 x 60 inches"],
+      ["Ensemble","images/Ensemble%2065x72in%20oil%20canvas.jpg","Oil on canvas","65 x 72 inches"],
+      ["Flute","images/Flute%2036x72in%20oil%20luan.jpg","Oil on luan board","36 x 72 inches"],
+      ["Gentleman Drummer","images/Gentleman%20Drummer%20%2044x60%20oil%20architectural%20panel%20.jpg","Oil on architectural panel","44 x 60 inches"],
+      ["Golden Tuba","images/Golden%20Tuba%2048x48in%20oil%20luan.jpg","Oil on luan board","48 x 48 inches"],
+      ["Hands on Ivory","images/Hands%20on%20Ivory%2048x48in%20acrylic%20luan%20.jpg","Acrylic on luan board","48 x 48 inches"],
+      ["Midnight Guitarist","images/Midnight%20Guitarist%2048x61%20acrylic%20luan.jpg","Acrylic on luan board","48 x 61 inches"],
+      ["Solo","images/Solo%2044x60in%20acrylic%20architectural%20panel%20.jpg","Acrylic on architectural panel","44 x 60 inches"],
+      ["Strings of Elegance","images/Strings%20of%20Elegance%2042x60in%20oil%20canvas%20.jpg","Oil on canvas","42 x 60 inches"],
+      ["Two Horns","images/Two%20Horns%20%2048x84in%20oil%20plywood%20.jpg","Oil on plywood","48 x 84 inches"]
+    ].forEach(([t,i,m,s]) => add(t,i,"Jazz",m,s));
+
+    for (let n=5; n<=9; n++) add(`Ephemeral Glow ${n}`, `images/EG${n}.jpg`, "Ephemeral Glow Series");
+
+    [
+      "American Selfie","BFF","Bliss","Blue Girl","Bonnet","Bride of Basquiat","Center of the Sun","Chanteuse","Color Flow"
+    ].forEach(t => add(t,`images/${encodeURIComponent(t)}.jpg`,"Figurative Series"));
+    [
+      ["CWC01","images/CWC01.jpg"],["CWC02","images/CWC02.jpg"],["CWC03","images/CWC03.jpg"],["CWC04","images/CWC04.jpg"],
+      ["Eye Get Misty","images/Eye%20get%20Misty.jpg"],["Soulmates (Male & Female)","images/Soulmates%20Male%20%26%20Female.jpg"],
+      ["When I Get There & Developmental","images/When%20I%20get%20there%20%26%20Develpmental.jpg"],
+      ["Relationship Mathematics","images/Relationship%20Mathematics.jpg"],["Surreal 1","images/Surreal%201.jpg"],
+      ["Surreal 2","images/Surreal%202.jpg"],["Vanity","images/Vanity.jpg"],["Gentleman","images/Gentleman.jpg"],
+      ["Beauty Salon","images/Beauty%20Salon.jpg"],["El Balleriana","images/El%20Balleriana.jpg"],
+      ["Tuxedo","images/Tuxedo.jpg"],["Yaz","images/Yaz.jpg"]
+    ].forEach(([t,i]) => add(t,i,"Figurative Series"));
+
+    for (let n=1; n<=24; n++) {
+      const num=String(n).padStart(2,"0");
+      add(`Luggage ${num}`,`images/Luggage${num}.jpg`,"Luggage Series");
+    }
+
+    [
+      ["Crowning A Prince","images/Crowning%20A%20Prince.jpg"],["Royal Birth","images/Royal%20Birth.jpg"],
+      ["Royal Dancers","images/Royal%20Dancers.jpg"],["Royal Gathering","images/Royal%20Gathering.jpg"]
+    ].forEach(([t,i]) => add(t,i,"Structure Series"));
+    for (let n=1; n<=6; n++) {
+      const num=String(n).padStart(2,"0");
+      add(`Structure ${num}`,`images/structure${num}.jpg`,"Structure Series");
+    }
+
+    [
+      ["The Artist","images/The%20Artist.jpg"],["The Elder","images/The%20Elder.jpg"],
+      ["The Mathematician","images/The%20Mathematician.jpg"],["The Pharmacist","images/The%20Pharmacist.jpg"],
+      ["The Resting Man","images/The%20Resting%20Man.jpg"],["The Teacher","images/The%20Teacher.jpg"],
+      ["Man About Town","images/man%20about%20town.jpg"],["Matador and Bull","images/matadorandbull.jpg"],
+      ["The Pilot","images/the%20pilot.jpg"],["The Postman","images/the%20postman.jpg"]
+    ].forEach(([t,i]) => add(t,i,"Men's Series"));
+
+    artworks.sort((a,b) => a.title.localeCompare(b.title,undefined,{numeric:true,sensitivity:"base"}));
+    const gallery=document.getElementById("gallery");
+    const esc=s => s.replace(/[&<>"']/g,c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    gallery.innerHTML=artworks.map((a,index)=>`
+      <article class="card">
+        <a class="image-link" href="${a.image}" data-index="${index}" aria-label="Enlarge ${esc(a.title)}">
+          <img src="${a.image}" alt="${esc(a.title)} by Kenneth J. Lewis Sr." loading="lazy">
+        </a>
+        <div class="details">
+          <h2>${esc(a.title)}</h2>
+          <p class="series">Series: ${esc(a.series)}</p>
+          ${a.medium?`<p>${esc(a.medium)}</p>`:""}${a.size?`<p>${esc(a.size)}</p>`:""}
+        </div>
+      </article>`).join("");
+
+    const lightbox=document.getElementById("lightbox"), lightboxImage=document.getElementById("lightbox-image"), lightboxCaption=document.getElementById("lightbox-caption");
+    gallery.addEventListener("click",e=>{const link=e.target.closest(".image-link");if(!link)return;e.preventDefault();const a=artworks[Number(link.dataset.index)];lightboxImage.src=a.image;lightboxImage.alt=a.title;lightboxCaption.textContent=`${a.title} — ${a.series}`;lightbox.classList.add("open");document.body.style.overflow="hidden";});
+    const closeLightbox=()=>{lightbox.classList.remove("open");lightboxImage.src="";document.body.style.overflow="";};
+    lightbox.querySelector("button").addEventListener("click",closeLightbox);
+    lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox();});
+    document.getElementById("year").textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -26,6 +26,8 @@
     .details h2 { margin:0 0 7px; font-size:1.22rem; line-height:1.25; }
     .details p { margin:3px 0; color:var(--muted); font-family:Arial,sans-serif; font-size:.88rem; line-height:1.45; }
     .details .series { color:var(--ink); font-weight:bold; }
+    .details .price { margin-top:8px; color:#a65d1b; font-size:1rem; font-weight:bold; }
+    .details .nfs { color:#8b1e1e; }
     .contact { margin:48px auto 0; padding:28px 20px; border-top:1px solid var(--rule); text-align:center; font-size:1.08rem; line-height:1.65; }
     .contact a { color:var(--ink); font-weight:bold; }
     footer { padding:24px 15px; text-align:center; background:#111; color:#ddd; font-family:Arial,sans-serif; font-size:.85rem; }
@@ -126,6 +128,100 @@
       ["The Pilot","images/the%20pilot.jpg"],["The Postman","images/the%20postman.jpg"]
     ].forEach(([t,i]) => add(t,i,"Men's Series"));
 
+    /* Handwritten inventory update, September 2026 */
+    const removeTitles=new Set([
+      "abstract28","abstract32","abstract35","abstract42","abstract44","abstract45",
+      "Beauty Salon","Center of the Sun","El Balleriana","Gentleman","When I Get There & Developmental",
+      "Structure 03","Structure 06","UA32","UA33","UA35","Untitled 1","Untitled 7","Untitled 8",
+      "Untitled 9","Untitled 10","Untitled 11"
+    ]);
+    for(let i=artworks.length-1;i>=0;i--)if(removeTitles.has(artworks[i].title))artworks.splice(i,1);
+
+    const updates={
+      "abstract24":["60 × 40 inches","Acrylic","Canvas"],
+      "abstract25":["30 × 40 inches","Acrylic","Canvas"],
+      "abstract26":["72 × 48 inches","Acrylic","Canvas"],
+      "abstract27":["60 × 72 inches","Acrylic","Canvas"],
+      "abstract29":["90 × 40 inches","Acrylic","Canvas","Not for Sale"],
+      "abstract30":["30 × 40 inches","Acrylic","Canvas","Not for Sale"],
+      "abstract31":["36 × 48 inches","Acrylic","Canvas"],
+      "abstract33":["44 × 60 inches","Acrylic","Canvas"],
+      "abstract34":["72 × 54 inches","Acrylic","Canvas"],
+      "abstract36":["72 × 54 inches","Acrylic","Canvas"],
+      "abstract37":["44 × 64 inches","Acrylic","Canvas"],
+      "abstract38":["30 × 40 inches","Acrylic","Canvas"],
+      "abstract39":["30 × 40 inches","Acrylic","Canvas"],
+      "abstract40":["48 × 96 inches","Acrylic","1/2-inch plywood"],
+      "abstract41":["72 × 54 inches","Acrylic","Canvas"],
+      "abstract43":["42 × 62 inches","Acrylic","Canvas"],
+      "American Selfie":["54 × 64 inches","Updating Soon","Canvas"],
+      "BFF":["58 × 35 inches","Acrylic","Canvas"],
+      "Bliss":["55 × 64 inches","Acrylic","Canvas"],
+      "Blue Girl":["60 × 72 inches","Acrylic","Canvas"],
+      "Bonnet":["84 × 48 inches","Acrylic","Canvas"],
+      "Bride of Basquiat":["36 × 48 inches","Acrylic","Wicker blind"],
+      "Chanteuse":["66 × 58 inches","Acrylic","Canvas"],
+      "Color Flow":["52 × 74 inches","Acrylic","Canvas","Not for Sale"],
+      "Crowning A Prince":["48 × 60 inches","Acrylic","Canvas","Not for Sale"],
+      "CWC01":["24 × 36 inches","Updating Soon","Presentation panel"],
+      "CWC02":["22 × 28 inches","Updating Soon","Presentation panel"],
+      "CWC03":["27 × 37 inches","Updating Soon","Presentation panel"],
+      "CWC04":["25 × 25 inches","Updating Soon","Presentation panel"],
+      "Ephemeral Glow 5":["30 × 40 inches","Acrylic","Architectural panel","Not for Sale"],
+      "Ephemeral Glow 6":["32 × 38 inches","Acrylic","Architectural panel"],
+      "Ephemeral Glow 7":["36 × 44 inches","Acrylic","Mounted wallpaper"],
+      "Ephemeral Glow 8":["36 × 44 inches","Acrylic","Architectural panel"],
+      "Ephemeral Glow 9":["32 × 39 inches","Acrylic","Architectural panel"],
+      "Eye Get Misty":["54 × 72 inches","Acrylic","Canvas"],
+      "Luggage 06":["42 × 54 inches","Acrylic and oil pastel","Architectural panel"],
+      "Luggage 12":["37 × 28 inches","Acrylic and oil pastel","Architectural panel"],
+      "Luggage 13":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
+      "Luggage 14":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
+      "Luggage 15":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
+      "Luggage 24":["48 × 54 inches","Acrylic and oil pastel","Presentation panel","Not for Sale"],
+      "Man About Town":["48 × 64 inches","Acrylic and oil pastel","Canvas","Not for Sale"],
+      "Matador and Bull":["48 × 60 inches","Oil","Canvas","Not for Sale"],
+      "Relationship Mathematics":["58 × 64 inches","Acrylic","Canvas"],
+      "Royal Birth":["48 × 72 inches","Acrylic","Tarp"],
+      "Royal Dancers":["48 × 60 inches","Acrylic","Canvas","Not for Sale"],
+      "Royal Gathering":["48 × 72 inches","Acrylic","Canvas"],
+      "Soulmates (Male & Female)":["48 × 48 inches","Acrylic","Oriented strand board"],
+      "Structure 01":["12 × 72 inches","Acrylic","Luan board"],
+      "Structure 02":["12 × 72 inches","Acrylic","Luan board"],
+      "Structure 04":["12 × 72 inches","Acrylic","Luan board"],
+      "Structure 05":["12 × 72 inches","Acrylic","Luan board"],
+      "Surreal 1":["24 × 48 inches","Mixed media and acrylic","Canvas"],
+      "Surreal 2":["24 × 48 inches","Mixed media and acrylic","Canvas"],
+      "The Artist":["44 × 48 inches","Acrylic","Oriented strand board"],
+      "The Elder":["44 × 72 inches","Acrylic","Architectural panel"],
+      "The Mathematician":["44 × 72 inches","Acrylic","Architectural panel"],
+      "The Pharmacist":["44 × 76 inches","Acrylic","Architectural panel"],
+      "The Pilot":["44 × 72 inches","Acrylic","Architectural panel"],
+      "The Postman":["44 × 72 inches","Acrylic","Architectural panel"],
+      "The Resting Man":["44 × 72 inches","Acrylic","Architectural panel"],
+      "The Teacher":["44 × 72 inches","Acrylic","Architectural panel","Not for Sale"],
+      "Tuxedo":["36 × 48 inches","Acrylic","Canvas","Not for Sale"],
+      "UA31":["36 × 72 inches","Acrylic and oil pastel","Canvas"],
+      "Untitled 2":["67 × 43 inches","Acrylic","Canvas"],
+      "Untitled 3":["29 × 35 inches","Acrylic","Canvas"],
+      "Untitled 4":["71 × 63 inches","Acrylic","Canvas"],
+      "Untitled 6":["88 × 60 inches","Acrylic","Canvas"],
+      "Untitled 15":["36 × 48 inches","Mixed media and acrylic","Updating Soon","Not for Sale"],
+      "Untitled 15 - 16":["72 × 48 inches","Mixed media and acrylic","Updating Soon","Not for Sale"],
+      "Untitled 16":["36 × 48 inches","Mixed media and acrylic","Updating Soon","Not for Sale"],
+      "Vanity":["36 × 48 inches","Mixed media and acrylic","Canvas","Not for Sale"],
+      "Yaz":["36 × 48 inches","Acrylic","Canvas","Not for Sale"]
+    };
+    artworks.forEach(a=>{
+      if(a.title.startsWith("Luggage ")){a.medium="Acrylic and oil pastel";a.surface="";a.status="Available";}
+      const u=updates[a.title];if(u){a.size=u[0];a.medium=u[1];a.surface=u[2];a.status=u[3]||"Available";}
+      else{a.surface=a.medium&&a.medium.includes(" on ")?a.medium.split(" on ").slice(1).join(" on "):a.surface||"";a.medium=a.medium&&a.medium.includes(" on ")?a.medium.split(" on ")[0]:a.medium||"";a.status=a.status||"Available";}
+    });
+
+    const parseSize=size=>{const m=(size||"").match(/([0-9.]+)\s*[×x]\s*([0-9.]+)/);return m?[Number(m[1]),Number(m[2])]:null;};
+    const priceFor=a=>{if(a.status==="Not for Sale")return"Not for Sale";const d=parseSize(a.size);if(!d||!a.medium||a.medium==="Updating Soon")return"Coming Soon";const rate=a.medium==="Oil"?2:1.5;const price=Math.round(d[0]*d[1]*rate/50)*50;return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(price);};
+    const value=v=>v||"Updating Soon";
+
     artworks.sort((a,b) => a.title.localeCompare(b.title,undefined,{numeric:true,sensitivity:"base"}));
     const gallery=document.getElementById("gallery");
     const esc=s => s.replace(/[&<>"']/g,c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -137,7 +233,10 @@
         <div class="details">
           <h2>${esc(a.title)}</h2>
           <p class="series">Series: ${esc(a.series)}</p>
-          ${a.medium?`<p>${esc(a.medium)}</p>`:""}${a.size?`<p>${esc(a.size)}</p>`:""}
+          <p><strong>Size:</strong> ${esc(value(a.size))}</p>
+          <p><strong>Medium:</strong> ${esc(value(a.medium))}</p>
+          <p><strong>Surface:</strong> ${esc(value(a.surface))}</p>
+          <p class="price ${priceFor(a)==="Not for Sale"?"nfs":""}">${esc(priceFor(a))}</p>
         </div>
       </article>`).join("");
 

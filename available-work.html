@@ -27,7 +27,12 @@
     .details p { margin:3px 0; color:var(--muted); font-family:Arial,sans-serif; font-size:.88rem; line-height:1.45; }
     .details .series { color:var(--ink); font-weight:bold; }
     .details .price { margin-top:8px; color:#a65d1b; font-size:1rem; font-weight:bold; }
-    .details .nfs { color:#8b1e1e; }
+    .details .sold { color:#8b1e1e; font-size:1.08rem; font-weight:900; letter-spacing:.08em; }
+    .studio-visit { max-width:850px; margin:0 auto 36px; padding:24px 20px; text-align:center; background:#fff; border:1px solid var(--rule); box-shadow:0 3px 10px rgba(0,0,0,.07); }
+    .studio-visit h2 { margin:0 0 8px; font-size:1.65rem; }
+    .studio-visit p { margin:0 auto 17px; max-width:680px; font-size:1.05rem; line-height:1.55; }
+    .studio-visit a { display:inline-block; padding:13px 22px; color:#fff; background:#a65d1b; border-radius:7px; text-decoration:none; font-family:Arial,sans-serif; font-size:.95rem; font-weight:bold; }
+    .studio-visit a:hover,.studio-visit a:focus { background:#7d4315; }
     .contact { margin:48px auto 0; padding:28px 20px; border-top:1px solid var(--rule); text-align:center; font-size:1.08rem; line-height:1.65; }
     .contact a { color:var(--ink); font-weight:bold; }
     footer { padding:24px 15px; text-align:center; background:#111; color:#ddd; font-family:Arial,sans-serif; font-size:.85rem; }
@@ -48,6 +53,11 @@
   </header>
   <main>
     <p class="collection-note">Select any image to view it larger. To confirm current availability, pricing, framing, or to arrange a private studio visit, call or text KJL Art Sanctuary.</p>
+    <section class="studio-visit" aria-label="Schedule a studio visit">
+      <h2>See More Original Artwork in Person</h2>
+      <p>Schedule a private visit to KJL Art Sanctuary Gallery &amp; Studio to experience additional artwork and discuss the right piece for your home, office, or collection.</p>
+      <a href="tel:+16093726022">Call 609-372-6022 to Schedule a Visit</a>
+    </section>
     <section id="gallery" class="gallery-grid" aria-label="Available artwork"></section>
     <div class="contact">To inquire about an artwork or schedule a visit:<br><a href="tel:+16093726022">609-372-6022</a> &nbsp;|&nbsp; <a href="https://www.kjlartsanctuary.com">www.kjlartsanctuary.com</a></div>
   </main>
@@ -142,8 +152,8 @@
       "abstract25":["30 × 40 inches","Acrylic","Canvas"],
       "abstract26":["72 × 48 inches","Acrylic","Canvas"],
       "abstract27":["60 × 72 inches","Acrylic","Canvas"],
-      "abstract29":["90 × 40 inches","Acrylic","Canvas","Not for Sale"],
-      "abstract30":["30 × 40 inches","Acrylic","Canvas","Not for Sale"],
+      "abstract29":["90 × 40 inches","Acrylic","Canvas","SOLD"],
+      "abstract30":["30 × 40 inches","Acrylic","Canvas","SOLD"],
       "abstract31":["36 × 48 inches","Acrylic","Canvas"],
       "abstract33":["44 × 60 inches","Acrylic","Canvas"],
       "abstract34":["72 × 54 inches","Acrylic","Canvas"],
@@ -161,13 +171,13 @@
       "Bonnet":["84 × 48 inches","Acrylic","Canvas"],
       "Bride of Basquiat":["36 × 48 inches","Acrylic","Wicker blind"],
       "Chanteuse":["66 × 58 inches","Acrylic","Canvas"],
-      "Color Flow":["52 × 74 inches","Acrylic","Canvas","Not for Sale"],
-      "Crowning A Prince":["48 × 60 inches","Acrylic","Canvas","Not for Sale"],
+      "Color Flow":["52 × 74 inches","Acrylic","Canvas","SOLD"],
+      "Crowning A Prince":["48 × 60 inches","Acrylic","Canvas","SOLD"],
       "CWC01":["24 × 36 inches","Concentrated Watercolor","Presentation panel"],
       "CWC02":["22 × 28 inches","Concentrated Watercolor","Presentation panel"],
       "CWC03":["27 × 37 inches","Concentrated Watercolor","Presentation panel"],
       "CWC04":["25 × 25 inches","Concentrated Watercolor","Presentation panel"],
-      "Ephemeral Glow 5":["30 × 40 inches","Acrylic","Architectural panel","Not for Sale"],
+      "Ephemeral Glow 5":["30 × 40 inches","Acrylic","Architectural panel","SOLD"],
       "Ephemeral Glow 6":["32 × 38 inches","Acrylic","Architectural panel"],
       "Ephemeral Glow 7":["36 × 44 inches","Acrylic","Mounted wallpaper"],
       "Ephemeral Glow 8":["36 × 44 inches","Acrylic","Architectural panel"],
@@ -178,12 +188,12 @@
       "Luggage 13":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
       "Luggage 14":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
       "Luggage 15":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
-      "Luggage 24":["48 × 54 inches","Acrylic and oil pastel","Presentation panel","Not for Sale"],
-      "Man About Town":["48 × 64 inches","Acrylic and oil pastel","Canvas","Not for Sale"],
-      "Matador and Bull":["48 × 60 inches","Oil","Canvas","Not for Sale"],
+      "Luggage 24":["48 × 54 inches","Acrylic and oil pastel","Presentation panel","SOLD"],
+      "Man About Town":["48 × 64 inches","Acrylic and oil pastel","Canvas","SOLD"],
+      "Matador and Bull":["48 × 60 inches","Oil","Canvas","SOLD"],
       "Relationship Mathematics":["58 × 64 inches","Acrylic","Canvas"],
       "Royal Birth":["48 × 72 inches","Acrylic","Tarp"],
-      "Royal Dancers":["48 × 60 inches","Acrylic","Canvas","Not for Sale"],
+      "Royal Dancers":["48 × 60 inches","Acrylic","Canvas","SOLD"],
       "Royal Gathering":["48 × 72 inches","Acrylic","Canvas"],
       "Soulmates (Male & Female)":["48 × 48 inches","Acrylic","Oriented strand board"],
       "Structure 01":["12 × 72 inches","Acrylic","Luan board"],
@@ -199,18 +209,18 @@
       "The Pilot":["44 × 72 inches","Acrylic","Architectural panel"],
       "The Postman":["44 × 72 inches","Acrylic","Architectural panel"],
       "The Resting Man":["44 × 72 inches","Acrylic","Architectural panel"],
-      "The Teacher":["44 × 72 inches","Acrylic","Architectural panel","Not for Sale"],
-      "Tuxedo":["36 × 48 inches","Acrylic","Canvas","Not for Sale"],
+      "The Teacher":["44 × 72 inches","Acrylic","Architectural panel","SOLD"],
+      "Tuxedo":["36 × 48 inches","Acrylic","Canvas","SOLD"],
       "UA31":["36 × 72 inches","Acrylic and oil pastel","Canvas"],
       "Untitled 2":["67 × 43 inches","Acrylic","Canvas"],
       "Untitled 3":["29 × 35 inches","Acrylic","Canvas"],
       "Untitled 4":["71 × 63 inches","Acrylic","Canvas"],
       "Untitled 6":["88 × 60 inches","Acrylic","Canvas"],
-      "Untitled 15":["36 × 48 inches","Mixed media and acrylic","Updating Soon","Not for Sale"],
-      "Untitled 15 - 16":["72 × 48 inches","Mixed media and acrylic","Updating Soon","Not for Sale"],
-      "Untitled 16":["36 × 48 inches","Mixed media and acrylic","Updating Soon","Not for Sale"],
-      "Vanity":["36 × 48 inches","Mixed media and acrylic","Canvas","Not for Sale"],
-      "Yaz":["36 × 48 inches","Acrylic","Canvas","Not for Sale"]
+      "Untitled 15":["36 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
+      "Untitled 15 - 16":["72 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
+      "Untitled 16":["36 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
+      "Vanity":["36 × 48 inches","Mixed media and acrylic","Canvas","SOLD"],
+      "Yaz":["36 × 48 inches","Acrylic","Canvas","SOLD"]
     };
     artworks.forEach(a=>{
       if(a.title.startsWith("Luggage ")){a.medium="Acrylic and oil pastel";a.surface="";a.status="Available";}
@@ -219,7 +229,7 @@
     });
 
     const parseSize=size=>{const m=(size||"").match(/([0-9.]+)\s*[×x]\s*([0-9.]+)/);return m?[Number(m[1]),Number(m[2])]:null;};
-    const priceFor=a=>{if(a.status==="Not for Sale")return"Not for Sale";const d=parseSize(a.size);if(!d||!a.medium||a.medium==="Updating Soon")return"Coming Soon";const rate=a.medium==="Oil"?2:1.5;const price=Math.round(d[0]*d[1]*rate/50)*50;return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(price);};
+    const priceFor=a=>{if(a.status==="SOLD")return"SOLD";const d=parseSize(a.size);if(!d||!a.medium||a.medium==="Updating Soon")return"Coming Soon";const rate=a.medium==="Oil"?2:1.5;const price=Math.round(d[0]*d[1]*rate/50)*50;return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(price);};
     const value=v=>v||"Updating Soon";
 
     artworks.sort((a,b) => a.title.localeCompare(b.title,undefined,{numeric:true,sensitivity:"base"}));
@@ -236,7 +246,7 @@
           <p><strong>Size:</strong> ${esc(value(a.size))}</p>
           <p><strong>Medium:</strong> ${esc(value(a.medium))}</p>
           <p><strong>Surface:</strong> ${esc(value(a.surface))}</p>
-          <p class="price ${priceFor(a)==="Not for Sale"?"nfs":""}">${esc(priceFor(a))}</p>
+          <p class="price ${priceFor(a)==="SOLD"?"sold":""}">${esc(priceFor(a))}</p>
         </div>
       </article>`).join("");
 

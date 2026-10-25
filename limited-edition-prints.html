@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Collect signed and numbered limited edition prints by Kenneth J. Lewis Sr. Editions of 50, with certificates of authenticity. 13 × 19 prints $95; matted to 18 × 24 $125."
+    content="Shop signed and numbered limited edition prints by Kenneth J. Lewis Sr. Editions of 50 with certificates of authenticity. $95 print only or $125 matted. Free shipping within the USA."
   />
 
   <link
@@ -23,7 +23,7 @@
   />
   <meta
     property="og:description"
-    content="Signed and numbered editions of 50. Print only $95. Matted $125. Certificate of authenticity included."
+    content="Signed and numbered editions of 50. Print only $95. Matted $125. Free shipping within the USA. Studio pickup available."
   />
   <meta
     property="og:url"
@@ -68,14 +68,14 @@
       font-size: 18px;
     }
 
-    nav.main-nav {
+    .main-nav {
       text-align: center;
       padding: 12px 10px;
       border-top: 2px solid #333;
       border-bottom: 2px solid #333;
     }
 
-    nav.main-nav a {
+    .main-nav a {
       display: inline-block;
       margin: 0 8px;
       padding: 6px;
@@ -85,8 +85,8 @@
       text-decoration: none;
     }
 
-    nav.main-nav a:hover,
-    nav.main-nav a[aria-current] {
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
       color: #a65d1b;
       text-decoration: underline;
       text-underline-offset: 5px;
@@ -105,7 +105,6 @@
     }
 
     .eyebrow {
-      font-size: 14px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #86501f;
@@ -142,25 +141,45 @@
       margin: 0 0 8px;
     }
 
-    .option .price {
-      font-size: 42px;
-      font-weight: bold;
-      margin: 8px 0;
-      color: #a65d1b;
-    }
-
     .option p {
       font-size: 17px;
       line-height: 1.5;
       margin: 8px 0;
     }
 
+    .option .price {
+      font-size: 42px;
+      font-weight: bold;
+      color: #a65d1b;
+    }
+
     .details {
       text-align: center;
       font-size: 17px;
       line-height: 1.7;
-      margin: 20px auto 40px;
+      margin: 20px auto 30px;
       max-width: 850px;
+    }
+
+    .shipping {
+      padding: 25px;
+      margin: 30px 0 40px;
+      background: #faf6f0;
+      border: 1px solid #e5ddd2;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .shipping h2 {
+      color: #a65d1b;
+      font-size: 30px;
+      margin: 0 0 12px;
+    }
+
+    .shipping p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 8px 0;
     }
 
     .gallery {
@@ -222,7 +241,14 @@
     .certificate {
       font-size: 15px;
       line-height: 1.5;
-      margin: 12px 0 22px;
+      margin: 12px 0;
+    }
+
+    .shipping-note {
+      font-size: 15px;
+      font-weight: bold;
+      color: #725538;
+      margin: 0 0 22px;
     }
 
     .button {
@@ -311,9 +337,8 @@
         height: 320px;
       }
 
-      nav.main-nav a {
+      .main-nav a {
         margin: 3px;
-        font-size: 14px;
       }
 
       .card-copy h3 {
@@ -382,9 +407,23 @@
     <p class="details">
       Each artwork is limited to an edition of <strong>50 prints</strong>,
       shared across both options. Matted prints include a mat, backer
-      board, and clear protective bag. Frame not included. Contact the
-      studio to confirm availability, payment, and pickup or shipping details.
+      board, and clear protective bag. Frame not included.
+      Use the purchase button beneath your chosen artwork to order through Square.
     </p>
+
+    <section class="shipping" aria-label="Shipping and pickup information">
+      <h2>Free Shipping Within the USA</h2>
+      <p>
+        <strong>Orders ship in 3 days.</strong><br />
+        Delivery time is additional.
+      </p>
+      <p>
+        Pickup is also available at<br />
+        <strong>KJL Art Sanctuary</strong><br />
+        310 4th Street, Ewing, NJ 08638
+      </p>
+      <p>Please contact the studio to arrange your pickup time.</p>
+    </section>
 
     <section class="gallery" aria-label="Limited edition print collection">
 
@@ -413,10 +452,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Color%20Flow2&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Color%20Flow2.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/1Kpckeny"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Color Flow2 through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -445,10 +488,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Dream%20Fragments&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Dream%20Fragments.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/QaCviseO"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Dream Fragments through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -477,10 +524,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20First%20Date&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20First%20Date.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/y6VzZ6AX"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase First Date through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -509,10 +560,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Head%20Bang%20Zone&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Head%20Bang%20Zone.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/klcFUXT7"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Head Bang Zone through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -541,10 +596,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20If%20Heels%20Can%20Talk&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20If%20Heels%20Can%20Talk.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/12vxPAPD"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase If Heels Can Talk through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -573,10 +632,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Jazz%20Alive&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Jazz%20Alive.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/GQID15kc"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Jazz Alive through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -605,10 +668,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Majestic&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Majestic.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/5T7S0k5t"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Majestic through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -637,10 +704,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Multifaceted&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Multifaceted.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/Iga8MlVc"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Multifaceted through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -669,10 +740,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20She%20Strings&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20She%20Strings.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/JUMZX29h"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase She Strings through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -701,10 +776,14 @@
             Matted to 18 × 24 <strong>$125</strong>
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
+          <p class="shipping-note">Free USA shipping · Pickup available</p>
           <a
             class="button"
-            href="mailto:kjlartsanctuary@gmail.com?subject=Limited%20Edition%20Print%20Inquiry%20%E2%80%94%20Whisper&amp;body=Hello%20Kenneth%2C%0A%0AI%20am%20interested%20in%20Whisper.%0A%0AMy%20preferred%20option%20is%3A%0A%5B%20%5D%2013%20%C3%97%2019%20print%20only%20%E2%80%94%20%2495%0A%5B%20%5D%2013%20%C3%97%2019%20print%20matted%20to%2018%20%C3%97%2024%20%E2%80%94%20%24125%0A%0APlease%20confirm%20availability%20and%20let%20me%20know%20how%20to%20arrange%20payment%20and%20pickup%20or%20shipping.%0A%0AName%3A%0APhone%3A%0A"
-          >Inquire About This Print</a>
+            href="https://square.link/u/QsKsHhxZ"
+            target="_blank"
+            rel="noopener"
+            aria-label="Purchase Whisper through Square"
+          >Purchase This Print</a>
         </div>
       </article>
 
@@ -712,18 +791,15 @@
 
     <section class="visit">
       <h2>Collect a Print or Visit the Studio</h2>
-
       <p>
-        Use the inquiry button beneath your chosen artwork, or contact me
-        directly to discuss your selection.
+        Purchase your chosen artwork through Square using the buttons above.
+        For questions or to arrange studio pickup, contact me directly.
       </p>
-
       <p>
         <strong>KJL Art Sanctuary</strong><br />
-        310 4th St, Ewing, NJ 08638<br />
-        Private studio visits by appointment
+        310 4th Street, Ewing, NJ 08638<br />
+        Private studio visits and pickup by appointment
       </p>
-
       <p>
         <a href="tel:16093726022">(609) 372-6022</a><br />
         <a href="mailto:kjlartsanctuary@gmail.com">

@@ -184,7 +184,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
     }
 
@@ -206,6 +206,39 @@
       display: block;
       width: 100%;
       height: 290px;
+      object-fit: contain;
+    }
+
+    .artwork-views {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2px;
+      background: #e5ddd2;
+    }
+
+    .view-item {
+      min-width: 0;
+      background: #f6f3ee;
+    }
+
+    .view-label {
+      display: block;
+      text-align: center;
+      padding: 12px 5px 0;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #725538;
+      font-weight: bold;
+    }
+
+    .artwork-views .image-link {
+      padding: 10px;
+    }
+
+    .artwork-views .image-link img {
+      height: 250px;
+      width: 100%;
       object-fit: contain;
     }
 
@@ -333,8 +366,8 @@
         padding: 0 16px;
       }
 
-      .image-link img {
-        height: 320px;
+      .artwork-views .image-link img {
+        height: 220px;
       }
 
       .main-nav a {
@@ -427,22 +460,36 @@
 
     <section class="gallery" aria-label="Limited edition print collection">
 
+      <!-- COLOR FLOW2 -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Color%20Flow2%2013x19%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Color Flow2"
-        >
-          <img
-            src="images/Color%20Flow2%2013x19%20Print.jpg"
-            alt="Color Flow2 by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Color%20Flow2%2013x19%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Color Flow2">
+              <img
+                src="images/Color%20Flow2%2013x19%20Print.jpg"
+                alt="Color Flow2 by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Color_Flow2_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Color Flow2">
+              <img
+                src="images/Color_Flow2_room.jpg"
+                alt="Color Flow2 framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Color Flow2</h3>
@@ -453,32 +500,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/1Kpckeny"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Color Flow2 through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/1Kpckeny"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Color Flow2 through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- DREAM FRAGMENTS -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Dream%20Fragments%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Dream Fragments"
-        >
-          <img
-            src="images/Dream%20Fragments%20Print.jpg"
-            alt="Dream Fragments by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Dream%20Fragments%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Dream Fragments">
+              <img
+                src="images/Dream%20Fragments%20Print.jpg"
+                alt="Dream Fragments by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Dream_Fragments_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Dream Fragments">
+              <img
+                src="images/Dream_Fragments_room.jpg"
+                alt="Dream Fragments framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Dream Fragments</h3>
@@ -489,32 +549,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/QaCviseO"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Dream Fragments through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/QaCviseO"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Dream Fragments through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- FIRST DATE -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/First%20Date13x19%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of First Date"
-        >
-          <img
-            src="images/First%20Date13x19%20Print.jpg"
-            alt="First Date by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/First%20Date13x19%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of First Date">
+              <img
+                src="images/First%20Date13x19%20Print.jpg"
+                alt="First Date by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/First_Date_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of First Date">
+              <img
+                src="images/First_Date_room.jpg"
+                alt="First Date framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>First Date</h3>
@@ -525,32 +598,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/y6VzZ6AX"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase First Date through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/y6VzZ6AX"
+             target="_blank" rel="noopener"
+             aria-label="Purchase First Date through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- HEAD BANG ZONE -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Head%20Bang%20Zone%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Head Bang Zone"
-        >
-          <img
-            src="images/Head%20Bang%20Zone%20Print.jpg"
-            alt="Head Bang Zone by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Head%20Bang%20Zone%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Head Bang Zone">
+              <img
+                src="images/Head%20Bang%20Zone%20Print.jpg"
+                alt="Head Bang Zone by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Head_Bang_Zone_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Head Bang Zone">
+              <img
+                src="images/Head_Bang_Zone_room.jpg"
+                alt="Head Bang Zone framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Head Bang Zone</h3>
@@ -561,32 +647,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/klcFUXT7"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Head Bang Zone through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/klcFUXT7"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Head Bang Zone through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- IF HEELS CAN TALK -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/If%20heels%20could%20talk%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of If Heels Can Talk"
-        >
-          <img
-            src="images/If%20heels%20could%20talk%20Print.jpg"
-            alt="If Heels Can Talk by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/If%20heels%20could%20talk%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of If Heels Can Talk">
+              <img
+                src="images/If%20heels%20could%20talk%20Print.jpg"
+                alt="If Heels Can Talk by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/If_Heels_Can_Talk_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of If Heels Can Talk">
+              <img
+                src="images/If_Heels_Can_Talk_room.jpg"
+                alt="If Heels Can Talk framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>If Heels Can Talk</h3>
@@ -597,32 +696,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/12vxPAPD"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase If Heels Can Talk through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/12vxPAPD"
+             target="_blank" rel="noopener"
+             aria-label="Purchase If Heels Can Talk through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- JAZZ ALIVE -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Jazz%20Alive%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Jazz Alive"
-        >
-          <img
-            src="images/Jazz%20Alive%20Print.jpg"
-            alt="Jazz Alive by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Jazz%20Alive%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Jazz Alive">
+              <img
+                src="images/Jazz%20Alive%20Print.jpg"
+                alt="Jazz Alive by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Jazz_Alive_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Jazz Alive">
+              <img
+                src="images/Jazz_Alive_room.jpg"
+                alt="Jazz Alive framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Jazz Alive</h3>
@@ -633,32 +745,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/GQID15kc"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Jazz Alive through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/GQID15kc"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Jazz Alive through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- MAJESTIC -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Majestic%2013x19%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Majestic"
-        >
-          <img
-            src="images/Majestic%2013x19%20Print.jpg"
-            alt="Majestic by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Majestic%2013x19%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Majestic">
+              <img
+                src="images/Majestic%2013x19%20Print.jpg"
+                alt="Majestic by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Majestic_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Majestic">
+              <img
+                src="images/Majestic_room.jpg"
+                alt="Majestic framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Majestic</h3>
@@ -669,32 +794,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/5T7S0k5t"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Majestic through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/5T7S0k5t"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Majestic through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- MULTIFACETED -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Multifaceted13x19%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Multifaceted"
-        >
-          <img
-            src="images/Multifaceted13x19%20Print.jpg"
-            alt="Multifaceted by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Multifaceted13x19%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Multifaceted">
+              <img
+                src="images/Multifaceted13x19%20Print.jpg"
+                alt="Multifaceted by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Multifaceted_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Multifaceted">
+              <img
+                src="images/Multifaceted_room.jpg"
+                alt="Multifaceted framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Multifaceted</h3>
@@ -705,32 +843,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/Iga8MlVc"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Multifaceted through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/Iga8MlVc"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Multifaceted through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- SHE STRINGS -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/She%20Strings%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of She Strings"
-        >
-          <img
-            src="images/She%20Strings%20Print.jpg"
-            alt="She Strings by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/She%20Strings%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of She Strings">
+              <img
+                src="images/She%20Strings%20Print.jpg"
+                alt="She Strings by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/She_Strings_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of She Strings">
+              <img
+                src="images/She_Strings_room.jpg"
+                alt="She Strings framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>She Strings</h3>
@@ -741,32 +892,45 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/JUMZX29h"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase She Strings through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/JUMZX29h"
+             target="_blank" rel="noopener"
+             aria-label="Purchase She Strings through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 
+      <!-- WHISPER -->
       <article class="print-card">
-        <a
-          class="image-link"
-          href="images/Whisper%20Print.jpg"
-          target="_blank"
-          rel="noopener"
-          aria-label="View larger image of Whisper"
-        >
-          <img
-            src="images/Whisper%20Print.jpg"
-            alt="Whisper by Kenneth J. Lewis Sr."
-            loading="lazy"
-            width="600"
-            height="600"
-          />
-        </a>
+        <div class="artwork-views">
+          <div class="view-item">
+            <span class="view-label">The Print</span>
+            <a class="image-link"
+               href="images/Whisper%20Print.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger image of Whisper">
+              <img
+                src="images/Whisper%20Print.jpg"
+                alt="Whisper by Kenneth J. Lewis Sr."
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div class="view-item">
+            <span class="view-label">In a Room</span>
+            <a class="image-link"
+               href="images/Whisper_room.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View larger room mockup of Whisper">
+              <img
+                src="images/Whisper_room.jpg"
+                alt="Whisper framed with a white mat in a room"
+                loading="lazy" />
+            </a>
+          </div>
+        </div>
+
         <div class="card-copy">
           <p class="edition">Edition of 50 · Signed &amp; numbered</p>
           <h3>Whisper</h3>
@@ -777,13 +941,12 @@
           </p>
           <p class="certificate">Certificate of authenticity included.</p>
           <p class="shipping-note">Free USA shipping · Pickup available</p>
-          <a
-            class="button"
-            href="https://square.link/u/QsKsHhxZ"
-            target="_blank"
-            rel="noopener"
-            aria-label="Purchase Whisper through Square"
-          >Purchase This Print</a>
+          <a class="button"
+             href="https://square.link/u/QsKsHhxZ"
+             target="_blank" rel="noopener"
+             aria-label="Purchase Whisper through Square">
+            Purchase This Print
+          </a>
         </div>
       </article>
 

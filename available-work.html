@@ -1,588 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore The Color of Jazz, a seven-piece collection of original oil paintings on canvas, followed by more available artwork by Kenneth J. Lewis Sr.">
-  <title>Available Work | Kenneth J. Lewis Sr.</title>
-  <style>
-    :root { --ink:#252525; --muted:#666; --paper:#f7f5f1; --card:#fff; --rule:#dedbd5; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:var(--paper); font-family:Garamond, Georgia, "Times New Roman", serif; }
-    header { padding:42px 18px 30px; text-align:center; background:#111; color:#fff; }
-    header h1 { margin:0 0 12px; font-size:clamp(2.25rem,5vw,3.8rem); letter-spacing:.03em; }
-    header p { max-width:850px; margin:0 auto; font-size:1.1rem; line-height:1.6; }
-    nav { margin-top:22px; }
-    nav a { display:inline-block; padding:10px 18px; border:1px solid #fff; color:#fff; text-decoration:none; font-weight:bold; }
-    nav a:hover, nav a:focus { background:#fff; color:#111; }
-    main { max-width:1200px; margin:0 auto; padding:42px 20px 55px; }
-    .collection-note { max-width:850px; margin:0 auto 34px; text-align:center; font-size:1.08rem; line-height:1.6; }
-    .gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
-    .card { min-width:0; overflow:hidden; background:var(--card); border:1px solid var(--rule); box-shadow:0 3px 10px rgba(0,0,0,.07); }
-    .image-link { display:flex; align-items:center; justify-content:center; height:360px; padding:10px; background:#eeeae4; }
-    .image-link img { display:block; width:100%; height:100%; object-fit:contain; transition:transform .2s ease; }
-    .image-link:hover img { transform:scale(1.025); }
-    .details { padding:15px 16px 18px; text-align:center; }
-    .details h2 { margin:0 0 7px; font-size:1.22rem; line-height:1.25; }
-    .details p { margin:3px 0; color:var(--muted); font-family:Arial,sans-serif; font-size:.88rem; line-height:1.45; }
-    .details .series { color:var(--ink); font-weight:bold; }
-    .details .price { margin-top:8px; color:#a65d1b; font-size:1rem; font-weight:bold; }
-    .details .sold { color:#8b1e1e; font-size:1.08rem; font-weight:900; letter-spacing:.08em; }
-    .studio-visit { max-width:850px; margin:0 auto 36px; padding:24px 20px; text-align:center; background:#fff; border:1px solid var(--rule); box-shadow:0 3px 10px rgba(0,0,0,.07); }
-    .studio-visit h2 { margin:0 0 8px; font-size:1.65rem; }
-    .studio-visit p { margin:0 auto 17px; max-width:680px; font-size:1.05rem; line-height:1.55; }
-    .studio-visit a { display:inline-block; padding:13px 22px; color:#fff; background:#a65d1b; border-radius:7px; text-decoration:none; font-family:Arial,sans-serif; font-size:.95rem; font-weight:bold; }
-    .studio-visit a:hover,.studio-visit a:focus { background:#7d4315; }
-    .contact { margin:48px auto 0; padding:28px 20px; border-top:1px solid var(--rule); text-align:center; font-size:1.08rem; line-height:1.65; }
-    .contact a { color:var(--ink); font-weight:bold; }
-    footer { padding:24px 15px; text-align:center; background:#111; color:#ddd; font-family:Arial,sans-serif; font-size:.85rem; }
-    .lightbox { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:55px 20px 25px; background:rgba(0,0,0,.92); }
-    .lightbox.open { display:flex; }
-    .lightbox img { max-width:94vw; max-height:84vh; object-fit:contain; }
-    .lightbox button { position:absolute; top:12px; right:20px; border:0; background:transparent; color:#fff; font-size:2.5rem; cursor:pointer; }
-    .lightbox-caption { position:absolute; bottom:8px; left:15px; right:15px; color:#fff; text-align:center; font-size:1rem; }
-    @media (max-width:900px) {
-      .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .image-link { height:330px; }
-    }
-    @media (max-width:600px) {
-      main { padding:32px 14px 45px; }
-      .gallery-grid { grid-template-columns:1fr; gap:18px; }
-      .image-link { height:auto; min-height:280px; max-height:480px; }
-      .image-link img { height:auto; max-height:450px; }
-    }
-    .jazz-collection { margin:0 0 48px; padding:28px; border:1px solid #d7c3a2; background:#f0e8da; }
-    .jazz-intro { max-width:920px; margin:0 auto 26px; text-align:center; }
-    .jazz-intro .eyebrow { color:#76501e; font-family:Arial,sans-serif; font-size:.8rem; font-weight:bold; letter-spacing:.12em; text-transform:uppercase; }
-    .jazz-intro h2 { font-size:clamp(2rem,5vw,3rem); margin:10px 0; }
-    .jazz-intro p { font-size:1.08rem; line-height:1.65; }
-    .jazz-offer { margin:22px auto; padding:20px; background:#fff; border:1px solid var(--rule); }
-    .jazz-offer strong { display:block; font-size:1.5rem; }
-    .inquiry-button { display:inline-block; margin-top:10px; padding:13px 20px; background:#81501d; color:#fff; text-decoration:none; font-family:Arial,sans-serif; font-size:.95rem; font-weight:bold; border-radius:5px; }
-    .inquiry-button:hover,.inquiry-button:focus { background:#583512; }
-    .jazz-card h3 { margin:0 0 8px; font-size:1.35rem; }
-    .jazz-card .description { margin:14px 0; text-align:left; font-size:.95rem; line-height:1.65; color:#444; }
-    .other-heading { font-size:2rem; margin:0 0 24px; text-align:center; }
-    @media (max-width:600px) {
-      .jazz-collection { padding:20px 12px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shop original artwork by Kenneth J. Lewis Sr.: The Color of Jazz, vintage automobiles, Forgotten Trades, floral paintings, and more at KJL Art Sanctuary.">
+<title>Available Work | Kenneth J. Lewis Sr.</title>
+<style>
+:root {
+  --ink:#252525;
+  --muted:#666;
+  --paper:#f7f5f1;
+  --card:#fff;
+  --rule:#dedbd5;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:Garamond,Georgia,"Times New Roman",serif;
+}
+header {
+  padding:42px 18px 30px;
+  text-align:center;
+  background:#111;
+  color:#fff;
+}
+header h1 {
+  margin:0 0 12px;
+  font-size:clamp(2.25rem,5vw,3.8rem);
+  letter-spacing:.03em;
+}
+header p {
+  max-width:850px;
+  margin:0 auto;
+  font-size:1.1rem;
+  line-height:1.6;
+}
+nav { margin-top:22px; }
+nav a {
+  display:inline-block;
+  margin:4px;
+  padding:10px 18px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+nav a:hover,nav a:focus { background:#fff;color:#111; }
+main {
+  max-width:1200px;
+  margin:0 auto;
+  padding:42px 20px 55px;
+}
+.collection-note {
+  max-width:850px;
+  margin:0 auto 34px;
+  text-align:center;
+  font-size:1.08rem;
+  line-height:1.6;
+}
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.card {
+  min-width:0;
+  overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--rule);
+  box-shadow:0 3px 10px rgba(0,0,0,.07);
+}
+.image-link {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:360px;
+  padding:10px;
+  background:#eeeae4;
+}
+.image-link img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transition:transform .2s ease;
+}
+.image-link:hover img { transform:scale(1.025); }
+.details { padding:15px 16px 18px;text-align:center; }
+.card h3 { margin:0 0 8px;font-size:1.35rem; }
+.details p {
+  margin:3px 0;
+  color:var(--muted);
+  font-family:Arial,sans-serif;
+  font-size:.88rem;
+  line-height:1.45;
+}
+.details .series { color:var(--ink);font-weight:bold; }
+.details .description {
+  margin:14px 0;
+  text-align:left;
+  line-height:1.65;
+  color:#444;
+}
+.details .price {
+  margin-top:8px;
+  color:#a65d1b;
+  font-size:1rem;
+  font-weight:bold;
+}
+.details .sold {
+  color:#8b1e1e;
+  font-size:1.08rem;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.studio-visit {
+  max-width:850px;
+  margin:0 auto 36px;
+  padding:24px 20px;
+  text-align:center;
+  background:#fff;
+  border:1px solid var(--rule);
+  box-shadow:0 3px 10px rgba(0,0,0,.07);
+}
+.studio-visit h2 { margin:0 0 8px;font-size:1.65rem; }
+.studio-visit p {
+  margin:0 auto 17px;
+  max-width:680px;
+  font-size:1.05rem;
+  line-height:1.55;
+}
+.studio-visit a {
+  display:inline-block;
+  padding:13px 22px;
+  color:#fff;
+  background:#a65d1b;
+  border-radius:7px;
+  text-decoration:none;
+  font-family:Arial,sans-serif;
+  font-size:.95rem;
+  font-weight:bold;
+}
+.studio-visit a:hover,.studio-visit a:focus { background:#7d4315; }
+.jazz-collection {
+  margin:0 0 48px;
+  padding:28px;
+  border:1px solid #d7c3a2;
+  background:#f0e8da;
+}
+.jazz-intro { max-width:920px;margin:0 auto 26px;text-align:center; }
+.jazz-intro .eyebrow {
+  color:#76501e;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+  font-weight:bold;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.jazz-intro h2 { font-size:clamp(2rem,5vw,3rem);margin:10px 0; }
+.jazz-intro p { font-size:1.08rem;line-height:1.65; }
+.jazz-offer {
+  margin:22px auto;
+  padding:20px;
+  background:#fff;
+  border:1px solid var(--rule);
+}
+.jazz-offer strong { display:block;font-size:1.5rem; }
+.inquiry-button {
+  display:inline-block;
+  margin-top:10px;
+  padding:13px 20px;
+  background:#81501d;
+  color:#fff;
+  text-decoration:none;
+  font-family:Arial,sans-serif;
+  font-size:.95rem;
+  font-weight:bold;
+  border-radius:5px;
+}
+.inquiry-button:hover,.inquiry-button:focus { background:#583512; }
+.other-heading { font-size:2rem;margin:0 0 24px;text-align:center; }
+.new-originals { margin:0 0 48px; }
+.section-intro {
+  max-width:850px;
+  margin:0 auto 28px;
+  text-align:center;
+  line-height:1.65;
+  font-size:1.08rem;
+}
+.contact {
+  margin:48px auto 0;
+  padding:28px 20px;
+  border-top:1px solid var(--rule);
+  text-align:center;
+  font-size:1.08rem;
+  line-height:1.65;
+}
+.contact a { color:var(--ink);font-weight:bold; }
+footer {
+  padding:24px 15px;
+  text-align:center;
+  background:#111;
+  color:#ddd;
+  font-family:Arial,sans-serif;
+  font-size:.85rem;
+}
+.lightbox {
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:55px 20px 25px;
+  background:rgba(0,0,0,.92);
+}
+.lightbox.open { display:flex; }
+.lightbox img { max-width:94vw;max-height:84vh;object-fit:contain; }
+.lightbox button {
+  position:absolute;
+  top:12px;
+  right:20px;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:2.5rem;
+  cursor:pointer;
+}
+.lightbox-caption {
+  position:absolute;
+  bottom:8px;
+  left:15px;
+  right:15px;
+  color:#fff;
+  text-align:center;
+  font-size:1rem;
+}
+@media(max-width:900px) {
+  .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .image-link { height:330px; }
+}
+@media(max-width:600px) {
+  main { padding:32px 14px 45px; }
+  .gallery-grid { grid-template-columns:1fr;gap:18px; }
+  .image-link { height:auto;min-height:280px;max-height:480px; }
+  .image-link img { height:auto;max-height:450px; }
+  .jazz-collection { padding:20px 12px; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Available Work</h1>
-    <p>Original artwork by Kenneth J. Lewis Sr. Discover the featured seven-piece jazz collection, followed by additional works arranged alphabetically.</p>
-    <nav><a href="index.html">Back to Home</a></nav>
-  </header>
 
-  <main>
-    <p class="collection-note">Select any image to view it larger. To confirm current availability, pricing, framing, or to arrange a private studio visit, call or text KJL Art Sanctuary.</p>
+<header>
+  <h1>Available Work</h1>
+  <p>Original artwork by Kenneth J. Lewis Sr. Explore The Color of Jazz, discover twelve newly added originals, and browse more works for your home, office, or collection.</p>
+  <nav>
+    <a href="index.html">Back to Home</a>
+    <a href="#new-originals">New Originals</a>
+    <a href="#gallery">More Artwork</a>
+  </nav>
+</header>
 
-    <section class="studio-visit" aria-label="Schedule a studio visit">
-      <h2>See More Original Artwork in Person</h2>
-      <p>Schedule a private visit to KJL Art Sanctuary Gallery &amp; Studio to experience additional artwork and discuss the right piece for your home, office, or collection.</p>
-      <a href="tel:+16093726022">Call 609-372-6022 to Schedule a Visit</a>
-    </section>
+<main>
+  <p class="collection-note">Select any image to view it larger. Call KJL Art Sanctuary to confirm availability or discuss framing, pickup, and delivery. Shipping and delivery are quoted separately.</p>
 
-    <section class="jazz-collection" aria-labelledby="jazz-title">
-      <div class="jazz-intro">
-        <p class="eyebrow">Featured collection · Seven original paintings</p>
-        <h2 id="jazz-title">The Color of Jazz</h2>
-        <p>Bring the whole ensemble home. Seven original oil paintings on canvas by Kenneth J. Lewis Sr. celebrate the soul of jazz through bold color, expressive brushwork, and the atmosphere of vintage clubs and city streets. Trombone, bass, trumpet, voice, saxophone, drums, and piano each take a turn in the spotlight.</p>
-        <p>Collected together, these paintings create a coordinated statement for a home, music room, restaurant, hotel, or corporate collection. Display them as one ensemble or carry their shared rhythm through several connected spaces.</p>
+  <section class="studio-visit" aria-label="Schedule a studio visit">
+    <h2>See More Original Artwork in Person</h2>
+    <p>Schedule a private visit to KJL Art Sanctuary Gallery &amp; Studio to experience the artwork and find the right piece for your space.</p>
+    <a href="tel:+16093726022">Call 609-372-6022 to Schedule a Visit</a>
+  </section>
 
-        <div class="jazz-offer">
-          <strong>Complete seven-piece collection: $22,680</strong>
-          <p>Acquire all seven originals together. Individual artwork prices are shown below; the collection price is their combined total. Call to confirm availability and discuss collection arrangements, framing, pickup, or delivery. Shipping and delivery are quoted separately.</p>
-          <a class="inquiry-button" href="tel:+16093726022">Inquire About the Complete Collection · 609-372-6022</a>
-        </div>
+  <section class="jazz-collection" aria-labelledby="jazz-title">
+    <div class="jazz-intro">
+      <p class="eyebrow">Featured collection · Seven original paintings</p>
+      <h2 id="jazz-title">The Color of Jazz</h2>
+      <p>Bring the whole ensemble home. Seven original oil paintings on canvas by Kenneth J. Lewis Sr. celebrate the soul of jazz through bold color, expressive brushwork, and the atmosphere of vintage clubs and city streets. Trombone, bass, trumpet, voice, saxophone, drums, and piano each take a turn in the spotlight.</p>
+      <p>Collected together, these paintings create a coordinated statement for a home, music room, restaurant, hotel, or corporate collection. Display them as one ensemble or carry their shared rhythm through several connected spaces.</p>
 
-        <p>Four paintings measure 30 × 48 inches, one measures 24 × 48 inches, and two measure 36 × 48 inches. Select any image for a closer look.</p>
+      <div class="jazz-offer">
+        <strong>Complete seven-piece collection: $22,680</strong>
+        <p>Acquire all seven originals together. The collection price is the combined total of the individual prices below. Call to confirm availability and discuss framing, pickup, or delivery. Shipping and delivery are quoted separately.</p>
+        <a class="inquiry-button" href="tel:+16093726022">Inquire About the Complete Collection · 609-372-6022</a>
       </div>
 
-      <div class="gallery-grid" id="jazz-gallery">
-        <article class="card jazz-card">
-          <a class="image-link" href="images/Riverside%20Slide.jpg" data-jazz="0" aria-label="Enlarge Riverside Slide">
-            <img src="images/Riverside%20Slide.jpg" alt="Riverside Slide — trombone, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>Riverside Slide</h3>
-            <p class="series">The Color of Jazz · Trombone</p>
-            <p><strong>Size:</strong> 30 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">A golden trombone stretches across brilliant blues as a sharply dressed musician plays beside the waterfront. Sweeping brushstrokes, warm reflections, and a colorful skyline bring the flowing rhythm of jazz into view.</p>
-            <p class="price">$3,060</p>
-          </div>
-        </article>
-
-        <article class="card jazz-card">
-          <a class="image-link" href="images/The%20Low%20Note.jpg" data-jazz="1" aria-label="Enlarge The Low Note">
-            <img src="images/The%20Low%20Note.jpg" alt="The Low Note — upright bass, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>The Low Note</h3>
-            <p class="series">The Color of Jazz · Upright bass</p>
-            <p><strong>Size:</strong> 30 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">An upright bassist stands absorbed in his music outside a welcoming jazz club. Rich amber and orange give the instrument a commanding presence against his cool green suit, capturing the steady pulse at the heart of the ensemble.</p>
-            <p class="price">$3,240</p>
-          </div>
-        </article>
-
-        <article class="card jazz-card">
-          <a class="image-link" href="images/Golden%20Phrases.jpg" data-jazz="2" aria-label="Enlarge Golden Phrases">
-            <img src="images/Golden%20Phrases.jpg" alt="Golden Phrases — trumpet, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>Golden Phrases</h3>
-            <p class="series">The Color of Jazz · Trumpet</p>
-            <p><strong>Size:</strong> 30 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">With eyes closed and trumpet raised, a musician becomes immersed in his melody. Bold blues meet golden yellows and flashes of orange, while visible brushstrokes bring movement to his hands, suit, and shining instrument.</p>
-            <p class="price">$3,060</p>
-          </div>
-        </article>
-
-        <article class="card jazz-card">
-          <a class="image-link" href="images/Velvet%20in%20Red.jpg" data-jazz="3" aria-label="Enlarge Velvet in Red">
-            <img src="images/Velvet%20in%20Red.jpg" alt="Velvet in Red — vocalist, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>Velvet in Red</h3>
-            <p class="series">The Color of Jazz · Vocalist</p>
-            <p><strong>Size:</strong> 30 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">A vocalist in a flowing red dress commands an intimate club setting. Her closed eyes and lifted hand suggest a deeply felt song, surrounded by warm amber light, a piano, and a bassist. Expressive brushwork gives the scene elegance and emotional warmth.</p>
-            <p class="price">$3,240</p>
-          </div>
-        </article>
-
-        <article class="card jazz-card">
-          <a class="image-link" href="images/Bourbon%20Street%20Serenade.jpg" data-jazz="4" aria-label="Enlarge Bourbon Street Serenade">
-            <img src="images/Bourbon%20Street%20Serenade.jpg" alt="Bourbon Street Serenade — saxophone, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>Bourbon Street Serenade</h3>
-            <p class="series">The Color of Jazz · Saxophone</p>
-            <p><strong>Size:</strong> 24 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">A saxophonist brings his music to a colorful Bourbon Street corner, with an open instrument case at his feet. Golden brass, fiery reds, and cool blues surround his relaxed stance, capturing the spontaneity and character of a street performance.</p>
-            <p class="price">$2,520</p>
-          </div>
-        </article>
-
-        <article class="card jazz-card">
-          <a class="image-link" href="images/The%20Eight%20O%E2%80%99Clock%20Groove.jpg" data-jazz="5" aria-label="Enlarge The Eight O’Clock Groove">
-            <img src="images/The%20Eight%20O%E2%80%99Clock%20Groove.jpg" alt="The Eight O’Clock Groove — drums, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>The Eight O’Clock Groove</h3>
-            <p class="series">The Color of Jazz · Drums</p>
-            <p><strong>Size:</strong> 36 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">A focused drummer settles into the evening rhythm beneath glowing cymbals. Broad strokes of ochre, orange, and brown fill the club with warmth, while bright yellow accents suggest the shimmer of percussion. Jazz posters and audience figures complete the welcoming scene.</p>
-            <p class="price">$3,780</p>
-          </div>
-        </article>
-
-        <article class="card jazz-card">
-          <a class="image-link" href="images/When%20the%20Keys%20Speak.jpg" data-jazz="6" aria-label="Enlarge When the Keys Speak">
-            <img src="images/When%20the%20Keys%20Speak.jpg" alt="When the Keys Speak — piano, original oil painting by Kenneth J. Lewis Sr." loading="lazy">
-          </a>
-          <div class="details">
-            <h3>When the Keys Speak</h3>
-            <p class="series">The Color of Jazz · Piano</p>
-            <p><strong>Size:</strong> 36 × 48 inches</p>
-            <p><strong>Medium:</strong> Oil on canvas</p>
-            <p class="description">A pianist leans into a grand piano as his hands travel across a bright sweep of keys. Fiery reds and oranges contrast with the cool blue city beyond the window. Angular forms and confident brushwork convey the concentration and freedom of a jazz performance.</p>
-            <p class="price">$3,780</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <h2 class="other-heading">More Available Artwork</h2>
-    <section id="gallery" class="gallery-grid" aria-label="Available artwork"></section>
-
-    <div class="contact">
-      To inquire about an artwork or schedule a visit:<br>
-      <a href="tel:+16093726022">609-372-6022</a>
-      &nbsp;|&nbsp;
-      <a href="https://www.kjlartsanctuary.com">www.kjlartsanctuary.com</a>
+      <p>Four paintings measure 30 × 48 inches, one measures 24 × 48 inches, and two measure 36 × 48 inches.</p>
     </div>
-  </main>
+    <div class="gallery-grid" id="jazz-gallery"></div>
+  </section>
 
-  <footer>&copy; <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary. All Rights Reserved.</footer>
+  <section class="new-originals" id="new-originals" aria-labelledby="new-title">
+    <h2 class="other-heading" id="new-title">New Original Paintings</h2>
+    <p class="section-intro">Twelve original oil paintings: vintage automobiles, tributes to forgotten trades, a hopeful city scene, and flowers that bring a little joy. Each is a one-of-a-kind original painting by Kenneth J. Lewis Sr. All are oil on canvas except the works identified as oil on luan board. Call about a painting below to discuss purchasing it.</p>
+    <div class="gallery-grid" id="new-gallery"></div>
+  </section>
 
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged artwork">
-    <button type="button" aria-label="Close enlarged image">&times;</button>
-    <img id="lightbox-image" alt="">
-    <div id="lightbox-caption" class="lightbox-caption"></div>
+  <h2 class="other-heading">More Available Artwork</h2>
+  <section id="gallery" class="gallery-grid" aria-label="Additional artwork and sold works"></section>
+
+  <div class="contact" id="contact">
+    To inquire about an artwork or schedule a visit:<br>
+    <a href="tel:+16093726022">609-372-6022</a>
+    &nbsp;|&nbsp;
+    <a href="https://www.kjlartsanctuary.com">www.kjlartsanctuary.com</a>
+    <p>KJL Art Sanctuary · 310 4th St · Ewing, NJ 08638<br>Open by appointment.</p>
   </div>
+</main>
 
-  <script>
-    const artworks = [];
-    const add = (title, image, series, medium = "", size = "") =>
-      artworks.push({title,image,series,medium,size});
+<footer>&copy; <span id="year"></span> Kenneth J. Lewis Sr. | KJL Art Sanctuary. All Rights Reserved.</footer>
 
-    for (let n=24; n<=45; n++)
-      add(`abstract${n}`, `images/abstract${n}.jpg`, "Abstract Series");
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged artwork" aria-hidden="true">
+  <button type="button" aria-label="Close enlarged image">&times;</button>
+  <img id="lightbox-image" alt="">
+  <div id="lightbox-caption" class="lightbox-caption"></div>
+</div>
 
-    [31,32,33,35].forEach(n =>
-      add(`UA${n}`, `images/UA${n}.jpg`, "Abstract Series"));
+<script>
+const jazzWorks = [
+  {
+    title:"Riverside Slide",
+    image:"images/Riverside%20Slide.jpg",
+    series:"The Color of Jazz · Trombone",
+    size:"30 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A golden trombone stretches across brilliant blues as a sharply dressed musician plays beside the waterfront. Sweeping brushstrokes, warm reflections, and a colorful skyline bring the flowing rhythm of jazz into view.",
+    price:3060
+  },
+  {
+    title:"The Low Note",
+    image:"images/The%20Low%20Note.jpg",
+    series:"The Color of Jazz · Upright bass",
+    size:"30 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"An upright bassist stands absorbed in his music outside a welcoming jazz club. Rich amber and orange give the instrument a commanding presence against his cool green suit, capturing the steady pulse at the heart of the ensemble.",
+    price:3240
+  },
+  {
+    title:"Golden Phrases",
+    image:"images/Golden%20Phrases.jpg",
+    series:"The Color of Jazz · Trumpet",
+    size:"30 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"With eyes closed and trumpet raised, a musician becomes immersed in his melody. Bold blues meet golden yellows and flashes of orange, while visible brushstrokes bring movement to his hands, suit, and shining instrument.",
+    price:3060
+  },
+  {
+    title:"Velvet in Red",
+    image:"images/Velvet%20in%20Red.jpg",
+    series:"The Color of Jazz · Vocalist",
+    size:"30 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A vocalist in a flowing red dress commands an intimate club setting. Her closed eyes and lifted hand suggest a deeply felt song, surrounded by warm amber light, a piano, and a bassist. Expressive brushwork gives the scene elegance and emotional warmth.",
+    price:3240
+  },
+  {
+    title:"Bourbon Street Serenade",
+    image:"images/Bourbon%20Street%20Serenade.jpg",
+    series:"The Color of Jazz · Saxophone",
+    size:"24 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A saxophonist brings his music to a colorful Bourbon Street corner, with an open instrument case at his feet. Golden brass, fiery reds, and cool blues surround his relaxed stance, capturing the spontaneity and character of a street performance.",
+    price:2520
+  },
+  {
+    title:"The Eight O’Clock Groove",
+    image:"images/The%20Eight%20O%E2%80%99Clock%20Groove.jpg",
+    series:"The Color of Jazz · Drums",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A focused drummer settles into the evening rhythm beneath glowing cymbals. Broad strokes of ochre, orange, and brown fill the club with warmth, while bright yellow accents suggest the shimmer of percussion. Jazz posters and audience figures complete the welcoming scene.",
+    price:3780
+  },
+  {
+    title:"When the Keys Speak",
+    image:"images/When%20the%20Keys%20Speak.jpg",
+    series:"The Color of Jazz · Piano",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A pianist leans into a grand piano as his hands travel across a bright sweep of keys. Fiery reds and oranges contrast with the cool blue city beyond the window. Angular forms and confident brushwork convey the concentration and freedom of a jazz performance.",
+    price:3780
+  }
+];
 
-    [
-      ["Untitled 1","images/Untitled%201.jpg"],
-      ["Untitled 2","images/untitled%202.jpg"],
-      ["Untitled 3","images/untitled%203.jpg"],
-      ["Untitled 4","images/untitled%204.jpg"],
-      ["Untitled 10","images/Untitled%2010.jpg"],
-      ["Untitled 11","images/Untitled%2011.jpg"],
-      ["Untitled 15","images/Untitled%2015.jpg"],
-      ["Untitled 15 - 16","images/Untitled%2015%20-%2016.jpg"],
-      ["Untitled 16","images/Untitled%2016.jpg"],
-      ["Untitled 6","images/untitled%206.jpg"],
-      ["Untitled 7","images/untitled%207.jpg"],
-      ["Untitled 8","images/untitled%208.jpg"],
-      ["Untitled 9","images/untitled%209.jpg"]
-    ].forEach(([t,i]) => add(t,i,"Abstract Series"));
+/*
+  NEW ORIGINALS
+  To add a Square link later, add this property to a painting:
+  purchaseUrl:"YOUR-SQUARE-CHECKOUT-LINK",
+  Its button will automatically change to Purchase This Original.
+*/
+const newWorks = [
+  {
+    title:"1957 BMW",
+    image:"images/1957%20BMW%2030%20x%2040.jpg",
+    series:"Vintage Automobiles",
+    size:"30 × 40 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:2400,
+    description:"A green roadster rests along a cobblestone street before an ornate building. Warm stonework and lively strokes of green create a nostalgic city scene with the automobile at its heart."
+  },
+  {
+    title:"1957 Camaro",
+    image:"images/1957%20Camaro%2036%20x%2048.jpg",
+    series:"Vintage Automobiles",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:3450,
+    description:"A red-and-cream convertible takes center stage outside Rosie’s Diner. The striped awning, vivid blue storefront, and colorful pavement give this nostalgic roadside scene an inviting energy."
+  },
+  {
+    title:"1957 Stingray",
+    image:"images/1957%20Stingray%2030%20x%2040.jpg",
+    series:"Vintage Automobiles",
+    size:"30 × 40 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:2400,
+    description:"A long blue classic car stretches across a streetscape of stone walls and turquoise doors. Reflections and loose strokes across the pavement bring movement to this celebration of vintage automotive style."
+  },
+  {
+    title:"The Coal Man",
+    image:"images/Forgotten%20Trades%20The%20Coal%20Man%2042%20x%2062%20on%20luan.jpg",
+    series:"Forgotten Trades",
+    size:"42 × 62 inches",
+    medium:"Oil",
+    surface:"Luan board",
+    price:5200,
+    description:"A coal delivery worker carries a heavy load through a colorful neighborhood, with a delivery cart nearby. The strong figure and expressive brushwork honor the physical labor that once kept homes warm."
+  },
+  {
+    title:"The Ice Man",
+    image:"images/Forgotten%20Trades%20The%20Ice%20Man%2036%20x%2048.jpg",
+    series:"Forgotten Trades",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:3450,
+    description:"Dressed in a blue coat, an ice delivery worker balances a block of ice on his shoulder beside a delivery wagon. Cool blues and warm accents recall the everyday service that helped households preserve food before electric refrigeration."
+  },
+  {
+    title:"The Lamp Lighter",
+    image:"images/Forgotten%20Trades%20The%20Lamp%20Lighter%2042%20x%2052%20on%20luan.jpg",
+    series:"Forgotten Trades",
+    size:"42 × 52 inches",
+    medium:"Oil",
+    surface:"Luan board",
+    price:4350,
+    description:"A worker reaches toward a glowing streetlamp as golden light fills the scene. Rich blues and warm yellows celebrate the quiet ritual of bringing light to neighborhood streets."
+  },
+  {
+    title:"The Telegraph Man",
+    image:"images/Forgotten%20Trades%20The%20Telegraph%20Man%2048%20x%2060.jpg",
+    series:"Forgotten Trades",
+    size:"48 × 60 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:5750,
+    description:"A mounted messenger holds a telegram near a telegraph office, with utility poles receding into the distance. Bright reds, golden earth, and a blue sky bring a sense of purpose to a scene about communication and connection."
+  },
+  {
+    title:"The Walk Toward Tomorrow",
+    image:"images/The%20Walk%20Toward%20Tomorrow%2042%20x%2040%20on%20luan.jpg",
+    series:"Figurative",
+    size:"42 × 40 inches",
+    medium:"Oil",
+    surface:"Luan board",
+    price:3350,
+    description:"Three figures in period clothing walk together along a city street, carrying books and a satchel. Their shared stride and thoughtful expressions suggest companionship, determination, and hope for what lies ahead."
+  },
+  {
+    title:"A Little Joy 1",
+    image:"images/A%20little%20Joy%201%2016x20.jpg",
+    series:"A Little Joy",
+    size:"16 × 20 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:950,
+    description:"A white daisy with a sunny yellow center rises from a dark vase against a muted violet background. Loose petals and fresh green leaves turn a simple flower into a warm, uplifting accent for an intimate space."
+  },
+  {
+    title:"A Little Joy 2",
+    image:"images/A%20little%20Joy%202%2016x20.jpg",
+    series:"A Little Joy",
+    size:"16 × 20 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:950,
+    description:"Pale blue-white petals open above a golden vase on a blue tabletop. The warm brown backdrop and visible brushwork give this small floral painting a welcoming, handcrafted character."
+  },
+  {
+    title:"A Little Joy 4",
+    image:"images/A%20little%20Joy%204%2016x20.jpg",
+    series:"A Little Joy",
+    size:"16 × 20 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:950,
+    description:"A cool blue flower rises from a deep blue vase against a vivid turquoise background. Layered blues and expressive strokes give this floral original a calm presence with a bold splash of color."
+  },
+  {
+    title:"A Little Joy 5",
+    image:"images/A%20little%20Joy%205%2016x20.jpg",
+    series:"A Little Joy",
+    size:"16 × 20 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:950,
+    description:"A white daisy blooms above a green vase against a soft pink background and warm red tabletop. The open petals and fresh leaves bring an easy sense of optimism to this cheerful floral original."
+  }
+];
 
-    [
-      ["After the Gig","images/AFTER%20THE%20GIG%2024x30in%20oil%20canvas%20.jpg","Oil on canvas","24 x 30 inches"],
-      ["After the Ballard","images/AFTER%20the%20Ballard%20%2036x36%20oil%20vinyl%20.jpg","Oil on vinyl","36 x 36 inches"],
-      ["After the Jazz","images/AFTER%20the%20Jazz%20%2024x30%20oil%20canvas.jpg","Oil on canvas","24 x 30 inches"],
-      ["After the Waltz","images/AFTER%20the%20Waltz%2036x36in%20oil%20vinyl.jpg","Oil on vinyl","36 x 36 inches"],
-      ["Accordion and Smoke","images/Accordion%20and%20Smoke%2048x48in%20acrylic%20luan.jpg","Acrylic on luan board","48 x 48 inches"],
-      ["Bass Night","images/Bass%20Night%20%2044x60in%20acrylic%20architectural%20panel%20.jpg","Acrylic on architectural panel","44 x 60 inches"],
-      ["Ensemble","images/Ensemble%2065x72in%20oil%20canvas.jpg","Oil on canvas","65 x 72 inches"],
-      ["Flute","images/Flute%2036x72in%20oil%20luan.jpg","Oil on luan board","36 x 72 inches"],
-      ["Gentleman Drummer","images/Gentleman%20Drummer%20%2044x60%20oil%20architectural%20panel%20.jpg","Oil on architectural panel","44 x 60 inches"],
-      ["Golden Tuba","images/Golden%20Tuba%2048x48in%20oil%20luan.jpg","Oil on luan board","48 x 48 inches"],
-      ["Hands on Ivory","images/Hands%20on%20Ivory%2048x48in%20acrylic%20luan%20.jpg","Acrylic on luan board","48 x 48 inches"],
-      ["Midnight Guitarist","images/Midnight%20Guitarist%2048x61%20acrylic%20luan.jpg","Acrylic on luan board","48 x 61 inches"],
-      ["Solo","images/Solo%2044x60in%20acrylic%20architectural%20panel%20.jpg","Acrylic on architectural panel","44 x 60 inches"],
-      ["Strings of Elegance","images/Strings%20of%20Elegance%2042x60in%20oil%20canvas%20.jpg","Oil on canvas","42 x 60 inches"],
-      ["Two Horns","images/Two%20Horns%20%2048x84in%20oil%20plywood%20.jpg","Oil on plywood","48 x 84 inches"]
-    ].forEach(([t,i,m,s]) => add(t,i,"Jazz",m,s));
+const artworks = [];
+const add = (title,image,series,medium="",size="") =>
+  artworks.push({title,image,series,medium,size});
 
-    for (let n=5; n<=9; n++)
-      add(`Ephemeral Glow ${n}`, `images/EG${n}.jpg`, "Ephemeral Glow Series");
+for(let n=24;n<=45;n++)
+  add(`abstract${n}`,`images/abstract${n}.jpg`,"Abstract Series");
 
-    [
-      "American Selfie","BFF","Bliss","Blue Girl","Bonnet",
-      "Bride of Basquiat","Center of the Sun","Chanteuse","Color Flow"
-    ].forEach(t => add(t,`images/${encodeURIComponent(t)}.jpg`,"Figurative Series"));
+[31,32,33,35].forEach(n =>
+  add(`UA${n}`,`images/UA${n}.jpg`,"Abstract Series"));
 
-    [
-      ["CWC01","images/CWC01.jpg"],
-      ["CWC02","images/CWC02.jpg"],
-      ["CWC03","images/CWC03.jpg"],
-      ["CWC04","images/CWC04.jpg"],
-      ["Eye Get Misty","images/Eye%20get%20Misty.jpg"],
-      ["Soulmates (Male & Female)","images/Soulmates%20Male%20%26%20Female.jpg"],
-      ["When I Get There & Developmental","images/When%20I%20get%20there%20%26%20Develpmental.jpg"],
-      ["Relationship Mathematics","images/Relationship%20Mathematics.jpg"],
-      ["Surreal 1","images/Surreal%201.jpg"],
-      ["Surreal 2","images/Surreal%202.jpg"],
-      ["Vanity","images/Vanity.jpg"],
-      ["Gentleman","images/Gentleman.jpg"],
-      ["Beauty Salon","images/Beauty%20Salon.jpg"],
-      ["El Balleriana","images/El%20Balleriana.jpg"],
-      ["Tuxedo","images/Tuxedo.jpg"],
-      ["Yaz","images/Yaz.jpg"]
-    ].forEach(([t,i]) => add(t,i,"Figurative Series"));
+[
+  ["Untitled 1","images/Untitled%201.jpg"],
+  ["Untitled 2","images/untitled%202.jpg"],
+  ["Untitled 3","images/untitled%203.jpg"],
+  ["Untitled 4","images/untitled%204.jpg"],
+  ["Untitled 10","images/Untitled%2010.jpg"],
+  ["Untitled 11","images/Untitled%2011.jpg"],
+  ["Untitled 15","images/Untitled%2015.jpg"],
+  ["Untitled 15 - 16","images/Untitled%2015%20-%2016.jpg"],
+  ["Untitled 16","images/Untitled%2016.jpg"],
+  ["Untitled 6","images/untitled%206.jpg"],
+  ["Untitled 7","images/untitled%207.jpg"],
+  ["Untitled 8","images/untitled%208.jpg"],
+  ["Untitled 9","images/untitled%209.jpg"]
+].forEach(([t,i]) => add(t,i,"Abstract Series"));
 
-    for (let n=1; n<=24; n++) {
-      const num=String(n).padStart(2,"0");
-      add(`Luggage ${num}`,`images/Luggage${num}.jpg`,"Luggage Series");
-    }
+[
+  ["After the Gig","images/AFTER%20THE%20GIG%2024x30in%20oil%20canvas%20.jpg","Oil on canvas","24 x 30 inches"],
+  ["After the Ballard","images/AFTER%20the%20Ballard%20%2036x36%20oil%20vinyl%20.jpg","Oil on vinyl","36 x 36 inches"],
+  ["After the Jazz","images/AFTER%20the%20Jazz%20%2024x30%20oil%20canvas.jpg","Oil on canvas","24 x 30 inches"],
+  ["After the Waltz","images/AFTER%20the%20Waltz%2036x36in%20oil%20vinyl.jpg","Oil on vinyl","36 x 36 inches"],
+  ["Accordion and Smoke","images/Accordion%20and%20Smoke%2048x48in%20acrylic%20luan.jpg","Acrylic on luan board","48 x 48 inches"],
+  ["Bass Night","images/Bass%20Night%20%2044x60in%20acrylic%20architectural%20panel%20.jpg","Acrylic on architectural panel","44 x 60 inches"],
+  ["Ensemble","images/Ensemble%2065x72in%20oil%20canvas.jpg","Oil on canvas","65 x 72 inches"],
+  ["Flute","images/Flute%2036x72in%20oil%20luan.jpg","Oil on luan board","36 x 72 inches"],
+  ["Gentleman Drummer","images/Gentleman%20Drummer%20%2044x60%20oil%20architectural%20panel%20.jpg","Oil on architectural panel","44 x 60 inches"],
+  ["Golden Tuba","images/Golden%20Tuba%2048x48in%20oil%20luan.jpg","Oil on luan board","48 x 48 inches"],
+  ["Hands on Ivory","images/Hands%20on%20Ivory%2048x48in%20acrylic%20luan%20.jpg","Acrylic on luan board","48 x 48 inches"],
+  ["Midnight Guitarist","images/Midnight%20Guitarist%2048x61%20acrylic%20luan.jpg","Acrylic on luan board","48 x 61 inches"],
+  ["Solo","images/Solo%2044x60in%20acrylic%20architectural%20panel%20.jpg","Acrylic on architectural panel","44 x 60 inches"],
+  ["Strings of Elegance","images/Strings%20of%20Elegance%2042x60in%20oil%20canvas%20.jpg","Oil on canvas","42 x 60 inches"],
+  ["Two Horns","images/Two%20Horns%20%2048x84in%20oil%20plywood%20.jpg","Oil on plywood","48 x 84 inches"]
+].forEach(([t,i,m,s]) => add(t,i,"Jazz",m,s));
 
-    [
-      ["Crowning A Prince","images/Crowning%20A%20Prince.jpg"],
-      ["Royal Birth","images/Royal%20Birth.jpg"],
-      ["Royal Dancers","images/Royal%20Dancers.jpg"],
-      ["Royal Gathering","images/Royal%20Gathering.jpg"]
-    ].forEach(([t,i]) => add(t,i,"Structure Series"));
+for(let n=5;n<=9;n++)
+  add(`Ephemeral Glow ${n}`,`images/EG${n}.jpg`,"Ephemeral Glow Series");
 
-    for (let n=1; n<=6; n++) {
-      const num=String(n).padStart(2,"0");
-      add(`Structure ${num}`,`images/structure${num}.jpg`,"Structure Series");
-    }
+[
+  "American Selfie","BFF","Bliss","Blue Girl","Bonnet",
+  "Bride of Basquiat","Center of the Sun","Chanteuse","Color Flow"
+].forEach(t => add(t,`images/${encodeURIComponent(t)}.jpg`,"Figurative Series"));
 
-    [
-      ["The Artist","images/The%20Artist.jpg"],
-      ["The Elder","images/The%20Elder.jpg"],
-      ["The Mathematician","images/The%20Mathematician.jpg"],
-      ["The Pharmacist","images/The%20Pharmacist.jpg"],
-      ["The Resting Man","images/The%20Resting%20Man.jpg"],
-      ["The Teacher","images/The%20Teacher.jpg"],
-      ["Man About Town","images/man%20about%20town.jpg"],
-      ["Matador and Bull","images/matadorandbull.jpg"],
-      ["The Pilot","images/the%20pilot.jpg"],
-      ["The Postman","images/the%20postman.jpg"]
-    ].forEach(([t,i]) => add(t,i,"Men's Series"));
+[
+  ["CWC01","images/CWC01.jpg"],
+  ["CWC02","images/CWC02.jpg"],
+  ["CWC03","images/CWC03.jpg"],
+  ["CWC04","images/CWC04.jpg"],
+  ["Eye Get Misty","images/Eye%20get%20Misty.jpg"],
+  ["Soulmates (Male & Female)","images/Soulmates%20Male%20%26%20Female.jpg"],
+  ["When I Get There & Developmental","images/When%20I%20get%20there%20%26%20Develpmental.jpg"],
+  ["Relationship Mathematics","images/Relationship%20Mathematics.jpg"],
+  ["Surreal 1","images/Surreal%201.jpg"],
+  ["Surreal 2","images/Surreal%202.jpg"],
+  ["Vanity","images/Vanity.jpg"],
+  ["Gentleman","images/Gentleman.jpg"],
+  ["Beauty Salon","images/Beauty%20Salon.jpg"],
+  ["El Balleriana","images/El%20Balleriana.jpg"],
+  ["Tuxedo","images/Tuxedo.jpg"],
+  ["Yaz","images/Yaz.jpg"]
+].forEach(([t,i]) => add(t,i,"Figurative Series"));
 
-    /* Handwritten inventory update, September 2026 */
-    const removeTitles=new Set([
-      "abstract28","abstract32","abstract35","abstract42","abstract44","abstract45",
-      "Beauty Salon","Center of the Sun","El Balleriana","Gentleman","When I Get There & Developmental",
-      "Structure 03","Structure 06","UA32","UA33","UA35","Untitled 1","Untitled 7","Untitled 8",
-      "Untitled 9","Untitled 10","Untitled 11",
-      "Luggage 01","Luggage 03","Luggage 05","Luggage 07","Luggage 08","Luggage 09",
-      "Luggage 10","Luggage 21","Luggage 22","Luggage 23"
-    ]);
+for(let n=1;n<=24;n++) {
+  const num=String(n).padStart(2,"0");
+  add(`Luggage ${num}`,`images/Luggage${num}.jpg`,"Luggage Series");
+}
 
-    for(let i=artworks.length-1;i>=0;i--)
-      if(removeTitles.has(artworks[i].title)) artworks.splice(i,1);
+[
+  ["Crowning A Prince","images/Crowning%20A%20Prince.jpg"],
+  ["Royal Birth","images/Royal%20Birth.jpg"],
+  ["Royal Dancers","images/Royal%20Dancers.jpg"],
+  ["Royal Gathering","images/Royal%20Gathering.jpg"]
+].forEach(([t,i]) => add(t,i,"Structure Series"));
 
-    const updates={
-      "abstract24":["60 × 40 inches","Acrylic","Canvas"],
-      "abstract25":["30 × 40 inches","Acrylic","Canvas"],
-      "abstract26":["72 × 48 inches","Acrylic","Canvas"],
-      "abstract27":["60 × 72 inches","Acrylic","Canvas"],
-      "abstract29":["90 × 40 inches","Acrylic","Canvas","SOLD"],
-      "abstract30":["30 × 40 inches","Acrylic","Canvas","SOLD"],
-      "abstract31":["36 × 48 inches","Acrylic","Canvas"],
-      "abstract33":["44 × 60 inches","Acrylic","Canvas"],
-      "abstract34":["72 × 54 inches","Acrylic","Canvas"],
-      "abstract36":["72 × 54 inches","Acrylic","Canvas"],
-      "abstract37":["44 × 64 inches","Acrylic","Canvas"],
-      "abstract38":["30 × 40 inches","Acrylic","Canvas"],
-      "abstract39":["30 × 40 inches","Acrylic","Canvas"],
-      "abstract40":["48 × 96 inches","Acrylic","1/2-inch plywood"],
-      "abstract41":["72 × 54 inches","Acrylic","Canvas"],
-      "abstract43":["42 × 62 inches","Acrylic","Canvas"],
-      "American Selfie":["54 × 64 inches","Acrylic","Canvas"],
-      "BFF":["58 × 35 inches","Acrylic","Canvas"],
-      "Bliss":["55 × 64 inches","Acrylic","Canvas"],
-      "Blue Girl":["60 × 72 inches","Acrylic","Canvas"],
-      "Bonnet":["84 × 48 inches","Acrylic","Canvas"],
-      "Bride of Basquiat":["36 × 48 inches","Acrylic","Wicker blind"],
-      "Chanteuse":["66 × 58 inches","Acrylic","Canvas"],
-      "Color Flow":["52 × 74 inches","Acrylic","Canvas","SOLD"],
-      "Crowning A Prince":["48 × 60 inches","Acrylic","Canvas","SOLD"],
-      "CWC01":["24 × 36 inches","Concentrated Watercolor","Presentation panel"],
-      "CWC02":["22 × 28 inches","Concentrated Watercolor","Presentation panel"],
-      "CWC03":["27 × 37 inches","Concentrated Watercolor","Presentation panel"],
-      "CWC04":["25 × 25 inches","Concentrated Watercolor","Presentation panel"],
-      "Ephemeral Glow 5":["30 × 40 inches","Acrylic","Architectural panel","SOLD"],
-      "Ephemeral Glow 6":["32 × 38 inches","Acrylic","Architectural panel"],
-      "Ephemeral Glow 7":["36 × 44 inches","Acrylic","Mounted wallpaper"],
-      "Ephemeral Glow 8":["36 × 44 inches","Acrylic","Architectural panel"],
-      "Ephemeral Glow 9":["32 × 39 inches","Acrylic","Architectural panel"],
-      "Eye Get Misty":["54 × 72 inches","Acrylic","Canvas"],
-      "Luggage 02":["18 × 24 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 04":["30 × 40 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 06":["42 × 54 inches","Acrylic and oil pastel","Architectural panel"],
-      "Luggage 11":["36 × 48 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 12":["36 × 48 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 13":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
-      "Luggage 14":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
-      "Luggage 15":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
-      "Luggage 16":["48 × 48 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 17":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 18":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 19":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 20":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
-      "Luggage 24":["48 × 54 inches","Acrylic and oil pastel","Presentation panel","SOLD"],
-      "Man About Town":["48 × 64 inches","Acrylic and oil pastel","Canvas","SOLD"],
-      "Matador and Bull":["48 × 60 inches","Oil","Canvas","SOLD"],
-      "Relationship Mathematics":["58 × 64 inches","Acrylic","Canvas"],
-      "Royal Birth":["48 × 72 inches","Acrylic","Tarp"],
-      "Royal Dancers":["48 × 60 inches","Acrylic","Canvas","SOLD"],
-      "Royal Gathering":["48 × 72 inches","Acrylic","Canvas"],
-      "Soulmates (Male & Female)":["48 × 48 inches","Acrylic","Oriented strand board"],
-      "Structure 01":["12 × 72 inches","Acrylic","Luan board"],
-      "Structure 02":["12 × 72 inches","Acrylic","Luan board"],
-      "Structure 04":["12 × 72 inches","Acrylic","Luan board"],
-      "Structure 05":["12 × 72 inches","Acrylic","Luan board"],
-      "Surreal 1":["24 × 48 inches","Mixed media and acrylic","Canvas"],
-      "Surreal 2":["24 × 48 inches","Mixed media and acrylic","Canvas"],
-      "The Artist":["44 × 48 inches","Acrylic","Oriented strand board"],
-      "The Elder":["44 × 72 inches","Acrylic","Architectural panel"],
-      "The Mathematician":["44 × 72 inches","Acrylic","Architectural panel"],
-      "The Pharmacist":["44 × 76 inches","Acrylic","Architectural panel"],
-      "The Pilot":["44 × 72 inches","Acrylic","Architectural panel"],
-      "The Postman":["44 × 72 inches","Acrylic","Architectural panel"],
-      "The Resting Man":["44 × 72 inches","Acrylic","Architectural panel"],
-      "The Teacher":["44 × 72 inches","Acrylic","Architectural panel","SOLD"],
-      "Tuxedo":["36 × 48 inches","Acrylic","Canvas","SOLD"],
-      "UA31":["36 × 72 inches","Acrylic and oil pastel","Canvas"],
-      "Untitled 2":["67 × 43 inches","Acrylic","Canvas"],
-      "Untitled 3":["29 × 35 inches","Acrylic","Canvas"],
-      "Untitled 4":["71 × 63 inches","Acrylic","Canvas"],
-      "Untitled 6":["88 × 60 inches","Acrylic","Canvas"],
-      "Untitled 15":["36 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
-      "Untitled 15 - 16":["72 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
-      "Untitled 16":["36 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
-      "Vanity":["36 × 48 inches","Mixed media and acrylic","Canvas","SOLD"],
-      "Yaz":["36 × 48 inches","Acrylic","Canvas","SOLD"]
-    };
+for(let n=1;n<=6;n++) {
+  const num=String(n).padStart(2,"0");
+  add(`Structure ${num}`,`images/structure${num}.jpg`,"Structure Series");
+}
 
-    artworks.forEach(a=>{
-      if(a.title.startsWith("Luggage ")){
-        a.medium="Acrylic and oil pastel";
-        a.surface="";
-        a.status="Available";
-      }
-      const u=updates[a.title];
-      if(u){
-        a.size=u[0];
-        a.medium=u[1];
-        a.surface=u[2];
-        a.status=u[3]||"Available";
-      } else {
-        a.surface=a.medium&&a.medium.includes(" on ")
-          ?a.medium.split(" on ").slice(1).join(" on ")
-          :a.surface||"";
-        a.medium=a.medium&&a.medium.includes(" on ")
-          ?a.medium.split(" on ")[0]
-          :a.medium||"";
-        a.status=a.status||"Available";
-      }
-    });
+[
+  ["The Artist","images/The%20Artist.jpg"],
+  ["The Elder","images/The%20Elder.jpg"],
+  ["The Mathematician","images/The%20Mathematician.jpg"],
+  ["The Pharmacist","images/The%20Pharmacist.jpg"],
+  ["The Resting Man","images/The%20Resting%20Man.jpg"],
+  ["The Teacher","images/The%20Teacher.jpg"],
+  ["Man About Town","images/man%20about%20town.jpg"],
+  ["Matador and Bull","images/matadorandbull.jpg"],
+  ["The Pilot","images/the%20pilot.jpg"],
+  ["The Postman","images/the%20postman.jpg"]
+].forEach(([t,i]) => add(t,i,"Men's Series"));
 
-    const parseSize=size=>{
-      const m=(size||"").match(/([0-9.]+)\s*[×x]\s*([0-9.]+)/);
-      return m?[Number(m[1]),Number(m[2])]:null;
-    };
+const removeTitles=new Set([
+  "abstract28","abstract32","abstract35","abstract42","abstract44","abstract45",
+  "Beauty Salon","Center of the Sun","El Balleriana","Gentleman",
+  "When I Get There & Developmental",
+  "Structure 03","Structure 06","UA32","UA33","UA35",
+  "Untitled 1","Untitled 7","Untitled 8","Untitled 9",
+  "Untitled 10","Untitled 11",
+  "Luggage 01","Luggage 03","Luggage 05","Luggage 07",
+  "Luggage 08","Luggage 09","Luggage 10",
+  "Luggage 21","Luggage 22","Luggage 23"
+]);
 
-    const priceFor=a=>{
-      if(a.status==="SOLD")return "SOLD";
-      const d=parseSize(a.size);
-      if(!d||!a.medium||a.medium==="Updating Soon")return "Coming Soon";
-      const rate=a.medium==="Oil"?2:1.5;
-      const price=Math.round(d[0]*d[1]*rate/50)*50;
-      return new Intl.NumberFormat("en-US",{
-        style:"currency",
-        currency:"USD",
-        maximumFractionDigits:0
-      }).format(price);
-    };
+for(let i=artworks.length-1;i>=0;i--)
+  if(removeTitles.has(artworks[i].title)) artworks.splice(i,1);
 
-    const value=v=>v||"Updating Soon";
+const updates={
+  "abstract24":["60 × 40 inches","Acrylic","Canvas"],
+  "abstract25":["30 × 40 inches","Acrylic","Canvas"],
+  "abstract26":["72 × 48 inches","Acrylic","Canvas"],
+  "abstract27":["60 × 72 inches","Acrylic","Canvas"],
+  "abstract29":["90 × 40 inches","Acrylic","Canvas","SOLD"],
+  "abstract30":["30 × 40 inches","Acrylic","Canvas","SOLD"],
+  "abstract31":["36 × 48 inches","Acrylic","Canvas"],
+  "abstract33":["44 × 60 inches","Acrylic","Canvas"],
+  "abstract34":["72 × 54 inches","Acrylic","Canvas"],
+  "abstract36":["72 × 54 inches","Acrylic","Canvas"],
+  "abstract37":["44 × 64 inches","Acrylic","Canvas"],
+  "abstract38":["30 × 40 inches","Acrylic","Canvas"],
+  "abstract39":["30 × 40 inches","Acrylic","Canvas"],
+  "abstract40":["48 × 96 inches","Acrylic","1/2-inch plywood"],
+  "abstract41":["72 × 54 inches","Acrylic","Canvas"],
+  "abstract43":["42 × 62 inches","Acrylic","Canvas"],
+  "American Selfie":["54 × 64 inches","Acrylic","Canvas"],
+  "BFF":["58 × 35 inches","Acrylic","Canvas"],
+  "Bliss":["55 × 64 inches","Acrylic","Canvas"],
+  "Blue Girl":["60 × 72 inches","Acrylic","Canvas"],
+  "Bonnet":["84 × 48 inches","Acrylic","Canvas"],
+  "Bride of Basquiat":["36 × 48 inches","Acrylic","Wicker blind"],
+  "Chanteuse":["66 × 58 inches","Acrylic","Canvas"],
+  "Color Flow":["52 × 74 inches","Acrylic","Canvas","SOLD"],
+  "Crowning A Prince":["48 × 60 inches","Acrylic","Canvas","SOLD"],
+  "CWC01":["24 × 36 inches","Concentrated Watercolor","Presentation panel"],
+  "CWC02":["22 × 28 inches","Concentrated Watercolor","Presentation panel"],
+  "CWC03":["27 × 37 inches","Concentrated Watercolor","Presentation panel"],
+  "CWC04":["25 × 25 inches","Concentrated Watercolor","Presentation panel"],
+  "Ephemeral Glow 5":["30 × 40 inches","Acrylic","Architectural panel","SOLD"],
+  "Ephemeral Glow 6":["32 × 38 inches","Acrylic","Architectural panel"],
+  "Ephemeral Glow 7":["36 × 44 inches","Acrylic","Mounted wallpaper"],
+  "Ephemeral Glow 8":["36 × 44 inches","Acrylic","Architectural panel"],
+  "Ephemeral Glow 9":["32 × 39 inches","Acrylic","Architectural panel"],
+  "Eye Get Misty":["54 × 72 inches","Acrylic","Canvas"],
+  "Luggage 02":["18 × 24 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 04":["30 × 40 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 06":["42 × 54 inches","Acrylic and oil pastel","Architectural panel"],
+  "Luggage 11":["36 × 48 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 12":["36 × 48 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 13":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
+  "Luggage 14":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
+  "Luggage 15":["44 × 60 inches","Acrylic and oil pastel","Architectural panel"],
+  "Luggage 16":["48 × 48 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 17":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 18":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 19":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 20":["23 × 35 inches","Acrylic and oil pastel","Updating Soon"],
+  "Luggage 24":["48 × 54 inches","Acrylic and oil pastel","Presentation panel","SOLD"],
+  "Man About Town":["48 × 64 inches","Acrylic and oil pastel","Canvas","SOLD"],
+  "Matador and Bull":["48 × 60 inches","Oil","Canvas","SOLD"],
+  "Relationship Mathematics":["58 × 64 inches","Acrylic","Canvas"],
+  "Royal Birth":["48 × 72 inches","Acrylic","Tarp"],
+  "Royal Dancers":["48 × 60 inches","Acrylic","Canvas","SOLD"],
+  "Royal Gathering":["48 × 72 inches","Acrylic","Canvas"],
+  "Soulmates (Male & Female)":["48 × 48 inches","Acrylic","Oriented strand board"],
+  "Structure 01":["12 × 72 inches","Acrylic","Luan board"],
+  "Structure 02":["12 × 72 inches","Acrylic","Luan board"],
+  "Structure 04":["12 × 72 inches","Acrylic","Luan board"],
+  "Structure 05":["12 × 72 inches","Acrylic","Luan board"],
+  "Surreal 1":["24 × 48 inches","Mixed media and acrylic","Canvas"],
+  "Surreal 2":["24 × 48 inches","Mixed media and acrylic","Canvas"],
+  "The Artist":["44 × 48 inches","Acrylic","Oriented strand board"],
+  "The Elder":["44 × 72 inches","Acrylic","Architectural panel"],
+  "The Mathematician":["44 × 72 inches","Acrylic","Architectural panel"],
+  "The Pharmacist":["44 × 76 inches","Acrylic","Architectural panel"],
+  "The Pilot":["44 × 72 inches","Acrylic","Architectural panel"],
+  "The Postman":["44 × 72 inches","Acrylic","Architectural panel"],
+  "The Resting Man":["44 × 72 inches","Acrylic","Architectural panel"],
+  "The Teacher":["44 × 72 inches","Acrylic","Architectural panel","SOLD"],
+  "Tuxedo":["36 × 48 inches","Acrylic","Canvas","SOLD"],
+  "UA31":["36 × 72 inches","Acrylic and oil pastel","Canvas"],
+  "Untitled 2":["67 × 43 inches","Acrylic","Canvas"],
+  "Untitled 3":["29 × 35 inches","Acrylic","Canvas"],
+  "Untitled 4":["71 × 63 inches","Acrylic","Canvas"],
+  "Untitled 6":["88 × 60 inches","Acrylic","Canvas"],
+  "Untitled 15":["36 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
+  "Untitled 15 - 16":["72 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
+  "Untitled 16":["36 × 48 inches","Mixed media and acrylic","Updating Soon","SOLD"],
+  "Vanity":["36 × 48 inches","Mixed media and acrylic","Canvas","SOLD"],
+  "Yaz":["36 × 48 inches","Acrylic","Canvas","SOLD"]
+};
 
-    artworks.sort((a,b) =>
-      a.title.localeCompare(b.title,undefined,{
-        numeric:true,
-        sensitivity:"base"
-      })
-    );
+artworks.forEach(a=>{
+  if(a.title.startsWith("Luggage ")) {
+    a.medium="Acrylic and oil pastel";
+    a.surface="";
+    a.status="Available";
+  }
+  const u=updates[a.title];
+  if(u) {
+    a.size=u[0];
+    a.medium=u[1];
+    a.surface=u[2];
+    a.status=u[3]||"Available";
+  } else {
+    a.surface=a.medium&&a.medium.includes(" on ")
+      ?a.medium.split(" on ").slice(1).join(" on ")
+      :a.surface||"";
+    a.medium=a.medium&&a.medium.includes(" on ")
+      ?a.medium.split(" on ")[0]
+      :a.medium||"";
+    a.status=a.status||"Available";
+  }
+});
 
-    const gallery=document.getElementById("gallery");
-    const esc=s => s.replace(/[&<>"']/g,c => ({
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#39;"
-    }[c]));
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
+}[c]));
 
-    gallery.innerHTML=artworks.map((a,index)=>`
-      <article class="card">
-        <a class="image-link" href="${a.image}" data-index="${index}" aria-label="Enlarge ${esc(a.title)}">
-          <img src="${a.image}" alt="${esc(a.title)} by Kenneth J. Lewis Sr." loading="lazy">
-        </a>
-        <div class="details">
-          <h2>${esc(a.title)}</h2>
-          <p class="series">Series: ${esc(a.series)}</p>
-          <p><strong>Size:</strong> ${esc(value(a.size))}</p>
-          <p><strong>Medium:</strong> ${esc(value(a.medium))}</p>
-          <p><strong>Surface:</strong> ${esc(value(a.surface))}</p>
-          <p class="price ${priceFor(a)==="SOLD"?"sold":""}">${esc(priceFor(a))}</p>
-        </div>
-      </article>`).join("");
+const money=n=>new Intl.NumberFormat("en-US",{
+  style:"currency",
+  currency:"USD",
+  maximumFractionDigits:0
+}).format(n);
 
-    const lightbox=document.getElementById("lightbox");
-    const lightboxImage=document.getElementById("lightbox-image");
-    const lightboxCaption=document.getElementById("lightbox-caption");
+const parseSize=s=>{
+  const m=(s||"").match(/([0-9.]+)\s*[×x]\s*([0-9.]+)/);
+  return m?[+m[1],+m[2]]:null;
+};
 
-    const jazzWorks=[
-      {
-        title:"Riverside Slide",
-        image:"images/Riverside%20Slide.jpg",
-        series:"The Color of Jazz"
-      },
-      {
-        title:"The Low Note",
-        image:"images/The%20Low%20Note.jpg",
-        series:"The Color of Jazz"
-      },
-      {
-        title:"Golden Phrases",
-        image:"images/Golden%20Phrases.jpg",
-        series:"The Color of Jazz"
-      },
-      {
-        title:"Velvet in Red",
-        image:"images/Velvet%20in%20Red.jpg",
-        series:"The Color of Jazz"
-      },
-      {
-        title:"Bourbon Street Serenade",
-        image:"images/Bourbon%20Street%20Serenade.jpg",
-        series:"The Color of Jazz"
-      },
-      {
-        title:"The Eight O’Clock Groove",
-        image:"images/The%20Eight%20O%E2%80%99Clock%20Groove.jpg",
-        series:"The Color of Jazz"
-      },
-      {
-        title:"When the Keys Speak",
-        image:"images/When%20the%20Keys%20Speak.jpg",
-        series:"The Color of Jazz"
-      }
-    ];
+const priceFor=a=>{
+  if(a.status==="SOLD") return "SOLD";
+  if(a.price) return money(a.price);
+  const d=parseSize(a.size);
+  if(!d||!a.medium||a.medium==="Updating Soon") return "Coming Soon";
+  return money(Math.round(d[0]*d[1]*(a.medium==="Oil"?2:1.5)/50)*50);
+};
 
-    let lastImageLink=null;
+const value=v=>v||"Updating Soon";
 
-    const showArtwork=(a,link)=>{
-      lastImageLink=link;
-      lightboxImage.src=a.image;
-      lightboxImage.alt=a.title;
-      lightboxCaption.textContent=`${a.title} — ${a.series}`;
-      lightbox.classList.add("open");
-      document.body.style.overflow="hidden";
-      lightbox.querySelector("button").focus();
-    };
+artworks.sort((a,b)=>a.title.localeCompare(b.title,undefined,{
+  numeric:true,
+  sensitivity:"base"
+}));
 
-    document.getElementById("jazz-gallery").addEventListener("click",e=>{
-      const link=e.target.closest(".image-link");
-      if(!link)return;
-      e.preventDefault();
-      showArtwork(jazzWorks[Number(link.dataset.jazz)],link);
-    });
+function renderGallery(id,items,featured=false) {
+  const root=document.getElementById(id);
+  root.innerHTML=items.map((a,index)=>`
+    <article class="card">
+      <a class="image-link"
+         href="${esc(a.image)}"
+         data-index="${index}"
+         aria-label="Enlarge ${esc(a.title)}">
+        <img src="${esc(a.image)}"
+             alt="${esc(a.title)} by Kenneth J. Lewis Sr."
+             loading="lazy">
+      </a>
+      <div class="details">
+        <h3>${esc(a.title)}</h3>
+        <p class="series">${esc(a.series)}</p>
+        ${featured?"<p>One-of-a-kind original painting</p>":""}
+        <p><strong>Size:</strong> ${esc(value(a.size))}</p>
+        <p><strong>Medium:</strong> ${esc(value(a.medium))}</p>
+        <p><strong>Surface:</strong> ${esc(value(a.surface))}</p>
+        ${a.description?`<p class="description">${esc(a.description)}</p>`:""}
+        <p class="price ${a.status==="SOLD"?"sold":""}">${esc(priceFor(a))}</p>
+        ${a.status==="SOLD"?"":`
+          <a class="inquiry-button"
+             href="${esc(a.purchaseUrl||"tel:+16093726022")}"
+             aria-label="${a.purchaseUrl?"Purchase":"Call about"} ${esc(a.title)}">
+            ${a.purchaseUrl?"Purchase This Original":"Call About This Painting"}
+          </a>
+        `}
+      </div>
+    </article>
+  `).join("");
 
-    gallery.addEventListener("click",e=>{
-      const link=e.target.closest(".image-link");
-      if(!link)return;
-      e.preventDefault();
-      showArtwork(artworks[Number(link.dataset.index)],link);
-    });
+  root.addEventListener("click",e=>{
+    const link=e.target.closest(".image-link");
+    if(!link) return;
+    e.preventDefault();
+    showArtwork(items[Number(link.dataset.index)],link);
+  });
+}
 
-    const closeLightbox=()=>{
-      lightbox.classList.remove("open");
-      lightboxImage.removeAttribute("src");
-      document.body.style.overflow="";
-      if(lastImageLink)lastImageLink.focus();
-    };
+const lightbox=document.getElementById("lightbox");
+const lightboxImage=document.getElementById("lightbox-image");
+const lightboxCaption=document.getElementById("lightbox-caption");
+let lastImageLink=null;
 
-    lightbox.querySelector("button").addEventListener("click",closeLightbox);
+function showArtwork(a,link) {
+  lastImageLink=link;
+  lightboxImage.src=a.image;
+  lightboxImage.alt=a.title;
+  lightboxCaption.textContent=`${a.title} — ${a.series}`;
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+  lightbox.querySelector("button").focus();
+}
 
-    lightbox.addEventListener("click",e=>{
-      if(e.target===lightbox)closeLightbox();
-    });
+function closeLightbox() {
+  if(!lightbox.classList.contains("open")) return;
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden","true");
+  lightboxImage.removeAttribute("src");
+  document.body.style.overflow="";
+  if(lastImageLink) lastImageLink.focus();
+}
 
-    document.addEventListener("keydown",e=>{
-      if(e.key==="Escape")closeLightbox();
-      if(e.key==="Tab"&&lightbox.classList.contains("open")){
-        e.preventDefault();
-        lightbox.querySelector("button").focus();
-      }
-    });
+lightbox.querySelector("button").addEventListener("click",closeLightbox);
 
-    document.getElementById("year").textContent=new Date().getFullYear();
-  </script>
+lightbox.addEventListener("click",e=>{
+  if(e.target===lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown",e=>{
+  if(!lightbox.classList.contains("open")) return;
+  if(e.key==="Escape") closeLightbox();
+  if(e.key==="Tab") {
+    e.preventDefault();
+    lightbox.querySelector("button").focus();
+  }
+});
+
+renderGallery("jazz-gallery",jazzWorks,true);
+renderGallery("new-gallery",newWorks,true);
+renderGallery("gallery",artworks);
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>

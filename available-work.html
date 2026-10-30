@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shop original artwork by Kenneth J. Lewis Sr.: The Color of Jazz, vintage automobiles, Forgotten Trades, floral paintings, and more at KJL Art Sanctuary.">
+<meta name="description" content="Shop original artwork by Kenneth J. Lewis Sr.: The Color of Jazz, Dressed Between Times, vintage automobiles, Forgotten Trades, floral paintings, and more at KJL Art Sanctuary.">
 <title>Available Work | Kenneth J. Lewis Sr.</title>
 <style>
 :root {
@@ -255,9 +255,10 @@ footer {
 
 <header>
   <h1>Available Work</h1>
-  <p>Original artwork by Kenneth J. Lewis Sr. Explore The Color of Jazz, discover twelve newly added originals, and browse more works for your home, office, or collection.</p>
+  <p>Original artwork by Kenneth J. Lewis Sr. Explore The Color of Jazz and Dressed Between Times, discover new originals, and browse more works for your home, office, or collection.</p>
   <nav>
     <a href="index.html">Back to Home</a>
+    <a href="#dressed-between-times">Dressed Between Times</a>
     <a href="#new-originals">New Originals</a>
     <a href="#gallery">More Artwork</a>
   </nav>
@@ -290,9 +291,26 @@ footer {
     <div class="gallery-grid" id="jazz-gallery"></div>
   </section>
 
+  <section class="jazz-collection" id="dressed-between-times" aria-labelledby="time-title">
+    <div class="jazz-intro">
+      <p class="eyebrow">Featured collection · Four original oil paintings on canvas</p>
+      <h2 id="time-title">Dressed Between Times</h2>
+      <p>Fashion crosses centuries, and time takes a human form. In this imaginative collection by Kenneth J. Lewis Sr., clock-headed figures combine clothing from different eras to explore identity, memory, and the way the past remains part of the present.</p>
+      <p>Edwardian tailoring meets seventies bell-bottoms, Mod geometry meets Romantic volume, and a gentleman brings formal tradition into the modern day. Expressive brushwork and distinctive backgrounds connect these figures while giving each an individual personality.</p>
+      <p>Collect the four paintings together for a striking display in a home, office, boutique, or hospitality setting, or select an individual work that speaks to your own sense of style and time.</p>
+
+      <div class="jazz-offer">
+        <strong>Four-piece collection shown: $10,000</strong>
+        <p>Includes the four originals below: two 30 × 40 paintings, one 36 × 48, and one 24 × 36. The collection price is the combined total of the individual prices. Available individually or together, subject to availability. Shipping and delivery are quoted separately.</p>
+        <a class="inquiry-button" href="tel:+16093726022">Inquire About Dressed Between Times · 609-372-6022</a>
+      </div>
+    </div>
+    <div class="gallery-grid" id="time-gallery"></div>
+  </section>
+
   <section class="new-originals" id="new-originals" aria-labelledby="new-title">
     <h2 class="other-heading" id="new-title">New Original Paintings</h2>
-    <p class="section-intro">Twelve original oil paintings: vintage automobiles, tributes to forgotten trades, a hopeful city scene, and flowers that bring a little joy. Each is a one-of-a-kind original painting by Kenneth J. Lewis Sr. All are oil on canvas except the works identified as oil on luan board. Call about a painting below to discuss purchasing it.</p>
+    <p class="section-intro">Explore original oil paintings featuring vintage automobiles, tributes to forgotten trades, a hopeful city scene, expressive flowers, and the grace of ballet. Each is a one-of-a-kind original painting by Kenneth J. Lewis Sr. All are oil on canvas except the works identified as oil on luan board. Call about a painting below to discuss purchasing it.</p>
     <div class="gallery-grid" id="new-gallery"></div>
   </section>
 
@@ -391,11 +409,53 @@ const jazzWorks = [
 ];
 
 /*
-  NEW ORIGINALS
   To add a Square link later, add this property to a painting:
   purchaseUrl:"YOUR-SQUARE-CHECKOUT-LINK",
   Its button will automatically change to Purchase This Original.
 */
+const timeWorks = [
+  {
+    title:"Edwardian & 1970s — Velvet and Lace",
+    image:"images/Dressed%20Between%20Times%201901%20Edwardian%20velvet-and-lace%20upper%20body%2C%201970s%20bell-bottom%20trousers%20and%20platform%20boots%2C%20and%20an%20ornate%20Edwardian%20Art%20Nouveau%20clock%20head.%2030%20x%2040.jpg",
+    series:"Dressed Between Times",
+    size:"30 × 40 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:2400,
+    description:"An ornate clock face crowns a figure wearing a fitted dark jacket, lace details, and sweeping light-colored bell-bottom trousers. Against a muted rose background, the meeting of Edwardian elegance and seventies flair becomes a playful reflection on identity and the passage of time."
+  },
+  {
+    title:"1960s Mod & 1830s Romantic",
+    image:"images/Dressed%20Between%20Times%201960s%20Mod%20geometric%20top%20above%2C%20an%201830s%20Romantic%20bell%20skirt%20and%20ankle%20boots%20below%2C%20with%20a%20brass%20sunburst-clock%20head.%2030x40.jpg",
+    series:"Dressed Between Times",
+    size:"30 × 40 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:2400,
+    description:"A radiant sunburst clock rises above a geometric Mod top and a full purple Romantic-era skirt. The cool blue background, warm accents, and dramatic silhouette bring distant fashion eras together in a bold conversation across time."
+  },
+  {
+    title:"The Gentleman at Seven",
+    image:"images/Dressed%20Between%20Times%20The%20Gentleman%20at%20Seven%2036%20x%2048.jpg",
+    series:"Dressed Between Times",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:3450,
+    description:"A clock-headed gentleman stands confidently in a dark long coat, warm waistcoat, patterned trousers, and bright contemporary sneakers. The fiery orange-red background gives this meeting of formal tradition and modern individuality a commanding presence."
+  },
+  {
+    title:"Edwardian & 1970s — Norfolk Jacket",
+    image:"images/Dressed%20between%20Times%20Edwardian%20upper%20belted%20herringbone%20Norfolk%20sporting%20jacket%20with%20patch%20pockets%20and%20leather%20elbow%20details.%20The%20lower%20half%20remains%20distinctly%201970s%20with%20plum%20bell-bottoms%20and%20cognac%20platform%20loafers.%2024x36.jpg",
+    series:"Dressed Between Times",
+    size:"24 × 36 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:1750,
+    description:"A pink clock face tops a belted green sporting jacket paired with warm rust-colored bell-bottom trousers. Loose brushwork and a softly textured neutral background give this figure an easy confidence while blending Edwardian tailoring with seventies style."
+  }
+];
+
 const newWorks = [
   {
     title:"1957 BMW",
@@ -516,6 +576,26 @@ const newWorks = [
     surface:"Canvas",
     price:950,
     description:"A white daisy blooms above a green vase against a soft pink background and warm red tabletop. The open petals and fresh leaves bring an easy sense of optimism to this cheerful floral original."
+  },
+  {
+    title:"A Little Joy 3",
+    image:"images/A%20little%20Joy%203%2024%20x%2036.jpg",
+    series:"A Little Joy",
+    size:"24 × 36 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:1750,
+    description:"A large daisy opens its pale, pink-touched petals above a rosy glass vase. Fresh green leaves, a soft blue background, and a pink tabletop create an uplifting floral statement with the warmth and texture of expressive oil painting."
+  },
+  {
+    title:"I Get Misty 2",
+    image:"images/I%20Get%20Misty%202%2030%20x%2040.jpg",
+    series:"Dance & Portraiture",
+    size:"30 × 40 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    price:2400,
+    description:"A ballet dancer reaches upward in an elegant extension as a flowing white costume sweeps across a deep teal setting. Expressive strokes and luminous highlights suggest movement, discipline, and the joy of performance in this tribute to Misty Copeland."
   }
 ];
 
@@ -725,7 +805,9 @@ artworks.forEach(a=>{
     a.surface="";
     a.status="Available";
   }
+
   const u=updates[a.title];
+
   if(u) {
     a.size=u[0];
     a.medium=u[1];
@@ -735,9 +817,11 @@ artworks.forEach(a=>{
     a.surface=a.medium&&a.medium.includes(" on ")
       ?a.medium.split(" on ").slice(1).join(" on ")
       :a.surface||"";
+
     a.medium=a.medium&&a.medium.includes(" on ")
       ?a.medium.split(" on ")[0]
       :a.medium||"";
+
     a.status=a.status||"Available";
   }
 });
@@ -764,9 +848,15 @@ const parseSize=s=>{
 const priceFor=a=>{
   if(a.status==="SOLD") return "SOLD";
   if(a.price) return money(a.price);
+
   const d=parseSize(a.size);
-  if(!d||!a.medium||a.medium==="Updating Soon") return "Coming Soon";
-  return money(Math.round(d[0]*d[1]*(a.medium==="Oil"?2:1.5)/50)*50);
+
+  if(!d||!a.medium||a.medium==="Updating Soon")
+    return "Coming Soon";
+
+  return money(
+    Math.round(d[0]*d[1]*(a.medium==="Oil"?2:1.5)/50)*50
+  );
 };
 
 const value=v=>v||"Updating Soon";
@@ -778,6 +868,7 @@ artworks.sort((a,b)=>a.title.localeCompare(b.title,undefined,{
 
 function renderGallery(id,items,featured=false) {
   const root=document.getElementById(id);
+
   root.innerHTML=items.map((a,index)=>`
     <article class="card">
       <a class="image-link"
@@ -788,15 +879,25 @@ function renderGallery(id,items,featured=false) {
              alt="${esc(a.title)} by Kenneth J. Lewis Sr."
              loading="lazy">
       </a>
+
       <div class="details">
         <h3>${esc(a.title)}</h3>
         <p class="series">${esc(a.series)}</p>
+
         ${featured?"<p>One-of-a-kind original painting</p>":""}
+
         <p><strong>Size:</strong> ${esc(value(a.size))}</p>
         <p><strong>Medium:</strong> ${esc(value(a.medium))}</p>
         <p><strong>Surface:</strong> ${esc(value(a.surface))}</p>
-        ${a.description?`<p class="description">${esc(a.description)}</p>`:""}
-        <p class="price ${a.status==="SOLD"?"sold":""}">${esc(priceFor(a))}</p>
+
+        ${a.description?`
+          <p class="description">${esc(a.description)}</p>
+        `:""}
+
+        <p class="price ${a.status==="SOLD"?"sold":""}">
+          ${esc(priceFor(a))}
+        </p>
+
         ${a.status==="SOLD"?"":`
           <a class="inquiry-button"
              href="${esc(a.purchaseUrl||"tel:+16093726022")}"
@@ -811,6 +912,7 @@ function renderGallery(id,items,featured=false) {
   root.addEventListener("click",e=>{
     const link=e.target.closest(".image-link");
     if(!link) return;
+
     e.preventDefault();
     showArtwork(items[Number(link.dataset.index)],link);
   });
@@ -819,29 +921,39 @@ function renderGallery(id,items,featured=false) {
 const lightbox=document.getElementById("lightbox");
 const lightboxImage=document.getElementById("lightbox-image");
 const lightboxCaption=document.getElementById("lightbox-caption");
+
 let lastImageLink=null;
 
 function showArtwork(a,link) {
   lastImageLink=link;
+
   lightboxImage.src=a.image;
   lightboxImage.alt=a.title;
   lightboxCaption.textContent=`${a.title} — ${a.series}`;
+
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden","false");
+
   document.body.style.overflow="hidden";
   lightbox.querySelector("button").focus();
 }
 
 function closeLightbox() {
   if(!lightbox.classList.contains("open")) return;
+
   lightbox.classList.remove("open");
   lightbox.setAttribute("aria-hidden","true");
+
   lightboxImage.removeAttribute("src");
   document.body.style.overflow="";
+
   if(lastImageLink) lastImageLink.focus();
 }
 
-lightbox.querySelector("button").addEventListener("click",closeLightbox);
+lightbox.querySelector("button").addEventListener(
+  "click",
+  closeLightbox
+);
 
 lightbox.addEventListener("click",e=>{
   if(e.target===lightbox) closeLightbox();
@@ -849,7 +961,9 @@ lightbox.addEventListener("click",e=>{
 
 document.addEventListener("keydown",e=>{
   if(!lightbox.classList.contains("open")) return;
+
   if(e.key==="Escape") closeLightbox();
+
   if(e.key==="Tab") {
     e.preventDefault();
     lightbox.querySelector("button").focus();
@@ -857,6 +971,7 @@ document.addEventListener("keydown",e=>{
 });
 
 renderGallery("jazz-gallery",jazzWorks,true);
+renderGallery("time-gallery",timeWorks,true);
 renderGallery("new-gallery",newWorks,true);
 renderGallery("gallery",artworks);
 

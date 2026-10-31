@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shop original artwork by Kenneth J. Lewis Sr.: The Color of Jazz, Dressed Between Times, vintage automobiles, Forgotten Trades, floral paintings, and more at KJL Art Sanctuary.">
+<meta name="description" content="Shop original artwork by Kenneth J. Lewis Sr.: The Color of Jazz, Dressed Between Times, American Objects, portraits, vintage automobiles, Forgotten Trades, and more at KJL Art Sanctuary.">
 <title>Available Work | Kenneth J. Lewis Sr.</title>
 <style>
 :root {
@@ -249,8 +249,6 @@ footer {
   .image-link img { height:auto;max-height:450px; }
   .jazz-collection { padding:20px 12px; }
 }
-
-/* Paired original and room views for the seven jazz paintings. */
 #jazz-gallery { grid-template-columns:1fr;gap:30px; }
 .artwork-views {
   display:grid;
@@ -310,6 +308,7 @@ footer {
   <nav>
     <a href="index.html">Back to Home</a>
     <a href="#dressed-between-times">Dressed Between Times</a>
+    <a href="#latest-additions">Latest Additions</a>
     <a href="#new-originals">New Originals</a>
     <a href="#gallery">More Artwork</a>
   </nav>
@@ -322,6 +321,12 @@ footer {
     <h2>See More Original Artwork in Person</h2>
     <p>Schedule a private visit to KJL Art Sanctuary Gallery &amp; Studio to experience the artwork and find the right piece for your space.</p>
     <a href="tel:+16093726022">Call 609-372-6022 to Schedule a Visit</a>
+  </section>
+
+  <section class="new-originals" id="latest-additions" aria-labelledby="latest-title">
+    <h2 class="other-heading" id="latest-title">Latest Additions</h2>
+    <p class="section-intro">Discover American Objects, portrait tributes, everyday life, and a new addition to A Little Joy. Explore each original below and call to confirm availability, request any pending details, or arrange a studio visit.</p>
+    <div class="gallery-grid" id="latest-gallery"></div>
   </section>
 
   <section class="jazz-collection" aria-labelledby="jazz-title">
@@ -387,6 +392,129 @@ footer {
 </div>
 
 <script>
+const latestWorks = [
+  {
+    title:"A Little Joy 3 — 16 × 20",
+    image:"images/A%20little%20Joy%203%20oil%20on%20canvas%2016%20x%2020.jpg",
+    series:"A Little Joy",
+    size:"16 × 20 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A floral original celebrating the pleasure of a small, everyday moment. Part of A Little Joy, this intimate painting brings a welcoming touch to a personal art collection.",
+    price:950
+  },
+  {
+    title:"The Hand-Crank Coffee Grinder",
+    image:"images/American%20Objects%20The%20Hand-Crank%20Coffee%20Grinder.jpg",
+    series:"American Objects",
+    size:"24 × 36 inches",
+    medium:"Please inquire",
+    surface:"Please inquire",
+    description:"An everyday tool becomes a subject of remembrance. This painting honors the hand-crank coffee grinder and the daily ritual of preparing coffee before electric appliances became commonplace.",
+    price:1750
+  },
+  {
+    title:"The Kerosene Lamp",
+    image:"images/American%20Objects%20The%20Kerosene%20Lamp.jpg",
+    series:"American Objects",
+    size:"24 × 36 inches",
+    medium:"Please inquire",
+    surface:"Please inquire",
+    description:"A familiar source of household light becomes a reflection on domestic history. The kerosene lamp connects this American Objects painting to evenings, routines, and lives shaped by lamplight.",
+    price:1750
+  },
+  {
+    title:"The Wood-Burning Cookstove",
+    image:"images/American%20Objects%20The%20Wood-Burning%20Cookstove.jpg",
+    series:"American Objects",
+    size:"24 × 36 inches",
+    medium:"Please inquire",
+    surface:"Please inquire",
+    description:"The wood-burning cookstove recalls a time when tending the fire and preparing meals were closely connected. This American Objects work recognizes the practical objects at the center of daily family life.",
+    price:1750
+  },
+  {
+    title:"Basquiat Portrait 12",
+    image:"images/Basquiat%20Portrait%2012%2024x36%20acrylic%20on%20luan.jpg",
+    series:"Portraits & Tributes",
+    size:"24 × 36 inches",
+    medium:"Acrylic",
+    surface:"Luan board",
+    description:"A painted tribute to Jean-Michel Basquiat, an enduring influence on Kenneth’s artistic journey. This portrait invites a conversation between the artist’s own voice and his admiration for Basquiat.",
+    price:1300
+  },
+  {
+    title:"Basquiat Portrait",
+    image:"images/Basquiat%20Portrait%20acrylic%20heavy%20panel%2019%20x%2027.jpg",
+    series:"Portraits & Tributes",
+    size:"19 × 27 inches",
+    medium:"Acrylic",
+    surface:"Heavy panel",
+    description:"An intimate portrait tribute to Jean-Michel Basquiat. Painted in acrylic on heavy panel, the work reflects Kenneth’s continuing interest in artists whose distinctive voices expanded the possibilities of painting.",
+    price:750
+  },
+  {
+    title:"Breakfast",
+    image:"images/Breakfast%2046%20x%2052.jpg",
+    series:"Everyday Life",
+    size:"46 × 52 inches",
+    medium:"Acrylic",
+    surface:"Canvas",
+    description:"A familiar daily meal becomes the subject of a large original painting. Breakfast invites viewers to consider the meaning and memories held in ordinary moments around the table.",
+    price:3600
+  },
+  {
+    title:"Charlie",
+    image:"images/Charlie%20acrylic%20on%20heavy%20paper%20mounted%20on%20oriented%20strandboard%2030%20x%2040.jpg",
+    series:"Portraits & Figures",
+    size:"30 × 40 inches",
+    medium:"Acrylic",
+    surface:"Heavy paper mounted on oriented strand board",
+    description:"A character-focused original in acrylic on heavy paper, mounted on oriented strand board. Charlie continues Kenneth’s exploration of people and the individual presence suggested by a painted figure.",
+    price:1800
+  },
+  {
+    title:"Patrice",
+    image:"images/Patrice%20oil%20on%20canvas%2036%20x%2048.jpg",
+    series:"Portraits & Tributes",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A portrait tribute to Patrice Lumumba, reflecting Kenneth’s interest in historical figures and the stories they carry. This substantial oil painting invites reflection on leadership, identity, and remembrance.",
+    price:3450
+  },
+  {
+    title:"The Last Light",
+    image:"images/The%20Last%20Light%20oil%20on%20canvas%2036%20x%2048.jpg",
+    series:"Portraits & Figures",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"An evocatively titled oil painting that invites reflection on time, memory, and the passing of a day. The Last Light offers a contemplative addition to Kenneth’s figurative work.",
+    price:3450
+  },
+  {
+    title:"Young Paul Robeson",
+    image:"images/Young%20Paul%20Robeson%20oil%20on%20canvas%2036%20x%2048.jpg",
+    series:"Portraits & Tributes",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"A tribute to the young Paul Robeson, whose life brought together art, scholarship, athletics, and advocacy. This oil portrait honors a remarkable individual with deep connections to New Jersey.",
+    price:3450
+  },
+  {
+    title:"Weathered Grace",
+    image:"images/Weathered%20Grace%20oil%20on%20canvas%2036%20x%2048.jpg",
+    series:"Portraits & Figures",
+    size:"36 × 48 inches",
+    medium:"Oil",
+    surface:"Canvas",
+    description:"An oil painting whose title suggests dignity shaped by experience. Weathered Grace invites a quiet consideration of age, resilience, and the enduring presence of the human spirit.",
+    price:3450
+  }
+];
+
 const jazzWorks = [
   {
     title:"Riverside Slide",
@@ -913,6 +1041,7 @@ const parseSize=s=>{
 
 const priceFor=a=>{
   if(a.status==="SOLD") return "SOLD";
+  if(a.pricePending) return "Please call for price";
   if(a.price) return money(a.price);
 
   const d=parseSize(a.size);
@@ -1070,6 +1199,7 @@ document.addEventListener("keydown",e=>{
   }
 });
 
+renderGallery("latest-gallery",latestWorks,true);
 renderGallery("jazz-gallery",jazzWorks,true);
 renderGallery("time-gallery",timeWorks,true);
 renderGallery("new-gallery",newWorks,true);

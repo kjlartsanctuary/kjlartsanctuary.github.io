@@ -304,13 +304,11 @@ footer {
 
 <header>
   <h1>Available Work</h1>
-  <p>Original artwork by Kenneth J. Lewis Sr. Explore The Color of Jazz and Dressed Between Times, discover new originals, and browse more works for your home, office, or collection.</p>
+  <p>Original artwork by Kenneth J. Lewis Sr. Explore The Color of Jazz and Dressed Between Times, discover original paintings, and browse works for your home, office, or collection.</p>
   <nav>
     <a href="index.html">Back to Home</a>
     <a href="#dressed-between-times">Dressed Between Times</a>
-    <a href="#latest-additions">Latest Additions</a>
-    <a href="#new-originals">New Originals</a>
-    <a href="#gallery">More Artwork</a>
+    <a href="#available-work">Available Artwork</a>
   </nav>
 </header>
 
@@ -321,12 +319,6 @@ footer {
     <h2>See More Original Artwork in Person</h2>
     <p>Schedule a private visit to KJL Art Sanctuary Gallery &amp; Studio to experience the artwork and find the right piece for your space.</p>
     <a href="tel:+16093726022">Call 609-372-6022 to Schedule a Visit</a>
-  </section>
-
-  <section class="new-originals" id="latest-additions" aria-labelledby="latest-title">
-    <h2 class="other-heading" id="latest-title">Latest Additions</h2>
-    <p class="section-intro">Discover American Objects, portrait tributes, everyday life, and a new addition to A Little Joy. Explore each original below and call to confirm availability, request any pending details, or arrange a studio visit.</p>
-    <div class="gallery-grid" id="latest-gallery"></div>
   </section>
 
   <section class="jazz-collection" aria-labelledby="jazz-title">
@@ -365,14 +357,11 @@ footer {
     <div class="gallery-grid" id="time-gallery"></div>
   </section>
 
-  <section class="new-originals" id="new-originals" aria-labelledby="new-title">
-    <h2 class="other-heading" id="new-title">New Original Paintings</h2>
-    <p class="section-intro">Explore original oil paintings featuring vintage automobiles, tributes to forgotten trades, a hopeful city scene, expressive flowers, and the grace of ballet. Each is a one-of-a-kind original painting by Kenneth J. Lewis Sr. All are oil on canvas except the works identified as oil on luan board. Call about a painting below to discuss purchasing it.</p>
-    <div class="gallery-grid" id="new-gallery"></div>
+  <section id="available-work" aria-labelledby="available-title">
+    <h2 class="other-heading" id="available-title">Available Artwork</h2>
+    <p class="section-intro">Browse original artwork by collection and subject. Select an image to enlarge it, or call to discuss purchasing a painting and arrange a studio visit.</p>
+    <div id="gallery"></div>
   </section>
-
-  <h2 class="other-heading">More Available Artwork</h2>
-  <section id="gallery" class="gallery-grid" aria-label="Additional artwork and sold works"></section>
 
   <div class="contact" id="contact">
     To inquire about an artwork or schedule a visit:<br>
@@ -392,7 +381,7 @@ footer {
 </div>
 
 <script>
-const latestWorks = [
+const additionalWorks = [
   {
     title:"A Little Joy 3 — 16 × 20",
     image:"images/A%20little%20Joy%203%20oil%20on%20canvas%2016%20x%2020.jpg",
@@ -1199,11 +1188,66 @@ document.addEventListener("keydown",e=>{
   }
 });
 
-renderGallery("latest-gallery",latestWorks,true);
 renderGallery("jazz-gallery",jazzWorks,true);
 renderGallery("time-gallery",timeWorks,true);
-renderGallery("new-gallery",newWorks,true);
-renderGallery("gallery",artworks);
+
+const collectionNames = {
+  "Portraits & Tributes":"Portraits & Figures",
+  "Everyday Life":"Figurative Series",
+  "Figurative":"Figurative Series",
+  "Dance & Portraiture":"Portraits & Figures"
+};
+
+const collectionOrder = [
+  "American Objects",
+  "A Little Joy",
+  "Portraits & Figures",
+  "Vintage Automobiles",
+  "Forgotten Trades",
+  "Figurative Series",
+  "Jazz",
+  "Abstract Series",
+  "Ephemeral Glow Series",
+  "Luggage Series",
+  "Structure Series",
+  "Men's Series"
+];
+
+const groups = new Map();
+
+[...additionalWorks,...newWorks,...artworks].forEach(a=>{
+  const name=collectionNames[a.series]||a.series;
+  if(!groups.has(name)) groups.set(name,[]);
+  groups.get(name).push(a);
+});
+
+const gallery=document.getElementById("gallery");
+
+[...groups.keys()].sort((a,b)=>{
+  const ai=collectionOrder.indexOf(a);
+  const bi=collectionOrder.indexOf(b);
+  return (ai<0?999:ai)-(bi<0?999:bi)||a.localeCompare(b);
+}).forEach((name,index)=>{
+  const section=document.createElement("section");
+  section.className="new-originals";
+
+  const heading=document.createElement("h3");
+  heading.className="other-heading";
+  heading.textContent=name;
+
+  const grid=document.createElement("div");
+  grid.className="gallery-grid";
+  grid.id="collection-"+index;
+
+  section.append(heading,grid);
+  gallery.append(section);
+
+  const items=groups.get(name).sort((a,b)=>
+    a.title.localeCompare(b.title,undefined,{numeric:true})
+  );
+
+  renderGallery(grid.id,items,true);
+});
 
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>

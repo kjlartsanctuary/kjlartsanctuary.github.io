@@ -249,6 +249,57 @@ footer {
   .image-link img { height:auto;max-height:450px; }
   .jazz-collection { padding:20px 12px; }
 }
+
+/* Paired original and room views for the seven jazz paintings. */
+#jazz-gallery { grid-template-columns:1fr;gap:30px; }
+.artwork-views {
+  display:grid;
+  grid-template-columns:minmax(0,2fr) minmax(0,3fr);
+  gap:1px;
+  background:var(--rule);
+}
+.artwork-views figure {
+  min-width:0;
+  margin:0;
+  background:#eeeae4;
+}
+.artwork-views figcaption {
+  padding:12px 10px;
+  background:#fff;
+  text-align:center;
+  font:600 .85rem Arial,sans-serif;
+}
+.artwork-views .image-link { height:400px; }
+.paired-card .details {
+  max-width:900px;
+  margin:auto;
+  padding:24px;
+}
+.paired-card .details h3 { font-size:1.7rem; }
+.paired-card .details .description { font-size:.98rem; }
+.room-note {
+  margin:0;
+  padding:12px 18px;
+  color:#666;
+  text-align:center;
+  font:.8rem/1.5 Arial,sans-serif;
+}
+@media(max-width:700px) {
+  .artwork-views { grid-template-columns:1fr; }
+  .artwork-views .image-link {
+    height:auto;
+    min-height:0;
+    max-height:none;
+    padding:12px;
+  }
+  .artwork-views .image-link img {
+    width:100%;
+    height:auto;
+    max-height:480px;
+    object-fit:contain;
+  }
+  .paired-card .details { padding:20px 16px; }
+}
 </style>
 </head>
 <body>
@@ -287,6 +338,7 @@ footer {
       </div>
 
       <p>Four paintings measure 30 × 48 inches, one measures 24 × 48 inches, and two measure 36 × 48 inches.</p>
+      <p>See each original alongside a room visualization. Select either image to enlarge it. Room settings illustrate decorating possibilities; scale is approximate. Please use the listed canvas dimensions when planning your space.</p>
     </div>
     <div class="gallery-grid" id="jazz-gallery"></div>
   </section>
@@ -407,6 +459,20 @@ const jazzWorks = [
     price:3780
   }
 ];
+
+const jazzRoomImages = {
+  "Riverside Slide":"Mock up Riverside Slide.png",
+  "The Low Note":"Mock Up The Low Note.png",
+  "Golden Phrases":"Mock Up Golden Phrases.png",
+  "Velvet in Red":"Mock up Velvet in Red.png",
+  "Bourbon Street Serenade":"Mock Up Bourbon Street Serenade.png",
+  "The Eight O’Clock Groove":"Mock up 8 oclock groove.png",
+  "When the Keys Speak":"Mock Up when the keys speak.png"
+};
+
+jazzWorks.forEach(a=>{
+  a.roomImage="images/"+encodeURIComponent(jazzRoomImages[a.title]);
+});
 
 /*
   To add a Square link later, add this property to a painting:
@@ -870,7 +936,37 @@ function renderGallery(id,items,featured=false) {
   const root=document.getElementById(id);
 
   root.innerHTML=items.map((a,index)=>`
-    <article class="card">
+    <article class="card ${a.roomImage?"paired-card":""}">
+      ${a.roomImage?`
+      <div class="artwork-views">
+        <figure>
+          <a class="image-link"
+             href="${esc(a.image)}"
+             data-index="${index}"
+             data-view="original"
+             aria-label="Enlarge original painting: ${esc(a.title)}">
+            <img src="${esc(a.image)}"
+                 alt="${esc(a.title)} — original painting by Kenneth J. Lewis Sr."
+                 loading="lazy">
+          </a>
+          <figcaption>Original Painting</figcaption>
+        </figure>
+
+        <figure>
+          <a class="image-link"
+             href="${esc(a.roomImage)}"
+             data-index="${index}"
+             data-view="room"
+             aria-label="Enlarge room visualization: ${esc(a.title)}">
+            <img src="${esc(a.roomImage)}"
+                 alt="${esc(a.title)} displayed as an unframed canvas in a room visualization"
+                 loading="lazy">
+          </a>
+          <figcaption>In a Room · Select to Enlarge</figcaption>
+        </figure>
+      </div>
+      <p class="room-note">Room visualization · Approximate scale. Refer to the actual canvas dimensions below.</p>
+      `:`
       <a class="image-link"
          href="${esc(a.image)}"
          data-index="${index}"
@@ -879,6 +975,7 @@ function renderGallery(id,items,featured=false) {
              alt="${esc(a.title)} by Kenneth J. Lewis Sr."
              loading="lazy">
       </a>
+      `}
 
       <div class="details">
         <h3>${esc(a.title)}</h3>
@@ -927,9 +1024,12 @@ let lastImageLink=null;
 function showArtwork(a,link) {
   lastImageLink=link;
 
-  lightboxImage.src=a.image;
-  lightboxImage.alt=a.title;
-  lightboxCaption.textContent=`${a.title} — ${a.series}`;
+  const room=link.dataset.view==="room";
+
+  lightboxImage.src=room?a.roomImage:a.image;
+  lightboxImage.alt=room?`${a.title} — room visualization`:a.title;
+  lightboxCaption.textContent=
+    `${a.title} — ${a.size||a.series}${room?" · Room visualization · Approximate scale":""}`;
 
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden","false");

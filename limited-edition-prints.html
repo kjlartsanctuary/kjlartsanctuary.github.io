@@ -4,25 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Limited Edition Prints | Kenneth J. Lewis Sr.</title>
-  <meta name="description" content="Shop Bound for Promise and other signed and numbered limited edition prints by Kenneth J. Lewis Sr. Free U.S. shipping and studio pickup.">
+  <meta name="description" content="Collect Bound for Promise, a limited edition of 50 numbered boxes with 17 signed prints by Kenneth J. Lewis Sr. Free U.S. shipping and studio pickup.">
   <link rel="canonical" href="https://kjlartsanctuary.com/limited-edition-prints.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Limited Edition Prints | KJL Art Sanctuary">
-  <meta property="og:description" content="Explore Bound for Promise, a 17-image limited edition print series on paper and mounted canvas.">
+  <meta property="og:description" content="Bound for Promise Collector’s Box. All 17 signed paper prints for $1,250. Limited to 50 numbered sets.">
   <meta property="og:url" content="https://kjlartsanctuary.com/limited-edition-prints.html">
   <meta property="og:image" content="https://kjlartsanctuary.com/images/LE%20Bound%20for%20Promise.png">
 
   <style>
+    :root {
+      --ink: #2f2b28;
+      --accent: #743126;
+      --paper: #faf6f0;
+      --line: #e5ddd2;
+    }
+
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      color: #2f2b28;
+      color: var(--ink);
       background: #fff;
       font: 18px/1.55 Garamond, "Times New Roman", serif;
     }
 
-    header, nav, footer, .intro, .details, .visit { text-align: center; }
+    header, nav, footer, .intro, .details, .offer, .visit { text-align: center; }
+
     header { padding: 24px 16px 20px; }
     header h1 { margin: 0; font-size: clamp(24px, 5vw, 36px); }
     header p { margin: 4px 0 0; }
@@ -37,7 +45,7 @@
     }
 
     .main-nav { border-block: 1px solid #51463e; }
-    .main-nav a, .collection-nav a { color: #743126; font-weight: bold; }
+    .main-nav a, .collection-nav a { color: var(--accent); font-weight: bold; }
     .main-nav a { font-size: 16px; text-decoration: none; }
     .main-nav a:hover, .main-nav a[aria-current="page"] {
       text-decoration: underline;
@@ -48,36 +56,42 @@
     section { margin: 34px 0 48px; }
     .intro, .details { max-width: 760px; margin: 0 auto 24px; }
     .intro p { font-size: 20px; }
+
     h2 {
       margin: 0 0 12px;
-      color: #743126;
+      color: var(--accent);
       font-size: clamp(32px, 6vw, 48px);
       line-height: 1.15;
     }
 
-    .pricing, .gallery { display: grid; gap: 20px; }
-    .pricing { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 24px 0; }
-    .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .early-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .option, .card, .visit {
-      border: 1px solid #e5ddd2;
+    .offer, .card, .visit {
+      border: 1px solid var(--line);
       border-radius: 12px;
       overflow: hidden;
     }
 
-    .option, .visit { background: #faf6f0; padding: 20px; }
-    .option { text-align: center; }
-    .option h3 { margin: 0; font-size: 22px; }
-    .option p { margin: 6px 0; }
-    .option .price {
-      color: #743126;
-      font-size: 40px;
+    .offer, .visit { background: var(--paper); padding: 24px; }
+    .offer { max-width: 790px; margin: 0 auto 30px; }
+    .offer h3 { margin: 0; font-size: 28px; line-height: 1.2; }
+    .offer p { margin: 10px 0; }
+
+    .offer .price {
+      color: var(--accent);
+      font-size: 46px;
       font-weight: bold;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
+    .offer .button { margin-top: 12px; }
     .gallery-title { text-align: center; font-size: 25px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .early-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .card { display: flex; flex-direction: column; }
     .card-copy { padding: 16px; }
     .card-copy h3 { margin: 0; line-height: 1.2; font-size: 23px; }
@@ -90,13 +104,13 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 2px;
-      background: #e5ddd2;
+      background: var(--line);
     }
 
     .image-link {
       display: block;
       padding: 12px;
-      color: #743126;
+      color: var(--accent);
       background: #f6f3ee;
       text-align: center;
       font-size: 15px;
@@ -117,7 +131,7 @@
       padding: 11px 18px;
       border-radius: 7px;
       color: #fff;
-      background: #743126;
+      background: var(--accent);
       text-align: center;
       text-decoration: none;
       font-weight: bold;
@@ -126,11 +140,10 @@
     .button:hover { background: #542218; }
     a:focus-visible { outline: 3px solid #a65d1b; outline-offset: 3px; }
     .visit h2 { font-size: 30px; }
-    .visit a { color: #743126; }
-    footer { border-top: 1px solid #e5ddd2; padding: 18px; font-size: 15px; }
+    .visit a { color: var(--accent); }
+    footer { border-top: 1px solid var(--line); padding: 18px; font-size: 15px; }
 
     @media (max-width: 800px) {
-      .pricing { grid-template-columns: 1fr; }
       .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
@@ -170,39 +183,21 @@
         <p>A 17-image series celebrating the first 17 years of a boy’s life through scenes of faith, family, education, and opportunity.</p>
       </div>
 
-      <div class="pricing">
-        <div class="option">
-          <h3>Individual Paper Print</h3>
-          <p class="price">$125</p>
-          <p>Unmatted paper print</p>
-          <p>6 individual copies per image</p>
-        </div>
-
-        <div class="option">
-          <h3>Mounted Canvas Print</h3>
-          <p class="price">$165</p>
-          <p>Canvas mounted flat on a rigid backer board</p>
-          <p>6 individual copies per image</p>
-        </div>
-
-        <div class="option">
-          <h3>Complete Boxed Paper Set</h3>
-          <p class="price">$1,975</p>
-          <p>All 17 paper prints in a presentation box with matching edition numbers</p>
-          <p>5 complete sets</p>
-        </div>
-      </div>
-
-      <div class="details">
-        <p>The edition is limited to <strong>17 copies per image</strong> across all three options. Each 13 × 19-inch print is hand-signed and numbered by Kenneth J. Lewis Sr., comes with its own certificate of authenticity, and is sold unframed.</p>
+      <div class="offer">
+        <h3>Limited-Edition Collector’s Box</h3>
+        <p class="price">$1,250</p>
+        <p><strong>Limited to 50 numbered boxed sets.</strong> Available exclusively as a complete set.</p>
+        <p>Each box includes all 17 <strong>13 × 19-inch paper prints</strong>, hand-signed and numbered by Kenneth J. Lewis Sr. Each print comes with its own certificate of authenticity. The prints are unmatted and unframed.</p>
+        <p>The decorative presentation box features the <em>Bound for Promise</em> cover artwork on the lid. The edition number on the outside of the box matches the number on all 17 prints inside.</p>
         <p><strong>Free U.S. shipping or studio pickup</strong> at KJL Art Sanctuary in Ewing, NJ.</p>
-        <a class="button" href="https://square.link/u/crW5FNrB">Shop Bound for Promise on Square</a>
+        <a class="button" href="https://square.link/u/crW5FNrB">Purchase the Collector’s Box</a>
       </div>
 
-      <h3 class="gallery-title" id="promise-gallery-title">Explore All 17 Images</h3>
+      <h3 class="gallery-title" id="promise-gallery-title">All 17 Prints in the Collector’s Box</h3>
       <div id="promise-gallery" class="gallery promise-gallery" aria-labelledby="promise-gallery-title"></div>
+
       <p class="gallery-cta">
-        <a class="button" href="https://square.link/u/crW5FNrB">Shop Bound for Promise on Square</a>
+        <a class="button" href="https://square.link/u/crW5FNrB">Purchase the Collector’s Box</a>
       </p>
     </section>
 

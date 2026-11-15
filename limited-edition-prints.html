@@ -289,16 +289,16 @@
     ];
 
     const earlyPrints = [
-      ["Color Flow2", "Color Flow2 13x19 Print.jpg", "Color_Flow2_room.jpg", "1Kpckeny"],
-      ["Dream Fragments", "Dream Fragments Print.jpg", "Dream_Fragments_room.jpg", "QaCviseO"],
-      ["First Date", "First Date13x19 Print.jpg", "First_Date_room.jpg", "y6VzZ6AX"],
-      ["Head Bang Zone", "Head Bang Zone Print.jpg", "Head_Bang_Zone_room.jpg", "klcFUXT7"],
-      ["If Heels Can Talk", "If heels could talk Print.jpg", "If_Heels_Can_Talk_room.jpg", "12vxPAPD"],
-      ["Jazz Alive", "Jazz Alive Print.jpg", "Jazz_Alive_room.jpg", "GQID15kc"],
-      ["Majestic", "Majestic 13x19 Print.jpg", "Majestic_room.jpg", "5T7S0k5t"],
-      ["Multifaceted", "Multifaceted13x19 Print.jpg", "Multifaceted_room.jpg", "Iga8MlVc"],
-      ["She Strings", "She Strings Print.jpg", "She_Strings_room.jpg", "JUMZX29h"],
-      ["Whisper", "Whisper Print.jpg", "Whisper_room.jpg", "QsKsHhxZ"]
+      ["Color Flow2", "Color Flow2 13x19 Print.jpg", "Color_Flow2_room.jpg"],
+      ["Dream Fragments", "Dream Fragments Print.jpg", "Dream_Fragments_room.jpg"],
+      ["First Date", "First Date13x19 Print.jpg", "First_Date_room.jpg"],
+      ["Head Bang Zone", "Head Bang Zone Print.jpg", "Head_Bang_Zone_room.jpg"],
+      ["If Heels Can Talk", "If heels could talk Print.jpg", "If_Heels_Can_Talk_room.jpg"],
+      ["Jazz Alive", "Jazz Alive Print.jpg", "Jazz_Alive_room.jpg"],
+      ["Majestic", "Majestic 13x19 Print.jpg", "Majestic_room.jpg"],
+      ["Multifaceted", "Multifaceted13x19 Print.jpg", "Multifaceted_room.jpg"],
+      ["She Strings", "She Strings Print.jpg", "She_Strings_room.jpg"],
+      ["Whisper", "Whisper Print.jpg", "Whisper_room.jpg"]
     ];
 
     function imageLink(filename, description, label) {
@@ -324,7 +324,7 @@
     renderBoxGallery("jazz-gallery", jazzPrints);
 
     document.getElementById("early-gallery").innerHTML = earlyPrints
-      .map(([title, filename, room, checkout]) => `
+      .map(([title, filename, room]) => `
         <article class="card">
           <div class="artwork-views">
             ${imageLink(filename, title + " by Kenneth J. Lewis Sr.", "The Print")}
@@ -335,7 +335,7 @@
             <p>13 × 19 inches · Edition of 50 · Signed and numbered</p>
             <p>Print only <strong>$95</strong></p>
             <p>Certificate of authenticity included.</p>
-            <a class="button" href="https://square.link/u/${checkout}" aria-label="Purchase ${title} through Square">Purchase This Print</a>
+            <a class="button" href="https://square.link/u/f5XJJ9g3" aria-label="Purchase ${title} through Square">Purchase This Print</a>
           </div>
         </article>`)
       .join("");

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Limited Edition Prints | Kenneth J. Lewis Sr.</title>
-  <meta name="description" content="Collect Bound for Promise, a limited edition of 50 numbered boxes with 17 signed prints by Kenneth J. Lewis Sr. Free U.S. shipping and studio pickup.">
+  <meta name="description" content="Shop signed limited-edition prints and collector’s boxes from Bound for Promise and The Color of Jazz by Kenneth J. Lewis Sr. Free U.S. shipping and studio pickup.">
   <link rel="canonical" href="https://kjlartsanctuary.com/limited-edition-prints.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Limited Edition Prints | KJL Art Sanctuary">
-  <meta property="og:description" content="Bound for Promise Collector’s Box. All 17 signed paper prints for $1,250. Limited to 50 numbered sets.">
+  <meta property="og:description" content="Collect the Bound for Promise 17-print box for $1,250 or The Color of Jazz seven-print box for $749.">
   <meta property="og:url" content="https://kjlartsanctuary.com/limited-edition-prints.html">
   <meta property="og:image" content="https://kjlartsanctuary.com/images/LE%20Bound%20for%20Promise.png">
 
@@ -95,7 +95,7 @@
     .card { display: flex; flex-direction: column; }
     .card-copy { padding: 16px; }
     .card-copy h3 { margin: 0; line-height: 1.2; font-size: 23px; }
-    .promise-gallery .card-copy { text-align: center; }
+    .boxed-gallery .card-copy { text-align: center; }
     .early-gallery .card-copy { flex: 1; display: flex; flex-direction: column; }
     .early-gallery .card-copy p { margin: 8px 0; }
     .early-gallery .button { margin-top: auto; }
@@ -154,6 +154,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1><a href="index.html">Contemporary Fine Artist Kenneth J. Lewis Sr.</a></h1>
@@ -174,6 +175,7 @@
   <main>
     <nav class="collection-nav" aria-label="Print collections">
       <a href="#bound-for-promise">Bound for Promise</a>
+      <a href="#the-color-of-jazz">The Color of Jazz</a>
       <a href="#early-works">Early Works</a>
     </nav>
 
@@ -194,10 +196,34 @@
       </div>
 
       <h3 class="gallery-title" id="promise-gallery-title">All 17 Prints in the Collector’s Box</h3>
-      <div id="promise-gallery" class="gallery promise-gallery" aria-labelledby="promise-gallery-title"></div>
+      <div id="promise-gallery" class="gallery boxed-gallery" aria-labelledby="promise-gallery-title"></div>
 
       <p class="gallery-cta">
         <a class="button" href="https://square.link/u/crW5FNrB">Purchase the Collector’s Box</a>
+      </p>
+    </section>
+
+    <section id="the-color-of-jazz" aria-labelledby="jazz-title">
+      <div class="intro">
+        <h2 id="jazz-title">The Color of Jazz</h2>
+        <p>Seven paintings by Kenneth J. Lewis Sr. capture the color and rhythm of jazz, from an intimate club performance to a New Orleans street corner.</p>
+      </div>
+
+      <div class="offer">
+        <h3>Limited-Edition Collector’s Box</h3>
+        <p class="price">$749</p>
+        <p><strong>Limited to 50 numbered boxed sets.</strong> Available exclusively as a complete set.</p>
+        <p>Each decorative presentation box includes all seven <strong>13 × 19-inch paper prints</strong>, hand-signed and numbered by Kenneth J. Lewis Sr. Each print comes with its own certificate of authenticity. The prints are unmatted and unframed.</p>
+        <p>The edition number on the outside of the box matches the number on all seven prints inside.</p>
+        <p><strong>Free U.S. shipping or studio pickup</strong> at KJL Art Sanctuary in Ewing, NJ.</p>
+        <a class="button" data-jazz-order href="tel:+16093726022">Call to Order the Jazz Collector’s Box</a>
+      </div>
+
+      <h3 class="gallery-title" id="jazz-gallery-title">All Seven Prints in the Collector’s Box</h3>
+      <div id="jazz-gallery" class="gallery boxed-gallery" aria-labelledby="jazz-gallery-title"></div>
+
+      <p class="gallery-cta">
+        <a class="button" data-jazz-order href="tel:+16093726022">Call to Order the Jazz Collector’s Box</a>
       </p>
     </section>
 
@@ -252,6 +278,16 @@
       ["The Promise Continues", "LE The Promise Continues.png"]
     ];
 
+    const jazzPrints = [
+      ["Riverside Slide", "Riverside Slide.jpg"],
+      ["The Low Note", "The Low Note.jpg"],
+      ["Golden Phrases", "Golden Phrases.jpg"],
+      ["Velvet in Red", "Velvet in Red.jpg"],
+      ["Bourbon Street Serenade", "Bourbon Street Serenade.jpg"],
+      ["The Eight O’Clock Groove", "The Eight O’Clock Groove.jpg"],
+      ["When the Keys Speak", "When the Keys Speak.jpg"]
+    ];
+
     const earlyPrints = [
       ["Color Flow2", "Color Flow2 13x19 Print.jpg", "Color_Flow2_room.jpg", "1Kpckeny"],
       ["Dream Fragments", "Dream Fragments Print.jpg", "Dream_Fragments_room.jpg", "QaCviseO"],
@@ -261,7 +297,7 @@
       ["Jazz Alive", "Jazz Alive Print.jpg", "Jazz_Alive_room.jpg", "GQID15kc"],
       ["Majestic", "Majestic 13x19 Print.jpg", "Majestic_room.jpg", "5T7S0k5t"],
       ["Multifaceted", "Multifaceted13x19 Print.jpg", "Multifaceted_room.jpg", "Iga8MlVc"],
-      ["She Strings", "She Strings Print.jpg", "She_Strings_room.jpg", "JUMZX29h"],
+      ["She Strings", "She_Strings_room.jpg", "She_Strings_room.jpg", "JUMZX29L"],
       ["Whisper", "Whisper Print.jpg", "Whisper_room.jpg", "QsKsHhxZ"]
     ];
 
@@ -274,13 +310,18 @@
         </a>`;
     }
 
-    document.getElementById("promise-gallery").innerHTML = promisePrints
-      .map(([title, filename]) => `
-        <article class="card">
-          ${imageLink(filename, title + " by Kenneth J. Lewis Sr.")}
-          <div class="card-copy"><h3>${title}</h3></div>
-        </article>`)
-      .join("");
+    function renderBoxGallery(galleryId, prints) {
+      document.getElementById(galleryId).innerHTML = prints
+        .map(([title, filename]) => `
+          <article class="card">
+            ${imageLink(filename, title + " by Kenneth J. Lewis Sr.")}
+            <div class="card-copy"><h3>${title}</h3></div>
+          </article>`)
+        .join("");
+    }
+
+    renderBoxGallery("promise-gallery", promisePrints);
+    renderBoxGallery("jazz-gallery", jazzPrints);
 
     document.getElementById("early-gallery").innerHTML = earlyPrints
       .map(([title, filename, room, checkout]) => `
@@ -298,6 +339,16 @@
           </div>
         </article>`)
       .join("");
+
+    // Paste the full Square checkout URL between the quotes.
+    const jazzCheckout = "";
+
+    if (jazzCheckout.trim()) {
+      document.querySelectorAll("[data-jazz-order]").forEach(button => {
+        button.href = jazzCheckout.trim();
+        button.textContent = "Purchase the Jazz Collector’s Box";
+      });
+    }
   </script>
 </body>
 </html>
